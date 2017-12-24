@@ -18,7 +18,7 @@ body {
   /*  border: solid black 2px; */
 }
 #top-header h1{
-    font-weight: 400;
+    font-weight: 400px;
     font-size: 1.7em;
     margin-left: 100px;
     margin-top: 7px;
@@ -66,13 +66,13 @@ body {
 }
 #logomenu {
     position: absolute;
-    width: 100;
-    height: 100;
+    width: 100px;
+    height: 100px;
     z-index: 20;
 }
 #obrazek-pozadi {
     width: 100%;
-    height: 500;
+    height: 500px;
     position: fixed;
     z-index: -1;
     
@@ -86,27 +86,27 @@ body {
     position: absolute;
     width: 100%;
     background-color: #DDD;
-    margin-top: 500;
-    height: 350;
+    margin-top: 500px;
+    height: 350px;
 }
 #sipkal {
     position: absolute;
-    margin-right: 492;
+    margin-right: 492px;
     right: 50%;
-    top: 143;
+    top: 143px;
 }
 #sipkap {
     position: absolute;
-    margin-left: 492;
+    margin-left: 492px;
     left: 50%;
-    top: 143;
+    top: 143px;
 }
 #novinky li{
     position: absolute;
-    margin-top: 30;
-    margin-bottom: 30;
-    width: 280;
-    height: 280;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 280px;
+    height: 280px;
     background-color: #FFF;
     -webkit-transition: 1s;
     transition: 1s;
@@ -114,33 +114,146 @@ body {
 #novinky ul{
     position: relative;
     list-style: none;
-    width: 1060;
+    width: 1060px;
     margin: auto;
     padding: 0px;
 }
 #n1 {
-    left: 64;
+    left: 64px;
 }
 #n2 {
-    left: 390;
+    left: 390px;
 }
 #n3 {
-    left: 716;
+    left: 716px;
 }
 #outer_page {
     background-color: #FFF;
     width: 100%;
     position: relative;
-    top: 850;
+    top: 850px;
 }
 #page {
     position: relative;
     margin: auto;
-    
-    width: 1060;
+    font-size: 1.3125em;
+    width: 932px;
     padding-top: 20px;
 }
 h2 {
     text-align: center;
-    
+    margin-top: 30px;
+    font-size: 2em;
+    color: #fdb62e;
+}
+#page p{
+    width: 400px;
+    margin-left: 64px;
+}
+#typy_studia li{
+    width: 265px;
+    margin-left: 64px;
+    text-align: justify;
+}
+#conabizime {
+    text-align: left;
+    margin-top: 40px;
+}
+#nabidky {
+    perspective: 1000px;
+    height: 700px;
+}
+.nabidka {
+    width: 233px;
+    height: 233px;
+    background: #fdb62e;
+    transform: rotateY(0deg);
+    transition: 1s;
+    float: left;
+}
+.nabidka:hover {
+    transform: rotateY(180deg);
+}
+.nabidka .predni {
+    z-index: 2;
+    backface-visibility: hidden;
+}
+.nabidka .zadni {
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+.nabidka.prvni, .nabidka.ctvrta { /*mobil .nabidka.prvni, .nabidka.treti*/
+    background: #fded2e;
+}
+#prohlidky {
+    height: 400px;
+}
+#prohlidka, #historie{
+    width: 400px;
+    float: left;
+    margin: 30px;
+}
+
+h3 {
+    text-align: center;
+}
+#spolupracujeme{
+    height: 700px;
+}
+.spoluprace_kraj {
+    width: 300px;
+    margin: 50px;
+}
+.spoluprace_obrazek {
+    width: 160px;
+    margin: 20px;
+}
+#outer_footer {
+    background-color: #1a35c9;
+    width: 100%;
+    position: relative;
+    top: 850px;
+}
+#footer {
+    position: relative;
+    height: 300px;
+    margin: auto;
+    width: 932px;
+    color: #FFF;
+    font-size: 1.3125em;
+}
+h4 {
+    position: absolute;
+    top: 30px;
+    left: 315px;
+    margin: 0px;
+    font-size: 1.5em;
+}
+#footer p{
+    position: absolute;
+    width: 300px;
+    left: 150px;
+    top: 80px;
+    margin: 0px;
+    text-align: right;
+}
+#footer_logo {
+    top: 60px;
+    height: 180px;
+    position: absolute;
+}
+#mapa {
+    position: absolute;
+    height: 280px;
+    width: 454px;
+    top: 10px;
+    right: 0px;
+}
+#carka {
+    background: #FFF;
+    position: absolute;
+    left: 464px;
+    right: 464px;
+    top: 20px;
+    bottom: 20px;
 }
