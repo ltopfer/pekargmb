@@ -1,5 +1,11 @@
+@font-face { 
+    font-family: Helvetica_light; 
+    src: url('font/HelveticaLt.ttf');
+}
+
 body {
     font-family: Helvetica, sans-serif;
+    font-weight: 100;
     color: #373d3f;
     margin: 0px;
     padding: 0px;
@@ -11,6 +17,7 @@ body {
     width: 100%;
     background-color: white;
     z-index: 20;
+  /*  font-family: Helvetica_light;*/
 }
 #top-header {
     margin:auto;
@@ -18,7 +25,7 @@ body {
   /*  border: solid black 2px; */
 }
 #top-header h1{
-    font-weight: 400px;
+    font-weight: 400;
     font-size: 1.7em;
     margin-left: 100px;
     margin-top: 7px;
@@ -160,30 +167,54 @@ h2 {
     margin-top: 40px;
 }
 #nabidky {
-    perspective: 1000px;
     height: 700px;
 }
 .nabidka {
+    perspective: 2000px;
     width: 233px;
     height: 233px;
-    background: #fdb62e;
+    float: left;
+    position: relative;
+}
+
+.nabidka .karta {
     transform: rotateY(0deg);
     transition: 1s;
-    float: left;
+    position: relative;
+    background: #fdb62e;
 }
-.nabidka:hover {
+.nabidka:hover .karta {
     transform: rotateY(180deg);
 }
-.nabidka .predni {
-    z-index: 2;
-    backface-visibility: hidden;
+.karta, .predni, .zadni {
+    width: 233px;
+    height: 233px;
 }
-.nabidka .zadni {
-    transform: rotateY(180deg);
-    backface-visibility: hidden;
+.karta {
+    transform-style: preserve-3d;
 }
-.nabidka.prvni, .nabidka.ctvrta { /*mobil .nabidka.prvni, .nabidka.treti*/
+.nabidka.prvni .karta, .nabidka.ctvrta .karta { /*mobil .nabidka.prvni, .nabidka.treti*/
     background: #fded2e;
+}
+.predni, .zadni {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.predni {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+.predni img {
+    position: absolute;
+    width: 101px;
+    left: 66px;
+    top: 5px;
+    margin-bottom: 5px;
+}
+.zadni {
+    transform: rotateY(180deg);
 }
 #prohlidky {
     height: 400px;
