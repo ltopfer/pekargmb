@@ -1,0 +1,6 @@
+změny v html vedlejších stránek:
+
+  -změna menu
+  -h4 a h5 sjednoceno a přeměněno na h2
+  (-položky menu přidat nedělitelné mezery, aby nebylo jedno slovo na druhém řádku)
+  -změna patičky

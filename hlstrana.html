@@ -1,6 +1,4 @@
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-
 <!doctype html>
 <html>
 
@@ -12,7 +10,7 @@
 
         <meta lang="cs" name="Description" content="Gymnázium Dr.J.Pekaře  Mladá Boleslav" >
 
-        <!-- <meta name="viewport" content="width=device-width,initial-scale=1"> -->     
+         <meta name="viewport" content="width=device-width,initial-scale=1">
 
         <meta lang="cs" name="Keywords" content="škola,výuka,žák,učitel" >
 
@@ -21,18 +19,87 @@
 
         <link href="stilhl-implic2.css" type="text/css" rel="stylesheet" >
         
-        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <title>Gymnázium Dr.J.Pekaře</title>
         
-        <title>Gymnázium Dr.J.Pekaře</title> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script>
+            var moveTime = 8;
+            var timer = 0;
+            var countTimer = true;
+            var novinky;
+            var pocet = 0;
+            var prvni = 0;
 
-        <script type="text/javascript" src="">
-        </script> 
+            $(document).ready(function() {
+                setInterval(function() {
+                    if(countTimer) {
+                        timer++;
+                        //$("#top-header").html(timer);
+                    }
+
+                    if(timer >= moveTime) {
+                        moveSlider(1);
+                    }
+                }, 1000);    
+
+                $(".novinka").mouseenter(function() {
+                    countTimer = false;
+                });
+                $(".novinka").mouseleave(function() {
+                    countTimer = true;
+                });
+                
+                $("#sipkal").click(function() {
+                    moveSlider(-1);
+                });
+                $("#sipkap").click(function() {
+                    moveSlider(1);
+                });
+                
+                start();
+                //timer = moveTime - 3;                
+            });
+                
+                function start() {
+                    novinky = $("#novinky").find(".novinka");
+                    pocet = novinky.length;
+                    moveSlider(0);
+                }
+                    
+                
+                function moveSlider(posun) {
+                    prvni = prvni + posun;
+
+                    timer = 0;
+                    
+                    $(novinky[cyklindex(prvni+0)]).removeClass().addClass("novinka n1");
+                    $(novinky[cyklindex(prvni+1)]).removeClass().addClass("novinka n2");
+                    $(novinky[cyklindex(prvni+2)]).removeClass().addClass("novinka n3");
+                    
+                    for (i = 3; i < pocet - 1; i++)
+                    {
+                        $(novinky[cyklindex(prvni+i)]).removeClass().addClass("novinka n4");
+                    }
+                    $(novinky[cyklindex(prvni+pocet-1)]).removeClass().addClass("novinka n0");
+                }
+            
+            function cyklindex(index)
+            {
+                index = index % pocet;
+                if(index < 0)
+                    index += pocet;
+                return index;
+            }
+        
+        </script>
+
     </head>
     
     <body>
         <div id="header">
             <div id="top-header">
-                <img src="obr/logomenu.png" id="logomenu"><h1>GYMNÁZIUM <b>DR. JOSEFA PEKAŘE</b></h1><div id="odkazy"><img><img><img></div>
+                <img src="obr/logomenu.png" id="logomenu"><h1>GYMNÁZIUM <b>DR. JOSEFA PEKAŘE</b></h1><div id="odkazy"><img  id="gb" src="obr/gb.png"><img class="odkaz" src="obr/fb-art.png"><img class="odkaz" src="obr/Feed-icon.svg"><img class="odkaz" src="obr/50744-200.png">
+                </div>
             </div>
         <ul id="textmenul">
             <li><a href="#">PRO UČITELE</a></li>    
@@ -47,15 +114,20 @@
             <li><a href="#">FOTOGALERIE</a></li>
         </ul>    
         </div>
-        <img id="obrazek-pozadi">
+        <span id="obrazek-pozadi">
+        </span>
         <div id="novinky">
+            <ul>
+                <li  class="novinka n1"><p>prvn</p><img src="obr/1200px-Budova_Gymn%C3%A1zia_Dr._Josefa_Peka%C5%99e.jpg"></li>
+                <li  class="novinka n2"><p>druh</p><img src="obr/logo%20%C5%A1kola.jpg"></li>
+                <li  class="novinka n3"><p>tret</p><img src="obr/logo%20%C5%A1kola.jpg"></li>
+                <li  class="novinka n4"><p>ctvr</p><img src="obr/logo%20%C5%A1kola.jpg"></li>
+                <li  class="novinka n4"><p>pata</p><img src="obr/logo%20%C5%A1kola.jpg"></li>
+                <li  class="novinka n4"><p>sest</p><img src="obr/logo%20%C5%A1kola.jpg"></li>
+            </ul>
             <img src="obr/sipkal.png" id="sipkal">
             <img src="obr/sipkap.png" id="sipkap">
-            <ul>
-                <li  id="n1"><img></li>
-                <li  id="n2"><img></li>
-                <li  id="n3"><img></li>
-            </ul>
+            <div id="novinky_vic"><a href="">více novinek</a></div>
         </div>
         <div id="outer_page">
             <div id="page">
@@ -66,17 +138,19 @@
                     </li>
                     <li><b>čtyřleté studium</b> pro žáky, kteří ukončili 9. třídu ZŠ </li>
                 </ul>
+                <img src="obr/ikony/teaching-purple.png" id="busta">
                 <h2 id="conabizime">Co nabízíme</h2>
                 <div id="nabidky">                    
                     <div class="nabidka prvni">
                         <div class="karta">
                             <div class="predni">
                                 <img class="nabidka_ikona" src="obr/ikony/diploma.svg" width="50px">
-                                <p>Všestranné středoškolské vzdělání ukončené maturitou</p>
+                                
                             </div>
 
                             <div class="zadni">
-                                <p>zadni</p>
+                                <p>Všestranné středoškolské vzdělání ukončené maturitou</p>
+                                <a href="">více informací</a>
                             </div>
                         </div>
                     </div>
@@ -84,11 +158,12 @@
                          <div class="karta">
                             <div class="predni">
                                 <img class="nabidka_ikona" src="obr/ikony/books.svg" width="50px">
-                                <p>knihovnu s čítárnou a studovnou</p>
+                                
                             </div>
 
                             <div class="zadni">
-                                <p>zadni</p>
+                                <p>knihovnu s čítárnou a studovnou</p>
+                                <a href="">více informací</a>
                             </div>
                         </div>
                     </div>
@@ -96,11 +171,12 @@
                           <div class="karta">
                             <div class="predni">
                                 <img class="nabidka_ikona" src="obr/ikony/cutlery%20(1).svg" width="50px">
-                                <p>obědy ve vlastní školní jídelně a občerstvení ve školním kiosku</p>
+                                
                             </div>
 
                             <div class="zadni">
-                                <p>zadni</p>
+                                <p>obědy ve vlastní školní jídelně a občerstvení ve školním kiosku</p>
+                                <a href="">více informací</a>
                             </div>
                         </div>
                     </div>
@@ -108,11 +184,12 @@
                           <div class="karta">
                             <div class="predni">
                                 <img class="nabidka_ikona" src="obr/ikony/basketball%20(1).svg" width="50px">
-                                <p>výbornépodmínky pro tělesnou výchovu a sportovní činnist</p>
+                                
                             </div>
 
                             <div class="zadni">
-                                <p>zadni</p>
+                                <p>výbornépodmínky pro tělesnou výchovu a sportovní činnist</p>
+                                <a href="">více informací</a>
                             </div>
                         </div>
                     </div>
@@ -120,11 +197,12 @@
                           <div class="karta">
                             <div class="predni">
                                 <img class="nabidka_ikona" src="obr/ikony/school.svg" width="50px">
-                                <p>spolupráce se školami ve Francii, Německu a Slovensku</p>
+                                
                             </div>
 
                             <div class="zadni">
-                                <p>zadni</p>
+                                <p>spolupráce se školami ve Francii, Německu a Slovensku</p>
+                                <a href="">více informací</a>
                             </div>
                         </div>
                     </div>
@@ -132,11 +210,12 @@
                           <div class="karta">
                             <div class="predni">
                                 <img class="nabidka_ikona" src="obr/ikony/blackboard.svg" width="50px">
-                                <p>výuku cizích jazyků ve skupinách rozdělených podle úrovně znalostí</p>
+                                
                             </div>
 
                             <div class="zadni">
-                                <p>zadni</p>
+                                <p>výuku cizích jazyků ve skupinách rozdělených podle úrovně znalostí</p>
+                                <a href="">více informací</a>
                             </div>
                         </div>
                     </div>
@@ -144,11 +223,12 @@
                          <div class="karta">
                             <div class="predni">
                                 <img class="nabidka_ikona" src="obr/ikony/panels.svg" width="50px">
-                                <p>profilaci studia prostřednictvím volitelných předmětů</p>
+                               
                             </div>
 
                             <div class="zadni">
-                                <p>zadni</p>
+                                <p>profilaci studia prostřednictvím volitelných předmětů</p>
+                                <a href="">více informací</a>
                             </div>
                         </div>
                     </div>
@@ -156,11 +236,12 @@
                         <div class="karta">
                                 <div class="predni">
                                     <img class="nabidka_ikona" src="obr/ikony/mortarboard.svg" width="50px">
-                                    <p>přípravu pro studium na všech typek vyšších odborných škol a vysokých škol</p>
+                                    
                                 </div>
 
                                 <div class="zadni">
-                                    <p>zadni</p>
+                                    <p>přípravu pro studium na všech typek vyšších odborných škol a vysokých škol</p>
+                                    <a href="">více informací</a>
                                 </div>
                         </div>
                     </div>
@@ -168,11 +249,12 @@
                           <div class="karta">
                             <div class="predni">
                                 <img class="nabidka_ikona" src="obr/ikony/two-test-tubes.svg" width="50px">
-                                <p>moderně vybavené specializované učebny, laboratoře a počítačové učebny</p>
+                                
                             </div>
 
                             <div class="zadni">
-                                <p>zadni</p>
+                                <p>moderně vybavené specializované učebny, laboratoře a počítačové učebny</p>
+                                <a href="">více informací</a>
                             </div>
                         </div>
                     </div>
@@ -180,11 +262,12 @@
                          <div class="karta">
                             <div class="predni">
                                 <img class="nabidka_ikona" src="obr/ikony/solution.svg" width="50px">
-                                <p>možnost bezplatného psychologického poradenství u školního psychologa</p>
+                                
                             </div>
 
                             <div class="zadni">
-                                <p>zadni</p>
+                                <p>možnost bezplatného psychologického poradenství u školního psychologa</p>
+                                <a href="">více informací</a>
                             </div>
                         </div>
                     </div>
@@ -192,11 +275,12 @@
                           <div class="karta">
                             <div class="predni">
                                 <img class="nabidka_ikona" src="obr/ikony/533356-entertainment.png" width="50px">
-                                <p>bohatou nabídku mimoškolních aktivit a kulturních, sportovních a počítačových kroužků</p>
+                               
                             </div>
 
                             <div class="zadni">
-                                <p>zadni</p>
+                                <p>mimoškolní aktivity a kulturní, sportovní a počítačové kroužky</p>
+                                <a href="">více informací</a>
                             </div>
                         </div>
                     </div>
@@ -204,11 +288,12 @@
                          <div class="karta">
                             <div class="predni">
                                 <img class="nabidka_ikona" src="obr/ikony/parlament.png" width="50px">
-                                <p>možnost aktivně se zapojit do fungování školy prostřednictvím studentského parlamentu</p>
+                                
                             </div>
 
                             <div class="zadni">
-                                <p>zadni</p>
+                                <p>možnost aktivně se zapojit do fungování školy prostřednictvím studentského parlamentu</p>
+                                <a href="">více informací</a>
                             </div>
                         </div>
                     </div>
@@ -237,7 +322,7 @@
                 </div>
             </div>
         </div>
-        <div id="outer_footer">
+        <div id="outer_footer" class="footer_index">
             <div id="footer">
             <h4>Kontakty</h4>
                 <img id="footer_logo" src="obr/logoskola-kruh.png">
