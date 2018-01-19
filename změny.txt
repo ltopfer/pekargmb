@@ -1,6 +1,13 @@
 změny v html vedlejších stránek:
 
   -změna menu
-  -h4 a h5 sjednoceno a přeměněno na h2
+  -h4 a h5 na h2 a h3
   (-položky menu přidat nedělitelné mezery, aby nebylo jedno slovo na druhém řádku)
   -změna patičky
+  -pro studenty: "podle zákona...." - kurzíva
+                  mezera před čáru
+  -odkazy???
+  -novinky: levy-sloupek-siroky na levy-sloupec-siroky-novinky
+            odebran nadpis "novinky - aktualní"
+            přidání id "cisla-stran-novinky"
+            cisla stran

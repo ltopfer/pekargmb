@@ -26,7 +26,7 @@
             var moveTime = 8;
             var timer = 0;
             var countTimer = true;
-            var novinky;
+            var novinky_index;
             var pocet = 0;
             var prvni = 0;
 
@@ -42,10 +42,10 @@
                     }
                 }, 1000);    
 
-                $(".novinka").mouseenter(function() {
+                $(".novinka_index").mouseenter(function() {
                     countTimer = false;
                 });
-                $(".novinka").mouseleave(function() {
+                $(".novinka_index").mouseleave(function() {
                     countTimer = true;
                 });
                 
@@ -61,8 +61,8 @@
             });
                 
                 function start() {
-                    novinky = $("#novinky").find(".novinka");
-                    pocet = novinky.length;
+                    novinky_index = $("#novinky_index").find(".novinka_index");
+                    pocet = novinky_index.length;
                     moveSlider(0);
                 }
                     
@@ -72,15 +72,15 @@
 
                     timer = 0;
                     
-                    $(novinky[cyklindex(prvni+0)]).removeClass().addClass("novinka n1");
-                    $(novinky[cyklindex(prvni+1)]).removeClass().addClass("novinka n2");
-                    $(novinky[cyklindex(prvni+2)]).removeClass().addClass("novinka n3");
+                    $(novinky_index[cyklindex(prvni+0)]).removeClass().addClass("novinka_index n1");
+                    $(novinky_index[cyklindex(prvni+1)]).removeClass().addClass("novinka_index n2");
+                    $(novinky_index[cyklindex(prvni+2)]).removeClass().addClass("novinka_index n3");
                     
                     for (i = 3; i < pocet - 1; i++)
                     {
-                        $(novinky[cyklindex(prvni+i)]).removeClass().addClass("novinka n4");
+                        $(novinky_index[cyklindex(prvni+i)]).removeClass().addClass("novinka_index n4");
                     }
-                    $(novinky[cyklindex(prvni+pocet-1)]).removeClass().addClass("novinka n0");
+                    $(novinky_index[cyklindex(prvni+pocet-1)]).removeClass().addClass("novinka_index n0");
                 }
             
             function cyklindex(index)
@@ -116,18 +116,18 @@
         </div>
         <span id="obrazek-pozadi">
         </span>
-        <div id="novinky">
+        <div id="novinky_index">
             <ul>
-                <li  class="novinka n1"><p>prvn</p><img src="obr/1200px-Budova_Gymn%C3%A1zia_Dr._Josefa_Peka%C5%99e.jpg"></li>
-                <li  class="novinka n2"><p>druh</p><img src="obr/logo%20%C5%A1kola.jpg"></li>
-                <li  class="novinka n3"><p>tret</p><img src="obr/logo%20%C5%A1kola.jpg"></li>
-                <li  class="novinka n4"><p>ctvr</p><img src="obr/logo%20%C5%A1kola.jpg"></li>
-                <li  class="novinka n4"><p>pata</p><img src="obr/logo%20%C5%A1kola.jpg"></li>
-                <li  class="novinka n4"><p>sest</p><img src="obr/logo%20%C5%A1kola.jpg"></li>
+                <li  class="novinka_index n1"><p>prvn</p><img src="obr/1200px-Budova_Gymn%C3%A1zia_Dr._Josefa_Peka%C5%99e.jpg"></li>
+                <li  class="novinka_index n2"><p>druh</p><img src="obr/logo%20%C5%A1kola.jpg"></li>
+                <li  class="novinka_index n3"><p>tret</p><img src="obr/logo%20%C5%A1kola.jpg"></li>
+                <li  class="novinka_index n4"><p>ctvr</p><img src="obr/logo%20%C5%A1kola.jpg"></li>
+                <li  class="novinka_index n4"><p>pata</p><img src="obr/logo%20%C5%A1kola.jpg"></li>
+                <li  class="novinka_index n4"><p>sest</p><img src="obr/logo%20%C5%A1kola.jpg"></li>
             </ul>
             <img src="obr/sipkal.png" id="sipkal">
             <img src="obr/sipkap.png" id="sipkap">
-            <div id="novinky_vic"><a href="">více novinek</a></div>
+            <div id="novinky_index_vic"><a href="">více novinek</a></div>
         </div>
         <div id="outer_page">
             <div id="page">
