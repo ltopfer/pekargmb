@@ -4,7 +4,7 @@ html { -webkit-font-smoothing: antialiased; }
 :root {
     --barva_hlavni: #fcbb23;
     --barva_pomocna: #fdd16d;
-    --barva_druha: #424452;
+    --barva_druha: #232a4e;    /*424452*/
     --barva_pozadí: #FFF;
     --barva_nadpis: #424452;
 }
@@ -536,7 +536,6 @@ a.tlacitkopodmenuakt {
 }
 #obsahova-cast h2{
     background: #FFF;
-    height: 30px;
     margin-bottom: 5px;
 }
 
@@ -608,22 +607,19 @@ a.tlacitkopodmenuakt {
     color: var(--barva-druha);
     font-weight: bold;
 }
-.obrvlevo {
-    float: left;
+.obrvlevo, .obrvpravo {
+    position: absolute;
     width: 50%;
-    height: 100%;
     border: none;
-    position: relative;
-    left: -100%;
-    
+    height: 100%;
+    background: url(obr/pozadi-novinka.jpg);
+    background-size: cover;
 }
-.obrvpravo {
-    float: left;
-    width: 50%;
-    height: 100%;
-    border: none;
+.obrvlevo img, .obrvpravo img{
     position: relative;
-    left: -100%;
+    top: 50%;
+    transform: translatey(-50%);
+    width: 100%;
 }
 .novinkazvyraznena {
     text-align: left;
@@ -631,6 +627,7 @@ a.tlacitkopodmenuakt {
     margin: auto;
 }
 .novinka, .polozka {
+    position: relative;
     text-align: left;
     vertical-align: top;
     margin: auto;
@@ -640,53 +637,45 @@ a.tlacitkopodmenuakt {
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
 }
 .textv-n-c {
+    margin-left: 50%;
     text-align: justify;
     vertical-align: top;
-    padding-left: 50%;
+    padding-left: 2%;
     padding-right: 10px;
     font: 100%;
 }
 .nadpisv-n-c, .nadpisvpolozce {
-    padding: 0px;
-    background: #fcbb23;
+    padding-top: 10px;
+    font-size: 1.25em;
+   /* background: #fcbb23; */
     color: var(--barva_druha);
-    border-bottom: 0px solid #fcbb23; 
     font-weight: bold;
+    padding-bottom: 5px;
+    margin-bottom: 7px;
+    text-align: center;
+    border-bottom: 2px solid #fcbb23;
 }
 .nadpis ,.prezdivka{
    border-bottom: 1px solid #DDD ;
 }
 
 .den-autor {
-    float: left;
-    vertical-align: bottom;
-    margin: auto;
-    border: none;
+    border-top: 1px solid #fcbb23;
+    margin-top: 5px;
+    padding-top: 4px;
     background: #FFF;
     width: auto;
-    padding-left: 50%
-
+    font-size: 0.9em;
+    text-align: left;
+    padding-bottom: 20px;
 
 }
-.tiskzpravy {
+.tiskzpravy, .tiskzpravyvlevo {
     float: right;
-    vertical-align: bottom;
-    margin: auto;
     border: none;
-    background: #FFF url(obr/tisk.gif) no-repeat left;
-    padding-left: 30px;
+    background: url(obr/tisk.gif) no-repeat left;
     padding-right: 10px;
     padding-top: 10px;
-    width: auto;
-}
-.tiskzpravyvlevo {
-    float: left;
-    vertical-align: bottom;
-    margin: auto;
-    border: none;
-    background: #FFF url(obr/tisk.gif) no-repeat left;
-    padding-left: 30px;
-    padding-right: 10px;
     width: auto;
 }
 
@@ -695,7 +684,7 @@ a.tlacitkopodmenuakt {
     vertical-align: bottom;
     margin: auto;
     border: none;
-    background: #FFF url(obr/pdefko.gif) no-repeat left;
+    background: url(obr/pdefko.gif) no-repeat left;
     padding-left: 40px;
     padding-right: 10px;
     width: auto;
@@ -717,20 +706,32 @@ a.tlacitkopodmenuakt {
 
 /*/////////*/
 /*tabulky*/
+a {
+    color: #0036AF;
+}
 table {
     font-family: sans-serif;
     font-size: 100%;
     margin: auto;
-
 }
-.tabklasik   {
-    border: 1px solid #DDD;
+.tabklasik tr:nth-child(even){
+    background-color: #ffffff;
+}
+.tabklasik tr:nth-child(odd){
+    background-color: #fff1d1;
 }
 .tabklasik  td {
-    background-color: #F1F3F5;
+    padding: 4px;
+}
+.tabklasik   a {
+    text-decoration: none;
 }
 .tabklasik  th {
-    background-color: #DDD;
+    background-color: #fcbb23;
+    text-align: left;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
 }
 .tabklasik .hlavicka {
     background-color: #DDD;
@@ -835,7 +836,7 @@ table {
 .skrolovatkomale {
     overflow: auto;
     width: 100%;
-    height: 70px;
+    height: 140px;
 }
 .nadpisv_n_ref {
     text-align: center;

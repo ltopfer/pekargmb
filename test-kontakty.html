@@ -1,0 +1,363 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+
+<html>
+
+<head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+
+<meta lang="cs" name="Description" content="Gymnázium Dr.J.Pekaře  Mladá Boleslav" >
+
+<meta lang="cs" name="Keywords" content="škola,výuka,žák,učitel" >
+
+<link rel="shortcut icon" href="http://www.pekargmb.cz/favicon.ico" type="image/x-icon" >
+
+
+
+<link href="stilhl-implic2.css" type="text/css" rel="stylesheet" >
+
+<title>Gymnázium Dr.J.Pekaře</title> 
+
+<script type="text/javascript" src="">
+</script> 
+</head>
+
+
+
+<body  class="celek" > 
+
+<div   id="stred">
+
+<div id="obrazeklogo"><div class="jazyky"><!-- <a href="http://www.pekargmb.cz/de_gympl/" class="tlacitkomenu_vl"><img src="http://www.pekargmb.cz/obr/de.gif" alt="de.gif, 1 kB" title="Deutsch" widtht="26" height="15" class="bezramecku"/></a> --><a href="http://www.pekargmb.cz/ang_gympl/" class="tlacitkomenu_vl"> <img src="http://www.pekargmb.cz/obr/en.gif" alt="uk.gif, 1 kB" title="English" widtht="26" height="15" class="bezramecku"/></a> </div><!-- jazyky -->   
+
+</div><!--  obrázek logo --> 
+
+<div id="textmenu"><a href="http://www.pekargmb.cz/index.php" class="tlacitkomenu" title="Domů">Domů</a><a href="http://www.pekargmb.cz/organizace_studia/skolni_rad.php" class="tlacitkomenu" title="Pro studenty"><span class="zvyraznivmenu">Pro studenty</span></a><a href="http://www.pekargmb.cz/verejnost/prijimacky.php" class="tlacitkomenu" title="Pro veřejnost, rodiče a uchazeče o studium"><span class="zvyraznivmenu">Pro veřejnost</span></a><a href="http://www.pekargmb.cz/proucitele/plan_akci.php" class="tlacitkomenu" title="Pro učitele"><span class="zvyraznivmenu">Pro učitele</span></a><a href="http://www.pekargmb.cz/gympl_novinky/gympl_novinky.php" class="tlacitkomenu" title="Novinky">Novinky</a><a href="http://www.pekargmb.cz/gympl_ucitele/gympl_ucitele.php" class="tlacmenuakt" title="Kontakty">Kontakty</a><a href="http://www.pekargmb.cz/dokumentace/skolni_rad.php" class="tlacitkomenu" title="Dokumenty, plány, školní řád a žádosti">Dokumenty</a><a href="http://www.pekargmb.cz/projekty/podpora.php" class="tlacitkomenu" title="Projekty">Projekty</a><a href="http://www.pekargmb.cz/fotogalerie_nova/fotogalerie_nova.php" class="tlacitkomenu" title="Fotogalerie">Fotogalerie</a><a href="http://www.facebook.com/pekargmb" onclick="return !window.open(this.href)"  class="tlacitkomenu">
+<span class="zvyraznivmenuface">Facebook</span>
+</a> <a href="http://www.pekargmb.cz/pro_vyhledavani/pro_vyhledavani.php"> <img src="http://www.pekargmb.cz/obr/11.gif" alt="Vyhledávání" title="Vyhledávání"   class="vyhledavat"> </a>  
+</div> 
+
+
+<div id="obsahova-cast">
+
+
+
+
+
+
+
+<script src="hlidac.js" type="text/javascript"></script> 
+<div id="pravy-sloupec-uzky">
+<div class="podmenu">
+<h2> Kontakty </h2>
+<a href="telefon.php?prohlizeno=telefon " class="tlacitkopodmenu">Telefonní linky</a><a href="mapa.php?prohlizeno=mapa " class="tlacitkopodmenu">Poloha školy na mapě</a>
+    
+<a href="../gympl_psycholog/gympl_psycholog.php " class="tlacitkopodmenu">Školní psycholog</a>
+<a href="../gympl_poradce/gympl_poradce.php " class="tlacitkopodmenu">Výchovný poradce</a>  
+
+    <h2> Kategorie zaměstnanců </h2>
+
+<a href="gympl_ucitele.php?sloupec=kategorie&amp;hodnotasloupce=učitelé  " class="tlacitkopodmenu"> Učitelé</a>
+<a href="gympl_ucitele.php?sloupec=kategorie&amp;hodnotasloupce=thp pracovníci " class="tlacitkopodmenu"> THP pracovníci</a>
+<a href="gympl_ucitele.php?sloupec=kategorie&amp;hodnotasloupce=správní zaměstnanci " class="tlacitkopodmenu"> Správní zaměstnaneci</a>
+<a href="gympl_ucitele.php?sloupec=kategorie&amp;hodnotasloupce=hala " class="tlacitkopodmenu"> Hala</a>
+<a href="gympl_ucitele.php?sloupec=kategorie&amp;hodnotasloupce=jídelna " class="tlacitkopodmenu"> Jídelna</a>
+<a href="gympl_ucitele.php?prohlizeno=celyseznam&amp;zobr= " class="tlacitkopodmenu">Seznam všech zaměstnanců </a> 
+
+
+<br />
+<h2> Zaměstnanci školy </h2>  
+
+<div class="centrovano">
+<form enctype="multipart/form-data" action="gympl_ucitele.php" method="post" name="f">
+<table border="0"  class="centrovano" >
+<tr><td >
+<input onclick="document.f.prijmeni.value = ''" onkeypress=testznak(this) onkeyup=testznak(this) type="text" size="10" name="prijmeni" value="příjmení"  /></td>
+
+
+
+<td   class="centrovano"  >                
+
+<input type="hidden" name="sloup" value="prijmeni" />
+<!--
+<input type="hidden" name="akcehledat" value="filtrovat" />
+-->
+<input     type="image" src="../obr/1.gif" align="middle" value="vyhledat" name="hledani">
+<input type="hidden" value="vyhledat" name="hledani"  />  
+
+</td></tr>
+</table>
+</form>
+</div> <!--     centrováno    -->
+<div class="skrolovatkomale"><a href="gympl_ucitele.php?zobr=3" class="tlacitkopodmenu"   > Balažíková  Jiřina   Mgr. </a> <a href="gympl_ucitele.php?zobr=4" class="tlacitkopodmenu"   > Bárta  Petr   Mgr. </a> <a href="gympl_ucitele.php?zobr=5" class="tlacitkopodmenu"   > Bártová  Jindra   PaedDr. </a> <a href="gympl_ucitele.php?zobr=7" class="tlacitkopodmenu"   > Boubínová  Ludmila   Mgr. </a> <a href="gympl_ucitele.php?zobr=134" class="tlacitkopodmenu"   > Brynych Miroslav  Mgr. </a> <a href="gympl_ucitele.php?zobr=8" class="tlacitkopodmenu"   > Budínová  Alena   PaedDr. </a> <a href="gympl_ucitele.php?zobr=135" class="tlacitkopodmenu"   > Crookston Iva  MA. </a> <a href="gympl_ucitele.php?zobr=109" class="tlacitkopodmenu"   > Cymorková Dana  Mgr. </a> <a href="gympl_ucitele.php?zobr=132" class="tlacitkopodmenu"   > Černá Lucie   </a> <a href="gympl_ucitele.php?zobr=121" class="tlacitkopodmenu"   > Červený Jan   </a> <a href="gympl_ucitele.php?zobr=114" class="tlacitkopodmenu"   > Dostál Petr  Mgr. </a> <a href="gympl_ucitele.php?zobr=108" class="tlacitkopodmenu"   > Dostálová Markéta  Mgr. </a> <a href="gympl_ucitele.php?zobr=66" class="tlacitkopodmenu"   > Drábková Miroslava  Mgr. </a> <a href="gympl_ucitele.php?zobr=126" class="tlacitkopodmenu"   > Duňková Hana   </a> <a href="gympl_ucitele.php?zobr=6" class="tlacitkopodmenu"   > Fialová  Monika   PaedDr. </a> <a href="gympl_ucitele.php?zobr=78" class="tlacitkopodmenu"   > Flídrová Jana   </a> <a href="gympl_ucitele.php?zobr=65" class="tlacitkopodmenu"   > Fořtová Pavla  Mgr. </a> <a href="gympl_ucitele.php?zobr=140" class="tlacitkopodmenu"   > Fousková Martina  Mgr. </a> <a href="gympl_ucitele.php?zobr=129" class="tlacitkopodmenu"   > Futtera Ladislav  PhDr. </a> <a href="gympl_ucitele.php?zobr=59" class="tlacitkopodmenu"   > Hanzlíková  Jitka   </a> <a href="gympl_ucitele.php?zobr=120" class="tlacitkopodmenu"   > Havlová Eva   </a> <a href="gympl_ucitele.php?zobr=133" class="tlacitkopodmenu"   > Hluchá Iva  Mgr. </a> <a href="gympl_ucitele.php?zobr=93" class="tlacitkopodmenu"   > Hluchý Jan  Mgr. </a> <a href="gympl_ucitele.php?zobr=13" class="tlacitkopodmenu"   > Holubářová  Hana   Mgr. </a> <a href="gympl_ucitele.php?zobr=14" class="tlacitkopodmenu"   > Hošek  Petr   Mgr. </a> <a href="gympl_ucitele.php?zobr=15" class="tlacitkopodmenu"   > Hrdličková  Lenka   Mgr. </a> <a href="gympl_ucitele.php?zobr=127" class="tlacitkopodmenu"   > Jágr Martin  Mgr. </a> <a href="gympl_ucitele.php?zobr=124" class="tlacitkopodmenu"   > Janečková Věra  Mgr. </a> <a href="gympl_ucitele.php?zobr=116" class="tlacitkopodmenu"   > Jaramillo Acosta  Elizabeth         Bc. </a> <a href="gympl_ucitele.php?zobr=101" class="tlacitkopodmenu"   > Juriga Richard  Mgr. </a> <a href="gympl_ucitele.php?zobr=19" class="tlacitkopodmenu"   > Klatovská  Veronika   Mgr. </a> <a href="gympl_ucitele.php?zobr=123" class="tlacitkopodmenu"   > Knesplová Zuzana  PhDr. </a> <a href="gympl_ucitele.php?zobr=137" class="tlacitkopodmenu"   > Kovářová Anna  Mgr. </a> <a href="gympl_ucitele.php?zobr=141" class="tlacitkopodmenu"   > Kovářová Anna  Mgr. </a> <a href="gympl_ucitele.php?zobr=125" class="tlacitkopodmenu"   > Kozubová Alena  Mgr. </a> <a href="gympl_ucitele.php?zobr=138" class="tlacitkopodmenu"   > Král Milan  Mgr. </a> <a href="gympl_ucitele.php?zobr=61" class="tlacitkopodmenu"   > Krautwurstová Věra   </a> <a href="gympl_ucitele.php?zobr=83" class="tlacitkopodmenu"   > Kudra Jaromír  Mgr. </a> <a href="gympl_ucitele.php?zobr=20" class="tlacitkopodmenu"   > Kuhnová  Zdeňka   PaedDr. </a> <a href="gympl_ucitele.php?zobr=21" class="tlacitkopodmenu"   > Kuchaříková  Dana   Ing. </a> <a href="gympl_ucitele.php?zobr=122" class="tlacitkopodmenu"   > Macounová Ludmila   </a> <a href="gympl_ucitele.php?zobr=112" class="tlacitkopodmenu"   > Maršounová Jana  Mgr. </a> <a href="gympl_ucitele.php?zobr=91" class="tlacitkopodmenu"   > Mašková Petra   </a> <a href="gympl_ucitele.php?zobr=117" class="tlacitkopodmenu"   > Matějcová Marta   </a> <a href="gympl_ucitele.php?zobr=104" class="tlacitkopodmenu"   > Mikulecká Libuše  Mgr. </a> <a href="gympl_ucitele.php?zobr=23" class="tlacitkopodmenu"   > Mulačová  Jarmila   RNDr. </a> <a href="gympl_ucitele.php?zobr=99" class="tlacitkopodmenu"   > Neuhäuserová Zuzana  Mgr. </a> <a href="gympl_ucitele.php?zobr=85" class="tlacitkopodmenu"   > Nováková Jarmila  Mgr. </a> <a href="gympl_ucitele.php?zobr=27" class="tlacitkopodmenu"   > Patočková  Dana   Mgr. </a> <a href="gympl_ucitele.php?zobr=48" class="tlacitkopodmenu"   > Pilař Jiří   </a> <a href="gympl_ucitele.php?zobr=62" class="tlacitkopodmenu"   > Pilařová Gražyna   </a> <a href="gympl_ucitele.php?zobr=46" class="tlacitkopodmenu"   > Pražáková Marta   </a> <a href="gympl_ucitele.php?zobr=110" class="tlacitkopodmenu"   > Přibík Daniel  Mgr. </a> <a href="gympl_ucitele.php?zobr=52" class="tlacitkopodmenu"   > Reichardová Marie   </a> <a href="gympl_ucitele.php?zobr=80" class="tlacitkopodmenu"   > Robertson  R. J.   </a> <a href="gympl_ucitele.php?zobr=30" class="tlacitkopodmenu"   > Sobotková  Jana   Mgr. </a> <a href="gympl_ucitele.php?zobr=106" class="tlacitkopodmenu"   > Svobodová Renata   </a> <a href="gympl_ucitele.php?zobr=33" class="tlacitkopodmenu"   > Šindelková  Yvonna   Mgr. </a> <a href="gympl_ucitele.php?zobr=143" class="tlacitkopodmenu"   > Šlapáková Michaela  Mgr. </a> <a href="gympl_ucitele.php?zobr=94" class="tlacitkopodmenu"   > Šourek Zdeněk  Mgr. </a> <a href="gympl_ucitele.php?zobr=79" class="tlacitkopodmenu"   > Techlovská Zdeňka   </a> <a href="gympl_ucitele.php?zobr=55" class="tlacitkopodmenu"   > Tiefenbachová Alice   </a> <a href="gympl_ucitele.php?zobr=35" class="tlacitkopodmenu"   > Toužimská Jana  Mgr. </a> <a href="gympl_ucitele.php?zobr=64" class="tlacitkopodmenu"   > Trnková Věra   </a> <a href="gympl_ucitele.php?zobr=36" class="tlacitkopodmenu"   > Tumajer František   </a> <a href="gympl_ucitele.php?zobr=130" class="tlacitkopodmenu"   > Tumajer Petr  Ing. </a> <a href="gympl_ucitele.php?zobr=88" class="tlacitkopodmenu"   > Tumajerová Stanislava   </a> <a href="gympl_ucitele.php?zobr=139" class="tlacitkopodmenu"   > Václavíková Lenka  Mgr. </a> <a href="gympl_ucitele.php?zobr=58" class="tlacitkopodmenu"   > Včelišová  Eva   </a> <a href="gympl_ucitele.php?zobr=37" class="tlacitkopodmenu"   > Voborová  Věra   Mgr. </a> <a href="gympl_ucitele.php?zobr=38" class="tlacitkopodmenu"   > Volf Vlastimil   </a> <a href="gympl_ucitele.php?zobr=16" class="tlacitkopodmenu"   > Volfová  Dana   Mgr. </a> <a href="gympl_ucitele.php?zobr=47" class="tlacitkopodmenu"   > Voničková Lenka   </a> <a href="gympl_ucitele.php?zobr=111" class="tlacitkopodmenu"   > Weissová Kristýna  Mgr. </a>  </div>  <!-- skrolovatkomale  -->
+<br /><br />
+
+
+</div>  <!-- ppodmenu  --> 
+<div class="centrovano">
+<br />
+<img src="../foto_skola/schody_3.jpg" alt="foto" />
+<br />
+</div>     
+</div>  <!-- pravy sloupec uzky  --> 
+
+<div id="levy-sloupec-siroky"> 
+
+
+
+
+
+
+
+
+
+
+<h4> Seznam zaměstnanců   </h4><div class="centrovano">                                            
+<table class="tabklasik" cellspacing=0  width="100%" border=0>
+<tr><th>Jméno </th><th>Aprobace</th> <th>Email </th><th>Telefon </th></tr><tr><td> <a name="3"> </a>
+<a href=" gympl_ucitele.php?zobr=3&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Balažíková</span> <span class="jmeno">  Jiřina</span> <span class="titul">  Mgr.</span></a></td>
+<td>M Fy </td> <td> <a href="mailto:balazikova@pekargmb.cz" class="email" > balazikova@pekargmb.cz </a> </td><td>326375954</td> 
+</tr><tr><td> <a name="4"> </a>
+<a href=" gympl_ucitele.php?zobr=4&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Bárta</span> <span class="jmeno">  Petr</span> <span class="titul">  Mgr.</span></a></td>
+<td>Ze Tv </td> <td> <a href="mailto:barta@pekargmb.cz" class="email" > barta@pekargmb.cz </a> </td><td>326375964</td> 
+</tr><tr><td> <a name="5"> </a>
+<a href=" gympl_ucitele.php?zobr=5&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Bártová</span> <span class="jmeno">  Jindra</span> <span class="titul">  PaedDr.</span></a></td>
+<td>Čj Tv </td> <td> <a href="mailto:bartova@pekargmb.cz" class="email" > bartova@pekargmb.cz </a> </td><td>326375963</td> 
+</tr><tr><td> <a name="7"> </a>
+<a href=" gympl_ucitele.php?zobr=7&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Boubínová</span> <span class="jmeno">  Ludmila</span> <span class="titul">  Mgr.</span></a></td>
+<td>Ch Bi </td> <td> <a href="mailto:boubinova@pekargmb.cz" class="email" > boubinova@pekargmb.cz </a> </td><td>326375965</td> 
+</tr><tr><td> <a name="134"> </a>
+<a href=" gympl_ucitele.php?zobr=134&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Brynych</span> <span class="jmeno"> Miroslav</span> <span class="titul"> Mgr.</span></a></td>
+<td>Fy, Ma </td> <td> <a href="mailto:brynych@pekargmb.cz" class="email" > brynych@pekargmb.cz </a> </td><td>326375968</td> 
+</tr><tr><td> <a name="8"> </a>
+<a href=" gympl_ucitele.php?zobr=8&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Budínová</span> <span class="jmeno">  Alena</span> <span class="titul">  PaedDr.</span></a></td>
+<td>On Tv </td> <td> <a href="mailto:budinova@pekargmb.cz" class="email" > budinova@pekargmb.cz </a> </td><td>326375953</td> 
+</tr><tr><td> <a name="135"> </a>
+<a href=" gympl_ucitele.php?zobr=135&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Crookston</span> <span class="jmeno"> Iva</span> <span class="titul"> MA.</span></a></td>
+<td>Aj </td> <td> <a href="mailto:crookston@pekargmb.cz" class="email" > crookston@pekargmb.cz </a> </td><td>326375958</td> 
+</tr><tr><td> <a name="109"> </a>
+<a href=" gympl_ucitele.php?zobr=109&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Cymorková</span> <span class="jmeno"> Dana</span> <span class="titul"> Mgr.</span></a></td>
+<td>Fy Ma </td> <td> <a href="mailto:cymorkova@pekargmb.cz" class="email" > cymorkova@pekargmb.cz </a> </td><td>326375968</td> 
+</tr><tr><td> <a name="132"> </a>
+<a href=" gympl_ucitele.php?zobr=132&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Černá</span> <span class="jmeno"> Lucie</span> <span class="titul"> </span></a></td>
+<td>Šj, Fj </td> <td> <a href="mailto:cerna@pekargmb.cz" class="email" > cerna@pekargmb.cz </a> </td><td>326375969</td> 
+</tr><tr><td> <a name="121"> </a>
+<a href=" gympl_ucitele.php?zobr=121&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Červený</span> <span class="jmeno"> Jan</span> <span class="titul"> </span></a></td>
+<td>správce haly </td> <td> <a href="mailto:pekargmb@pekargmb.cz" class="email" > pekargmb@pekargmb.cz </a> </td><td></td> 
+</tr><tr><td> <a name="114"> </a>
+<a href=" gympl_ucitele.php?zobr=114&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Dostál</span> <span class="jmeno"> Petr</span> <span class="titul"> Mgr.</span></a></td>
+<td>Čj - Sv </td> <td> <a href="mailto:dostal.petr@pekargmb.cz" class="email" > dostal.petr@pekargmb.cz </a> </td><td>326375953</td> 
+</tr><tr><td> <a name="108"> </a>
+<a href=" gympl_ucitele.php?zobr=108&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Dostálová</span> <span class="jmeno"> Markéta</span> <span class="titul"> Mgr.</span></a></td>
+<td>Bi  Fj </td> <td> <a href="mailto:dostalova@pekargmb.cz" class="email" > dostalova@pekargmb.cz </a> </td><td>326375969</td> 
+</tr><tr><td> <a name="66"> </a>
+<a href=" gympl_ucitele.php?zobr=66&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Drábková</span> <span class="jmeno"> Miroslava</span> <span class="titul"> Mgr.</span></a></td>
+<td>Ch, Bi, Nj </td> <td> <a href="mailto:drabkova@pekargmb.cz" class="email" > drabkova@pekargmb.cz </a> </td><td>326375965</td> 
+</tr><tr><td> <a name="126"> </a>
+<a href=" gympl_ucitele.php?zobr=126&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Duňková</span> <span class="jmeno"> Hana</span> <span class="titul"> </span></a></td>
+<td>hospodářka </td> <td> <a href="mailto:dunkova@pekargmb.cz" class="email" > dunkova@pekargmb.cz </a> </td><td>326375952</td> 
+</tr><tr><td> <a name="6"> </a>
+<a href=" gympl_ucitele.php?zobr=6&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Fialová</span> <span class="jmeno">  Monika</span> <span class="titul">  PaedDr.</span></a></td>
+<td>M Bv Iv </td> <td> <a href="mailto:fialova@pekargmb.cz" class="email" > fialova@pekargmb.cz </a> </td><td>326375968</td> 
+</tr><tr><td> <a name="78"> </a>
+<a href=" gympl_ucitele.php?zobr=78&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Flídrová</span> <span class="jmeno"> Jana</span> <span class="titul"> </span></a></td>
+<td>kuchařka </td> <td> <a href="mailto:pekargmb@pekargmb.cz" class="email" > pekargmb@pekargmb.cz </a> </td><td></td> 
+</tr><tr><td> <a name="65"> </a>
+<a href=" gympl_ucitele.php?zobr=65&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Fořtová</span> <span class="jmeno"> Pavla</span> <span class="titul"> Mgr.</span></a></td>
+<td>TV </td> <td> <a href="mailto:fortova@pekargmb.cz" class="email" > fortova@pekargmb.cz </a> </td><td>326375963</td> 
+</tr><tr><td> <a name="140"> </a>
+<a href=" gympl_ucitele.php?zobr=140&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Fousková</span> <span class="jmeno"> Martina</span> <span class="titul"> Mgr.</span></a></td>
+<td>Aj </td> <td> <a href="mailto:fouskova@pekargmb.cz" class="email" > fouskova@pekargmb.cz </a> </td><td>326375958</td> 
+</tr><tr><td> <a name="129"> </a>
+<a href=" gympl_ucitele.php?zobr=129&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Futtera</span> <span class="jmeno"> Ladislav</span> <span class="titul"> PhDr.</span></a></td>
+<td>Čj, De, Nj </td> <td> <a href="mailto:futtera@pekargmb.cz" class="email" > futtera@pekargmb.cz </a> </td><td>326375966</td> 
+</tr><tr><td> <a name="59"> </a>
+<a href=" gympl_ucitele.php?zobr=59&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Hanzlíková</span> <span class="jmeno">  Jitka</span> <span class="titul"> </span></a></td>
+<td>kuchařka </td> <td> <a href="mailto:pekargmb@pekargmb.cz" class="email" > pekargmb@pekargmb.cz </a> </td><td></td> 
+</tr><tr><td> <a name="120"> </a>
+<a href=" gympl_ucitele.php?zobr=120&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Havlová</span> <span class="jmeno"> Eva</span> <span class="titul"> </span></a></td>
+<td>kuchařka </td> <td> <a href="mailto:pekargmb@pekargmb.cz" class="email" > pekargmb@pekargmb.cz </a> </td><td></td> 
+</tr><tr><td> <a name="133"> </a>
+<a href=" gympl_ucitele.php?zobr=133&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Hluchá</span> <span class="jmeno"> Iva</span> <span class="titul"> Mgr.</span></a></td>
+<td>Aj, Tv </td> <td> <a href="mailto:hlucha@pekargmb.cz" class="email" > hlucha@pekargmb.cz </a> </td><td>  326375954 </td> 
+</tr><tr><td> <a name="93"> </a>
+<a href=" gympl_ucitele.php?zobr=93&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Hluchý</span> <span class="jmeno"> Jan</span> <span class="titul"> Mgr.</span></a></td>
+<td>Aj, Tv, Ze </td> <td> <a href="mailto:hluchy@pekargmb.cz" class="email" > hluchy@pekargmb.cz </a> </td><td>326375956</td> 
+</tr><tr><td> <a name="13"> </a>
+<a href=" gympl_ucitele.php?zobr=13&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Holubářová</span> <span class="jmeno">  Hana</span> <span class="titul">  Mgr.</span></a></td>
+<td>Ch Fy </td> <td> <a href="mailto:holubarova@pekargmb.cz" class="email" > holubarova@pekargmb.cz </a> </td><td>326375973</td> 
+</tr><tr><td> <a name="14"> </a>
+<a href=" gympl_ucitele.php?zobr=14&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Hošek</span> <span class="jmeno">  Petr</span> <span class="titul">  Mgr.</span></a></td>
+<td>Sv Vv </td> <td> <a href="mailto:hosek@pekargmb.cz" class="email" > hosek@pekargmb.cz </a> </td><td>326375967</td> 
+</tr><tr><td> <a name="15"> </a>
+<a href=" gympl_ucitele.php?zobr=15&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Hrdličková</span> <span class="jmeno">  Lenka</span> <span class="titul">  Mgr.</span></a></td>
+<td>Nj, Tv </td> <td> <a href="mailto:hrdlickova@pekargmb.cz" class="email" > hrdlickova@pekargmb.cz </a> </td><td>326375963</td> 
+</tr><tr><td> <a name="127"> </a>
+<a href=" gympl_ucitele.php?zobr=127&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Jágr</span> <span class="jmeno"> Martin</span> <span class="titul"> Mgr.</span></a></td>
+<td>Aj </td> <td> <a href="mailto:jagr@pekargmb.cz" class="email" > jagr@pekargmb.cz </a> </td><td>326375957 </td> 
+</tr><tr><td> <a name="124"> </a>
+<a href=" gympl_ucitele.php?zobr=124&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Janečková</span> <span class="jmeno"> Věra</span> <span class="titul"> Mgr.</span></a></td>
+<td>Aj, Čj, Fj </td> <td> <a href="mailto:janeckova@pekargmb.cz" class="email" > janeckova@pekargmb.cz </a> </td><td>326375956 </td> 
+</tr><tr><td> <a name="116"> </a>
+<a href=" gympl_ucitele.php?zobr=116&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Jaramillo Acosta </span> <span class="jmeno"> Elizabeth       </span> <span class="titul"> Bc.</span></a></td>
+<td>Šj </td> <td> <a href="mailto:jaramillo@pekargmb.cz" class="email" > jaramillo@pekargmb.cz </a> </td><td></td> 
+</tr><tr><td> <a name="101"> </a>
+<a href=" gympl_ucitele.php?zobr=101&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Juriga</span> <span class="jmeno"> Richard</span> <span class="titul"> Mgr.</span></a></td>
+<td>Čj - Dě </td> <td> <a href="mailto:juriga@pekargmb.cz" class="email" > juriga@pekargmb.cz </a> </td><td>326375956</td> 
+</tr><tr><td> <a name="19"> </a>
+<a href=" gympl_ucitele.php?zobr=19&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Klatovská</span> <span class="jmeno">  Veronika</span> <span class="titul">  Mgr.</span></a></td>
+<td>Tv Ze </td> <td> <a href="mailto:klatovska@pekargmb.cz" class="email" > klatovska@pekargmb.cz </a> </td><td>326375963</td> 
+</tr><tr><td> <a name="123"> </a>
+<a href=" gympl_ucitele.php?zobr=123&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Knesplová</span> <span class="jmeno"> Zuzana</span> <span class="titul"> PhDr.</span></a></td>
+<td>školní psycholog </td> <td> <a href="mailto:knesplova@pekargmb.cz" class="email" > knesplova@pekargmb.cz </a> </td><td>326 375 950</td> 
+</tr><tr><td> <a name="137"> </a>
+<a href=" gympl_ucitele.php?zobr=137&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Kovářová</span> <span class="jmeno"> Anna</span> <span class="titul"> Mgr.</span></a></td>
+<td>Ma </td> <td> <a href="mailto:pekargmb@pekargmb.cz" class="email" > pekargmb@pekargmb.cz </a> </td><td></td> 
+</tr><tr><td> <a name="141"> </a>
+<a href=" gympl_ucitele.php?zobr=141&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Kovářová</span> <span class="jmeno"> Anna</span> <span class="titul"> Mgr.</span></a></td>
+<td>Deg (Ma) </td> <td> <a href="mailto:kovarova@pekargmb.cz" class="email" > kovarova@pekargmb.cz </a> </td><td>326375968</td> 
+</tr><tr><td> <a name="125"> </a>
+<a href=" gympl_ucitele.php?zobr=125&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Kozubová</span> <span class="jmeno"> Alena</span> <span class="titul"> Mgr.</span></a></td>
+<td>VEK </td> <td> <a href="mailto:pekargmb@pekargmb.cz" class="email" > pekargmb@pekargmb.cz </a> </td><td></td> 
+</tr><tr><td> <a name="138"> </a>
+<a href=" gympl_ucitele.php?zobr=138&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Král</span> <span class="jmeno"> Milan</span> <span class="titul"> Mgr.</span></a></td>
+<td>Nj </td> <td> <a href="mailto:kral@pekargmb.cz" class="email" > kral@pekargmb.cz </a> </td><td>326375966</td> 
+</tr><tr><td> <a name="61"> </a>
+<a href=" gympl_ucitele.php?zobr=61&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Krautwurstová</span> <span class="jmeno"> Věra</span> <span class="titul"> </span></a></td>
+<td>kuchařka </td> <td> <a href="mailto:pekargmb@pekargmb.cz" class="email" > pekargmb@pekargmb.cz </a> </td><td></td> 
+</tr><tr><td> <a name="83"> </a>
+<a href=" gympl_ucitele.php?zobr=83&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Kudra</span> <span class="jmeno"> Jaromír</span> <span class="titul"> Mgr.</span></a></td>
+<td>Tv, Ze </td> <td> <a href="mailto:kudra@pekargmb.cz" class="email" > kudra@pekargmb.cz </a> </td><td>326375964</td> 
+</tr><tr><td> <a name="20"> </a>
+<a href=" gympl_ucitele.php?zobr=20&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Kuhnová</span> <span class="jmeno">  Zdeňka</span> <span class="titul">  PaedDr.</span></a></td>
+<td>Rj Hv Ev </td> <td> <a href="mailto:kuhnova@pekargmb.cz" class="email" > kuhnova@pekargmb.cz </a> </td><td>326375967</td> 
+</tr><tr><td> <a name="21"> </a>
+<a href=" gympl_ucitele.php?zobr=21&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Kuchaříková</span> <span class="jmeno">  Dana</span> <span class="titul">  Ing.</span></a></td>
+<td>Fy Ch </td> <td> <a href="mailto:kucharikova@pekargmb.cz" class="email" > kucharikova@pekargmb.cz </a> </td><td>326375973</td> 
+</tr><tr><td> <a name="122"> </a>
+<a href=" gympl_ucitele.php?zobr=122&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Macounová</span> <span class="jmeno"> Ludmila</span> <span class="titul"> </span></a></td>
+<td>úklid </td> <td> <a href="mailto:pekargmb@pekargmb.cz" class="email" > pekargmb@pekargmb.cz </a> </td><td></td> 
+</tr><tr><td> <a name="112"> </a>
+<a href=" gympl_ucitele.php?zobr=112&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Maršounová</span> <span class="jmeno"> Jana</span> <span class="titul"> Mgr.</span></a></td>
+<td>Bi, Ze </td> <td> <a href="mailto:marsounova@pekargmb.cz" class="email" > marsounova@pekargmb.cz </a> </td><td>326375965</td> 
+</tr><tr><td> <a name="91"> </a>
+<a href=" gympl_ucitele.php?zobr=91&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Mašková</span> <span class="jmeno"> Petra</span> <span class="titul"> </span></a></td>
+<td>úklid </td> <td> <a href="mailto:pekargmb@pekargmb.cz" class="email" > pekargmb@pekargmb.cz </a> </td><td></td> 
+</tr><tr><td> <a name="117"> </a>
+<a href=" gympl_ucitele.php?zobr=117&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Matějcová</span> <span class="jmeno"> Marta</span> <span class="titul"> </span></a></td>
+<td>účetní  </td> <td> <a href="mailto:matejcova@pekargmb.cz" class="email" > matejcova@pekargmb.cz </a> </td><td>326375952 </td> 
+</tr><tr><td> <a name="104"> </a>
+<a href=" gympl_ucitele.php?zobr=104&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Mikulecká</span> <span class="jmeno"> Libuše</span> <span class="titul"> Mgr.</span></a></td>
+<td>Čj - Sv </td> <td> <a href="mailto:mikulecka@pekargmb.cz" class="email" > mikulecka@pekargmb.cz </a> </td><td>326375956</td> 
+</tr><tr><td> <a name="23"> </a>
+<a href=" gympl_ucitele.php?zobr=23&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Mulačová</span> <span class="jmeno">  Jarmila</span> <span class="titul">  RNDr.</span></a></td>
+<td>Ma Fy </td> <td> <a href="mailto:mulacova@pekargmb.cz" class="email" > mulacova@pekargmb.cz </a> </td><td>326375968</td> 
+</tr><tr><td> <a name="99"> </a>
+<a href=" gympl_ucitele.php?zobr=99&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Neuhäuserová</span> <span class="jmeno"> Zuzana</span> <span class="titul"> Mgr.</span></a></td>
+<td>Bi, Tv </td> <td> <a href="mailto:Neuhauserova@pekargmb.cz" class="email" > Neuhauserova@pekargmb.cz </a> </td><td>326375965</td> 
+</tr><tr><td> <a name="85"> </a>
+<a href=" gympl_ucitele.php?zobr=85&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Nováková</span> <span class="jmeno"> Jarmila</span> <span class="titul"> Mgr.</span></a></td>
+<td>Vv </td> <td> <a href="mailto:novakova.j@pekargmb.cz" class="email" > novakova.j@pekargmb.cz </a> </td><td>326375967</td> 
+</tr><tr><td> <a name="27"> </a>
+<a href=" gympl_ucitele.php?zobr=27&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Patočková</span> <span class="jmeno">  Dana</span> <span class="titul">  Mgr.</span></a></td>
+<td>Čj Sv </td> <td> <a href="mailto:patockova@pekargmb.cz" class="email" > patockova@pekargmb.cz </a> </td><td>326375957</td> 
+</tr><tr><td> <a name="48"> </a>
+<a href=" gympl_ucitele.php?zobr=48&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Pilař</span> <span class="jmeno"> Jiří</span> <span class="titul"> </span></a></td>
+<td>školník </td> <td> <a href="mailto:pekargmb@pekargmb.cz" class="email" > pekargmb@pekargmb.cz </a> </td><td></td> 
+</tr><tr><td> <a name="62"> </a>
+<a href=" gympl_ucitele.php?zobr=62&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Pilařová</span> <span class="jmeno"> Gražyna</span> <span class="titul"> </span></a></td>
+<td>kuchařka </td> <td> <a href="mailto:pekargmb@pekargmb.cz" class="email" > pekargmb@pekargmb.cz </a> </td><td></td> 
+</tr><tr><td> <a name="46"> </a>
+<a href=" gympl_ucitele.php?zobr=46&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Pražáková</span> <span class="jmeno"> Marta</span> <span class="titul"> </span></a></td>
+<td>knihovnice </td> <td> <a href="mailto:prazakova@pekargmb.cz" class="email" > prazakova@pekargmb.cz </a> </td><td>326375961</td> 
+</tr><tr><td> <a name="110"> </a>
+<a href=" gympl_ucitele.php?zobr=110&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Přibík</span> <span class="jmeno"> Daniel</span> <span class="titul"> Mgr.</span></a></td>
+<td>Fy Ma </td> <td> <a href="mailto:pribik@pekargmb.cz" class="email" > pribik@pekargmb.cz </a> </td><td>326375954</td> 
+</tr><tr><td> <a name="52"> </a>
+<a href=" gympl_ucitele.php?zobr=52&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Reichardová</span> <span class="jmeno"> Marie</span> <span class="titul"> </span></a></td>
+<td>úklid </td> <td> <a href="mailto:pekargmb@pekargmb.cz" class="email" > pekargmb@pekargmb.cz </a> </td><td></td> 
+</tr><tr><td> <a name="80"> </a>
+<a href=" gympl_ucitele.php?zobr=80&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Robertson</span> <span class="jmeno">  R. J.</span> <span class="titul"> </span></a></td>
+<td>Aj </td> <td> <a href="mailto:robertson@pekargmb.cz" class="email" > robertson@pekargmb.cz </a> </td><td>326375958</td> 
+</tr><tr><td> <a name="30"> </a>
+<a href=" gympl_ucitele.php?zobr=30&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Sobotková</span> <span class="jmeno">  Jana</span> <span class="titul">  Mgr.</span></a></td>
+<td>Aj, Dě </td> <td> <a href="mailto:sobotkova@pekargmb.cz" class="email" > sobotkova@pekargmb.cz </a> </td><td>326375957</td> 
+</tr><tr><td> <a name="106"> </a>
+<a href=" gympl_ucitele.php?zobr=106&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Svobodová</span> <span class="jmeno"> Renata</span> <span class="titul"> </span></a></td>
+<td>úklid </td> <td> <a href="mailto:pekargmb@pekargmb.cz" class="email" > pekargmb@pekargmb.cz </a> </td><td></td> 
+</tr><tr><td> <a name="33"> </a>
+<a href=" gympl_ucitele.php?zobr=33&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Šindelková</span> <span class="jmeno">  Yvonna</span> <span class="titul">  Mgr.</span></a></td>
+<td>Čj De </td> <td> <a href="mailto:sindelkova@pekargmb.cz" class="email" > sindelkova@pekargmb.cz </a> </td><td>326375957</td> 
+</tr><tr><td> <a name="143"> </a>
+<a href=" gympl_ucitele.php?zobr=143&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Šlapáková</span> <span class="jmeno"> Michaela</span> <span class="titul"> Mgr.</span></a></td>
+<td>Dě-Nj </td> <td> <a href="mailto:slapakova@pekargmb.cz" class="email" > slapakova@pekargmb.cz </a> </td><td>326375966 </td> 
+</tr><tr><td> <a name="94"> </a>
+<a href=" gympl_ucitele.php?zobr=94&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Šourek</span> <span class="jmeno"> Zdeněk</span> <span class="titul"> Mgr.</span></a></td>
+<td>Ek </td> <td> <a href="mailto:pekargmb@pekargmb.cz" class="email" > pekargmb@pekargmb.cz </a> </td><td></td> 
+</tr><tr><td> <a name="79"> </a>
+<a href=" gympl_ucitele.php?zobr=79&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Techlovská</span> <span class="jmeno"> Zdeňka</span> <span class="titul"> </span></a></td>
+<td>vedoucí školní jídelny </td> <td> <a href="mailto:techlovska@pekargmb.cz" class="email" > techlovska@pekargmb.cz </a> </td><td>326375977 </td> 
+</tr><tr><td> <a name="55"> </a>
+<a href=" gympl_ucitele.php?zobr=55&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Tiefenbachová</span> <span class="jmeno"> Alice</span> <span class="titul"> </span></a></td>
+<td>úklid </td> <td> <a href="mailto:pekargmb@pekargmb.cz" class="email" > pekargmb@pekargmb.cz </a> </td><td></td> 
+</tr><tr><td> <a name="35"> </a>
+<a href=" gympl_ucitele.php?zobr=35&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Toužimská</span> <span class="jmeno"> Jana</span> <span class="titul"> Mgr.</span></a></td>
+<td>Aj </td> <td> <a href="mailto:touzimska@pekargmb.cz" class="email" > touzimska@pekargmb.cz </a> </td><td>326375958</td> 
+</tr><tr><td> <a name="64"> </a>
+<a href=" gympl_ucitele.php?zobr=64&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Trnková</span> <span class="jmeno"> Věra</span> <span class="titul"> </span></a></td>
+<td>kuchařka </td> <td> <a href="mailto:pekargmb@pekargmb.cz" class="email" > pekargmb@pekargmb.cz </a> </td><td></td> 
+</tr><tr><td> <a name="36"> </a>
+<a href=" gympl_ucitele.php?zobr=36&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Tumajer</span> <span class="jmeno"> František</span> <span class="titul"> </span></a></td>
+<td>Ma Fy Iv </td> <td> <a href="mailto:tumajer@pekargmb.cz" class="email" > tumajer@pekargmb.cz </a> </td><td>326375954</td> 
+</tr><tr><td> <a name="130"> </a>
+<a href=" gympl_ucitele.php?zobr=130&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Tumajer</span> <span class="jmeno"> Petr</span> <span class="titul"> Ing.</span></a></td>
+<td>Iv </td> <td> <a href="mailto:tumajer.petr@pekargmb.cz" class="email" > tumajer.petr@pekargmb.cz </a> </td><td>326375968</td> 
+</tr><tr><td> <a name="88"> </a>
+<a href=" gympl_ucitele.php?zobr=88&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Tumajerová</span> <span class="jmeno"> Stanislava</span> <span class="titul"> </span></a></td>
+<td>Ma, Fy, Iv </td> <td> <a href="mailto:tumajerova@pekargmb.cz" class="email" > tumajerova@pekargmb.cz </a> </td><td>326375968</td> 
+</tr><tr><td> <a name="139"> </a>
+<a href=" gympl_ucitele.php?zobr=139&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Václavíková</span> <span class="jmeno"> Lenka</span> <span class="titul"> Mgr.</span></a></td>
+<td>Hv </td> <td> <a href="mailto:vaclavikova@pekargmb.cz" class="email" > vaclavikova@pekargmb.cz </a> </td><td>  326375967</td> 
+</tr><tr><td> <a name="58"> </a>
+<a href=" gympl_ucitele.php?zobr=58&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Včelišová</span> <span class="jmeno">  Eva</span> <span class="titul"> </span></a></td>
+<td>kuchařka </td> <td> <a href="mailto:pekargmb@pekargmb.cz" class="email" > pekargmb@pekargmb.cz </a> </td><td></td> 
+</tr><tr><td> <a name="37"> </a>
+<a href=" gympl_ucitele.php?zobr=37&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Voborová</span> <span class="jmeno">  Věra</span> <span class="titul">  Mgr.</span></a></td>
+<td>Aj </td> <td> <a href="mailto:voborova@pekargmb.cz" class="email" > voborova@pekargmb.cz </a> </td><td>326375958</td> 
+</tr><tr><td> <a name="38"> </a>
+<a href=" gympl_ucitele.php?zobr=38&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Volf</span> <span class="jmeno"> Vlastimil</span> <span class="titul"> </span></a></td>
+<td>Ma Fy </td> <td> <a href="mailto:volf@pekargmb.cz" class="email" > volf@pekargmb.cz </a> </td><td>326375955</td> 
+</tr><tr><td> <a name="16"> </a>
+<a href=" gympl_ucitele.php?zobr=16&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Volfová</span> <span class="jmeno">  Dana</span> <span class="titul">  Mgr.</span></a></td>
+<td>Čj De </td> <td> <a href="mailto:volfova@pekargmb.cz" class="email" > volfova@pekargmb.cz </a> </td><td>326375966</td> 
+</tr><tr><td> <a name="47"> </a>
+<a href=" gympl_ucitele.php?zobr=47&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Voničková</span> <span class="jmeno"> Lenka</span> <span class="titul"> </span></a></td>
+<td>asistentka ředitele a pokladní  </td> <td> <a href="mailto:vonickova@pekargmb.cz" class="email" > vonickova@pekargmb.cz </a> </td><td>326375951</td> 
+</tr><tr><td> <a name="111"> </a>
+<a href=" gympl_ucitele.php?zobr=111&amp;sloupec=&amp;hodnotasloupce= " ><span class="prijmeni"> Weissová</span> <span class="jmeno"> Kristýna</span> <span class="titul"> Mgr.</span></a></td>
+<td>Aj Čj </td> <td> <a href="mailto:weissova@pekargmb.cz " class="email" > weissova@pekargmb.cz  </a> </td><td>326375956</td> 
+</tr></table></div>
+</div><!--  levy sloupec siroky -->
+
+
+<br />
+</div><!--  obsahova cast -->
+<div id="paticka">
+<a name="paticka"></a>
+Gymnázium Dr. J. Pekaře<br />
+Design: 
+
+<a href="mailto:jakubchromec@gmail.com">Jakub Chromec</a> 
+</div><!--  paticka-->
+</div><!--  stred --> 
+
+
+
+
+
+</body><!--  celek --> 
+</html>

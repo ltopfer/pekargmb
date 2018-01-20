@@ -10,4 +10,11 @@ změny v html vedlejších stránek:
   -novinky: levy-sloupek-siroky na levy-sloupec-siroky-novinky
             odebran nadpis "novinky - aktualní"
             přidání id "cisla-stran-novinky"
-            cisla stran
+            cisla stran - začít od 1
+                        - odebrat číslo aktuální stránky, jen ho zvýraznit
+            autor - odkaz na stránku s konstaktem misto emailu
+            
+  -kontakty: podmenu odebrání nového řádku za "poloha školy na mapě"
+             odebrání "(pracovní zařacení)"
+             přidal sudý a líchý řádek pro změnu barvy
+             email velké E
