@@ -1,5 +1,5 @@
 
-}
+
 html { -webkit-font-smoothing: antialiased; }
 :root {
     --barva_hlavni: #fcbb23;
@@ -40,6 +40,7 @@ body {
     margin-left: 100px;
     margin-top: 7px;
     margin-bottom: 0px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 #textmenul, #textmenup {
     position: absolute;
@@ -65,6 +66,7 @@ body {
     height: 100%;
     vertical-align: middle;
     line-height: 33px;
+    -webkit-transition: 0.4s;
     transition: 0.4s;
     
 }
@@ -82,11 +84,13 @@ body {
 }
 .textmenul_akt {
     background: var(--barva_pomocna);
+    -webkit-transition: 0.4s;
     transition: 0.4s;
 }
 .textmenup_akt {
     color: #FFF;
     background: #6a6c7e;
+    -webkit-transition: 0.4s;
     transition: 0.4s;
 }
 #textmenup li a{
@@ -96,6 +100,7 @@ body {
 #textmenup li:hover{
     color: #FFF;
     background: #6a6c7e;
+    -webkit-transition: 0.4s;
     transition: 0.4s;
 }
 #textmenul li:hover{
@@ -164,14 +169,20 @@ body {
     margin-right: 492px;
     right: 50%;
     top: 143px;
+    cursor: pointer;
 }
 #sipkap {
     position: absolute;
     margin-left: 492px;
     left: 50%;
     top: 143px;
+    cursor: pointer;
 }
 .novinka_index{
+    background: url(obr/pozadi-novinka.jpg);
+    background-size: cover;
+    background-position: right;
+    cursor: pointer;
     position: absolute;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -182,6 +193,7 @@ body {
     transition: 0.7s;
     -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    overflow: hidden;
 }
 #novinky_index ul{
     position: relative;
@@ -192,7 +204,9 @@ body {
 }
 .n0 {
     left: -262px;
+    -webkit-transform: rotateY(-90deg);
     transform: rotateY(-90deg);
+    -webkit-transform-origin: right;
     transform-origin: right;
     opacity: 0;
 }
@@ -207,28 +221,59 @@ body {
 }
 .n4 {
     left: 1042px;
+    -webkit-transform: rotateY(90deg);
     transform: rotateY(90deg);
+    -webkit-transform-origin: left;
     transform-origin: left;
     opacity: 0;
 }
 
 .novinka_index img {
     display: block;
-    max-width: 100%;
-    max-height: 70%;
+    max-width: 280px;
+    max-height: 186px;
     margin: auto;
+    position: absolute;
+    top: 93px;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+}
+.novinka_index span{
+    z-index: 10;
+    width: 100%;
+    height: 94px;
+    background: #FFF;
+    position: absolute;
+    bottom: 0px;
+    margin: 0px;
+}
+.novinka_index h2{
+    text-align: center;
+    margin: 3px;
+    padding: 0px;
+    font-size: 1em;
 }
 .novinka_index p{
-    position: absolute;
-    top: 72%;
+    margin: 0px;
+    padding-left: 3px;
 }
-#novinky_vic {
+#novinky_index_vic a{
+    color: #FFF;
+    font-size: 1.25em;
     position: absolute;
-    bottom: 20px;
-    background-color: --barva_pozadí: #FFF;
+    right: 64px;
+    top: 330px;
+    background-color: #232a4e;
     font-weight: 600;
-    width: 100px;
-    
+    padding: 10px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);  
+}
+#novinky_index_vic{
+    position: relative;
+    width: 1060px;
+    margin: auto;
 }
 #outer_page {
     background-color: #FFF;
@@ -618,6 +663,7 @@ a.tlacitkopodmenuakt {
 .obrvlevo img, .obrvpravo img{
     position: relative;
     top: 50%;
+    -webkit-transform: translatey(-50%);
     transform: translatey(-50%);
     width: 100%;
 }
@@ -708,6 +754,7 @@ a.tlacitkopodmenuakt {
 /*tabulky*/
 a {
     color: #0036AF;
+    text-decoration: none;
 }
 table {
     font-family: sans-serif;
