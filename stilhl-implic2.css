@@ -42,12 +42,16 @@ body {
     margin-bottom: 0px;
     font-family: Arial, Helvetica, sans-serif;
 }
+#menuButton {
+    display: none;
+}
 #textmenul, #textmenup {
     position: absolute;
     left: 0px;
     right: 0px;
     height: 33px;
     margin: 0px;
+    text-transform: uppercase;
     
 }
 
@@ -144,9 +148,10 @@ body {
 /*///////////////////////////////////////////////////obrazek-pozadi////////////////////////////////////*/
 #obrazek-pozadi {
     width: 100%;
-    background-image: url(obr/1200px-Budova_Gymn%C3%A1zia_Dr._Josefa_Peka%C5%99e.jpg);
+    background-image: url(obr/budova.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
+    /*background-size: 100%;*/
+    background-size: cover;
     background-position: center;
     height: 500px;
     position: fixed;
@@ -958,9 +963,6 @@ table {
 
 /*//////1100px-785px////////polovina fullhd/////*/ 
 @media only screen and (max-width: 1100px) {
-    body {
-        /*overflow-x: hidden;*/
-    }
     #page {
         width: 768px;
         margin: auto;
@@ -1138,6 +1140,8 @@ table {
         margin-top: 0px;
     }
     #outer_footer {
+        position: relative;
+        width: 1060px;
         -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
         box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
     }
@@ -1170,6 +1174,266 @@ table {
 
 /*//////mobil/////*/
 @media only screen and (max-width: 785px) {
-    
-    
+    #page {
+        width: 100%;
+        margin: auto;
+        z-index: 10;
+    }
+    /*///////////////////////////////////////////////////header////////////////////////////////////*/
+    #header {
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+        /*display: none;*/
+    }
+    #top-header {
+        width: 768px;
+    }
+    #top-header h1{
+        font-size: 1.7em;
+        margin-left: 100px;
+    }
+    #menuButton {
+        display: block;
+        position: absolute; 
+        top: 0px;
+        right: 0px;
+    }
+    #menuButton line {
+        stroke: var(--barva_druha);
+        -webkit-transition: 0.6s;
+        transition: 0.6s;
+    }
+    #menu {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        height: 0px;
+        -webkit-transition: 0.6s;
+        transition: 0.6s;
+        overflow: hidden;
+        background: var(--barva_hlavni);
+        padding-top: 50px;
+    }
+    #menu.otevreno {
+        height: 100%;
+        background: var(--barva_druha);
+    }
+    #menu.otevreno #menuButton line {
+        stroke: var(--barva_hlavni);
+    }
+    /*#menu.otevreno*/ #textmenul {
+        margin-right: 0px; 
+    }
+    /*#menu.otevreno*/ #textmenup {
+        margin-left: 0px; 
+    }
+    /*#menu.otevreno*/ #textmenul, #textmenup {
+        letter-spacing: initial;
+    }
+    /*#menu.otevreno*/ #textmenul li {
+        font-size: 0.85em;
+        padding: 0px 5px;
+        width: 100%;
+    }
+    /*#menu.otevreno*/ #textmenup li {
+        font-size: 0.85em;
+        padding: 0px 5px;
+        width: 100%;
+    }
+    #textmenup li:last-child{
+        padding-right: 1.5%;
+    }
+    #logomenu {
+        width: 45px;
+        margin-left: 45px;
+    }
+    #odkazy {
+        margin-top: 3px;
+        width: 180px;
+        padding-left: 616px;
+    }
+    .odkaz {
+        width: 20px;
+        margin-right: 10px;
+    }
+    #gb {
+        width: 40px;
+        margin-right: 12px;
+    }
+    /*//////////////////novinky///////////////////*/
+    #sipkal {
+        position: absolute;
+        margin-right: 336px;
+        right: 50%;
+        top: 143px;
+        cursor: pointer;
+    }
+    #sipkap {
+        margin-left: 336px;
+        left: 50%;
+        top: 143px;
+    }
+    .novinka_index{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 60%;
+        height: 60vw;
+        overflow-x: hidden;
+    }
+    #novinky_index ul{
+        width: 100%;
+    }
+    .n0 {
+        left: -262px;
+    }
+    .n1 {
+        left: 74px;
+    }
+    .n2 {
+        left: 414px;
+    }
+    .n3 {
+        left: 716px;
+        -webkit-transform: rotateY(90deg);
+        transform: rotateY(90deg);
+        -webkit-transform-origin: left;
+        transform-origin: left;
+        opacity: 0;
+    }
+    .n4 {
+        left: 716px;
+    }
+
+    .novinka_index img {
+        display: block;
+        max-width: 280px;
+        max-height: 186px;
+        margin: auto;
+        position: absolute;
+        top: 93px;
+        left: 50%;
+        -webkit-transform: translateY(-50%) translateX(-50%);
+        transform: translateY(-50%) translateX(-50%);
+    }
+    .novinka_index h2{
+        text-align: center;
+        margin: 3px;
+        padding: 0px;
+        font-size: 1em;
+    }
+    .novinka_index p{
+        margin: 0px;
+        padding-left: 3px;
+    }
+    #novinky_index_vic a{
+        font-size: 1.25em;
+        right: 74px;
+        top: 330px;
+        padding: 10px;  
+    }
+    #novinky_index_vic{
+        width: 100%;
+    }
+    /*///////////////nabidky///////////*/
+    #nabidky {
+        height: auto;
+    }
+    .nabidka {
+        width: 33.33%;
+        height: 33.33vw;
+    }
+    .karta {
+        width: 100%;
+        height: 100%;
+    }
+    .nabidka.prvni .karta, .nabidka.ctvrta .karta {
+        background: var(--barva_hlavni)
+    }
+    .nabidka.prvni .karta, .nabidka.treti .karta{
+        background: var(--barva_pomocna);
+    }
+    .predni, .zadni {
+        width: 100%;
+        height: 100%;
+    }
+    .predni img {
+        width: 60%;
+        left: 20%;
+    }
+    .zadni p{
+        margin: 10px;
+        top: 10px;
+        font-weight: 600;
+        font-size: 0.9em;
+    }
+    .zadni a{
+        margin-left: 23px;
+        top: 10%;
+        font-size: 1em;
+    }
+    /*//////////////dalsi/////////////////*/
+    #spolupracujeme{
+        height: 230vw;
+    }
+    #prohlidka, #historie{
+        width: 80%;
+        margin: 7vw;
+        margin-bottom: 0vw;
+        border: solid var(--barva_hlavni) 3vw;
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    }
+    .spoluprace_kraj {
+        width: 80vw;
+        margin: 10vw;
+        margin-top: 3vw;
+        margin-bottom: 10px;
+    }
+    .spoluprace_obrazek {
+        width: 35%;
+        margin-left: 10%;
+        margin-right: 0%;
+        margin-bottom: 1vw;
+        margin-top: 1vw;
+    }
+    #outer_footer {
+        position: relative;
+        width: 100%;
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    }
+    #footer {
+        width: 100%;
+        font-size: 1em;
+        height: 200px;
+    }
+    #footer h4 {
+        display: none;
+    }
+    #footer p{
+        text-align: center;
+        left: 20%;
+        width: 60%;
+        top: 10px;
+        line-height: 180%;
+    }
+    #footer br {
+        content: "";
+    }
+    #footer br:after {
+        content: "  |  ";
+    } 
+    #footer_logo {
+        display: none;
+    }
+    #footer br.neodebrat:after {
+        content: "";
+    }
+    #mapa {
+        display: none;
+    }
+    #carka {
+        display: none;
+    }
 }

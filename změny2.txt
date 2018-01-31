@@ -1,0 +1,31 @@
+změny v html vedlejších stránek:
+
+  -změna menu
+  -h4 a h5 na h2 a h3 ????????
+  (-položky menu přidat nedělitelné mezery, aby nebylo jedno slovo na druhém řádku)
+  -změna patičky
+  -pro studenty: "podle zákona...." - kurzíva????????? * 
+                  mezera před čáru???????????
+  -odkazy???
+  -novinky: levy-sloupek-siroky na levy-sloupec-siroky-novinky
+            odebran nadpis "novinky - aktualní"
+            přidání id "cisla-stran-novinky"
+            cisla stran - začít od 1
+                        - odebrat číslo aktuální stránky, jen ho zvýraznit
+            autor - odkaz na stránku s konstaktem misto emailu
+            
+  -kontakty: podmenu odebrání nového řádku za "poloha školy na mapě"
+             odebrání "(pracovní zařacení)"
+             přidal sudý a líchý řádek pro změnu barvy
+             email velké E
+-------------------------------------------------------
+Pořadí v hlavním menu
+ * odebrat domů, odkaz přendat na logo
+obrázky a tab..........maxwidth??????
+odladit pro IE
+vyřešit podmenu mam tam odkazy a kotvu ...posouvá se to pod fixní hlavičku a menu
+není vidět lupa ???????? v IE v chomu neni žadný ikona???záleží na rozlišení(1024x768)
+ * přidal jsem změnu stylu pro rozlišení <1100px
+naformátovat další rubriky "naši nej"a "významní abs."
+------------------------------------------------------
+v html chybí div stred
