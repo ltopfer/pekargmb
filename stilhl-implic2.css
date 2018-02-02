@@ -16,6 +16,12 @@ body {
     margin: 0px;
     padding: 0px;
     background-color: white;
+    /*padding-top:75px;*/
+}
+a[name] {
+    display: block;
+    position: relative;
+    top: -75px;
 }
 /*///////////////////////////////////////////////////header////////////////////////////////////*/
 #header {
@@ -24,6 +30,7 @@ body {
     background-color: white;
     z-index: 20;
     height: 75px;
+    top: 0px;
   /*  font-family: Helvetica_light;*/
     -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
     box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
@@ -44,6 +51,10 @@ body {
 }
 #menuButton {
     display: none;
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
 }
 #textmenul, #textmenup {
     position: absolute;
@@ -132,17 +143,19 @@ body {
     margin-left: 15px;
 }
 #odkazy {
-    width: 180px;
-    position: absolute;
-    top: 10px;
-    padding-left: 880px;
+    width: 1060px;
+    position: relative;
+    top: -33px;
+    margin: auto;
 }
 .odkaz {
     width: 25px;
     margin-right: 10px;
+    float: right;
 }
 #gb {
     width: 50px;
+    float: right;
     margin-right: 12px;
 }
 /*///////////////////////////////////////////////////obrazek-pozadi////////////////////////////////////*/
@@ -153,6 +166,7 @@ body {
     /*background-size: 100%;*/
     background-size: cover;
     background-position: center;
+    margin-top: 75px;
     height: 500px;
     position: fixed;
     z-index: -1;   
@@ -162,7 +176,7 @@ body {
     position: absolute;
     width: 100%;
     background-color: #DDD;
-    margin-top: 500px;
+    margin-top: 575px;
     height: 390px;
     -webkit-box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.2);
     box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.2); 
@@ -283,7 +297,7 @@ body {
     background-color: #FFF;
     width: 100%;
     position: relative;
-    top: 890px;
+    top: 965px;
     /*-webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
     box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2); */
 }
@@ -294,7 +308,7 @@ body {
     margin: auto;
     font-size: 1.3125em;
     width: 932px;
-    padding-top: 20px;
+    padding-top: 12px;
 }
 h2 {
     text-align: left;
@@ -321,9 +335,13 @@ h3 {
 }
 #busta {
     position: absolute;
-    left: 63%;
-    top: 200px;
-    width: 200px;
+    left: 55%;
+    top: 20px;
+    width: 300px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.1em;
+    font-size: 1.1em;
 }
 /*/////////////////////////nabidky///////////////////////////////*/
 #conabizime {
@@ -458,7 +476,7 @@ h3 {
 .spoluprace_obrazek {
     width: 160px;
     margin: 34px;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     margin-top: 0px;
 }
 #outer_footer {
@@ -478,7 +496,7 @@ h3 {
 }
 .footer_index {
     position: relative;
-    top: 890px;
+    top: 985px;
 }
 #footer h4 {
     position: absolute;
@@ -579,9 +597,34 @@ a.tlacitkopodmenuakt {
     padding-bottom: 6px;
     padding-right: 5px;
 }
+a.tridapppmenu {
+    display: block;
+    text-align: left;
+    background: var(--barva_pomocna);
+    padding-left: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    text-decoration: none;
+    color: #333333;
+}
+a.tridapppmenu:hover {
+    color: var(--barva_druha);
+    background: var(--barva_hlavni);
+}
+a.tridappmenuakt {
+    display: block;
+    font-family: sans-serif;
+    background: var(--barva_hlavni);
+    color: var(--barva_druha);
+    font-weight: bold;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 15px;
+}
 #obsahova-cast {
     /*border:  thin solid red	;	*/
-    padding-top: 60px;
+    padding-top: 75px;
     text-align: left;
     font-family: sans-serif;
     min-height: 350px;
@@ -1005,9 +1048,8 @@ table {
         margin-left: 45px;
     }
     #odkazy {
-        margin-top: 3px;
-        width: 180px;
-        padding-left: 616px;
+        width: 736px;
+        top: -30px;
     }
     .odkaz {
         width: 20px;
@@ -1145,6 +1187,9 @@ table {
         -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
         box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
     }
+    #outer_footer.footer_index {
+        width: 100%;
+    }
     #footer {
         width: 768px;
         font-size: 1.2em;
@@ -1181,27 +1226,51 @@ table {
     }
     /*///////////////////////////////////////////////////header////////////////////////////////////*/
     #header {
-        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
-        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+        height: 40px;
         /*display: none;*/
     }
     #top-header {
-        width: 768px;
+        position: relative;
+        z-index: 9;
+        background: var(--barva_hlavni);
+        padding-top: 1px;
+        padding-bottom: 4px;
+        margin-left: 40px;
+        width: auto;
     }
     #top-header h1{
-        font-size: 1.7em;
-        margin-left: 100px;
+        font-size: 1.2em;
+        position: relative;
+        z-index: 10;
+        margin-left: -35px;
+        top: 2px;
+        text-align: center;
+        pointer-events: none;        
     }
     #menuButton {
         display: block;
         position: absolute; 
         top: 0px;
-        right: 0px;
+        left: 0px;
+        z-index: 10;
+        background: var(--barva_hlavni);
     }
     #menuButton line {
         stroke: var(--barva_druha);
         -webkit-transition: 0.6s;
         transition: 0.6s;
+    }
+    #menuButton line#l1 {
+        -webkit-transform-origin: 10px 10px;
+        transform-origin: 10px 10px;
+    }
+    #menuButton line#l2 {
+        -webkit-transform-origin: 20px 20px;
+        transform-origin: 20px 20px;
+    }
+    #menuButton line#l3 {
+        -webkit-transform-origin: 10px 30px;
+        transform-origin: 10px 30px;
     }
     #menu {
         position: fixed;
@@ -1212,15 +1281,39 @@ table {
         -webkit-transition: 0.6s;
         transition: 0.6s;
         overflow: hidden;
-        background: var(--barva_hlavni);
-        padding-top: 50px;
+        background: var(--barva_druha);
+        padding-top: 40px;
+    }
+    #menu::before {
+        position: absolute;
+        top: 0px;
+        height: 40px;
+        background: #FFFE00;
+        left: 0px;
+        right: 0px;
+        content: "";
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+        z-index: 5;
     }
     #menu.otevreno {
         height: 100%;
-        background: var(--barva_druha);
+        /*background: var(--barva_druha);*/
     }
     #menu.otevreno #menuButton line {
-        stroke: var(--barva_hlavni);
+        stroke: var(--barva_druha);
+    }
+    #menu.otevreno #menuButton line#l1 {
+        -webkit-transform: rotate(45deg) scale(1.12, 1);
+        transform: rotate(45deg) scale(1.12, 1);
+    }
+    #menu.otevreno #menuButton line#l2 {
+        -webkit-transform: scale(0, 1);
+        transform: scale(0, 1);
+    }
+    #menu.otevreno #menuButton line#l3 {
+        -webkit-transform: rotate(-45deg) scale(1.12, 1);
+        transform: rotate(-45deg) scale(1.12, 1);
     }
     /*#menu.otevreno*/ #textmenul {
         margin-right: 0px; 
@@ -1230,36 +1323,66 @@ table {
     }
     /*#menu.otevreno*/ #textmenul, #textmenup {
         letter-spacing: initial;
+        text-align: center;
     }
-    /*#menu.otevreno*/ #textmenul li {
-        font-size: 0.85em;
-        padding: 0px 5px;
+    #textmenul,#textmenup {
+        position: relative;
+        float: left;
+        height: auto;
         width: 100%;
+        font-weight: bold;
     }
-    /*#menu.otevreno*/ #textmenup li {
-        font-size: 0.85em;
-        padding: 0px 5px;
+    #textmenul {
+        padding-top: 10px;
+    }
+    #textmenul li, #textmenup li {
+        padding: 3px 5px;
         width: 100%;
+        font-size: 120%;
+        height: 40px;
+        line-height: 40px;
     }
-    #textmenup li:last-child{
-        padding-right: 1.5%;
+    #textmenul li a, #textmenup li a {
+        position: relative;
+    }
+    #textmenul li a::after, #textmenup li a::after {
+        position: absolute;
+        content: "";
+        height: 40px;
+        width: 80vw;
+        left: calc(50% - 40vw);
+        top: -50%;
     }
     #logomenu {
-        width: 45px;
-        margin-left: 45px;
+        display: none;
     }
+    /*#odkazy {
+        margin-top: 360px;
+        width: 50%;
+    }*/
     #odkazy {
-        margin-top: 3px;
+        clear: left;
         width: 180px;
-        padding-left: 616px;
+        top: 10px;
     }
     .odkaz {
         width: 20px;
-        margin-right: 10px;
     }
     #gb {
         width: 40px;
-        margin-right: 12px;
+    }
+    /*///////////////////////////////////////////////////obrazek-pozadi////////////////////////////////////*/
+    #obrazek-pozadi {
+        width: 100%;
+        background-image: url(obr/budova.jpg);
+        background-repeat: no-repeat;
+        /*background-size: 100%;*/
+        background-size: cover;
+        background-position: center;
+        margin-top: 50px;
+        height: 200px;
+        position: fixed;
+        z-index: -1;   
     }
     /*//////////////////novinky///////////////////*/
     #sipkal {
@@ -1277,8 +1400,8 @@ table {
     .novinka_index{
         margin-top: 30px;
         margin-bottom: 30px;
-        width: 60%;
-        height: 60vw;
+        width: 90%;
+        height: 90vw;
         overflow-x: hidden;
     }
     #novinky_index ul{
@@ -1288,23 +1411,26 @@ table {
         left: -262px;
     }
     .n1 {
-        left: 74px;
+        left: 5%;
     }
     .n2 {
         left: 414px;
-    }
-    .n3 {
-        left: 716px;
         -webkit-transform: rotateY(90deg);
         transform: rotateY(90deg);
         -webkit-transform-origin: left;
         transform-origin: left;
         opacity: 0;
     }
+    .n3 {
+        left: 716px;
+    }
     .n4 {
         left: 716px;
     }
-
+    #novinky_index {
+        margin-top: 575px;
+        height: 300vw;
+    }
     .novinka_index img {
         display: block;
         max-width: 280px;
@@ -1372,6 +1498,10 @@ table {
         top: 10%;
         font-size: 1em;
     }
+    /*//////////////page//////////////////*/
+    #outer_page {
+        top: calc(965px + 300vw);
+    }
     /*//////////////dalsi/////////////////*/
     #spolupracujeme{
         height: 230vw;
@@ -1435,5 +1565,36 @@ table {
     }
     #carka {
         display: none;
+    }
+}
+@media only screen and (max-width: 390px) {
+    #top-header h1{
+        font-size: 1.2em;
+        position: relative;
+        z-index: 10;
+        margin-left: 5px;
+        top: -3px;
+    }
+    #header {
+        height: 50px;
+        /*display: none;*/
+    }
+    #top-header {
+        padding-bottom: 14px;
+    }
+    #menu {
+        padding-top: 50px;
+    }
+    #menu::before {
+        height: 50px;
+    }
+    #menuButton {
+        display: block;
+        position: absolute; 
+        padding-top: 7px;
+        padding-bottom: 3px;
+        left: 0px;
+        z-index: 10;
+        background: var(--barva_hlavni);
     }
 }

@@ -26,6 +26,7 @@ odladit pro IE
 vyřešit podmenu mam tam odkazy a kotvu ...posouvá se to pod fixní hlavičku a menu
 není vidět lupa ???????? v IE v chomu neni žadný ikona???záleží na rozlišení(1024x768)
  * přidal jsem změnu stylu pro rozlišení <1100px
-naformátovat další rubriky "naši nej"a "významní abs."
+naformátovat další rubriky "naši nej"a "významní abs."   -bude potřeba změnit class u obrázků
 ------------------------------------------------------
 v html chybí div stred
+odebrání <br>, úprava <script> v hlstrana.html

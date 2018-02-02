@@ -59,6 +59,11 @@
                     $("#menu").toggleClass("otevreno");
                 });
                 
+                $(window).scroll(function() {
+                    var scrolledY = $(window).scrollTop();
+                    $("#obrazek-pozadi").css("margin-top", 75 - scrolledY*0.3);
+                });
+                
                 start();
                 //timer = moveTime - 3;                
             });
@@ -101,8 +106,7 @@
     <body>
         <div id="header">
             <div id="top-header">
-                <img src="obr/logomenu.png" id="logomenu"><h1>GYMNÁZIUM <strong>DR. JOSEFA PEKAŘE</strong></h1><div id="odkazy"><img  id="gb" src="obr/gb.png"><img class="odkaz" src="obr/fb-art.png"><img class="odkaz" src="obr/Feed-icon.svg"><img class="odkaz" src="obr/50744-200.png">
-                </div>
+                <img src="obr/logomenu.png" id="logomenu"><h1>GYMNÁZIUM <strong>DR.&nbsp;JOSEFA&nbsp;PEKAŘE</strong></h1>
             </div>
             <div id="menu">
                 <ul id="textmenul">
@@ -116,11 +120,13 @@
                     <li><a href="#">DOKUMENTY</a></li>
                     <li><a href="#">PROJEKTY</a></li>
                     <li><a href="#">FOTOGALERIE</a></li>
-                </ul>    
-                <svg id="menuButton" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
-                    <line stroke-linecap="round" stroke-linejoin="undefined" id="svg_1" y2="25" x2="40" y1="25" x1="10" stroke-width="7" stroke="#000" fill="none"/>
-                    <line stroke-linecap="round" stroke-linejoin="undefined" id="svg_2" y2="10" x2="40" y1="10" x1="10" stroke-width="7" stroke="#000" fill="none"/>
-                    <line stroke-linecap="round" stroke-linejoin="undefined" id="svg_3" y2="40" x2="40" y1="40" x1="10" stroke-width="7"stroke="#000" fill="none"/>
+                </ul>
+                <div id="odkazy"><img  id="gb" src="obr/gb.png"><img class="odkaz" src="obr/fb-art.png"><img class="odkaz" src="obr/Feed-icon.svg"><img class="odkaz" src="obr/50744-200.png">
+                </div>
+                <svg id="menuButton" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+                    <line id="l1" stroke-linecap="square" stroke-linejoin="undefined" y2="10" x2="35" y1="10" x1="10" stroke-width="4" stroke="#000" fill="none"/>
+                    <line id="l2" stroke-linecap="square" stroke-linejoin="undefined" y2="20" x2="35" y1="20" x1="10" stroke-width="4" stroke="#000" fill="none"/>
+                    <line id="l3" stroke-linecap="square" stroke-linejoin="undefined" y2="30" x2="35" y1="30" x1="10" stroke-width="4"stroke="#000" fill="none"/>
                 </svg>
             </div>            
         </div>
@@ -148,7 +154,7 @@
                     </li>
                     <li><b>čtyřleté studium</b> pro žáky, kteří ukončili 9. třídu ZŠ </li>
                 </ul>
-                <img src="obr/busta.jpg" id="busta">
+                <div id="busta"><img src="obr/busta.jpg" width=100%><i>Prof. Dr. J. Pekař<br>1870-1937</i></div>
                 <h2 id="conabizime">Co nabízíme</h2>
                 <div id="nabidky">                    
                     <div class="nabidka prvni">
@@ -308,15 +314,6 @@
                         </div>
                     </div>
                 </div>
-                <br>
-                <br>
-                
-                
-                
-                <br>
-                <br>
-                
-                
                 <div id="prohlidky">
                     <a><img src="obr/h_odkaz.png" id="historie"></a>
                     <a><img src="obr/v_prohlidka.png" id="prohlidka"></a>
