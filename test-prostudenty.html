@@ -1,192 +1,211 @@
 <!doctype html>
 <html>
-    <head>
-        <!--<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >-->
-        <meta charset="utf-8">
-        <meta lang="cs" name="Description" content="Gymnázium Dr.J.Pekaře  Mladá Boleslav" >
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <meta lang="cs" name="Keywords" content="škola,výuka,žák,učitel" >
+<head>
+    <!--<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >-->
+    <meta charset="utf-8">
+    <meta lang="cs" name="Description" content="Gymnázium Dr.J.Pekaře  Mladá Boleslav">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta lang="cs" name="Keywords" content="škola,výuka,žák,učitel">
 
-        <link rel="shortcut icon" href="http://www.pekargmb.cz/favicon.ico" type="image/x-icon" >
-        <link href="stilhl-implic2.css" type="text/css" rel="stylesheet" >
+    <link rel="shortcut icon" href="http://www.pekargmb.cz/favicon.ico" type="image/x-icon">
+    <link href="stilhl-implic2.css" type="text/css" rel="stylesheet">
 
-        <title>Gymnázium Dr.J.Pekaře</title> 
+    <title>Gymnázium Dr.J.Pekaře</title>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <script>
-            // obecné
-            $(document).ready(function() {
-                $("#menuButton").click(function() {
-                    $("#menu").toggleClass("otevreno");
-                });
-                
-                $(".podmenu h2").click(function() {
-                    $(".podmenu").toggleClass("otevrenopod");
-                });
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+        // obecné
+        $(document).ready(function() {
+            $("#menuButton").click(function() {
+                $("#menu").toggleClass("otevreno");
             });
-        </script>
-    </head>
+
+            $(".podmenu h2").click(function() {
+                $(".podmenu").toggleClass("otevrenopod");
+            });
+        });
+
+    </script>
+</head>
 
 
 
-    <body class="celek" > 
-        <div id="header">
-            <div id="top-header">
-                <img src="obr/logomenu.png" id="logomenu"><h1>GYMNÁZIUM <strong>DR.&nbsp;JOSEFA&nbsp;PEKAŘE</strong></h1>
+<body class="celek">
+    <div id="header">
+        <div id="top-header">
+            <img src="obr/logomenu.png" id="logomenu">
+            <h1>GYMNÁZIUM <strong>DR.&nbsp;JOSEFA&nbsp;PEKAŘE</strong></h1>
+        </div>
+        <div id="menu">
+            <ul id="textmenul">
+                <li><a href="#">PRO UČITELE</a></li>
+                <li><a href="#">PRO VEŘEJNOST</a></li>
+                <li class="textmenul_akt"><a href="#">PRO STUDENTY</a></li>
+            </ul>
+            <ul id="textmenup">
+                <li><a href="#">NOVINKY</a></li>
+                <li><a href="#">KONTAKTY</a></li>
+                <li><a href="#">DOKUMENTY</a></li>
+                <li><a href="#">PROJEKTY</a></li>
+                <li><a href="#">FOTOGALERIE</a></li>
+            </ul>
+            <div id="odkazy"><img id="gb" src="obr/gb.png"><img class="odkaz" src="obr/fb-art.png"><img class="odkaz" src="obr/Feed-icon.svg"><img class="odkaz" src="obr/50744-200.png">
             </div>
-            <div id="menu">
-                <ul id="textmenul">
-                    <li><a href="#">PRO UČITELE</a></li>    
-                    <li><a href="#">PRO VEŘEJNOST</a></li>
-                    <li class="textmenul_akt"><a href="#" >PRO STUDENTY</a></li>
-                </ul>
-                <ul id="textmenup">
-                    <li><a href="#">NOVINKY</a></li>
-                    <li><a href="#">KONTAKTY</a></li>
-                    <li><a href="#">DOKUMENTY</a></li>
-                    <li><a href="#">PROJEKTY</a></li>
-                    <li><a href="#">FOTOGALERIE</a></li>
-                </ul>
-                <div id="odkazy"><img  id="gb" src="obr/gb.png"><img class="odkaz" src="obr/fb-art.png"><img class="odkaz" src="obr/Feed-icon.svg"><img class="odkaz" src="obr/50744-200.png">
-                </div>
-                <svg id="menuButton" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+            <svg id="menuButton" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
                     <line id="l1" stroke-linecap="square" stroke-linejoin="undefined" y2="10" x2="35" y1="10" x1="10" stroke-width="4" stroke="#000" fill="none"/>
                     <line id="l2" stroke-linecap="square" stroke-linejoin="undefined" y2="20" x2="35" y1="20" x1="10" stroke-width="4" stroke="#000" fill="none"/>
                     <line id="l3" stroke-linecap="square" stroke-linejoin="undefined" y2="30" x2="35" y1="30" x1="10" stroke-width="4" stroke="#000" fill="none"/>
                 </svg>
-            </div>            
         </div>
-        
-
-        <div   id="stred">
+    </div>
 
 
-
-            <div id="obsahova-cast">
+    <div id="stred">
 
 
 
+        <div id="obsahova-cast">
 
 
 
 
 
-                <div id="pravy-sloupec-uzky">
-                    <div class="podmenu">
-                        <h2> Pro studenty </h2>
-                        <svg id="podmenuButton" width="40" height="30" xmlns="http://www.w3.org/2000/svg">
+
+
+
+            <div id="pravy-sloupec-uzky">
+                <div class="podmenu">
+                    <h2> Pro studenty </h2>
+                    <svg id="podmenuButton" width="40" height="30" xmlns="http://www.w3.org/2000/svg">
                             <line id="l1-podmenu" stroke-linecap="square" stroke-linejoin="undefined" y2="8" x2="5" y1="18" x1="19" stroke-width="4" stroke="#333333" fill="none"/>
                             <line id="l2-podmenu" stroke-linecap="square" stroke-linejoin="undefined" y2="8" x2="35" y1="18" x1="21" stroke-width="4" stroke="#333333" fill="none"/>
                         </svg>
-                        <a href="skolni_rad.php" class="tlacitkopodmenuakt"   > Školní řád </a> <a href="../gympl_psycholog/gympl_psycholog.php" class="tlacitkopodmenu"   > Školní psycholog </a> <a href="http://www.schranka-duvery.cz/9667231f" class="tlacitkopodmenu"   > Schránka důvěry </a> <a href="../gympl_poradce/gympl_poradce.php" class="tlacitkopodmenu"   > Výchovný poradce </a> <a href="http://fialova.hostuju.cz" class="tlacitkopodmenu"  onclick="return !window.open(this.href)" >  Přípravné kurzy </a> <a href="https://mail.pekargmb.cz/bakaweb" class="tlacitkopodmenu"   >  Webové aplikace-vstup </a> <a href="elearning.php" class="tlacitkopodmenu"   > Stránky komisí (Elearning) </a> <a href="http://parlament.pekcloud.cz/" class="tlacitkopodmenu"   > Studentský parlament </a> <a href="http://www.pekcloud.cz" class="tlacitkopodmenu"  onclick="return !window.open(this.href)" > Pek Cloud </a> <a href="wifi.php" class="tlacitkopodmenu"   > WiFi síť </a> <a href="vs.php" class="tlacitkopodmenu"   > Vysoké školy </a> <a href="../gympl_casopis/gympl_casopis.php" class="tlacitkopodmenu"   > Školní časopis </a> <a href="http://www.pekargmb.cz/vol_primajaz/svp/editace.php" class="tlacitkopodmenu"   > Prima volba jazyků </a> <a href="http://www.pekargmb.cz/vol_pr1rocjaz/svp/editace.php" class="tlacitkopodmenu"   > 1.roč. volba jazyků </a> <a href="?ppmenu=rozvrhy#rozvrhy" class="tlacitkopodmenu"   > Rozvrhy </a> <a href="?ppmenu=maturita#maturita" class="tlacitkopodmenu"   > Maturita </a> <a href="?ppmenu=vol_pr#vol_pr" class="tlacitkopodmenu"   > Volitelné předměty </a> <a href="?ppmenu=zadosti#zadosti" class="tlacitkopodmenu"   > Žádosti </a> <a href="kopirovani.php" class="tlacitkopodmenu"   > Kopírování na studentské karty ISIC </a> <a href="../verejnost/office_skoleni.php" class="tlacitkopodmenu"   > Office školení  </a> <a href="../dokumentace/platebni_kod.pdf" class="tlacitkopodmenu"  onclick="return !window.open(this.href)" > Pravidla pro tvorbu platebního kódu (pdf) </a> <a href="?ppmenu=jidelna#jidelna" class="tlacitkopodmenu"   > Školní jídelna </a>  </div>  <!-- ppodmenu  --> 
-                    <div class="centrovano">
-                        <br />
-                        <img src="../foto_skola/schody_4.jpg" alt="foto" />
-                        <br />
-                    </div>
-                </div>  <!-- pravy sloupec uzky  --> 
-
-                <div id="levy-sloupec-siroky"> 
-
-
-
-
-
-                    <h3>Školní řád 2017/2018</h3>   
-
-                    Podle zákona č.561/2004 Sb.ze dne 24. září 2004 o předškolním, základním, středním, vyšším odborném a jiném vzdělávání (školský zákon) § 30 vydává ředitel Gymnázia Dr. Josefa školní řád.<br>
-                    Tento dokument se skládá z následujících příloh:<br>
-                    <table border="1" width="100%">
-
-
-                        <table border="0" width="100%"><tr><th>Příloha</th> <th>Náhled</th> <th>Text v pdf</th></tr><tr>
-                            <td>a) Práva a povinnosti žáků a jejich zákonných zástupců.</td>
-                            <td align="center"><a href="skolni_rad.php?zobr=1#cil" ><img src="../obr/arrow.png" alt="Stručný náhled" title="Stručný náhled" border="0" height="14" width="10"> </a></td>
-                            <td align="center"><br /><a href="../gympl_rady/pdfsoubory/1.pdf" title="Podrobný text v pdf"  onclick="return !window.open(this.href)">
-                                <img src="../obr/pdefko.gif" alt="pdefko.gif, 767B" title="text v pdf" border="0" height="39" width="37" class="obrvlevobezokraje"> 
-                                </a></td>
-                            </tr> <tr>
-                            <td>b) Klasifikační řád.</td>
-                            <td align="center"><a href="skolni_rad.php?zobr=2#cil" ><img src="../obr/arrow.png" alt="Stručný náhled" title="Stručný náhled" border="0" height="14" width="10"> </a></td>
-                            <td align="center"><br /><a href="../gympl_rady/pdfsoubory/2.pdf" title="Podrobný text v pdf"  onclick="return !window.open(this.href)">
-                                <img src="../obr/pdefko.gif" alt="pdefko.gif, 767B" title="text v pdf" border="0" height="39" width="37" class="obrvlevobezokraje"> 
-                                </a></td>
-                            </tr> <tr>
-                            <td>c) Kodex slušného chování žáka Gymnázia Dr. Josefa Pekaře.</td>
-                            <td align="center"><a href="skolni_rad.php?zobr=3#cil" ><img src="../obr/arrow.png" alt="Stručný náhled" title="Stručný náhled" border="0" height="14" width="10"> </a></td>
-                            <td align="center"><br /><a href="../gympl_rady/pdfsoubory/3.pdf" title="Podrobný text v pdf"  onclick="return !window.open(this.href)">
-                                <img src="../obr/pdefko.gif" alt="pdefko.gif, 767B" title="text v pdf" border="0" height="39" width="37" class="obrvlevobezokraje"> 
-                                </a></td>
-                            </tr> <tr>
-                            <td>d) Sankční řád.</td>
-                            <td align="center"><a href="skolni_rad.php?zobr=4#cil" ><img src="../obr/arrow.png" alt="Stručný náhled" title="Stručný náhled" border="0" height="14" width="10"> </a></td>
-                            <td align="center"><br /><a href="../gympl_rady/pdfsoubory/4.pdf" title="Podrobný text v pdf"  onclick="return !window.open(this.href)">
-                                <img src="../obr/pdefko.gif" alt="pdefko.gif, 767B" title="text v pdf" border="0" height="39" width="37" class="obrvlevobezokraje"> 
-                                </a></td>
-                            </tr> <tr>
-                            <td>e) Zásady omlouvání absencí.</td>
-                            <td align="center"><a href="skolni_rad.php?zobr=5#cil" ><img src="../obr/arrow.png" alt="Stručný náhled" title="Stručný náhled" border="0" height="14" width="10"> </a></td>
-                            <td align="center"><br /><a href="../gympl_rady/pdfsoubory/5.pdf" title="Podrobný text v pdf"  onclick="return !window.open(this.href)">
-                                <img src="../obr/pdefko.gif" alt="pdefko.gif, 767B" title="text v pdf" border="0" height="39" width="37" class="obrvlevobezokraje"> 
-                                </a></td>
-                            </tr> <tr>
-                            <td>f) Knihovní řád Gymnázia Dr. Josefa Pekaře.</td>
-                            <td align="center"><a href="skolni_rad.php?zobr=6#cil" ><img src="../obr/arrow.png" alt="Stručný náhled" title="Stručný náhled" border="0" height="14" width="10"> </a></td>
-                            <td align="center"><br /><a href="../gympl_rady/pdfsoubory/6.pdf" title="Podrobný text v pdf"  onclick="return !window.open(this.href)">
-                                <img src="../obr/pdefko.gif" alt="pdefko.gif, 767B" title="text v pdf" border="0" height="39" width="37" class="obrvlevobezokraje"> 
-                                </a></td>
-                            </tr> <tr>
-                            <td>g) Řád třídních služeb.</td>
-                            <td align="center"><a href="skolni_rad.php?zobr=7#cil" ><img src="../obr/arrow.png" alt="Stručný náhled" title="Stručný náhled" border="0" height="14" width="10"> </a></td>
-                            <td align="center"><br /><a href="../gympl_rady/pdfsoubory/7.pdf" title="Podrobný text v pdf"  onclick="return !window.open(this.href)">
-                                <img src="../obr/pdefko.gif" alt="pdefko.gif, 767B" title="text v pdf" border="0" height="39" width="37" class="obrvlevobezokraje"> 
-                                </a></td>
-                            </tr> <tr>
-                            <td>h) Řád učebny s PC.</td>
-                            <td align="center"><a href="skolni_rad.php?zobr=8#cil" ><img src="../obr/arrow.png" alt="Stručný náhled" title="Stručný náhled" border="0" height="14" width="10"> </a></td>
-                            <td align="center"><br /><a href="../gympl_rady/pdfsoubory/8.pdf" title="Podrobný text v pdf"  onclick="return !window.open(this.href)">
-                                <img src="../obr/pdefko.gif" alt="pdefko.gif, 767B" title="text v pdf" border="0" height="39" width="37" class="obrvlevobezokraje"> 
-                                </a></td>
-                            </tr> <tr>
-                            <td>i) Provozní řád sportovní haly.</td>
-                            <td align="center"><a href="skolni_rad.php?zobr=9#cil" ><img src="../obr/arrow.png" alt="Stručný náhled" title="Stručný náhled" border="0" height="14" width="10"> </a></td>
-                            <td align="center"><br /><a href="../gympl_rady/pdfsoubory/9.pdf" title="Podrobný text v pdf"  onclick="return !window.open(this.href)">
-                                <img src="../obr/pdefko.gif" alt="pdefko.gif, 767B" title="text v pdf" border="0" height="39" width="37" class="obrvlevobezokraje"> 
-                                </a></td>
-                            </tr> <tr>
-                            <td>j) Organizace šaten a řešení škodní události.</td>
-                            <td align="center"><a href="skolni_rad.php?zobr=10#cil" ><img src="../obr/arrow.png" alt="Stručný náhled" title="Stručný náhled" border="0" height="14" width="10"> </a></td>
-                            <td align="center"><br /><a href="../gympl_rady/pdfsoubory/10.pdf" title="Podrobný text v pdf"  onclick="return !window.open(this.href)">
-                                <img src="../obr/pdefko.gif" alt="pdefko.gif, 767B" title="text v pdf" border="0" height="39" width="37" class="obrvlevobezokraje"> 
-                                </a></td>
-                            </tr>  </table> <br>
-                    </table>
-                </div><!--  levy sloupec siroky -->
-
-
-                <br />
-            </div><!--  obsahova cast -->
-        </div><!--  stred --> 
-            <div id="outer_footer">
-                <div id="footer">
-                    <h4>Kontakty</h4>
-                    <img id="footer_logo" src="obr/logoskola-kruh.png">
-                    <p>Palackého 211<br>
-                        29380 Mladá Boleslav<br>
-                        tel: 326375951<br>
-                        IČO: 48683868<br>
-                        pekargmb@pekargmb.cz<br>
-                        č. účtu školy pro platby<br>
-                        19-5779840267/0100
-                    </p>
-                    <div id="carka"></div>
-                    <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2542.342389539517!2d14.904282115516343!3d50.4160920977214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470955b9a6e1dcf1%3A0x9c598a8a9dfd43d2!2sGymn%C3%A1zium+Dr.+Josefa+Peka%C5%99e!5e0!3m2!1scs!2scz!4v1514132764272"frameborder="0" style="border:0" allowfullscreen></iframe></div>
+                    <a href="skolni_rad.php" class="tlacitkopodmenuakt"> Školní řád </a> <a href="../gympl_psycholog/gympl_psycholog.php" class="tlacitkopodmenu"> Školní psycholog </a> <a href="http://www.schranka-duvery.cz/9667231f" class="tlacitkopodmenu"> Schránka důvěry </a> <a href="../gympl_poradce/gympl_poradce.php" class="tlacitkopodmenu"> Výchovný poradce </a> <a href="http://fialova.hostuju.cz" class="tlacitkopodmenu" onclick="return !window.open(this.href)">  Přípravné kurzy </a> <a href="https://mail.pekargmb.cz/bakaweb" class="tlacitkopodmenu">  Webové aplikace-vstup </a> <a href="elearning.php" class="tlacitkopodmenu"> Stránky komisí (Elearning) </a> <a href="http://parlament.pekcloud.cz/" class="tlacitkopodmenu"> Studentský parlament </a> <a href="http://www.pekcloud.cz" class="tlacitkopodmenu" onclick="return !window.open(this.href)"> Pek Cloud </a> <a href="wifi.php" class="tlacitkopodmenu"> WiFi síť </a> <a href="vs.php" class="tlacitkopodmenu"> Vysoké školy </a> <a href="../gympl_casopis/gympl_casopis.php" class="tlacitkopodmenu"> Školní časopis </a> <a href="http://www.pekargmb.cz/vol_primajaz/svp/editace.php" class="tlacitkopodmenu"> Prima volba jazyků </a> <a href="http://www.pekargmb.cz/vol_pr1rocjaz/svp/editace.php" class="tlacitkopodmenu"> 1.roč. volba jazyků </a> <a href="?ppmenu=rozvrhy#rozvrhy" class="tlacitkopodmenu"> Rozvrhy </a> <a href="?ppmenu=maturita#maturita" class="tlacitkopodmenu"> Maturita </a> <a href="?ppmenu=vol_pr#vol_pr" class="tlacitkopodmenu"> Volitelné předměty </a> <a href="?ppmenu=zadosti#zadosti" class="tlacitkopodmenu"> Žádosti </a> <a href="kopirovani.php" class="tlacitkopodmenu"> Kopírování na studentské karty ISIC </a> <a href="../verejnost/office_skoleni.php" class="tlacitkopodmenu"> Office školení  </a> <a href="../dokumentace/platebni_kod.pdf" class="tlacitkopodmenu" onclick="return !window.open(this.href)"> Pravidla pro tvorbu platebního kódu (pdf) </a> <a href="?ppmenu=jidelna#jidelna" class="tlacitkopodmenu"> Školní jídelna </a> </div>
+                <!-- ppodmenu  -->
+                <div class="centrovano">
+                    <br />
+                    <img src="../foto_skola/schody_4.jpg" alt="foto" />
+                    <br />
+                </div>
             </div>
-        
+            <!-- pravy sloupec uzky  -->
+
+            <div id="levy-sloupec-siroky">
 
 
 
 
 
-    </body><!--  celek --> 
+                <h3>Školní řád 2017/2018</h3>
+
+                Podle zákona č.561/2004 Sb.ze dne 24. září 2004 o předškolním, základním, středním, vyšším odborném a jiném vzdělávání (školský zákon) § 30 vydává ředitel Gymnázia Dr. Josefa školní řád.<br> Tento dokument se skládá z následujících příloh:<br>
+                <table border="1" width="100%">
+
+
+                    <table border="0" width="100%">
+                        <tr>
+                            <th>Příloha</th>
+                            <th>Náhled</th>
+                            <th>Text v pdf</th>
+                        </tr>
+                        <tr>
+                            <td>a) Práva a povinnosti žáků a jejich zákonných zástupců.</td>
+                            <td align="center"><a href="skolni_rad.php?zobr=1#cil"><img src="../obr/arrow.png" alt="Stručný náhled" title="Stručný náhled" border="0" height="14" width="10"> </a></td>
+                            <td align="center"><br /><a href="../gympl_rady/pdfsoubory/1.pdf" title="Podrobný text v pdf" onclick="return !window.open(this.href)">
+                                <img src="../obr/pdefko.gif" alt="pdefko.gif, 767B" title="text v pdf" border="0" height="39" width="37" class="obrvlevobezokraje"> 
+                                </a></td>
+                        </tr>
+                        <tr>
+                            <td>b) Klasifikační řád.</td>
+                            <td align="center"><a href="skolni_rad.php?zobr=2#cil"><img src="../obr/arrow.png" alt="Stručný náhled" title="Stručný náhled" border="0" height="14" width="10"> </a></td>
+                            <td align="center"><br /><a href="../gympl_rady/pdfsoubory/2.pdf" title="Podrobný text v pdf" onclick="return !window.open(this.href)">
+                                <img src="../obr/pdefko.gif" alt="pdefko.gif, 767B" title="text v pdf" border="0" height="39" width="37" class="obrvlevobezokraje"> 
+                                </a></td>
+                        </tr>
+                        <tr>
+                            <td>c) Kodex slušného chování žáka Gymnázia Dr. Josefa Pekaře.</td>
+                            <td align="center"><a href="skolni_rad.php?zobr=3#cil"><img src="../obr/arrow.png" alt="Stručný náhled" title="Stručný náhled" border="0" height="14" width="10"> </a></td>
+                            <td align="center"><br /><a href="../gympl_rady/pdfsoubory/3.pdf" title="Podrobný text v pdf" onclick="return !window.open(this.href)">
+                                <img src="../obr/pdefko.gif" alt="pdefko.gif, 767B" title="text v pdf" border="0" height="39" width="37" class="obrvlevobezokraje"> 
+                                </a></td>
+                        </tr>
+                        <tr>
+                            <td>d) Sankční řád.</td>
+                            <td align="center"><a href="skolni_rad.php?zobr=4#cil"><img src="../obr/arrow.png" alt="Stručný náhled" title="Stručný náhled" border="0" height="14" width="10"> </a></td>
+                            <td align="center"><br /><a href="../gympl_rady/pdfsoubory/4.pdf" title="Podrobný text v pdf" onclick="return !window.open(this.href)">
+                                <img src="../obr/pdefko.gif" alt="pdefko.gif, 767B" title="text v pdf" border="0" height="39" width="37" class="obrvlevobezokraje"> 
+                                </a></td>
+                        </tr>
+                        <tr>
+                            <td>e) Zásady omlouvání absencí.</td>
+                            <td align="center"><a href="skolni_rad.php?zobr=5#cil"><img src="../obr/arrow.png" alt="Stručný náhled" title="Stručný náhled" border="0" height="14" width="10"> </a></td>
+                            <td align="center"><br /><a href="../gympl_rady/pdfsoubory/5.pdf" title="Podrobný text v pdf" onclick="return !window.open(this.href)">
+                                <img src="../obr/pdefko.gif" alt="pdefko.gif, 767B" title="text v pdf" border="0" height="39" width="37" class="obrvlevobezokraje"> 
+                                </a></td>
+                        </tr>
+                        <tr>
+                            <td>f) Knihovní řád Gymnázia Dr. Josefa Pekaře.</td>
+                            <td align="center"><a href="skolni_rad.php?zobr=6#cil"><img src="../obr/arrow.png" alt="Stručný náhled" title="Stručný náhled" border="0" height="14" width="10"> </a></td>
+                            <td align="center"><br /><a href="../gympl_rady/pdfsoubory/6.pdf" title="Podrobný text v pdf" onclick="return !window.open(this.href)">
+                                <img src="../obr/pdefko.gif" alt="pdefko.gif, 767B" title="text v pdf" border="0" height="39" width="37" class="obrvlevobezokraje"> 
+                                </a></td>
+                        </tr>
+                        <tr>
+                            <td>g) Řád třídních služeb.</td>
+                            <td align="center"><a href="skolni_rad.php?zobr=7#cil"><img src="../obr/arrow.png" alt="Stručný náhled" title="Stručný náhled" border="0" height="14" width="10"> </a></td>
+                            <td align="center"><br /><a href="../gympl_rady/pdfsoubory/7.pdf" title="Podrobný text v pdf" onclick="return !window.open(this.href)">
+                                <img src="../obr/pdefko.gif" alt="pdefko.gif, 767B" title="text v pdf" border="0" height="39" width="37" class="obrvlevobezokraje"> 
+                                </a></td>
+                        </tr>
+                        <tr>
+                            <td>h) Řád učebny s PC.</td>
+                            <td align="center"><a href="skolni_rad.php?zobr=8#cil"><img src="../obr/arrow.png" alt="Stručný náhled" title="Stručný náhled" border="0" height="14" width="10"> </a></td>
+                            <td align="center"><br /><a href="../gympl_rady/pdfsoubory/8.pdf" title="Podrobný text v pdf" onclick="return !window.open(this.href)">
+                                <img src="../obr/pdefko.gif" alt="pdefko.gif, 767B" title="text v pdf" border="0" height="39" width="37" class="obrvlevobezokraje"> 
+                                </a></td>
+                        </tr>
+                        <tr>
+                            <td>i) Provozní řád sportovní haly.</td>
+                            <td align="center"><a href="skolni_rad.php?zobr=9#cil"><img src="../obr/arrow.png" alt="Stručný náhled" title="Stručný náhled" border="0" height="14" width="10"> </a></td>
+                            <td align="center"><br /><a href="../gympl_rady/pdfsoubory/9.pdf" title="Podrobný text v pdf" onclick="return !window.open(this.href)">
+                                <img src="../obr/pdefko.gif" alt="pdefko.gif, 767B" title="text v pdf" border="0" height="39" width="37" class="obrvlevobezokraje"> 
+                                </a></td>
+                        </tr>
+                        <tr>
+                            <td>j) Organizace šaten a řešení škodní události.</td>
+                            <td align="center"><a href="skolni_rad.php?zobr=10#cil"><img src="../obr/arrow.png" alt="Stručný náhled" title="Stručný náhled" border="0" height="14" width="10"> </a></td>
+                            <td align="center"><br /><a href="../gympl_rady/pdfsoubory/10.pdf" title="Podrobný text v pdf" onclick="return !window.open(this.href)">
+                                <img src="../obr/pdefko.gif" alt="pdefko.gif, 767B" title="text v pdf" border="0" height="39" width="37" class="obrvlevobezokraje"> 
+                                </a></td>
+                        </tr>
+                    </table> <br>
+                </table>
+            </div>
+            <!--  levy sloupec siroky -->
+
+
+            <br />
+        </div>
+        <!--  obsahova cast -->
+    </div>
+    <!--  stred -->
+    <div id="outer_footer">
+        <div id="footer">
+            <h4>Kontakty</h4>
+            <img id="footer_logo" src="obr/logoskola-kruh.png">
+            <p>Palackého 211<br> 29380 Mladá Boleslav<br> tel: 326375951<br> IČO: 48683868<br> pekargmb@pekargmb.cz
+                <br> č. účtu školy pro platby<br> 19-5779840267/0100
+            </p>
+            <div id="carka"></div>
+            <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2542.342389539517!2d14.904282115516343!3d50.4160920977214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470955b9a6e1dcf1%3A0x9c598a8a9dfd43d2!2sGymn%C3%A1zium+Dr.+Josefa+Peka%C5%99e!5e0!3m2!1scs!2scz!4v1514132764272" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+    </div>
+
+
+
+
+
+
+</body>
+<!--  celek -->
+
 </html>
