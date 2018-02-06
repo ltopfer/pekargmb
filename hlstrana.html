@@ -1,28 +1,32 @@
-
 <!doctype html>
 <html>
-
     <head>
-
-
         <!--<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >-->
         <meta charset="utf-8">
-
         <meta lang="cs" name="Description" content="Gymnázium Dr.J.Pekaře  Mladá Boleslav" >
-
-         <meta name="viewport" content="width=device-width,initial-scale=1">
-
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta lang="cs" name="Keywords" content="škola,výuka,žák,učitel" >
-
+        <meta name="theme-color" content="#fcbb23">
+        
         <link rel="shortcut icon" href="http://www.pekargmb.cz/favicon.ico" type="image/x-icon" >
-
-
         <link href="stilhl-implic2.css" type="text/css" rel="stylesheet" >
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
         
         <title>Gymnázium Dr.J.Pekaře</title>
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script>
+            // obecné
+            $(document).ready(function() {
+                $("#menuButton").click(function() {
+                    $("#menu").toggleClass("otevreno");
+                });
+                
+                // jen na hlavní straně
+                hlstrana();
+            });
+            
+            // hlstrana
             var moveTime = 8;
             var timer = 0;
             var countTimer = true;
@@ -30,17 +34,18 @@
             var pocet = 0;
             var prvni = 0;
 
-            $(document).ready(function() {
-                setInterval(function() {
-                    if(countTimer) {
-                        timer++;
-                        //$("#top-header").html(timer);
-                    }
+            function hlstrana() {
+                if(window.innerWidth > 768)
+                    setInterval(function() {
+                        if(countTimer) {
+                            timer++;
+                            //$("#top-header").html(timer);
+                        }
 
-                    if(timer >= moveTime) {
-                        moveSlider(1);
-                    }
-                }, 1000);    
+                        if(timer >= moveTime) {
+                            moveSlider(1);
+                        }
+                    }, 1000);    
 
                 $(".novinka_index").mouseenter(function() {
                     countTimer = false;
@@ -55,18 +60,18 @@
                 $("#sipkap").click(function() {
                     moveSlider(1);
                 });
-                $("#menuButton").click(function() {
-                    $("#menu").toggleClass("otevreno");
-                });
                 
                 $(window).scroll(function() {
                     var scrolledY = $(window).scrollTop();
-                    $("#obrazek-pozadi").css("margin-top", 75 - scrolledY*0.3);
+                    if(window.innerWidth <= 768)
+                        $("#obrazek-pozadi").css("margin-top", 40 - scrolledY*0.3);
+                    else
+                        $("#obrazek-pozadi").css("margin-top", 75 - scrolledY*0.3);
                 });
                 
                 start();
                 //timer = moveTime - 3;                
-            });
+            }
                 
                 function start() {
                     novinky_index = $("#novinky_index").find(".novinka_index");
@@ -126,10 +131,11 @@
                 <svg id="menuButton" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
                     <line id="l1" stroke-linecap="square" stroke-linejoin="undefined" y2="10" x2="35" y1="10" x1="10" stroke-width="4" stroke="#000" fill="none"/>
                     <line id="l2" stroke-linecap="square" stroke-linejoin="undefined" y2="20" x2="35" y1="20" x1="10" stroke-width="4" stroke="#000" fill="none"/>
-                    <line id="l3" stroke-linecap="square" stroke-linejoin="undefined" y2="30" x2="35" y1="30" x1="10" stroke-width="4"stroke="#000" fill="none"/>
+                    <line id="l3" stroke-linecap="square" stroke-linejoin="undefined" y2="30" x2="35" y1="30" x1="10" stroke-width="4" stroke="#000" fill="none"/>
                 </svg>
             </div>            
         </div>
+        
         <span id="obrazek-pozadi">
         </span>
         <div id="novinky_index">
@@ -147,7 +153,7 @@
         </div>
         <div id="outer_page">
             <div id="page">
-                <h2>Uspěšní v tradici<br> kvalitního vzdělávání</h2>
+                <h2 id="tradice">Uspěšní v tradici<br> kvalitního vzdělávání</h2>
                 <p id="typy_studia_p">Škola s třistaletou tradicí pojmenovaná po&nbsp;významném historikovi poskytuje středoškolské vzdělání zakončené maturitní zkouškou v&nbsp;těchto studijních oborech: </p>
                 <ul id="typy_studia">
                     <li><b>osmileté studium</b> pro žáky, kteří ukončili 5. třídu ZŠ 
@@ -165,7 +171,8 @@
                             </div>
 
                             <div class="zadni">
-                                <p>Všestranné středoškolské vzdělání ukončené maturitou</p>
+                                <p class="karta-text-dlouhy">Všestranné středoškolské vzdělání ukončené maturitou</p>
+                                <p class="karta-text-kratky">Maturita</p>
                                 <a href="">více informací</a>
                             </div>
                         </div>
@@ -178,7 +185,8 @@
                             </div>
 
                             <div class="zadni">
-                                <p>knihovnu s čítárnou a studovnou</p>
+                                <p class="karta-text-dlouhy">knihovnu s čítárnou a studovnou</p>
+                                <p class="karta-text-kratky">Knihovna</p>
                                 <a href="">více informací</a>
                             </div>
                         </div>
@@ -191,7 +199,8 @@
                             </div>
 
                             <div class="zadni">
-                                <p>obědy ve vlastní školní jídelně a občerstvení ve školním kiosku</p>
+                                <p class="karta-text-dlouhy">obědy ve vlastní školní jídelně a občerstvení ve školním kiosku</p>
+                                <p class="karta-text-kratky">Školní jídelnu</p>
                                 <a href="">více informací</a>
                             </div>
                         </div>
@@ -204,7 +213,8 @@
                             </div>
 
                             <div class="zadni">
-                                <p>výbornépodmínky pro tělesnou výchovu a sportovní činnist</p>
+                                <p class="karta-text-dlouhy">výbornépodmínky pro tělesnou výchovu a sportovní činnist</p>
+                                <p class="karta-text-kratky">Sport</p>
                                 <a href="">více informací</a>
                             </div>
                         </div>
@@ -217,7 +227,8 @@
                             </div>
 
                             <div class="zadni">
-                                <p>spolupráce se školami ve Francii, Německu a Slovensku</p>
+                                <p class="karta-text-dlouhy">spolupráce se školami ve Francii, Německu a Slovensku</p>
+                                <p class="karta-text-kratky">Zahraniční spolupráce</p>
                                 <a href="">více informací</a>
                             </div>
                         </div>
@@ -230,7 +241,8 @@
                             </div>
 
                             <div class="zadni">
-                                <p>výuku cizích jazyků ve skupinách rozdělených podle úrovně znalostí</p>
+                                <p class="karta-text-dlouhy">výuku cizích jazyků ve skupinách rozdělených podle úrovně znalostí</p>
+                                <p class="karta-text-kratky">Výuka cizích jazyků</p>
                                 <a href="">více informací</a>
                             </div>
                         </div>
@@ -243,7 +255,8 @@
                             </div>
 
                             <div class="zadni">
-                                <p>profilaci studia prostřednictvím volitelných předmětů</p>
+                                <p class="karta-text-dlouhy">profilaci studia prostřednictvím volitelných předmětů</p>
+                                <p class="karta-text-kratky">Profilace studia</p>
                                 <a href="">více informací</a>
                             </div>
                         </div>
@@ -256,7 +269,8 @@
                                 </div>
 
                                 <div class="zadni">
-                                    <p>přípravu pro studium na všech typek vyšších odborných škol a vysokých škol</p>
+                                    <p class="karta-text-dlouhy">přípravu pro studium na všech typek vyšších odborných škol a vysokých škol</p>
+                                    <p class="karta-text-kratky">Příprava na VŠ</p>
                                     <a href="">více informací</a>
                                 </div>
                         </div>
@@ -269,7 +283,8 @@
                             </div>
 
                             <div class="zadni">
-                                <p>moderně vybavené specializované učebny, laboratoře a počítačové učebny</p>
+                                <p class="karta-text-dlouhy">moderní specializované učebny, laboratoře a počítačové učebny</p>
+                                <p class="karta-text-kratky">Moderně vybavené učebny</p>
                                 <a href="">více informací</a>
                             </div>
                         </div>
@@ -282,7 +297,8 @@
                             </div>
 
                             <div class="zadni">
-                                <p>možnost bezplatného psychologického poradenství u školního psychologa</p>
+                                <p class="karta-text-dlouhy">možnost bezplatného psychologického poradenství u školního psychologa</p>
+                                <p class="karta-text-kratky">Školní psycholog</p>
                                 <a href="">více informací</a>
                             </div>
                         </div>
@@ -295,7 +311,8 @@
                             </div>
 
                             <div class="zadni">
-                                <p>mimoškolní aktivity a kulturní, sportovní a počítačové kroužky</p>
+                                <p class="karta-text-dlouhy">mimoškolní aktivity a kulturní, sportovní a počítačové kroužky</p>
+                                <p class="karta-text-kratky">Kroužky</p>
                                 <a href="">více informací</a>
                             </div>
                         </div>
@@ -308,7 +325,8 @@
                             </div>
 
                             <div class="zadni">
-                                <p>možnost aktivně se zapojit do fungování školy prostřednictvím studentského parlamentu</p>
+                                <p class="karta-text-dlouhy">možnost aktivně se zapojit do fungování školy prostřednictvím studentského parlamentu</p>
+                                <p class="karta-text-kratky">Školní parlament</p>
                                 <a href="">více informací</a>
                             </div>
                         </div>
@@ -321,7 +339,7 @@
                 <div id="spolupracujeme">
                     <a><img src="obr/kraj-znak.png" class="spoluprace_kraj"></a>
                     <a><img src="obr/kraj.png" class="spoluprace_kraj"></a>
-                    <h3>Blíže spolupracujeme</h3>
+                    <h2>Blíže spolupracujeme</h2>
                     <a><img src="obr/str_cer.png" class="spoluprace_obrazek"></a>
                     <a><img src="obr/mensa.png" class="spoluprace_obrazek"></a>
                     <a><img src="obr/logopartner.gif" class="spoluprace_obrazek"></a>

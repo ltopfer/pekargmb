@@ -1,6 +1,11 @@
+@-ms-viewport { /* pro Edge/IE na Windows Phone */
+    width: device-width; 
+}
 
-
-html { -webkit-font-smoothing: antialiased; }
+html { 
+    -webkit-font-smoothing: antialiased; 
+    font-size: 16px;
+}
 :root {
     --barva_hlavni: #fcbb23;
     --barva_pomocna: #fdd16d;
@@ -35,19 +40,22 @@ a[name] {
     -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
     box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
 }
+#header strong {
+    font-weight: 700;
+}
 #top-header {
     margin:auto;
     width: 1060px;
-    height: 35px;
+    height: 39px; /*35*/
   /*  border: solid black 2px; */
 }
 #top-header h1{
-    font-weight: 400;
+    font-weight: 300;
     font-size: 1.7em;
     margin-left: 100px;
-    margin-top: 7px;
+    margin-top: 3px; /*7*/
     margin-bottom: 0px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 #menuButton {
     display: none;
@@ -310,8 +318,13 @@ a[name] {
     width: 932px;
     padding-top: 12px;
 }
+#tradice {
+    text-align: center;
+    position: relative;
+    left: -220px;
+}
 h2 {
-    text-align: left;
+    text-align: center;
     margin-top: 30px;
     font-size: 1.5em;
     color: var(--barva_nadpis);
@@ -325,8 +338,9 @@ h3 {
     color: var(--barva_nadpis);
 }
 #typy_studia_p{
-    width: 400px;
+    width: 370px;
     margin-left: 64px;
+    text-align: justify;
 }
 #typy_studia li{
     width: 265px;
@@ -345,7 +359,6 @@ h3 {
 }
 /*/////////////////////////nabidky///////////////////////////////*/
 #conabizime {
-    text-align: left;
     margin-top: 40px;
 }
 #nabidky {
@@ -427,17 +440,26 @@ h3 {
 }
 .zadni p{
     position: absolute;
-    margin: 10px;
-    top: 15px;
+    margin: auto;
+    padding-left: 10%;
+    padding-right: 10%;
+    top: 20px;
     color: black;
     font-weight: 600;
     text-align: center;
     
 }
+.karta-text-kratky {
+    display: none;
+}
+.karta-text-dlouhy {
+    display: block;
+}
 .zadni a{
     position: absolute;
-    margin-left: 38px;
-    top: 180px;
+    margin:auto;
+    width: 100%;
+    bottom: 20px;
     font-weight: 600;
     font-size: 1.1em;
     text-align: center;
@@ -667,6 +689,9 @@ a.tridappmenuakt {
     padding-left: 1%;
     -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+}
+#podmenuButton {
+    display: none;
 }
 /* novinky */
 #levy-sloupec-siroky-novinky {
@@ -1150,16 +1175,13 @@ table {
         width: 123px;
         left: 34px;
     }
-    .zadni p{
-        margin: 10px;
-        top: 10px;
-        font-weight: 600;
-        font-size: 0.9em;
+   .zadni p{
+       font-size: 0.9em;
+       top: 15px;
     }
     .zadni a{
-        margin-left: 23px;
-        top: 150px;
         font-size: 1em;
+        bottom: 15px;
     }
     /*//////////////dalsi/////////////////*/
     #prohlidka, #historie{
@@ -1237,15 +1259,18 @@ table {
         padding-bottom: 4px;
         margin-left: 40px;
         width: auto;
+        height: 35px;
     }
     #top-header h1{
         font-size: 1.2em;
         position: relative;
         z-index: 10;
-        margin-left: -35px;
-        top: 2px;
+        margin-left: 0px;
+        vertical-align: middle;
+        line-height: 40px;
         text-align: center;
-        pointer-events: none;        
+        pointer-events: none;
+        margin-top: 0px;
     }
     #menuButton {
         display: block;
@@ -1362,14 +1387,14 @@ table {
     }*/
     #odkazy {
         clear: left;
-        width: 180px;
+        width: 200px;
         top: 10px;
     }
     .odkaz {
-        width: 20px;
+        width: 30px;
     }
     #gb {
-        width: 40px;
+        width: 60px;
     }
     /*///////////////////////////////////////////////////obrazek-pozadi////////////////////////////////////*/
     #obrazek-pozadi {
@@ -1379,30 +1404,23 @@ table {
         /*background-size: 100%;*/
         background-size: cover;
         background-position: center;
-        margin-top: 50px;
+        margin-top: 40px;
         height: 200px;
         position: fixed;
         z-index: -1;   
     }
     /*//////////////////novinky///////////////////*/
-    #sipkal {
-        position: absolute;
-        margin-right: 336px;
-        right: 50%;
-        top: 143px;
-        cursor: pointer;
-    }
-    #sipkap {
-        margin-left: 336px;
-        left: 50%;
-        top: 143px;
+    #sipkal, #sipkap {
+        display: none;
     }
     .novinka_index{
-        margin-top: 30px;
-        margin-bottom: 30px;
+        margin-top: 20px;
+        margin-bottom: 0px;
         width: 90%;
         height: 90vw;
         overflow-x: hidden;
+        float: left;
+        position: relative;
     }
     #novinky_index ul{
         width: 100%;
@@ -1411,36 +1429,46 @@ table {
         left: -262px;
     }
     .n1 {
-        left: 5%;
+        left: 5%; 
     }
     .n2 {
-        left: 414px;
-        -webkit-transform: rotateY(90deg);
-        transform: rotateY(90deg);
-        -webkit-transform-origin: left;
-        transform-origin: left;
-        opacity: 0;
+        left: 5%; 
     }
     .n3 {
-        left: 716px;
+        left: 5%;
+        -webkit-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+        -webkit-transform-origin: left;
+        transform-origin: left;
+        opacity: 1;
+        
     }
     .n4 {
         left: 716px;
-    }
+    } 
     #novinky_index {
-        margin-top: 575px;
-        height: 300vw;
+        margin-top: 240px;
+        height: calc(270vw + 142px);
     }
     .novinka_index img {
         display: block;
-        max-width: 280px;
-        max-height: 186px;
+        max-width: 90vw;
+        max-height: 50vw;
         margin: auto;
         position: absolute;
-        top: 93px;
+        top: 25vw;
         left: 50%;
         -webkit-transform: translateY(-50%) translateX(-50%);
         transform: translateY(-50%) translateX(-50%);
+    }
+    .novinka_index span{
+        z-index: 10;
+        width: 100%;
+        height: 40vw;
+        background: #FFF;
+        position: absolute;
+        bottom: 0px;
+        margin: 0px;
     }
     .novinka_index h2{
         text-align: center;
@@ -1454,16 +1482,59 @@ table {
     }
     #novinky_index_vic a{
         font-size: 1.25em;
-        right: 74px;
-        top: 330px;
-        padding: 10px;  
+        text-align: center;
+        left: calc(50% - 75px);
+        width: 150px;        
+        padding: 10px; 
+        right: initial;
+        position: absolute;
+        top: 0px;
     }
     #novinky_index_vic{
         width: 100%;
+        position: absolute;
+        bottom: 0px;
+        height: 62px;
     }
     /*///////////////nabidky///////////*/
     #nabidky {
         height: auto;
+    }
+    #tradice {
+        left: 0px;
+    }
+    #typy_studia_p{
+        
+        width: 80vw;
+        margin: auto;
+        margin-top: 65vw;
+        text-align: justify;
+    }
+    #typy_studia li{
+        width: 70vw;
+        margin: auto;
+        text-align: justify;
+    }
+    #busta {
+        position: absolute;
+        left: auto;
+        margin: auto;
+        top: 4em;
+        width: 60vw;
+        margin-left: 20vw;
+        height: auto;
+        text-align: center;
+        font-weight: bold;
+        line-height: 1.1em;
+        font-size: 1.1em;
+    }
+    #busta img {
+        position: relative;
+        width: 40vw;
+        margin-left: 10vw;
+        margin-right: 10vw;
+        top: 20px;
+        margin-bottom: 1em;
     }
     .nabidka {
         width: 33.33%;
@@ -1488,19 +1559,36 @@ table {
         left: 20%;
     }
     .zadni p{
-        margin: 10px;
-        top: 10px;
+        text-align: center;
+        width: 80%;
+        margin: auto;
         font-weight: 600;
-        font-size: 0.9em;
+        font-size: 5vw;
+        top: 30%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    .karta-text-kratky {
+        display: block;
+    }
+    .karta-text-dlouhy {
+        display: none;
     }
     .zadni a{
-        margin-left: 23px;
-        top: 10%;
-        font-size: 1em;
+        margin-left: auto;
+        width: 90%;
+        text-align: center;
+        font-size: 5vw;
+        bottom: 10px;
+        padding-left: 5%;
+        padding-right: 5%;
     }
     /*//////////////page//////////////////*/
     #outer_page {
-        top: calc(965px + 300vw);
+        top: calc(240px + 270vw + 142px);
+    }
+    #page {
+        padding-top: 1px;
     }
     /*//////////////dalsi/////////////////*/
     #spolupracujeme{
@@ -1527,11 +1615,15 @@ table {
         margin-bottom: 1vw;
         margin-top: 1vw;
     }
-    #outer_footer {
+    .footer_index {
         position: relative;
+        top: calc(3em + 65vw + 150vw + 120vw + 80vw + 35vw + 50px);
+    }
+    #outer_footer {
         width: 100%;
-        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
-        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    }
+    #outer_footer.footer_index {
+        width: 100%;
     }
     #footer {
         width: 100%;
@@ -1566,14 +1658,124 @@ table {
     #carka {
         display: none;
     }
+    /*//////////////////////// ostatní stránky ///////////////////////*/
+    #stred {
+        width: 100%;
+    }
+    #obsahova-cast {
+        padding-top: 20px;
+    }
+    #obsahova-cast h2{
+        text-align: left;
+        cursor: pointer;
+        padding: 7px;
+        padding-left: 15px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        position: relative;
+        -webkit-box-shadow: 0px 6px 13px -4px rgba(0,0,0,0.2);
+        box-shadow: 0px 6px 13px -4px rgba(0,0,0,0.2);
+        z-index: 10;
+        
+    }
+    
+    #pravy-sloupec-uzky {
+        background: #DDD;
+        float: left;
+        height: auto;
+        width: 100%;
+        margin-right: 0px;
+        padding-right: 0px;
+        padding-left: 0px;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+    .podmenu {
+        display: block;
+        
+        float: none;
+        width: 90%;
+        margin: auto;
+        margin-top: 40px;
+        max-height: 42px;
+        -webkit-transition: 1s;
+        transition: 1s;
+        overflow: hidden;
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
+    }
+    .podmenu #podmenuButton #l1-podmenu {
+        -webkit-transition: 0.6s;
+        transition: 0.6s;
+        -webkit-transform-origin: 12px 13px;
+        transform-origin: 12px 13px;
+    }
+    .podmenu #podmenuButton #l2-podmenu {
+        -webkit-transition: 0.6s;
+        transition: 0.6s;
+        -webkit-transform-origin: 27px 13px;
+        transform-origin: 27px 13px;
+    }
+    .podmenu.otevrenopod {
+        max-height: 1000px;
+    }
+    .podmenu.otevrenopod #podmenuButton #l1-podmenu {
+        -webkit-transform: rotate(-71.08deg);
+        transform: rotate(-71.08deg);
+    }
+    .podmenu.otevrenopod #podmenuButton #l2-podmenu {
+        -webkit-transform: rotate(71.08deg);
+        transform: rotate(71.08deg);
+    }
+    #podmenuButton {
+        display: block;
+        float: right;
+        position: relative;
+        top: -35px;
+        right: 7px;
+        pointer-events: none;
+        z-index: 15;
+    }
+    #levy-sloupec-siroky {
+        background: #FFF;
+        float: left;
+        width: 90%;
+        display: block;
+        margin-bottom: 15px;
+        padding-top: 0px;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 00px;
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    }
+    #levy-sloupec-siroky-novinky {
+        float: left;
+        /*background: Red;*/
+        width: 96%;
+        margin-left: 2%;
+        margin-right: 2%;
+        /*border:  thin solid red	;*/
+        display: block;
+        text-align: justify;
+        /*margin-right: 2%;*/
+        margin-bottom: 15px;
+        /*border: 1px dotted Highlight; */
+        padding-top: 0px;
+
+        padding-bottom: 10px;
+    }
+
+
+    
 }
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 350px) {
     #top-header h1{
         font-size: 1.2em;
         position: relative;
         z-index: 10;
         margin-left: 5px;
-        top: -3px;
+        line-height: 25px;
     }
     #header {
         height: 50px;
@@ -1597,4 +1799,12 @@ table {
         z-index: 10;
         background: var(--barva_hlavni);
     }
+    .footer_index {
+        position: relative;
+        top: calc(3em + 65vw + 150vw + 120vw + 80vw + 45vw + 80px);
+    }
+    #footer {
+        height: 250px; 
+    }
 }
+/* Ladislav Töpfer, 2018 */

@@ -29,4 +29,13 @@ není vidět lupa ???????? v IE v chomu neni žadný ikona???záleží na rozli�
 naformátovat další rubriky "naši nej"a "významní abs."   -bude potřeba změnit class u obrázků
 ------------------------------------------------------
 v html chybí div stred
+ - HEADER, OUTER_FOOTER patří mimo střed (na hlavní straně střed nemá být vůbec)
 odebrání <br>, úprava <script> v hlstrana.html
+změnit doctype na HTML5 ?
+ - hlavička - nový charset
+ - javascript
+ 
+úprava hlstrana.html
+přidání scriptu do hlavišky ostatní stran pro podmenu
+úprava podmenu
+obrazen pod podmenu - odebrat?

@@ -1,51 +1,62 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-
-
+<!doctype html>
 <html>
-
     <head>
-
-
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
-
+        <!--<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >-->
+        <meta charset="utf-8">
         <meta lang="cs" name="Description" content="Gymnázium Dr.J.Pekaře  Mladá Boleslav" >
-
+        <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta lang="cs" name="Keywords" content="škola,výuka,žák,učitel" >
 
         <link rel="shortcut icon" href="http://www.pekargmb.cz/favicon.ico" type="image/x-icon" >
-
-
-
         <link href="stilhl-implic2.css" type="text/css" rel="stylesheet" >
 
         <title>Gymnázium Dr.J.Pekaře</title> 
 
-        <script type="text/javascript" src="">
-        </script> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script>
+            // obecné
+            $(document).ready(function() {
+                $("#menuButton").click(function() {
+                    $("#menu").toggleClass("otevreno");
+                });
+                
+                $(".podmenu h2").click(function() {
+                    $(".podmenu").toggleClass("otevrenopod");
+                });
+            });
+        </script>
     </head>
 
 
 
-    <body  class="celek" > 
-
+    <body class="celek" > 
         <div id="header">
             <div id="top-header">
-                <img src="obr/logomenu.png" id="logomenu"><h1>GYMNÁZIUM <b>DR. JOSEFA PEKAŘE</b></h1><div id="odkazy"><img  id="gb" src="obr/gb.png"><img class="odkaz" src="obr/fb-art.png"><img class="odkaz" src="obr/Feed-icon.svg"><img class="odkaz" src="obr/50744-200.png">
-                </div>
+                <img src="obr/logomenu.png" id="logomenu"><h1>GYMNÁZIUM <strong>DR.&nbsp;JOSEFA&nbsp;PEKAŘE</strong></h1>
             </div>
-            <ul id="textmenul">
-                <li><a href="#">PRO UČITELE</a></li>    
-                <li class="textmenul_akt"><a href="#">PRO VEŘEJNOST</a></li>
-                <li><a href="#">PRO STUDENTY</a></li>
-            </ul>
-            <ul id="textmenup">
-                <li><a href="#">NOVINKY</a></li>
-                <li><a href="#">KONTAKTY</a></li>
-                <li><a href="#">DOKUMENTY</a></li>
-                <li><a href="#">PROJEKTY</a></li>
-                <li><a href="#">FOTOGALERIE</a></li>
-            </ul>    
+            <div id="menu">
+                <ul id="textmenul">
+                    <li><a href="#">PRO UČITELE</a></li>    
+                    <li><a href="#">PRO VEŘEJNOST</a></li>
+                    <li class="textmenul_akt"><a href="#" >PRO STUDENTY</a></li>
+                </ul>
+                <ul id="textmenup">
+                    <li><a href="#">NOVINKY</a></li>
+                    <li><a href="#">KONTAKTY</a></li>
+                    <li><a href="#">DOKUMENTY</a></li>
+                    <li><a href="#">PROJEKTY</a></li>
+                    <li><a href="#">FOTOGALERIE</a></li>
+                </ul>
+                <div id="odkazy"><img  id="gb" src="obr/gb.png"><img class="odkaz" src="obr/fb-art.png"><img class="odkaz" src="obr/Feed-icon.svg"><img class="odkaz" src="obr/50744-200.png">
+                </div>
+                <svg id="menuButton" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+                    <line id="l1" stroke-linecap="square" stroke-linejoin="undefined" y2="10" x2="35" y1="10" x1="10" stroke-width="4" stroke="#000" fill="none"/>
+                    <line id="l2" stroke-linecap="square" stroke-linejoin="undefined" y2="20" x2="35" y1="20" x1="10" stroke-width="4" stroke="#000" fill="none"/>
+                    <line id="l3" stroke-linecap="square" stroke-linejoin="undefined" y2="30" x2="35" y1="30" x1="10" stroke-width="4" stroke="#000" fill="none"/>
+                </svg>
+            </div>            
         </div>
+        
 
         <div   id="stred">
 
@@ -63,6 +74,10 @@
                 <div id="pravy-sloupec-uzky">
                     <div class="podmenu">
                         <h2> Pro studenty </h2>
+                        <svg id="podmenuButton" width="40" height="30" xmlns="http://www.w3.org/2000/svg">
+                            <line id="l1-podmenu" stroke-linecap="square" stroke-linejoin="undefined" y2="8" x2="5" y1="18" x1="19" stroke-width="4" stroke="#333333" fill="none"/>
+                            <line id="l2-podmenu" stroke-linecap="square" stroke-linejoin="undefined" y2="8" x2="35" y1="18" x1="21" stroke-width="4" stroke="#333333" fill="none"/>
+                        </svg>
                         <a href="skolni_rad.php" class="tlacitkopodmenuakt"   > Školní řád </a> <a href="../gympl_psycholog/gympl_psycholog.php" class="tlacitkopodmenu"   > Školní psycholog </a> <a href="http://www.schranka-duvery.cz/9667231f" class="tlacitkopodmenu"   > Schránka důvěry </a> <a href="../gympl_poradce/gympl_poradce.php" class="tlacitkopodmenu"   > Výchovný poradce </a> <a href="http://fialova.hostuju.cz" class="tlacitkopodmenu"  onclick="return !window.open(this.href)" >  Přípravné kurzy </a> <a href="https://mail.pekargmb.cz/bakaweb" class="tlacitkopodmenu"   >  Webové aplikace-vstup </a> <a href="elearning.php" class="tlacitkopodmenu"   > Stránky komisí (Elearning) </a> <a href="http://parlament.pekcloud.cz/" class="tlacitkopodmenu"   > Studentský parlament </a> <a href="http://www.pekcloud.cz" class="tlacitkopodmenu"  onclick="return !window.open(this.href)" > Pek Cloud </a> <a href="wifi.php" class="tlacitkopodmenu"   > WiFi síť </a> <a href="vs.php" class="tlacitkopodmenu"   > Vysoké školy </a> <a href="../gympl_casopis/gympl_casopis.php" class="tlacitkopodmenu"   > Školní časopis </a> <a href="http://www.pekargmb.cz/vol_primajaz/svp/editace.php" class="tlacitkopodmenu"   > Prima volba jazyků </a> <a href="http://www.pekargmb.cz/vol_pr1rocjaz/svp/editace.php" class="tlacitkopodmenu"   > 1.roč. volba jazyků </a> <a href="?ppmenu=rozvrhy#rozvrhy" class="tlacitkopodmenu"   > Rozvrhy </a> <a href="?ppmenu=maturita#maturita" class="tlacitkopodmenu"   > Maturita </a> <a href="?ppmenu=vol_pr#vol_pr" class="tlacitkopodmenu"   > Volitelné předměty </a> <a href="?ppmenu=zadosti#zadosti" class="tlacitkopodmenu"   > Žádosti </a> <a href="kopirovani.php" class="tlacitkopodmenu"   > Kopírování na studentské karty ISIC </a> <a href="../verejnost/office_skoleni.php" class="tlacitkopodmenu"   > Office školení  </a> <a href="../dokumentace/platebni_kod.pdf" class="tlacitkopodmenu"  onclick="return !window.open(this.href)" > Pravidla pro tvorbu platebního kódu (pdf) </a> <a href="?ppmenu=jidelna#jidelna" class="tlacitkopodmenu"   > Školní jídelna </a>  </div>  <!-- ppodmenu  --> 
                     <div class="centrovano">
                         <br />
