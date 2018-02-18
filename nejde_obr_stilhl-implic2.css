@@ -1,16 +1,10 @@
-@-ms-viewport {    /* pro Edge/IE na Windows Phone */
-    width: device-width;
-}
 
-html {
-    -webkit-font-smoothing: antialiased;
-    font-size: 16px;
-}
 
+html { -webkit-font-smoothing: antialiased; }
 :root {
     --barva_hlavni: #fcbb23;
     --barva_pomocna: #fdd16d;
-    --barva_druha: #232a4e; /*424452*/
+    --barva_druha: #232a4e;    /*424452*/
     --barva_pozadí: #FFF;
     --barva_nadpis: #424452;
 }
@@ -24,15 +18,12 @@ body {
     background-color: white;
     /*padding-top:75px;*/
 }
-
 a[name] {
     display: block;
     position: relative;
     top: -75px;
 }
-
 /*///////////////////////////////////////////////////header////////////////////////////////////*/
-
 #header {
     position: fixed;
     width: 100%;
@@ -40,61 +31,49 @@ a[name] {
     z-index: 20;
     height: 75px;
     top: 0px;
-    /*  font-family: Helvetica_light;*/
-    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+  /*  font-family: Helvetica_light;*/
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
 }
-
-#header strong {
-    font-weight: 700;
-}
-
 #top-header {
-    margin: auto;
+    margin:auto;
     width: 1060px;
-    height: 39px; /*35*/
-    /*  border: solid black 2px; */
+    height: 35px;
+  /*  border: solid black 2px; */
 }
-
-#top-header h1 {
-    font-weight: 300;
+#top-header h1{
+    font-weight: 400;
     font-size: 1.7em;
     margin-left: 100px;
-    margin-top: 3px; /*7*/
+    margin-top: 7px;
     margin-bottom: 0px;
-    font-family: 'Open Sans', sans-serif;
-    color: #373d3f;
+    font-family: Arial, Helvetica, sans-serif;
 }
-
 #menuButton {
     display: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
     user-select: none;
 }
-
-#textmenul,
-#textmenup {
+#textmenul, #textmenup {
     position: absolute;
     left: 0px;
     right: 0px;
     height: 33px;
     margin: 0px;
     text-transform: uppercase;
-
+    
 }
 
 #textmenul {
     color: #000;
-    background-color: #fcbb23;
-    margin-right: 51%;
-    /*50% by bylo hezčí :)*/
+    background-color: var(--barva_hlavni);
+    margin-right: 51%; /*50% by bylo hezčí :)*/
     font-weight: 500;
     padding-left: 0px;
-
+    
 }
-
 #textmenul li {
     display: block;
     float: right;
@@ -104,58 +83,50 @@ a[name] {
     line-height: 33px;
     -webkit-transition: 0.4s;
     transition: 0.4s;
-
+    
 }
 
 /* #textmenul li:last-child{
     padding-left: 10%
 }*/
 
-#textmenup li:last-child {
+#textmenup li:last-child{
     padding-right: 1.5%;
 }
-
-#textmenul li a {
+#textmenul li a{
     color: #000;
     text-decoration: none;
 }
-
 .textmenul_akt {
-    background: #fdd16d;
+    background: var(--barva_pomocna);
     -webkit-transition: 0.4s;
     transition: 0.4s;
 }
-
 .textmenup_akt {
     color: #FFF;
     background: #6a6c7e;
     -webkit-transition: 0.4s;
     transition: 0.4s;
 }
-
-#textmenup li a {
+#textmenup li a{
     color: #ffffff;
     text-decoration: none;
 }
-
-#textmenup li:hover {
+#textmenup li:hover{
     color: #FFF;
     background: #6a6c7e;
-
+    
 }
-
-#textmenul li:hover {
+#textmenul li:hover{
     color: #FFF;
-    background: #fdd16d;
+    background: var(--barva_pomocna);
 }
-
 #textmenup {
     color: #FFF;
-    background-color: #232a4e;
+    background-color: var(--barva_druha);
     margin-left: 49%; /*50% by bylo hezčí :)*/
     padding-left: 0px;
 }
-
 #textmenup li {
     display: block;
     float: left;
@@ -165,36 +136,29 @@ a[name] {
     -webkit-transition: 0.4s;
     transition: 0.4s;
 }
-
 #logomenu {
     position: absolute;
-    margin-top: 5px;
     width: 70px;
     z-index: 20;
     margin-left: 15px;
 }
-
 #odkazy {
     width: 1060px;
     position: relative;
     top: -33px;
     margin: auto;
 }
-
 .odkaz {
     width: 25px;
     margin-right: 10px;
     float: right;
 }
-
 #gb {
     width: 50px;
     float: right;
     margin-right: 12px;
 }
-
 /*///////////////////////////////////////////////////obrazek-pozadi////////////////////////////////////*/
-
 #obrazek-pozadi {
     width: 100%;
     background-image: url(obr/budova.jpg);
@@ -205,21 +169,18 @@ a[name] {
     margin-top: 75px;
     height: 500px;
     position: fixed;
-    z-index: -1;
+    z-index: -1;   
 }
-
 /*////////////////////////////////novinky////////////////////////////////*/
-
 #novinky_index {
     position: absolute;
     width: 100%;
     background-color: #DDD;
     margin-top: 575px;
     height: 390px;
-    -webkit-box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
-    box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.2);
+    box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.2); 
 }
-
 #sipkal {
     position: absolute;
     margin-right: 492px;
@@ -227,7 +188,6 @@ a[name] {
     top: 143px;
     cursor: pointer;
 }
-
 #sipkap {
     position: absolute;
     margin-left: 492px;
@@ -235,8 +195,7 @@ a[name] {
     top: 143px;
     cursor: pointer;
 }
-
-.novinka_index {
+.novinka_index{
     background: url(obr/pozadi-novinka.jpg);
     background-size: cover;
     background-position: right;
@@ -249,19 +208,17 @@ a[name] {
     background-color: #FFF;
     -webkit-transition: 0.7s;
     transition: 0.7s;
-    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
     overflow: hidden;
 }
-
-#novinky_index ul {
+#novinky_index ul{
     position: relative;
     list-style: none;
     width: 1060px;
     margin: auto;
     padding: 0px;
 }
-
 .n0 {
     left: -262px;
     -webkit-transform: rotateY(-90deg);
@@ -270,19 +227,15 @@ a[name] {
     transform-origin: right;
     opacity: 0;
 }
-
 .n1 {
     left: 64px;
 }
-
 .n2 {
     left: 390px;
 }
-
 .n3 {
     left: 716px;
 }
-
 .n4 {
     left: 1042px;
     -webkit-transform: rotateY(90deg);
@@ -303,8 +256,7 @@ a[name] {
     -webkit-transform: translateY(-50%) translateX(-50%);
     transform: translateY(-50%) translateX(-50%);
 }
-
-.novinka_index span {
+.novinka_index span{
     z-index: 10;
     width: 100%;
     height: 94px;
@@ -313,23 +265,17 @@ a[name] {
     bottom: 0px;
     margin: 0px;
 }
-
-.novinka_index h2 {
+.novinka_index h2{
     text-align: center;
     margin: 3px;
     padding: 0px;
     font-size: 1em;
 }
-.novinka_index h2 a {
-    color: inherit;
-}
-.novinka_index p {
+.novinka_index p{
     margin: 0px;
-    padding: 5px;
-    padding-top: 0px;
-    font-size: 0.9em;
+    padding-left: 3px;
 }
-#novinky_index_vic a {
+#novinky_index_vic a{
     color: #FFF;
     font-size: 1.25em;
     position: absolute;
@@ -338,18 +284,15 @@ a[name] {
     background-color: #232a4e;
     font-weight: 600;
     padding: 10px;
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);  
 }
-
-#novinky_index_vic {
+#novinky_index_vic{
     position: relative;
     width: 1060px;
     margin: auto;
 }
-
 /*///////////////////////////////////////////////page///////////////////////////////////////////*/
-
 #outer_page {
     background-color: #FFF;
     width: 100%;
@@ -358,7 +301,6 @@ a[name] {
     /*-webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
     box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2); */
 }
-
 #page {
     margin: auto;
     z-index: 10;
@@ -368,41 +310,35 @@ a[name] {
     width: 932px;
     padding-top: 12px;
 }
-
 #tradice {
     text-align: center;
     position: relative;
     left: -220px;
 }
-
 h2 {
     text-align: center;
     margin-top: 30px;
     font-size: 1.5em;
-    color: #424452;
+    color: var(--barva_nadpis);
     padding-left: 15px;
 }
-
 h3 {
     text-align: center;
     margin-top: 30px;
     margin-bottom: 10px;
     font-size: 2em;
-    color: #424452;
+    color: var(--barva_nadpis);
 }
-
-#typy_studia_p {
+#typy_studia_p{
     width: 370px;
     margin-left: 64px;
     text-align: justify;
 }
-
-#typy_studia li {
+#typy_studia li{
     width: 265px;
     margin-left: 64px;
     text-align: justify;
 }
-
 #busta {
     position: absolute;
     left: 55%;
@@ -413,17 +349,13 @@ h3 {
     line-height: 1.1em;
     font-size: 1.1em;
 }
-
 /*/////////////////////////nabidky///////////////////////////////*/
-
 #conabizime {
     margin-top: 40px;
 }
-
 #nabidky {
     height: 700px;
 }
-
 .nabidka {
     -webkit-perspective: 2000px;
     perspective: 2000px;
@@ -432,8 +364,7 @@ h3 {
     float: left;
     position: relative;
 }
-
-.nabidka p {
+.nabidka p{
     position: absolute;
     top: 100px;
 }
@@ -445,11 +376,10 @@ h3 {
     transition: 1s;
     z-index: auto;
     position: relative;
-    background: #fcbb23;
+    background: var(--barva_hlavni);
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
 }
-
 .nabidka .karta:before {
     content: "";
     position: absolute;
@@ -458,60 +388,49 @@ h3 {
     bottom: 0px;
     right: 0px;
     z-index: -10;
-    /*  -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+  /*  -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
     box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2); */
 }
-
 .nabidka:hover .karta {
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
-    /*   -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+ /*   -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
     box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2); */
     z-index: 20;
 }
-
-.karta,
-.predni,
-.zadni {
+.karta, .predni, .zadni {
     width: 233px;
     height: 233px;
 }
-
-.nabidka.prvni .karta,
-.nabidka.ctvrta .karta {
-    background: #fdd16d;
+.nabidka.prvni .karta, .nabidka.ctvrta .karta { /*mobil .nabidka.prvni, .nabidka.treti*/
+    background: var(--barva_pomocna);
     z-index: 20;
     position: relative;
 }
-
-.predni,
-.zadni {
+.predni, .zadni {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     position: absolute;
     top: 0px;
     left: 0px;
 }
-
 .predni {
     z-index: 2;
     -webkit-transform: rotateY(0deg);
     transform: rotateY(0deg);
 }
-
 .predni img {
     position: absolute;
     width: 150px;
     display: block;
-    /* left: 35px;
+   /* left: 35px;
     top: 30px;
     margin-bottom: 5px;*/
     margin: auto;
     left: 41.5px;
     padding-top: 40px;
 }
-
-.zadni p {
+.zadni p{
     position: absolute;
     margin: auto;
     padding-left: 10%;
@@ -520,80 +439,67 @@ h3 {
     color: black;
     font-weight: 600;
     text-align: center;
-
+    
 }
-
 .karta-text-kratky {
     display: none;
 }
-
 .karta-text-dlouhy {
     display: block;
 }
-
-.zadni a {
+.zadni a{
     position: absolute;
-    margin: auto;
+    margin:auto;
     width: 100%;
     bottom: 20px;
     font-weight: 600;
     font-size: 1.1em;
     text-align: center;
 }
-
 .zadni {
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
-
+    
 }
-
 /*///////////////////////////////////////////////dalsi///////////////////////////////////////////*/
-
 #prohlidky {
     height: 300px;
 }
-
-#prohlidka,
-#historie {
+#prohlidka, #historie{
     width: 350px;
     float: left;
     margin: 43px;
-    border: solid #fcbb23 15px;
-    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+    border: solid var(--barva_hlavni) 15px;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
 }
 
 #spolupracujeme h3 {
     text-align: center;
     margin-bottom: 10px;
 }
-
-#spolupracujeme {
+#spolupracujeme{
     height: 430px;
 }
-
 .spoluprace_kraj {
     width: 300px;
     margin: 81px;
     margin-top: 10px;
     margin-bottom: 15px;
 }
-
 .spoluprace_obrazek {
     width: 160px;
     margin: 34px;
     margin-bottom: 25px;
     margin-top: 0px;
 }
-
 #outer_footer {
-    background-color: #232a4e;
+    background-color: var(--barva_druha);
     width: 100%;
-    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
     clear: both;
 }
-
 #footer {
     position: relative;
     height: 300px;
@@ -602,23 +508,18 @@ h3 {
     color: #FFF;
     font-size: 1.3125em;
 }
-
 .footer_index {
     position: relative;
     top: 985px;
 }
-
 #footer h4 {
     position: absolute;
     top: 45px;
     left: 315px;
     margin: 0px;
     font-size: 1.5em;
-    color: white;
-    padding-left: 0px;
 }
-
-#footer p {
+#footer p{
     position: absolute;
     width: 300px;
     left: 150px;
@@ -626,13 +527,11 @@ h3 {
     margin: 0px;
     text-align: right;
 }
-
 #footer_logo {
     top: 50px;
     height: 200px;
     position: absolute;
 }
-
 #mapa {
     position: absolute;
     height: 280px;
@@ -640,7 +539,6 @@ h3 {
     top: 10px;
     right: 0px;
 }
-
 #carka {
     background: #FFF;
     position: absolute;
@@ -649,74 +547,37 @@ h3 {
     top: 20px;
     bottom: 20px;
 }
-
 /*index*/
-
 /*/////////////////////////////////////////////////////////////////////////////*/
-
 /*+pro ostatni*/
-
 #stred {
     width: 1060px;
     margin: auto;
-    min-height: calc(100vh - 340px);
+    
 }
-
 .celek {
-    background: #e3e3e3;
+    background: #DDD;
 
 }
-
 .centrovano {
     text-align: center;
     margin: auto;
 
 }
-
 .dobloku {
     text-align: left;
     display: block;
     margin: 3px;
 }
-/* h4,h5 {
-
-    text-align: center;
-    background: #ff7a00;
-    border-top: 1px solid #BBBBBB ;
-    width: 100%;
-    margin: auto;
-    color: #333333;
-    font-size: 12px;
-    padding-bottom: 3px;
-    padding-top: 3px;
-    margin-bottom: 10px;
-} */
-h4 {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 1.5em;
-    color: #424452;
-    padding-left: 15px;
-}
-
-h5 {
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    font-size: 1em;
-    color: #424452;
-}
-
 .podmenu {
     position: static;
     display: inline;
     list-style: inside;
     list-style-image: url(obr/odr.png);
     float: left;
-    width: 100%;
+    
 }
-
-a.tlacitkopodmenu {
+ a.tlacitkopodmenu {
     display: block;
     text-align: left;
     /*background: #F1F3F5;*/
@@ -728,17 +589,13 @@ a.tlacitkopodmenu {
     padding-top: 6px;
     padding-bottom: 6px;
     padding-right: 5px;
-    border-top: solid #DDD 1px;
+     border-top: solid #DDD 1px;
 
-}
-
-a.tlacitkopodmenu:first-of-type {
-    padding-top: 10px;
 }
 
 a.tlacitkopodmenu:hover {
     color: #000;
-    background: #fdd16d;
+    background: var(--barva_pomocna);
 
 }
 
@@ -747,25 +604,17 @@ a.tlacitkopodmenuakt {
     font-weight: bold;
     color: inherit;
     text-decoration: none;
-    background: #fcbb23;
+    background: var(--barva_hlavni);
     padding-left: 15px;
     margin-left: 0px;
     padding-top: 6px;
     padding-bottom: 6px;
     padding-right: 5px;
 }
-
-a.tlacitkopodmenuakt:first-of-type {
-    padding-top: 10px;
-}
-a.tridappmenuakt ~ a.tlacitkopodmenuakt {
-    padding-left: 30px;
-    background: #fdd16d;
-}
 a.tridapppmenu {
     display: block;
     text-align: left;
-    background: #fdd16d;
+    background: var(--barva_pomocna);
     padding-left: 30px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -773,34 +622,30 @@ a.tridapppmenu {
     text-decoration: none;
     color: #333333;
 }
-
 a.tridapppmenu:hover {
-    color: #232a4e;
-    background: #fcbb23;
+    color: var(--barva_druha);
+    background: var(--barva_hlavni);
 }
-
 a.tridappmenuakt {
     display: block;
     font-family: sans-serif;
-    background: #fcbb23;
-    color: #232a4e;
+    background: var(--barva_hlavni);
+    color: var(--barva_druha);
     font-weight: bold;
     padding-top: 6px;
     padding-bottom: 6px;
     padding-left: 15px;
 }
-
 #obsahova-cast {
     /*border:  thin solid red	;	*/
-    padding-top: 65px;
+    padding-top: 75px;
     text-align: left;
     font-family: sans-serif;
     min-height: 350px;
     overflow: auto;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
-
-#obsahova-cast h2 {
+#obsahova-cast h2{
     background: #FFF;
     margin-bottom: 5px;
 }
@@ -821,8 +666,8 @@ a.tridappmenuakt {
     padding-left: 2%;
     padding-right: 2%;
     padding-bottom: 10px;
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
 }
 
 
@@ -834,17 +679,13 @@ a.tridappmenuakt {
     margin-right: 1%;
     padding-right: 1%;
     padding-left: 1%;
-    padding-bottom: 1%;
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
 }
-
 #podmenuButton {
     display: none;
 }
-
 /* novinky */
-
 #levy-sloupec-siroky-novinky {
     float: left;
     /*background: Red;*/
@@ -859,32 +700,28 @@ a.tridappmenuakt {
 
     padding-bottom: 10px;
 }
-
-#cisla-stran-novinky {
+#cisla-stran-novinky{
     line-height: 1.5;
     color: var(--barva-druha);
     font-size: 1.5em;
     font-weight: bold;
-    /*  background-color: #fcbb23; */
+  /*  background-color: #fcbb23; */
     padding: 1px;
-}
-
-#cisla-stran-novinky a {
+} 
+#cisla-stran-novinky a{
     font-size: 0.7em;
     text-decoration: none;
-    /* background-color: #fcbb23;*/
+   /* background-color: #fcbb23;*/
     color: #AAA;
     font-weight: bold;
     padding: 5px;
 }
-
-#cisla-stran-novinky a:hover {
-    /*  background-color: #fcbb23;*/
+#cisla-stran-novinky a:hover{
+  /*  background-color: #fcbb23;*/
     color: var(--barva-druha);
     font-weight: bold;
 }
-
-div.obrnovinka {
+.obrvlevo, .obrvpravo {
     position: absolute;
     width: 50%;
     border: none;
@@ -892,62 +729,28 @@ div.obrnovinka {
     background: url(obr/pozadi-novinka.jpg);
     background-size: cover;
 }
-
-div.obrnovinka img{
+.obrvlevo img, .obrvpravo img{
     position: relative;
     top: 50%;
     -webkit-transform: translatey(-50%);
     transform: translatey(-50%);
     width: 100%;
-    max-height: 100%;
-    -o-object-fit: contain;
-    object-fit: contain;
-    margin: 0px;
-}
-.obrvlevo {
-    float: left;
-    margin: 10px;
-    border: none;
-}
-.obrvpravo {
-    float: right;
-    margin: 10px;
-    border: none;
-}
-.obrvpravobezokraje {
-    float: right;
-    border: none;
-}
-.obrvlevobezokraje {
-
-    float: left;
-    border: none;
-}
-.obrvpravopekar {
-    float: right;
-
-    margin: 10px;
-    margin-top: 0px;
-    border: none;
 }
 .novinkazvyraznena {
     text-align: left;
     vertical-align: top;
     margin: auto;
 }
-
-.novinka,
-.polozka {
+.novinka, .polozka {
     position: relative;
     text-align: left;
     vertical-align: top;
     margin: auto;
     background: #ffffff;
     padding-bottom: 5x;
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
 }
-
 .textv-n-c {
     margin-left: 50%;
     text-align: justify;
@@ -956,23 +759,19 @@ div.obrnovinka img{
     padding-right: 10px;
     font: 100%;
 }
-
-.nadpisv-n-c,
-.nadpisvpolozce {
+.nadpisv-n-c, .nadpisvpolozce {
     padding-top: 10px;
     font-size: 1.25em;
-    /* background: #fcbb23; */
-    color: #232a4e;
+   /* background: #fcbb23; */
+    color: var(--barva_druha);
     font-weight: bold;
     padding-bottom: 5px;
     margin-bottom: 7px;
     text-align: center;
     border-bottom: 2px solid #fcbb23;
 }
-
-.nadpis,
-.prezdivka {
-    border-bottom: 1px solid #DDD;
+.nadpis ,.prezdivka{
+   border-bottom: 1px solid #DDD ;
 }
 
 .den-autor {
@@ -986,9 +785,7 @@ div.obrnovinka img{
     padding-bottom: 20px;
 
 }
-
-.tiskzpravy,
-.tiskzpravyvlevo {
+.tiskzpravy, .tiskzpravyvlevo {
     float: right;
     border: none;
     background: url(obr/tisk.gif) no-repeat left;
@@ -1011,7 +808,8 @@ div.obrnovinka img{
 
 
 
-.patickav-n-c {
+.patickav-n-c
+{
     padding-left: 10px;
     padding-right: 10px;
 
@@ -1022,44 +820,35 @@ div.obrnovinka img{
 }
 
 /*/////////*/
-
 /*tabulky*/
-
 a {
     color: #0036AF;
     text-decoration: none;
 }
-
 table {
     font-family: sans-serif;
     font-size: 100%;
     margin: auto;
 }
-
-.tabklasik tr:nth-child(even) {
+.tabklasik tr:nth-child(even){
     background-color: #ffffff;
 }
-
-.tabklasik tr:nth-child(odd) {
+.tabklasik tr:nth-child(odd){
     background-color: #fff1d1;
 }
-
-.tabklasik td {
+.tabklasik  td {
     padding: 4px;
 }
-
-.tabklasik a {
+.tabklasik   a {
     text-decoration: none;
 }
-
-.tabklasik th {
+.tabklasik  th {
     background-color: #fcbb23;
     text-align: left;
     padding-left: 5px;
     padding-bottom: 5px;
     padding-top: 5px;
 }
-
 .tabklasik .hlavicka {
     background-color: #DDD;
 }
@@ -1068,306 +857,11 @@ table {
     background-color: #FFF;
 
 }
-
 .licharadka {
     background-color: #DDD;
 }
-
-col.prvni-sloupec {
-    width: 20%;
-}
-
 /*////////*/
-
 /*dalsi*/
-
-.prihlaska {
-    background: ThreedHighlight;
-    border-style: double;
-    border-color: Blue;
-}
-
-.udaje {
-    background-color: #AC3232;
-    color: White;
-    margin: auto;
-}
-
-.chyba {
-    color: Red;
-    font-weight: bold;
-    text-align: left;
-
-}
-
-.tlacitko {
-    background-color: #AC3232;
-    ;
-    color: White;
-    /*letter-spacing: 5pt;*/
-    font-weight: normal;
-}
-
-.fotogal {
-    background: #F1F3F5;
-    text-align: center;
-    margin: auto;
-    border-left-style: solid;
-    border-left-width: 1px;
-    border-right-style: solid;
-    border-right-width: 1px;
-    border-bottom-style: solid;
-    border-top-style: solid;
-    border-width: 1px;
-    border-color: #CCCCCC;
-
-}
-
-.fotogaladmin {
-    border: 1px solid #CCCCCC;
-    text-align: center;
-}
-
-.skrolovatko {
-    overflow: auto;
-    width: 100%;
-    height: 400px;
-}
-
-.skrolovatkorady {
-    overflow: auto;
-    width: 100%;
-    height: 150px;
-}
-
-.pdefkorady {
-    float: right;
-    vertical-align: top;
-    margin: auto;
-    border: none;
-    background: transparent;
-    background-image: url(obr/pdefko.gif);
-    background-repeat: no-repeat;
-    background-position: left top;
-    margin-top: -20px;
-    padding-left: 40px;
-    padding-right: 10px;
-    width: auto;
-    height: 39px;
-    display: inline;
-}
-
-.zavrirady {
-    float: right;
-    vertical-align: top;
-    margin: auto;
-    border: none;
-    background: transparent;
-    background-image: url(obr/zavri.gif);
-    background-repeat: no-repeat;
-    background-position: left top;
-    margin-top: -15px;
-    padding-left: 10px;
-    padding-right: 10px;
-    width: auto;
-    height: 18px;
-    display: inline;
-}
-
-
-.skrolovatkomale {
-    overflow: auto;
-    width: 100%;
-    height: 140px;
-}
-
-.nadpisv_n_ref {
-    text-align: center;
-    vertical-align: top;
-    background: #058706;
-    color: Yellow;
-    width: auto;
-}
-
-.prodanevstup {
-    color: #AC3232;
-    font-weight: bold;
-    text-align: left;
-}
-
-.volnevstup {
-    color: #2E8B57;
-    font-weight: bold;
-    text-align: right;
-}
-
-.robauto {
-    visibility: hidden;
-}
-
-.zvyraznitano {
-    background-color: Lime;
-    font-weight: bolder;
-}
-
-.zvyraznitne {
-    background-color: Yellow;
-    font-weight: bolder;
-}
-
-.tlacodkaz {
-    width: auto;
-    height: auto;
-    color: #AC3232;
-    background-color: transparent;
-    text-align: left;
-    font-family: sans-serif;
-    font: bolder;
-    padding-left: 15px;
-    background-image: url(obr/arrow.png);
-    background-repeat: no-repeat;
-    background-position: top left;
-}
-
-.tlacodkazblok {
-    width: auto;
-    height: auto;
-    /*color:#696969;*/
-    color: #AC3232;
-    background-color: transparent;
-    text-align: left;
-    font-family: sans-serif;
-    font: bolder;
-    padding-left: 15px;
-    background-image: url(obr/arrow.png);
-    background-repeat: no-repeat;
-    background-position: top left;
-    text-decoration: line-through;
-
-}
-
-.tlacitkoblok {
-    background-color: #AC3232;
-    ;
-    color: White;
-    /*letter-spacing: 5pt;*/
-    font-weight: normal;
-    text-decoration: line-through;
-}
-/*/////////////////////////////////////////*/
-
-a.tlacitkopodmenurss {
-    display: block;
-    text-align: left;
-    /*background: #ff7a00;*/
-    background: #F1F3F5;
-    color: #333333;
-    font-size: 12px;
-    text-decoration: none;
-    border-left: 0px solid #F1F3F5;
-    border-right: 0px solid #F1F3F5;
-    border-top: 0px solid #F1F3F5;
-    border-bottom: 0px solid #F1F3F5;
-    margin-left: 0px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-right: 5px;
-    padding-left: 25px;
-    background-image: url(obr/rss.gif);
-    background-repeat: no-repeat;
-    background-position: left bottom;
-
-}
-a.tlacitkopodmenurss:hover {
-    color: #AC3232;
-    background: #FFFFFF;
-    padding-left: 25px;
-    background-image: url(obr/rss.gif);
-    background-repeat: no-repeat;
-    background-position: left bottom;
-}
-a.tlacitkopodmenufacebook {
-    display: block;
-    text-align: left;
-    /*background: #ff7a00;*/
-    background: #F1F3F5;
-    color: #333333;
-    font-size: 12px;
-    text-decoration: none;
-    border-left: 0px solid #F1F3F5;
-    border-right: 0px solid #F1F3F5;
-    border-top: 0px solid #F1F3F5;
-    border-bottom: 0px solid #F1F3F5;
-    margin-left: 0px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-right: 5px;
-    padding-left: 25px;
-    background-image: url(obr/facebook.gif);
-    background-repeat: no-repeat;
-    background-position: left bottom;
-
-}
-a.tlacitkopodmenufacebook:hover {
-    color: #AC3232;
-    background: #FFFFFF;
-    padding-left: 25px;
-    background-image: url(obr/facebook.gif);
-    background-repeat: no-repeat;
-    background-position: left bottom;
-}
-a.tlacitkopodmenuarchiv {
-    display: block;
-    text-align: left;
-    background: #F1F3F5;
-    color: #333333;
-    font-size: 12px;
-    text-decoration: none;
-    border-left: 0px solid #F1F3F5;
-    border-right: 0px solid #F1F3F5;
-    border-top: 0px solid #F1F3F5;
-    border-bottom: 0px solid #F1F3F5;
-    margin-left: 0px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-right: 5px;
-    padding-left: 20px;
-    background-image: url(obr/archiv.gif);
-    background-repeat: no-repeat;
-    background-position: left bottom;
-}
-
-a.tlacitkopodmenuarchiv:hover {
-    color: #AC3232;
-    background: #FFFFFF;
-    padding-left: 20px;
-    background-image: url(obr/archiv.gif);
-    background-repeat: no-repeat;
-    background-position: left bottom;
-}
-a.tlacitkopodmenuvse {
-    width: auto;
-    height: auto;
-    color: #AC3232;
-    background-color: transparent;
-    text-align: center;
-    font-family: sans-serif;
-    font: bolder;
-    padding-right: 14px;
-    /*padding-top: 5px;*/
-    background-image: url(obr/arrow.png);
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    float: right;
-}
-.absolventi img, .nasinej img {
-    margin: auto;
-    float: none;
-}
-.absolventi td, .nasinej td {
-    vertical-align: bottom;
-}
-
 .prihlaska{
     background: ThreedHighlight;
     border-style: double;
@@ -1383,6 +877,7 @@ a.tlacitkopodmenuvse {
     color: Red;
     font-weight: bold;
     text-align: left;
+
 }
 .tlacitko {
     background-color: #AC3232;;
@@ -1457,7 +952,7 @@ a.tlacitkopodmenuvse {
 .skrolovatkomale {
     overflow: auto;
     width: 100%;
-    height: 70px;
+    height: 140px;
 }
 .nadpisv_n_ref {
     text-align: center;
@@ -1524,162 +1019,9 @@ a.tlacitkopodmenuvse {
     font-weight: normal;
     text-decoration: line-through;
 }
-.hledej-tlacitko{
-    float: right;
-}
-#rozdeleny_obsah_oskole {
-    float: right;
-    /*background: Red;*/
-    width: 35%;
-    /*border:  thin solid red	;*/
-    display: inline;
-    text-align: justify;
-    margin-right: 1%;
-    padding: 1%;
-    margin-bottom: 15px;
-    /*border: 1px dotted Highlight; */
-    padding-top: 0px;
-
-
-}
-
-#rozdeleny_obsah_novinky {
-    float: left;
-    /*background: Red;*/
-    width: 35%;
-    /*border:  thin solid red	;*/
-    display: inline;
-    text-align: justify;
-    /*margin-right: 2%;*/
-    padding: 1%;
-    margin-bottom: 15px;
-    /*border: 1px dotted Highlight; */
-    padding-top: 0px;
-
-
-}
-#rozdeleny_obsah_levy {
-    float: left;
-    /*background: Red;*/
-    width: 48%;
-    /*border:  thin solid red	;*/
-    display: inline;
-    text-align: center;
-    /*margin-right: 2%;*/
-    padding: 1%;
-    margin-bottom: 15px;
-    /*border: 1px dotted Highlight; */
-    padding-top: 0px;
-
-
-}
-
-#rozdeleny_obsah_pravy {
-    float: right;
-    /*background: Red;*/
-    width: 48%;
-    /*border:  thin solid red	;*/
-    display: inline;
-    text-align: center;
-    /*margin-right: 2%;*/
-    padding: 1%;
-    margin-bottom: 15px;
-    /*border: 1px dotted Highlight; */
-    padding-top: 0px;
-
-
-}
-.upozorneni {
-    background: White;
-    width: auto;
-    z-index: 5;
-    top: -10px;position: relative;
-}
-#rozdeleny_elearning_levy {
-    float: left;
-    /*background: Red;*/
-    width: 70%;
-    /*border:  thin solid red	;*/
-    display: block;
-    padding-left: 1%;
-    padding-right: 1%;
-
-    /*border: 1px dotted Highlight; */
-    padding-top: 0px;
-    margin: auto;
-    /*	background: Fuchsia;   */
-}
-
-#rozdeleny_elearning_pravy {
-    float: right;
-    /*background: Red;*/
-    width: 25%;
-    display: block;
-    padding-left: 1%;
-    padding-right: 1%;
-    margin: auto;
-    /*	background: Aqua;     */
-
-}
-.stin {
-    background: #A3A3A3;
-
-    float: left;
-    background-image: url(obr/stin.jpg);
-    background-position: right bottom ;
-    background-repeat: no-repeat;
-    overflow: visible;
-}
-
-.posunap {
-
-    top: -5px;
-    left: -5px;
-    position: relative;
-
-
-}
-
-
-.jidelna {
-    border: 3px solid Red;
-    text-align: center;
-    width: 100%;
-}
-.stul {
-    background: #FFDEAC;
-    height: auto;
-    color: #AC3232;
-    text-decoration: none;
-    font-weight: bold;
-    text-align: center; /*margin: 10px;*/
-    font-size: 100%;
-    font-weight: bold;
-    width: 30%;
-    border: 20px solid Gray;
-}
-.frame img{
-    border: none;
-}
-.vyhledavat{
-    margin-top: -10px;
-    top: -1px;
-    position: relative;
-    margin-left: 10px;	
-    border: none;
-}
-
-.obedy {
-    line-height: 1.5;
-}
-
-
-
-
 /*///////*/
 
-/*//////1100px-785px////////polovina fullhd/////*/
-
+/*//////1100px-785px////////polovina fullhd/////*/ 
 @media only screen and (max-width: 1100px) {
     #page {
         width: 768px;
@@ -1688,13 +1030,13 @@ a.tlacitkopodmenuvse {
     }
     /*///////////////////////////////////////////////////header////////////////////////////////////*/
     #header {
-        -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
     }
     #top-header {
         width: 768px;
     }
-    #top-header h1 {
+    #top-header h1{
         font-size: 1.7em;
         margin-left: 100px;
     }
@@ -1704,8 +1046,7 @@ a.tlacitkopodmenuvse {
     #textmenup {
         margin-left: 44%; /*50% by bylo hezčí :)*/
     }
-    #textmenul,
-    #textmenup {
+    #textmenul, #textmenup {
         letter-spacing: -0.5px;
     }
     #textmenul li {
@@ -1716,7 +1057,7 @@ a.tlacitkopodmenuvse {
         font-size: 0.85em;
         padding: 0px 5px;
     }
-    #textmenup li:last-child {
+    #textmenup li:last-child{
         padding-right: 1.5%;
     }
     #logomenu {
@@ -1748,14 +1089,14 @@ a.tlacitkopodmenuvse {
         left: 50%;
         top: 143px;
     }
-    .novinka_index {
+    .novinka_index{
         margin-top: 30px;
         margin-bottom: 30px;
         width: 280px;
         height: 280px;
         overflow-x: hidden;
     }
-    #novinky_index ul {
+    #novinky_index ul{
         width: 768px;
 
     }
@@ -1791,23 +1132,23 @@ a.tlacitkopodmenuvse {
         -webkit-transform: translateY(-50%) translateX(-50%);
         transform: translateY(-50%) translateX(-50%);
     }
-    .novinka_index h2 {
+    .novinka_index h2{
         text-align: center;
         margin: 3px;
         padding: 0px;
         font-size: 1em;
     }
-    .novinka_index p {
+    .novinka_index p{
         margin: 0px;
         padding-left: 3px;
     }
-    #novinky_index_vic a {
+    #novinky_index_vic a{
         font-size: 1.25em;
         right: 74px;
         top: 330px;
-        padding: 10px;
+        padding: 10px;  
     }
-    #novinky_index_vic {
+    #novinky_index_vic{
         width: 768px;
     }
     /*///////////////nabidky///////////*/
@@ -1818,9 +1159,7 @@ a.tlacitkopodmenuvse {
         width: 192px;
         height: 192px;
     }
-    .karta,
-    .predni,
-    .zadni {
+    .karta, .predni, .zadni {
         width: 192px;
         height: 192px;
     }
@@ -1828,22 +1167,21 @@ a.tlacitkopodmenuvse {
         width: 123px;
         left: 34px;
     }
-    .zadni p {
-        font-size: 0.9em;
-        top: 15px;
+   .zadni p{
+       font-size: 0.9em;
+       top: 15px;
     }
-    .zadni a {
+    .zadni a{
         font-size: 1em;
         bottom: 15px;
     }
     /*//////////////dalsi/////////////////*/
-    #prohlidka,
-    #historie {
+    #prohlidka, #historie{
         width: 320px;
         margin: 19px;
-        border: solid #fcbb23 13px;
-        -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+        border: solid var(--barva_hlavni) 13px;
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
     }
     .spoluprace_kraj {
         width: 300px;
@@ -1860,8 +1198,8 @@ a.tlacitkopodmenuvse {
     #outer_footer {
         position: relative;
         width: 1060px;
-        -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
     }
     #outer_footer.footer_index {
         width: 100%;
@@ -1873,9 +1211,8 @@ a.tlacitkopodmenuvse {
     #footer h4 {
         left: 250px;
         font-size: 1.4em;
-        padding-left: 0px;
     }
-    #footer p {
+    #footer p{
         width: 300px;
         left: 65px;
     }
@@ -1895,7 +1232,6 @@ a.tlacitkopodmenuvse {
 }
 
 /*//////mobil/////*/
-
 @media only screen and (max-width: 785px) {
     #page {
         width: 100%;
@@ -1910,18 +1246,17 @@ a.tlacitkopodmenuvse {
     #top-header {
         position: relative;
         z-index: 9;
-        background: #fcbb23;
+        background: var(--barva_hlavni);
         padding-top: 1px;
         padding-bottom: 4px;
         margin-left: 40px;
         width: auto;
-        height: 35px;
     }
-    #top-header h1 {
+    #top-header h1{
         font-size: 1.2em;
         position: relative;
         z-index: 10;
-        margin-left: 0px;
+        margin-left: -35px;
         vertical-align: middle;
         line-height: 40px;
         text-align: center;
@@ -1930,14 +1265,14 @@ a.tlacitkopodmenuvse {
     }
     #menuButton {
         display: block;
-        position: absolute;
+        position: absolute; 
         top: 0px;
         left: 0px;
         z-index: 10;
-        background: #fcbb23;
+        background: var(--barva_hlavni);
     }
     #menuButton line {
-        stroke: #232a4e;
+        stroke: var(--barva_druha);
         -webkit-transition: 0.6s;
         transition: 0.6s;
     }
@@ -1962,7 +1297,7 @@ a.tlacitkopodmenuvse {
         -webkit-transition: 0.6s;
         transition: 0.6s;
         overflow: hidden;
-        background: #232a4e;
+        background: var(--barva_druha);
         padding-top: 40px;
     }
     #menu::before {
@@ -1973,16 +1308,16 @@ a.tlacitkopodmenuvse {
         left: 0px;
         right: 0px;
         content: "";
-        -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
         z-index: 5;
     }
     #menu.otevreno {
         height: 100%;
-        /*background: #232a4e;*/
+        /*background: var(--barva_druha);*/
     }
     #menu.otevreno #menuButton line {
-        stroke: #232a4e;
+        stroke: var(--barva_druha);
     }
     #menu.otevreno #menuButton line#l1 {
         -webkit-transform: rotate(45deg) scale(1.12, 1);
@@ -1996,22 +1331,17 @@ a.tlacitkopodmenuvse {
         -webkit-transform: rotate(-45deg) scale(1.12, 1);
         transform: rotate(-45deg) scale(1.12, 1);
     }
-    /*#menu.otevreno*/
-    #textmenul {
-        margin-right: 0px;
+    /*#menu.otevreno*/ #textmenul {
+        margin-right: 0px; 
     }
-    /*#menu.otevreno*/
-    #textmenup {
-        margin-left: 0px;
+    /*#menu.otevreno*/ #textmenup {
+        margin-left: 0px; 
     }
-    /*#menu.otevreno*/
-    #textmenul,
-    #textmenup {
+    /*#menu.otevreno*/ #textmenul, #textmenup {
         letter-spacing: initial;
         text-align: center;
     }
-    #textmenul,
-    #textmenup {
+    #textmenul,#textmenup {
         position: relative;
         float: left;
         height: auto;
@@ -2020,30 +1350,18 @@ a.tlacitkopodmenuvse {
     }
     #textmenul {
         padding-top: 10px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-        flex-direction: column-reverse;
     }
-    #textmenul li,
-    #textmenup li {
+    #textmenul li, #textmenup li {
         padding: 3px 5px;
         width: 100%;
         font-size: 120%;
-        height: 46px;
-        line-height: 46px;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
+        height: 40px;
+        line-height: 40px;
     }
-    #textmenul li a,
-    #textmenup li a {
+    #textmenul li a, #textmenup li a {
         position: relative;
     }
-    #textmenul li a::after,
-    #textmenup li a::after {
+    #textmenul li a::after, #textmenup li a::after {
         position: absolute;
         content: "";
         height: 40px;
@@ -2080,14 +1398,13 @@ a.tlacitkopodmenuvse {
         margin-top: 40px;
         height: 200px;
         position: fixed;
-        z-index: -1;
+        z-index: -1;   
     }
     /*//////////////////novinky///////////////////*/
-    #sipkal,
-    #sipkap {
+    #sipkal, #sipkap {
         display: none;
     }
-    .novinka_index {
+    .novinka_index{
         margin-top: 20px;
         margin-bottom: 0px;
         width: 90%;
@@ -2096,17 +1413,17 @@ a.tlacitkopodmenuvse {
         float: left;
         position: relative;
     }
-    #novinky_index ul {
+    #novinky_index ul{
         width: 100%;
     }
     .n0 {
         left: -262px;
     }
     .n1 {
-        left: 5%;
+        left: 5%; 
     }
     .n2 {
-        left: 5%;
+        left: 5%; 
     }
     .n3 {
         left: 5%;
@@ -2115,11 +1432,11 @@ a.tlacitkopodmenuvse {
         -webkit-transform-origin: left;
         transform-origin: left;
         opacity: 1;
-
+        
     }
     .n4 {
         left: 716px;
-    }
+    } 
     #novinky_index {
         margin-top: 240px;
         height: calc(270vw + 142px);
@@ -2135,7 +1452,7 @@ a.tlacitkopodmenuvse {
         -webkit-transform: translateY(-50%) translateX(-50%);
         transform: translateY(-50%) translateX(-50%);
     }
-    .novinka_index span {
+    .novinka_index span{
         z-index: 10;
         width: 100%;
         height: 40vw;
@@ -2144,27 +1461,27 @@ a.tlacitkopodmenuvse {
         bottom: 0px;
         margin: 0px;
     }
-    .novinka_index h2 {
+    .novinka_index h2{
         text-align: center;
         margin: 3px;
         padding: 0px;
         font-size: 1em;
     }
-    .novinka_index p {
+    .novinka_index p{
         margin: 0px;
         padding-left: 3px;
     }
-    #novinky_index_vic a {
+    #novinky_index_vic a{
         font-size: 1.25em;
         text-align: center;
         left: calc(50% - 75px);
-        width: 150px;
-        padding: 10px;
+        width: 150px;        
+        padding: 10px; 
         right: initial;
         position: absolute;
         top: 0px;
     }
-    #novinky_index_vic {
+    #novinky_index_vic{
         width: 100%;
         position: absolute;
         bottom: 0px;
@@ -2177,14 +1494,14 @@ a.tlacitkopodmenuvse {
     #tradice {
         left: 0px;
     }
-    #typy_studia_p {
-
+    #typy_studia_p{
+        
         width: 80vw;
         margin: auto;
         margin-top: 65vw;
         text-align: justify;
     }
-    #typy_studia li {
+    #typy_studia li{
         width: 70vw;
         margin: auto;
         text-align: justify;
@@ -2218,16 +1535,13 @@ a.tlacitkopodmenuvse {
         width: 100%;
         height: 100%;
     }
-    .nabidka.prvni .karta,
-    .nabidka.ctvrta .karta {
-        background: #fcbb23
+    .nabidka.prvni .karta, .nabidka.ctvrta .karta {
+        background: var(--barva_hlavni)
     }
-    .nabidka.prvni .karta,
-    .nabidka.treti .karta {
-        background: #fdd16d;
+    .nabidka.prvni .karta, .nabidka.treti .karta{
+        background: var(--barva_pomocna);
     }
-    .predni,
-    .zadni {
+    .predni, .zadni {
         width: 100%;
         height: 100%;
     }
@@ -2235,7 +1549,7 @@ a.tlacitkopodmenuvse {
         width: 60%;
         left: 20%;
     }
-    .zadni p {
+    .zadni p{
         text-align: center;
         width: 80%;
         margin: auto;
@@ -2251,7 +1565,7 @@ a.tlacitkopodmenuvse {
     .karta-text-dlouhy {
         display: none;
     }
-    .zadni a {
+    .zadni a{
         margin-left: auto;
         width: 90%;
         text-align: center;
@@ -2268,17 +1582,16 @@ a.tlacitkopodmenuvse {
         padding-top: 1px;
     }
     /*//////////////dalsi/////////////////*/
-    #spolupracujeme {
+    #spolupracujeme{
         height: 230vw;
     }
-    #prohlidka,
-    #historie {
+    #prohlidka, #historie{
         width: 80%;
         margin: 7vw;
         margin-bottom: 0vw;
-        border: solid #fcbb23 3vw;
-        -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+        border: solid var(--barva_hlavni) 3vw;
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
     }
     .spoluprace_kraj {
         width: 80vw;
@@ -2310,9 +1623,8 @@ a.tlacitkopodmenuvse {
     }
     #footer h4 {
         display: none;
-        padding-left: 0px;
     }
-    #footer p {
+    #footer p{
         text-align: center;
         left: 20%;
         width: 60%;
@@ -2324,7 +1636,7 @@ a.tlacitkopodmenuvse {
     }
     #footer br:after {
         content: "  |  ";
-    }
+    } 
     #footer_logo {
         display: none;
     }
@@ -2342,9 +1654,9 @@ a.tlacitkopodmenuvse {
         width: 100%;
     }
     #obsahova-cast {
-        padding-top: 40px;
+        padding-top: 20px;
     }
-    #obsahova-cast h2 {
+    #obsahova-cast h2{
         text-align: left;
         cursor: pointer;
         padding: 7px;
@@ -2352,12 +1664,12 @@ a.tlacitkopodmenuvse {
         margin-bottom: 0px;
         margin-top: 0px;
         position: relative;
-        -webkit-box-shadow: 0px 6px 13px -4px rgba(0, 0, 0, 0.2);
-        box-shadow: 0px 6px 13px -4px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0px 6px 13px -4px rgba(0,0,0,0.2);
+        box-shadow: 0px 6px 13px -4px rgba(0,0,0,0.2);
         z-index: 10;
-
+        
     }
-
+    
     #pravy-sloupec-uzky {
         background: #DDD;
         float: left;
@@ -2371,16 +1683,17 @@ a.tlacitkopodmenuvse {
     }
     .podmenu {
         display: block;
-
+        
         float: none;
         width: 90%;
-        margin: 20px auto;
+        margin: auto;
+        margin-top: 40px;
         max-height: 42px;
         -webkit-transition: 1s;
         transition: 1s;
         overflow: hidden;
-        -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
-        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15);
     }
     .podmenu #podmenuButton #l1-podmenu {
         -webkit-transition: 0.6s;
@@ -2424,9 +1737,8 @@ a.tlacitkopodmenuvse {
         padding-left: 5%;
         padding-right: 5%;
         padding-bottom: 00px;
-        -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
-        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
-        overflow: auto;
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
     }
     #levy-sloupec-siroky-novinky {
         float: left;
@@ -2441,15 +1753,15 @@ a.tlacitkopodmenuvse {
         margin-bottom: 15px;
         /*border: 1px dotted Highlight; */
         padding-top: 0px;
+
         padding-bottom: 10px;
     }
 
 
-
+    
 }
-
-@media only screen and (max-width: 350px) {
-    #top-header h1 {
+@media only screen and (max-width: 380px) {
+    #top-header h1{
         font-size: 1.2em;
         position: relative;
         z-index: 10;
@@ -2459,9 +1771,6 @@ a.tlacitkopodmenuvse {
     #header {
         height: 50px;
         /*display: none;*/
-    }
-    #obsahova-cast {
-        padding-top: 50px;
     }
     #top-header {
         padding-bottom: 14px;
@@ -2474,12 +1783,12 @@ a.tlacitkopodmenuvse {
     }
     #menuButton {
         display: block;
-        position: absolute;
+        position: absolute; 
         padding-top: 7px;
         padding-bottom: 3px;
         left: 0px;
         z-index: 10;
-        background: #fcbb23;
+        background: var(--barva_hlavni);
     }
     .footer_index {
         position: relative;
@@ -2487,5 +1796,6 @@ a.tlacitkopodmenuvse {
     }
     #footer {
         height: 250px;
-    }
+        
+}
 }

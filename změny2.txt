@@ -30,12 +30,21 @@ naformátovat další rubriky "naši nej"a "významní abs."   -bude potřeba zm
 ------------------------------------------------------
 v html chybí div stred
  - HEADER, OUTER_FOOTER patří mimo střed (na hlavní straně střed nemá být vůbec)
+ - na stránce PROJEKTY je pořád div outer_footer uvnitř divu stred, což je špatně
 odebrání <br>, úprava <script> v hlstrana.html
 změnit doctype na HTML5 ?
  - hlavička - nový charset
  - javascript
  
 úprava hlstrana.html
-přidání scriptu do hlavišky ostatní stran pro podmenu
+přidání scriptu do hlavičky ostatní stran pro podmenu
 úprava podmenu
-obrazen pod podmenu - odebrat?
+obrazek pod podmenu - odebrat?
+změna class obrázků u novinek na obrnovinka
+odebrat <br> mezi novinkami
+  * hotovo
+používat relativní odkazy v novinkách (bez "http://gmbpekar.esy.es/")
+
+
+
+odebrat <br> pod nadpisem
