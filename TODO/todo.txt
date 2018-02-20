@@ -1,0 +1,7 @@
+novinky na hlavní straně světšit pading textu, přidat prochu textu
+strana novinky pro mobil
+dát vyhledávání bílou výplň na mobilu
+fotogalerie
+footer- přidat autory - přidat do php, zkontrolovat nastylování při různý šířce okna
+vyřešit contribution ikonek
+e-learning

@@ -316,7 +316,8 @@ a[name] {
 
 .novinka_index h2 {
     text-align: center;
-    margin: 3px;
+    margin: 5px;
+    margin-bottom: 0px;
     padding: 0px;
     font-size: 1em;
 }
@@ -325,7 +326,7 @@ a[name] {
 }
 .novinka_index p {
     margin: 0px;
-    padding: 5px;
+    padding: 7px;
     padding-top: 0px;
     font-size: 0.9em;
 }
@@ -406,12 +407,13 @@ h3 {
 #busta {
     position: absolute;
     left: 55%;
-    top: 20px;
+    top: 15px;
     width: 300px;
     text-align: center;
     font-weight: bold;
     line-height: 1.1em;
     font-size: 1.1em;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /*/////////////////////////nabidky///////////////////////////////*/
@@ -596,7 +598,7 @@ h3 {
 
 #footer {
     position: relative;
-    height: 300px;
+    height: 315px;
     margin: auto;
     width: 932px;
     color: #FFF;
@@ -647,9 +649,16 @@ h3 {
     left: 464px;
     right: 464px;
     top: 20px;
-    bottom: 20px;
+    bottom: 30px;
 }
-
+#footer_autor {
+    position: absolute;
+    bottom: 3px;
+    text-align: center;
+    width: 100%;
+    font-size: 0.7em;
+    color: #8f97ba
+}
 /*index*/
 
 /*/////////////////////////////////////////////////////////////////////////////*/
@@ -1526,6 +1535,9 @@ a.tlacitkopodmenuvse {
 }
 .hledej-tlacitko{
     float: right;
+}
+.aktualnistrana {
+    color: #333333;
 }
 #rozdeleny_obsah_oskole {
     float: right;
@@ -2417,13 +2429,13 @@ a.tlacitkopodmenuvse {
     #levy-sloupec-siroky {
         background: #FFF;
         float: left;
-        width: 90%;
+        width: 95%;
         display: block;
         margin-bottom: 15px;
         padding-top: 0px;
-        padding-left: 5%;
-        padding-right: 5%;
-        padding-bottom: 00px;
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+        padding-bottom: 0px;
         -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
         box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
         overflow: auto;
@@ -2443,7 +2455,49 @@ a.tlacitkopodmenuvse {
         padding-top: 0px;
         padding-bottom: 10px;
     }
+    div.obrnovinka {
+        position: absolute;
+        width: 50%;
+        border: none;
+        height: auto;
+        background: none;
+        background-size: cover;
+        float: right;
+    }
 
+    div.obrnovinka img{
+        position: relative;
+        top: 3em;
+        -webkit-transform: translatey(-50%);
+        transform: translatey(-00%);
+        width: 100%;
+        max-height: 100%;
+        -o-object-fit: contain;
+        object-fit: contain;
+        margin-left: 10px;
+
+    }
+    .textv-n-c {
+        margin-left: 0%;
+        text-align: justify;
+        vertical-align: top;
+        padding-left: 2%;
+        padding-right: 10px;
+        font: 100%;
+    }
+
+    .nadpisv-n-c,
+    .nadpisvpolozce {
+        padding-top: 10px;
+        font-size: 1.25em;
+        /* background: #fcbb23; */
+        color: #232a4e;
+        font-weight: bold;
+        padding-bottom: 5px;
+        margin-bottom: 7px;
+        text-align: center;
+        border-bottom: 2px solid #fcbb23;
+    }
 
 
 }
