@@ -706,6 +706,7 @@ h4 {
     font-size: 1.5em;
     color: #424452;
     padding-left: 15px;
+    border-bottom: 2px solid #fcbb23;
 }
 
 h5 {
@@ -813,7 +814,9 @@ a.tridappmenuakt {
     background: #FFF;
     margin-bottom: 5px;
 }
-
+#obsahova-cast-roztazeny {
+    width: 600px;
+}
 
 #levy-sloupec-siroky {
     background: #FFF;
@@ -1070,7 +1073,7 @@ table {
 }
 
 .tabklasik .hlavicka {
-    background-color: #DDD;
+    background-color: #fcbb23;
 }
 
 .sudaradka {
@@ -1466,7 +1469,8 @@ a.tlacitkopodmenuvse {
 .skrolovatkomale {
     overflow: auto;
     width: 100%;
-    height: 70px;
+    height: 140px;
+    border: 1px solid #DDD;
 }
 .nadpisv_n_ref {
     text-align: center;
@@ -2497,6 +2501,15 @@ a.tlacitkopodmenuvse {
         margin-bottom: 7px;
         text-align: center;
         border-bottom: 2px solid #fcbb23;
+    }
+    #rozdeleny_elearning_levy ul {
+        padding-left: 10px;
+    }
+    #rozdeleny_elearning_levy {
+        float: left;
+    }
+    #rozdeleny_elearning_pravy {
+        float: left;
     }
 
 
