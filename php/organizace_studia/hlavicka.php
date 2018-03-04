@@ -34,7 +34,7 @@ $polozka[]="http://supl.esy.es/supl/suplovtr.htm?ppmenu=$k_pom";$nazev[]='Suplov
   
 
 $k_pom='maturita';
-$polozka[]="?ppmenu=$k_pom#$k_pom";$nazev[]='Maturita';$ppkat[]='';
+$polozka[]="maturita_2017_18.php?ppmenu=$k_pom#$k_pom";$nazev[]='Maturita';$ppkat[]='';
 if ($ppmenu==$k_pom) {
 $polozka[]="maturita_2017_18.php?ppmenu=$k_pom";$nazev[]='Maturita 2017/2018';$ppkat[]=$k_pom;
 
@@ -44,7 +44,7 @@ $polozka[]="maturitni_otazky.php?ppmenu=$k_pom";$nazev[]='Maturitní otázky 2017/
 
 //$polozka[]='maturita_2010_11.php';$nazev[]='Maturita 2010/2011';$ppkat[]='';
 $k_pom='vol_pr';
-$polozka[]="?ppmenu=$k_pom#$k_pom";$nazev[]='Volitelné pøedmìty';$ppkat[]='';
+$polozka[]="volitelne_predmety.php?ppmenu=$k_pom#$k_pom";$nazev[]='Volitelné pøedmìty';$ppkat[]='';
 if ($ppmenu==$k_pom) {
 $polozka[]="nab_vol_pr_17_18.pdf?ppmenu=$k_pom";$nazev[]='Nabízené volitelné pøedmìty 2017/2018';$ppkat[]=$k_pom;
 //$polozka[]="vol_pr_15_16.pdf?ppmenu=$k_pom";$nazev[]='Volitelné pøedmìty 2015/16 (podmínky výbìru)';$ppkat[]=$k_pom;
@@ -77,9 +77,10 @@ $polozka[]="../dokumentace/platebni_kod.pdf";$nazev[]='Pravidla pro tvorbu plate
 
 
 $k_pom='jidelna';
-$polozka[]="?ppmenu=$k_pom#$k_pom";$nazev[]='Školní jídelna';$ppkat[]='';
+$polozka[]="jidelna.php?ppmenu=$k_pom#$k_pom";$nazev[]='Školní jídelna';$ppkat[]='';
 if ($ppmenu==$k_pom) {
-$polozka[]="jidelna.php?ppmenu=$k_pom";$nazev[]='Odhlášky obìdù';$ppkat[]=$k_pom;
+$polozka[]="jidelna.php?ppmenu=$k_pom";$nazev[]='Školní jídelna';$ppkat[]=$k_pom;
+$polozka[]="odhlasky.php?ppmenu=$k_pom";$nazev[]='Odhlášky obìdù';$ppkat[]=$k_pom;
 
 $polozka[]="jidelnicek.pdf?ppmenu=$k_pom";$nazev[]='Jídelníèek';$ppkat[]=$k_pom;
 $polozka[]="jidelnicek1.pdf?ppmenu=$k_pom";$nazev[]='Jídelníèek další týden';$ppkat[]=$k_pom;
@@ -90,7 +91,7 @@ $polozka[]="strav_komise.pdf?ppmenu=$k_pom";$nazev[]='Stravovací komise';$ppkat[
 
 //$polozka[]="http://www.pekargmb.cz/gympl_novinky/gympl_novinky.php?zobr=1418?ppmenu=$k_pom";$nazev[]='Pøihlašování a odhlašování stravy pomocí mobilní aplikace';$ppkat[]=$k_pom;
 
- $polozka[]="jideln_prihlasky_apl.php?ppmenu=$k_pom";$nazev[]='Pøihlašování a odhlašování stravy pomocí mobilní aplikace';$ppkat[]=$k_pom;
+ //$polozka[]="jideln_prihlasky_apl.php?ppmenu=$k_pom";$nazev[]='Pøihlašování a odhlašování stravy pomocí mobilní aplikace';$ppkat[]=$k_pom;
 
 }
 

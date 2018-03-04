@@ -2,18 +2,41 @@ hlavicka_nova_do_front.php
   - řádky 40-42, 50-52 (přidání skriptu)
   - řádek 61 (přesunutí </a>)
   - zakomentování starého meta charset (17)
+paticka_nova_do_front.php
+  - přidání autorů (22)
 index.php
   - řádek 132 (přesunutí </a>)
+  - výpis novinek - prodloužen text (157-162)
+  - hlavička (28), patička (406)
 menu_do_indexu_bez_obsahove_casti.php
   - prohodit řádky 3 a 5
   - řádek 6 (odebrána mezera před "Novinky")
   - zvýraznění aktuální stránky při výpisu z menu (původní soubor jsem jen přejmenoval) - řádky 16-37
   - odebrání "<span>" z názvů v menu - 3-5
   - přidání fragmentu (#a) k odkazům v části menu -> otevře podmenu na mobilu
+  - nahrazení obrázku lupy za SVG (39-58)
 verejnost/gympl_absol.php
   - přidány řádky 4-6, 25-27 (div pro stylování)
+verejnost/cabsol_zobr.php
+  - předělán výpis (FormatujObashRubriky) - púvodní soubor zachován
 verejnost/gympl_nasinej.php
   - přidány řádky 4-6, 24-26 (div pro stylování)
+verejnost/cnasinej_zobr.php
+  - předělán výpis (FormatujObashRubriky) - púvodní soubor zachován
+verejnost/skolska_rada.php
+  - odebrán obrázek (16)
+verejnost/prijimacky.php
+  - odebrání zbytečných <br>
+verejnost/spp.php
+  - odebrání zbytečných <br>
+verejnost/smp.php
+  - odebrání zbytečných <br>
+verejnost/inkluzivni_vzdelavani.php
+  - odebrání zbytečných <br>
+verejnost/office_skoleni.php
+  - odebrání zbytečných <br>
+verejnost/hlavicka.php
+  - 29 - odkazy rovnou otevřou i stránku, nejen menu
 gympl_novinky/gympl_novinky.php
   - smazat řádky 10-11 (echo)
 gympl_novinky/cnovinky.php
@@ -22,6 +45,7 @@ gympl_novinky/cnovinky.php
   - řádek 641, 596 (odebráno "<br />")
   - řádek 592 (nedělitelná mezera mezi email)
   - řádek 644 - odebrání spanu okolo autora a emailu (ten se přidává už v CRubrika::FormatujObsahRubriky()) - původní kód je na řádku 637
+  - upraven výpis novinek, aby obrázek byl uvnitř odstavce textu (řákdy 573-581, 619-626)
 gympl_novinky/hlavicka.php
   - řádek 19 - omezení počtu novinek v menu
 crubrika.php
@@ -40,16 +64,22 @@ gympl_casopis/ccasopis.php
   - nedělitelná mezera u autora a emailu - 536, 615
 gympl_casopis/hlavicka.php
   - úprava menu 32-36
-organizace_studia/jidelna.php
-  - aktualizace textu, odebrání obrázku
+organizace_studia/jidelna.php, odhlasky.php  (přidáno)
+  - předěláno (přidán rozcestník jídelny), aktualizace textu, odebrání obrázku
 organizace_studia/hlavicka.php
   - přidání mezery před pomlčku u profilové části maturity (41)
+  - 37, 80 - odkazy rovnou otevřou i stránku, nejen menu
 organizace_studia/maturitni_otazky.php
   - opraven překlep (6)
 organizace_studia/maturita_2017_18.php
   - opraven překlep (7)
+  - odebrání zbytečných <br>
 organizace_studia/vs.php
   - širší frame (7)
+organizace_studia/wifi.php
+  - odebrán obrázek (23)
+organizace_studia/volitelne_predmety.php (přidáno)
+  - přidán rozcestník
 projekty/podpora.php
   - chyběl konec divu (doplněn řádek 56)
 projekty/deti_mensa.php
@@ -58,10 +88,17 @@ projekty/nasi_partneri.php
   - chyběl konec divu (doplněn řádek 20)
 fotogalerie_nova/fotogalerie_nova.php
   - přidány řádky 5, 135-137 (div pro stylování)
+  - kompletně předělány nadpisy a seznamy (odebrání <br>, mezery se přidají ve stylu)
 gympl_ucitele/cucitele.php
   - přidání možnosti stylování sloupců (1029-1031, 480-483)
   - odebrání mezer mezi buňkami tabulky - řádek 479, 1028
+gympl_ucitele/hlavicka.php
+  - změněno vyhledávání (23, 110-117)
 dokumentace/skolni_rad.php, organizace_studia/skolni_rad.php
   - tabulka nahrazena <hr> (18)
+dokumentace/plan_ict.php, plan_akci.php
+  - odebrání zbytečných <br>
 gympl_rady/crady.php
   - upraven výpis školních řádů - funkce FormatujObashRubriky (původní soubor je zachiván) 
+rss/rss_nanovinky
+  - předěláno (přidány obrázky, drobné úpravy; původní soubor zachován)

@@ -972,7 +972,7 @@ echo"
             ";    
                           }
            else echo"<td >
-<input onclick=\"document.f.".$fsloupec.".value = ''\" onkeypress=testznak(this) onkeyup=testznak(this) type=\"text\" size=\"10\" name=\"".$fsloupec."\" value=\"".$ceskyfloupec."\"  /></td>
+<input onclick=\"document.f.".$fsloupec.".value = ''\" onkeypress=testznak(this) onkeyup=\"testznak(this); FiltrujKontakty(this)\" type=\"text\" size=\"10\" name=\"".$fsloupec."\" value=\"".$ceskyfloupec."\"  /></td>
             ";                    
         
 

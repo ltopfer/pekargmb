@@ -21,6 +21,7 @@ $nazev[$i]=$seznam_uzivatelu[prijmeni][$i].' '.$seznam_uzivatelu[jmeno][$i].'  '
                                    } 
  echo"
 <script src=\"hlidac.js\" type=\"text/javascript\"></script> 
+<script src=\"kontakty.js\" type=\"text/javascript\"></script>
  <div id=\"pravy-sloupec-uzky\">
  <div class=\"podmenu\">
  <h2> $kategorie_nazav </h2>
@@ -43,14 +44,13 @@ else {
 }
 
 echo"
- <br />
 <a href=\"../gympl_psycholog/gympl_psycholog.php \" class=\"tlacitkopodmenu\">Školní psycholog</a>
 <a href=\"../gympl_poradce/gympl_poradce.php \" class=\"tlacitkopodmenu\">Výchovný poradce</a>  
   ";
      
   
   echo"
-  <h5> Kategorie zamìstnancù </h5>
+  <h5>Kategorie zamìstnancù</h5>
   ";
 if ($hodnotasloupce=='uèitelé') {
 echo"
@@ -108,17 +108,14 @@ echo"
 
   
   echo"
-   <br />
-   <h5> Zamìstnanci školy </h5>  
+   <h5>Vyhledávání</h5>  
+   <input type=text onkeyup=FiltrujKontakty(this)>
      ";
- $pro_seznam_ucitelu->Formular_hledej('gympl_ucitele.php','prijmeni');    
-echo" <div class=\"skrolovatkomale\">" ;
- require '../vypis_podmenu.php'; 
-echo" </div>  <!-- skrolovatkomale  -->" ;
-echo"
-<br /><br />
-
-  
+// $pro_seznam_ucitelu->Formular_hledej('gympl_ucitele.php','prijmeni');    
+//echo" <div class=\"skrolovatkomale\">" ;
+// require '../vypis_podmenu.php'; 
+//echo" </div>  <!-- skrolovatkomale  -->" ;
+echo"  
 </div>  <!-- ppodmenu  --> 
      
      </div>  <!-- pravy sloupec uzky  --> 

@@ -10,10 +10,8 @@ require 'cabsol_zobr.php';
 
 
 <?php
-echo"<h4>Galerie významných absolventù školy</h4> <br />
-Za vznikem této rubriky stojí projekt studentù Gymnázia Dr. J. Pekaøe, kteøí se rozhodli v rámci volitelných semináøù stylistiky zpracovat medailony zajímavých osobností z øad absolventù své školy.  Následnì se tedy budete setkávat s žijícími osobnostmi, jež jsou ve svém oboru úspìšní. Skladba osobností bude velmi pestrá, mùžete se tedy tìšit na politiky, lékaøe, sportovce …
-
-";
+echo"<h4>Galerie významných absolventù školy</h4>
+Za vznikem této rubriky stojí projekt studentù Gymnázia Dr. J. Pekaøe, kteøí se rozhodli v rámci volitelných semináøù stylistiky zpracovat medailony zajímavých osobností z øad absolventù své školy.  Následnì se tedy budete setkávat s žijícími osobnostmi, jež jsou ve svém oboru úspìšní. Skladba osobností bude velmi pestrá, mùžete se tedy tìšit na politiky, lékaøe, sportovce …<br><br>";
 $zobr=$_GET[zobr];
 
  

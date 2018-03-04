@@ -22,13 +22,13 @@ echo"</ul>";
  <div class="obrvpravo">
    
 
-<?php
+<?php/*
 $cislofotky=rand(1, 9);
 $adresafotky='../budova_bbb/'.$cislofotky.'.jpg';
 echo"
 <img src=\"$adresafotky\" width=\"400\" class=\"obrvpravo\" />
 ";
-?>
+*/?>
  </div>
 <?php
 require "paticka.php";

@@ -1,14 +1,19 @@
-novinky na hlavní straně přidat prochu textu
-strana novinky pro mobil - dal jsem obrázek na správné místo, potřeboval bych přidat obtékání textu okolo
-dát vyhledávání bílou výplň na mobilu - vytvořil jsem svg z png, ale aby fungoval fill tak se asi bude muset přidat jako normální svg, změnit koncovku nestačí.
+HOTOVO, ÚPRAVA POMOCÍ INDEX.PHP (ČÍSLA NA ŘÁDCÍCH 160 A 162 UDÁVÁJÍ DÉLKU TEXTU VE ZNACÍCH) - novinky na hlavní straně přidat prochu textu 
+SNAD HOTOVO - strana novinky pro mobil - dal jsem obrázek na správné místo, potřeboval bych přidat obtékání textu okolo
+HOTOVO - dát vyhledávání bílou výplň na mobilu - vytvořil jsem svg z png, ale aby fungoval fill tak se asi bude muset přidat jako normální svg, změnit koncovku nestačí.
 fotogalerie
-footer- přidat autory - přidat do php, zkontrolovat nastylování při různý šířce okna (už je to přidaný lokálně na hlstrana.html)
+SNAD HOTOVO footer- přidat autory - přidat do php, zkontrolovat nastylování při různý šířce okna (už je to přidaný lokálně na hlstrana.html)
 vyřešit contribution ikonek
-mobil - e-learning, volitelný předměty - buď nejak vymyslet nebo nastavit pevnou šířku a scrollovat
-karty co nabízíme, odkaz "více informací" funguje jen na pravý půlce
+ČÁSTEČNĚ HOTOVO (elearning) mobil - e-learning, volitelný předměty - buď nejak vymyslet nebo nastavit pevnou šířku a scrollovat
+SNAD HOTOVO karty co nabízíme, odkaz "více informací" funguje jen na pravý půlce
+  * ve Firefoxu funguje správně
+  * zakrýval ho :before, vyřešeno přes pointer-events 
 předělat ikonku pro křížek
 formátování tisku
-u absolventů je zbytečně moc tabulek v sobě
-fotogalerie má špatný nadpisy mají být h4
+PŘĚDĚLÁNO u absolventů je zbytečně moc tabulek v sobě
+PŘEDĚLÁNO (NA H5) fotogalerie má špatný nadpisy mají být h4
+HOTOVO opravit odkazy na prohlídky atd na úvodní straně, zmenšit obrázky (vw se počítá i se scrollbarem, což je problém) - Screenshot 2018-02-25 11.14.34
 
-
+volitelné předměty
+ * u 4. ročníku (jednoleté) úpraveno rozhraní -> class predmety, predmet, ...
+ * pro přihlášení jde jméno:6co001 a heslo:o55555 

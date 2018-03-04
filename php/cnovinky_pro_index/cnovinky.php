@@ -1,6 +1,6 @@
 <?php
-require("../spojenie.php");
-require("../crubrika.php");
+require("spojenie.php");
+require("crubrika.php");
 /*---------------------------Popis tøídy Crubrika_Foto--------------------------
 Tøídy Crubrika_Foto je potomkem tøídy Crubrika
 
@@ -95,7 +95,7 @@ echo"
          echo"<tr><td>";echo $this->sloupec[$i]; echo":</td>";
         echo"
        <td class=\"chyba\">
-        <textarea   rows=\"20\" name=\"".$this->sloupec[$i]."\" cols=\"50\">".$fsloupec[$i]."</textarea>".$this->chyba[$i]."</td></tr>
+        <textarea  rows=\"20\" name=\"".$this->sloupec[$i]."\" cols=\"50\">".$fsloupec[$i]."</textarea>".$this->chyba[$i]."</td></tr>
             ";
          	break; 
 case 'vlastnik':
@@ -133,59 +133,7 @@ $vypis ="<option value=\"ne\" selected=\"selected\">ne</option><option value=\"a
   
  echo"  <input type=\"hidden\"  name=\"".$this->sloupec[$i]."\" value=\"ne\" />";
   }  
-         	break;
-           
-  case 'poradi': 
-  $mp=MySQL_Query("SELECT Max( poradi) FROM $this->Nazev ");
-$maxporadi=mysql_result($mp,0);
-$poradip=$maxporadi+1;                                                               
- if($superadmin==true){
- echo"<tr><td>"; echo"mùžete rovnou nastavit preferenci</td>";
-        echo"<td class=\"chyba\">";
-         echo"<select name=\"".$this->sloupec[$i]."\" size\"1\">";         
-for ($ip=$poradip;$ip>=0;$ip--) {
-$vypis =($ip==$maxporadi)?("<option value=\"$ip\" selected=\"selected\">$ip</option>"):("<option value=\"$ip\">$ip</option>");
-echo $vypis ;	
-}                
-
-                 
-        
-                                                          
-                                                     
-        echo "</select> " .$this->chyba[$i]."
- <a href=\"help_preference.htm\" onclick=\" window.open('help_preference.htm','_blank', 'width=200,height=450,menubar=no,scrollbars=yes,resizable=yes,left=0,top=0');return false\"> 
-       <img src=\"../obr/help.gif\" alt=\"Dokumentace\" title=\"Dokumentace\" width=\"14\" height=\"14\"  /></a>             
-        
-        
-        </td></tr>
-            ";
- 
-                }
-
- else { 
-  
- echo"  <input type=\"hidden\"  name=\"".$this->sloupec[$i]."\" value=\"$maxporadi\" />";
-  }  
-         	break;
-case 'zverejnit': 
-
- echo"<tr><td>"; echo"zveøejnit novinku v tisku</td>";
-        echo"<td class=\"chyba\">";
-         echo"<select name=\"".$this->sloupec[$i]."\" size\"1\">";         
-                
-$vypis ="<option value=\"ano\" selected=\"selected\">ano</option>";
-                 
-        echo $vypis ;
-                                                          
-                                                     
-        echo "</select> " .$this->chyba[$i]."
-            
-        
-        
-        </td></tr>
-            ";       
-
-         	break;                                   
+         	break;             
   default:
   	/*echo $this->sloupec[$i];
         echo":::<INPUT TYPE=\"TEXT\" SIZE=\"45\" NAME=\"".$this->sloupec[$i]."\" VALUE=\"".$fsloupec[$i]."\" ><br />
@@ -196,8 +144,8 @@ $vypis ="<option value=\"ano\" selected=\"selected\">ano</option>";
 }  
 
 
-if($this->pocetobr()<1500) {echo"<tr><td colspan=\"2\"  class=\"centrovano\" > Mùžete pøidat k textu 2obrázky, 
-max. 50kB,formát *.jpg,doporuèené  rozmìry: šíøka 250px (jeden obr.), 150px (dva obr.) <br />
+if($this->pocetobr()<500) {echo"<tr><td colspan=\"2\"  class=\"centrovano\" > Mùžete pøidat k textu 2obrázky, 
+max. 50kB,formát *.jpg,doporuèené  rozmìry 300x200px <br />
 nebo 2soubory *.pdf,  max. 50kB  <br />
    <input type=\"hidden\" name=\"MAX_FILE_SIZE\" value=\"50000000\" /> 
   Vyberte obrázek1(soubor1) v poèítaèi:<input name=\"soubor\" type=\"file\"  accept=\"image/* ,application/pdf \" /> <span class=\"chyba\">     $this->chybafotky  </span>
@@ -207,22 +155,21 @@ nebo 2soubory *.pdf,  max. 50kB  <br />
                      ";
                       if ($this->Upravafoto) {
               echo"<tr><td colspan=\"2\"  class=\"centrovano\" >
-              <a name=\"cilupravarozmeru\"> </a>               
-             <a href=\"#cilupravarozmeru\"  onclick=\"document.getElementById('upravarozmeru').style.visibility='visible'\" > upravit rozmìry fotek,</a>
-<div  id=\"upravarozmeru\" style=\"visibility: hidden;\">               
+              upravit rozmìry fotek, 
 šíøka: <select name=\"sirka\" size=\"1\">   
-<!-- <option value=\"0\">neupravovat</option> -->
-
-
-
+<option value=\"0\">neupravovat</option>
+<option value=\"450\">450</option>
+<option value=\"400\">400</option>
+<option value=\"350\">350</option>
+<option value=\"300\">300</option>
 <option value=\"250\">250</option>
 <option value=\"200\">200</option>
 <option value=\"150\">150</option>
-<option value=\"100\">100</option>
-<option value=\"0\">neupravovat</option>  
+<option value=\"100\">100</option> 
  </select> px ,  
  výška: <select name=\"vyska\" size=\"1\">
-<option value=\"0\">neupravovat</option>
+<option value=\"0\">neupravovat</option>  
+<option value=\"400\">400</option>
 <option value=\"350\">350</option>
 <option value=\"300\">300</option>
 <option value=\"250\">250</option>
@@ -230,13 +177,12 @@ nebo 2soubory *.pdf,  max. 50kB  <br />
 <option value=\"150\">150</option>
 <option value=\"100\">100</option> 
 </select>  px 
-</div>
               </td></tr> ";
  	
                      }  
                      
                         }
-         else echo"<tr><td colspan=\"2\"  class=\"centrovano\" > Poèet obrázkù v adresáøi je vìtší než 1500 . Kapacita vyèerpána.Smažte starší zázanmy s obrázky.</td></tr> ";
+         else echo"<tr><td colspan=\"2\"  class=\"centrovano\" > Poèet obrázkù v adresáøi je vìtší než 500 . Kapacita vyèerpána.Smažte starší zázanmy s obrázky.</td></tr> ";
 
 
 	          
@@ -297,24 +243,7 @@ $verdikt= ($kontrolatextu && $kontrolaobrazku);
  return $verdikt;
  }
 /*----------------------------------------------------------------------------*/
-/*---------------------------Popis metody Preber_promene()----------------------
 
-Metoda Preber_promene() se stará o pøedání pole promìnných
- odeslaných  formuláøem metodou POST.
-Názvy promìnných ve formuláøi musí odpovídat názvùm sloupcù v dané tabulce.
-Formátovácí znaky pøevádí pomocí htmlspecialchars na entity
-------------------------------------------------------------------------------*/
-function Preber_promene()
-{ 
-foreach ($this->sloupec as $key=>$value) {
-//echo"klic:$key a hodnota $value <br />";	
-//$lpole[]=$_POST[$value];
-//$lpole[]= $value=='text'? $_POST[$value]: htmlspecialchars($_POST[$value]);
-
-$lpole[]= $_POST[$value];
-}
-return $lpole ;
-}
 
 /*---------------------------Popis metody  Preber_rozmery()---------------------
 
@@ -369,11 +298,8 @@ $uploadDir = $this->adresarfotek;$uploadFile2 = $uploadDir.$nazev2;
 if($vysledek2==$uploadFile2 && $this->Upravafoto && ($fvyska!=0||$fsirka!=0)&& $_FILES['soubor2']['type']!="application/pdf" ) $this->image_resize($uploadFile2,$uploadFile2,$fvyska,$fsirka); 
  
            }           
-//pokud jsou dva jpg, tak je zmenšit na 150px šíøky           
-if (file_exists ($uploadFile ) && file_exists ($uploadFile2) && (substr ($uploadFile, -3)=='jpg')&& (substr ($uploadFile2, -3)=='jpg') ) {
- $this->image_resize($uploadFile,$uploadFile,150,0);
- $this->image_resize($uploadFile2,$uploadFile2,150,0);	
-}           
+           
+           
 return $poradovecislo ;
 }
 
@@ -387,22 +313,7 @@ Rozšíøení:
 Umožòuje zmìnu fotky 
 ------------------------------------------------------------------------------*/
 function Update_v_Rubrice($f_id,$f_updatepole,$fvyska=0,$fsirka=0)
-{ 
-for($i=0;$i<4;$i++)  $smazsoubor[$i]=$_POST[smazsoubor][$i];
-
- foreach($smazsoubor as $k => $v){//k foreach
-                                      if($v!='') { //k ifu                                      
-                                       
-// echo"<div class=\"chyba\">adresa smasaného souboru:$v <br /> </div>";
- if( file_exists ($v)){
-                                   unlink ($v);
-                                   $vysledek =$v;  
-                                   }  
-                echo"<div class=\"chyba\">byl smazán soubor:$vysledek <br /> </div>";                    
-                                                                    
-                                                   }//k ifu
-                                                              }//k foreach  
- 
+{  
 $poradovecislo=CRubrika::Update_v_Rubrice($f_id,$f_updatepole);
 if($_FILES['soubor']['name']!=""){
 $cislofotky=$poradovecislo;
@@ -435,11 +346,6 @@ if( file_exists ($uploadFile2)){
 if($vysledek2==$uploadFile2 && $this->Upravafoto && ($fvyska!=0||$fsirka!=0)&& $_FILES['soubor2']['type']!="application/pdf" ) $this->image_resize($uploadFile2,$uploadFile2,$fvyska,$fsirka); 
  
            }
-//pokud jsou dva jpg, tak je zmenšit na 150px šíøky           
-if (file_exists ($uploadFile ) && file_exists ($uploadFile2) && (substr ($uploadFile, -3)=='jpg')&& (substr ($uploadFile2, -3)=='jpg') ) {
- $this->image_resize($uploadFile,$uploadFile,150,0);
- $this->image_resize($uploadFile2,$uploadFile2,150,0);	
-}             
 return ($f_id);
 }
 
@@ -548,248 +454,90 @@ ostaní :výstup ve formì <div class=\"jmeno_sloupce\"> hodnota</div>
 
 Rozšíøení:
 $f_id...urèuje id vybrané novinky
-
-
-
-
-
-
-------------------------------------------------------------------------------*/
-function 	FormatujObashRubriky($f_id,$f_sloupec='',$f_kriterium='', $f_tridit_podle='id DESC')
+------------------------------------------------------------------------------*/		
+function 	FormatujObashRubriky($f_id,$f_sloupec='',$f_kriterium='')
 {
-global $co;
+
 
 if($f_id!=""){  //zobraz novinku nahore
 $VybranaNovinka=CRubrika::VyberPolozku($f_id);
+
+echo"<div class=\"centrovano\">    
+    <table  class=\"novinka\" width=\"80%\">
+ <tr class=\"nadpisv-n-c \" ><td>".$VybranaNovinka[nadpis]."</td></tr>";
+echo"<tr><td class=\"textv-n-c \"> <a name=\"".$VybranaNovinka[id]."\"> </a>";
 $adresafotky=$this->adresarfotek.$VybranaNovinka[id].'.jpg';
 $adresafotky2=$this->adresarfotek.'2_'.$VybranaNovinka[id].'.jpg';
 $adresapdefka=$this->adresarfotek.$VybranaNovinka[id].'.pdf';
 $adresapdefka2=$this->adresarfotek.'2_'.$VybranaNovinka[id].'.pdf';
-
-echo"
-<div class=\"centrovano\">    
-         <div  class=\"novinka\" width=\"100%\">
-             <div class=\"textv-n-c \">
-             <h4 class=\"nadpisv-n-c \" >{$VybranaNovinka[nadpis]} <a href=\"?zobr=".''.'&amp;co='.$co."\" > <img src=\"../obr/zavri.gif\" alt=\"zavri.gif, 767B\" title=\"zavøít\" border=\"0\" height=\"20\" width=\"20\" class=\"obrvpravobezokraje\"> </a></h4>  <a name=\"{$VybranaNovinka[id]}\"> </a>
-             <div class=\"obrnovinka\">";
-
-    if (file_exists ($adresafotky))echo"<img src=\"$adresafotky\"  class=\"obrvlevo\" alt=\"foto\" />";
-    if (file_exists ($adresafotky2))echo"<img src=\"$adresafotky2\"  class=\"obrvlevo\" alt=\"foto\" />";             
-
-    echo"     
-             </div>";
-    
-echo NL2BR($VybranaNovinka['text']);
+if (file_exists ($adresafotky))echo"<img src=\"$adresafotky\"  class=\"obrvlevo\" alt=\"foto\" />";
+if (file_exists ($adresafotky2))echo"<img src=\"$adresafotky2\"  class=\"obrvlevo\" alt=\"foto\" />";  
+ echo NL2BR($VybranaNovinka[text]);
 if (file_exists ($adresapdefka))echo"
-                                 <br>
-<a href=\"$adresapdefka\" class=\"pdefkonovinky\" onclick=\"return !window.open(this.href)\">
+                                 <hr />
+<a href=\"$adresapdefka\" class=\"pdefko\" onclick=\"return !window.open(this.href)\">
  Pøíloha *.pdf
  </a>                                "; 
- if (file_exists ($adresapdefka2))echo"                                
-<a href=\"$adresapdefka2\" class=\"pdefkonovinky\" onclick=\"return !window.open(this.href)\">
+ if (file_exists ($adresapdefka2))echo"
+                                 <hr />
+<a href=\"$adresapdefka2\" class=\"pdefko\" onclick=\"return !window.open(this.href)\">
  Pøíloha2 *.pdf
- </a> ";
-
-    echo"<div  class=\"den-autor\" >Autor:<span class=\"autor\"> {$VybranaNovinka[autor]}</span>, email:&nbsp;<a href=\"mailto:$VybranaNovinka[email]\" class=\"email\" >{$VybranaNovinka[email]} </a><br /><span class=\"datum\"> {$VybranaNovinka[datum]}</span>
-                     <span class=\"tiskzpravy\"><a href=\"tisk.php?id={$VybranaNovinka[id]}\"    
-                      onclick=\"return !window.open(this.href)\">Tisk zprávy</a></span>
-                 </div></div></div>
-     </div>
- ";
+ </a>                                ";  
+  echo"</td></tr> <tr><td> <div  class=\"den-autor\" >Autor:".$VybranaNovinka[autor]." email:<a href=\"mailto:$VybranaNovinka[email]\"  > ".$VybranaNovinka[email]." </a>Datum:".$VybranaNovinka[datum]."</div>
+  <a href=\"tisk.php?id=".$VybranaNovinka[id]."\"   class=\" tiskzpravy\" 
+ onclick=\"return !window.open(this.href)\">Tisk zprávy</a>  
+  </td></tr></table>
+  </div>";
+  echo"<br />";  
 
                     } //zobraz novinku nahore
 else               {  //zobraz vse
-
-$PoleRubrik=CRubrika::FormatujObashRubriky($f_sloupec,$f_kriterium,$f_tridit_podle); 
- $strana=$_GET[strana];
-$min=$strana*$this->strankovani; 
-$max=($min+$this->strankovani)<count($PoleRubrik[id])?($min+$this->strankovani):count($PoleRubrik[id]) ;
-$pocetstran=(round(count($PoleRubrik[id])/$this->strankovani))+1;
-//echo $min.'***'.$max;   
-for ($i=$min;$i< $max;$i++) {
-$adresafotky=$this->adresarfotek.$PoleRubrik[id][$i].'.jpg';
-$adresafotky2=$this->adresarfotek.'2_'.$PoleRubrik[id][$i].'.jpg';
-$adresapdefka=$this->adresarfotek.$PoleRubrik[id][$i].'.pdf';
-$adresapdefka2=$this->adresarfotek.'2_'.$PoleRubrik[id][$i].'.pdf';
-
-echo"
-<div class=\"centrovano\">    
-         <div  class=\"novinka\" width=\"100%\">
-             <div class=\"textv-n-c \">
-             <h4 class=\"nadpisv-n-c \" >{$PoleRubrik[nadpis][$i]}</h4>  <a name=\"{$PoleRubrik[id][$i]}\"> </a>
-             <div class=\"obrnovinka\">";
-
-    if (file_exists ($adresafotky))echo"<img src=\"$adresafotky\"  class=\"obrnovinka\" alt=\"foto\" />";
-    if (file_exists ($adresafotky2))echo"<img src=\"$adresafotky2\"  class=\"obrnovinka\" alt=\"foto\" />";             
-
-    echo"     
-             </div>";
-echo NL2BR($PoleRubrik[text][$i]);
-if (file_exists ($adresapdefka))echo"
-                                 <br>
-<a href=\"$adresapdefka\" class=\"pdefkonovinky\" onclick=\"return !window.open(this.href)\">
- Pøíloha *.pdf
- </a>                                "; 
- if (file_exists ($adresapdefka2))echo"                                
-<a href=\"$adresapdefka2\" class=\"pdefkonovinky\" onclick=\"return !window.open(this.href)\">
- Pøíloha2 *.pdf
- </a> ";
-
-/* echo"<div  class=\"den-autor\" >Autor:<span class=\"autor\"> {$PoleRubrik[autor][$i]}</span>, email: <a href=\"mailto:$PoleRubrik[email][$i]\" class=\"email\" >{$PoleRubrik[email][$i]} </a><br /><span class=\"datum\"> {$PoleRubrik[datum][$i]}</span>
-                     <span class=\"tiskzpravy\"><a href=\"tisk.php?id={$PoleRubrik[id][$i]}\"    
-                      onclick=\"return !window.open(this.href)\">Tisk zprávy</a></span>
-                 </div></div></div>
-     </div>
- ";
- */
-    echo "<div class=\"den-autor\" >Autor:&nbsp;{$PoleRubrik[autor][$i]}, email:&nbsp;{$PoleRubrik[email][$i]}<br /><span class=\"datum\"> {$PoleRubrik[datum][$i]}</span>
-                     <span class=\"tiskzpravy\"><a href=\"tisk.php?id={$PoleRubrik[id][$i]}\"    
-                      onclick=\"return !window.open(this.href)\">Tisk zprávy</a></span>
-                 </div></div></div>
-     </div>
- ";
-
-
-
-
-
-
-  //echo"<br />"; 
-                                             }
-                                             
-echo"<div class=\"centrovano\" id=\"cisla-stran-novinky\">";
-    $strana=(int)$strana;
-    $zobrcislo=$strana+1;
-// echo"- $zobrcislo - ";
-//    echo"<br />  ";
- for ($i=0;$i<$pocetstran ;$i++ ) {
- /*   if ($i==$strana) { 
-        $zpom=$i+1;
-        $zobicko='&gt;'.$zpom.'&lt;';
-    } 
-    else
-    { $zobicko=$i+1; } 
-      echo"<a href=\"".$this->Nazev.".php?strana=".$i.'&amp;co='.$co."\">|  $zobicko  |</a>"; 
-      */
-     if ($i==$strana)
-         echo"<a href=\"".$this->Nazev.".php?strana=".$i.'&amp;co='.$co."\" class=\"aktualnistrana\" >" . ($i+1) . "</a>"; 
-     else
-         echo"<a href=\"".$this->Nazev.".php?strana=".$i.'&amp;co='.$co."\" >" . ($i+1) . "</a>"; 
-     
- } 
-echo" </div>";                                             
-                    } //zobraz vse                        
-                                             
-                                             
-                                              
-}
-/*----------------------------------------------------------------------------*/		
-function 	FormatujObashRubriky_Stare($f_id,$f_sloupec='',$f_kriterium='', $f_tridit_podle='id DESC')
-{
-global $co;
-
-if($f_id!=""){  //zobraz novinku nahore
-$VybranaNovinka=CRubrika::VyberPolozku($f_id);
-$adresafotky=$this->adresarfotek.$VybranaNovinka[id].'.jpg';
-$adresafotky2=$this->adresarfotek.'2_'.$VybranaNovinka[id].'.jpg';
-$adresapdefka=$this->adresarfotek.$VybranaNovinka[id].'.pdf';
-$adresapdefka2=$this->adresarfotek.'2_'.$VybranaNovinka[id].'.pdf';
-
-echo"
-<div class=\"centrovano\">    
-         <div  class=\"novinka\" width=\"100%\">
-             <div class=\"obrvlevo\">";
-             
- if (file_exists ($adresafotky))echo"<img src=\"$adresafotky\"  class=\"obrvlevo\" alt=\"foto\" />";
-if (file_exists ($adresafotky2))echo"<img src=\"$adresafotky2\"  class=\"obrvlevo\" alt=\"foto\" />";             
-             
- echo"     
-             </div>
-             <div class=\"textv-n-c \">
-             <h4 class=\"nadpisv-n-c \" >{$VybranaNovinka[nadpis]} <a href=\"?zobr=".''.'&amp;co='.$co."\" > <img src=\"../obr/zavri.gif\" alt=\"zavri.gif, 767B\" title=\"zavøít\" border=\"0\" height=\"20\" width=\"20\" class=\"obrvpravobezokraje\"> </a></h4>  <a name=\"{$VybranaNovinka[id]}\"> </a>";
-echo NL2BR($VybranaNovinka['text']);
-if (file_exists ($adresapdefka))echo"
-                                 <br>
-<a href=\"$adresapdefka\" class=\"pdefkonovinky\" onclick=\"return !window.open(this.href)\">
- Pøíloha *.pdf
- </a>                                "; 
- if (file_exists ($adresapdefka2))echo"                                
-<a href=\"$adresapdefka2\" class=\"pdefkonovinky\" onclick=\"return !window.open(this.href)\">
- Pøíloha2 *.pdf
- </a> ";
-
-echo"<div  class=\"den-autor\" >Autor:<span class=\"autor\"> {$VybranaNovinka[autor]}</span> email: <a href=\"mailto:$VybranaNovinka[email]\" class=\"email\" > {$VybranaNovinka[email]} </a><br /><span class=\"datum\"> {$VybranaNovinka[datum]}</span>
-                     <span class=\"tiskzpravy\"><a href=\"tisk.php?id={$VybranaNovinka[id]}\"    
-                      onclick=\"return !window.open(this.href)\">Tisk zprávy</a></span>
-                 </div></div></div>
-     </div><br />
- ";
-
-                    } //zobraz novinku nahore
-else               {  //zobraz vse
-
-$PoleRubrik=CRubrika::FormatujObashRubriky($f_sloupec,$f_kriterium,$f_tridit_podle); 
+$PoleRubrik=CRubrika::FormatujObashRubriky($f_sloupec,$f_kriterium); 
  $strana=$_GET[strana];
 $min=$strana*$this->strankovani; 
 $max=($min+$this->strankovani)<count($PoleRubrik[id])?($min+$this->strankovani):count($PoleRubrik[id]) ;
 $pocetstran=(round(count($PoleRubrik[id])/$this->strankovani))+1;
 //echo $min.'***'.$max;             
 for ($i=$min;$i< $max;$i++) {
+ echo"<div class=\"centrovano\">    
+    <table  class=\"novinka\" width=\"80%\">
+ <tr class=\"nadpisv-n-c \" ><td>".$PoleRubrik[nadpis][$i]."</td></tr>";
+echo"<tr><td class=\"textv-n-c \"> <a name=\"".$PoleRubrik[id][$i]."\"> </a>";
 $adresafotky=$this->adresarfotek.$PoleRubrik[id][$i].'.jpg';
 $adresafotky2=$this->adresarfotek.'2_'.$PoleRubrik[id][$i].'.jpg';
 $adresapdefka=$this->adresarfotek.$PoleRubrik[id][$i].'.pdf';
 $adresapdefka2=$this->adresarfotek.'2_'.$PoleRubrik[id][$i].'.pdf';
-
-echo"
-<div class=\"centrovano\">    
-         <div  class=\"novinka\" width=\"100%\">
-             <div class=\"obrvlevo\">";
-             
- if (file_exists ($adresafotky))echo"<img src=\"$adresafotky\"  class=\"obrvlevo\" alt=\"foto\" />";
-if (file_exists ($adresafotky2))echo"<img src=\"$adresafotky2\"  class=\"obrvlevo\" alt=\"foto\" />";             
-             
- echo"     
-             </div>
-             <div class=\"textv-n-c \">
-             <h4 class=\"nadpisv-n-c \" >{$PoleRubrik[nadpis][$i]}</h4>  <a name=\"{$PoleRubrik[id][$i]}\"> </a>";
-echo NL2BR($PoleRubrik[text][$i]);
-if (file_exists ($adresapdefka))echo"
-                                 <br>
-<a href=\"$adresapdefka\" class=\"pdefkonovinky\" onclick=\"return !window.open(this.href)\">
+if( (file_exists ($adresafotky))&&($i%2==0)){
+echo"<img src=\"$adresafotky\"  class=\"obrvlevo\" alt=\"foto\" />";
+if( (file_exists ($adresafotky2)))echo"<img src=\"$adresafotky2\"  class=\"obrvlevo\" alt=\"foto\" />";
+                                            }
+if( (file_exists ($adresafotky))&&($i%2!=0)){
+echo"<img src=\"$adresafotky\" class=\"obrvpravo\" alt=\"foto\" />";
+if( (file_exists ($adresafotky2)))echo"<img src=\"$adresafotky2\"  class=\"obrvpravo\" alt=\"foto\" />";
+                                            }
+ echo NL2BR($PoleRubrik[text][$i]); 
+ if (file_exists ($adresapdefka))echo" <hr />
+<a href=\"$adresapdefka\" class=\"pdefko\" onclick=\"return !window.open(this.href)\">
  Pøíloha *.pdf
- </a>                                "; 
- if (file_exists ($adresapdefka2))echo"                                
-<a href=\"$adresapdefka2\" class=\"pdefkonovinky\" onclick=\"return !window.open(this.href)\">
+ </a>             "; 
+  if (file_exists ($adresapdefka2))echo"
+<a href=\"$adresapdefka2\" class=\"pdefko\" onclick=\"return !window.open(this.href)\">
  Pøíloha2 *.pdf
- </a> ";
-
-echo"<div  class=\"den-autor\" >Autor:<span class=\"autor\"> {$PoleRubrik[autor][$i]}</span> email: <a href=\"mailto:$PoleRubrik[email][$i]\" class=\"email\" > {$PoleRubrik[email][$i]} </a><br /><span class=\"datum\"> {$PoleRubrik[datum][$i]}</span>
-                     <span class=\"tiskzpravy\"><a href=\"tisk.php?id={$PoleRubrik[id][$i]}\"    
-                      onclick=\"return !window.open(this.href)\">Tisk zprávy</a></span>
-                 </div></div></div>
-     </div><br />
- ";
-
-
-
-
-
-
+ </a>             ";
+  echo"</td></tr> <tr><td> <div  class=\"den-autor\" >Autor:".$PoleRubrik[autor][$i]." email:".$PoleRubrik[email][$i]." Datum:".$PoleRubrik[datum][$i]."</div>
+  <a href=\"tisk.php?id=".$PoleRubrik[id][$i]."\"   class=\" tiskzpravy\" 
+ onclick=\"return !window.open(this.href)\">Tisk zprávy</a>  
+  </td></tr></table>
+  </div>";
   echo"<br />"; 
                                              }
                                              
-echo"<div class=\"centrovano\" id=\"cisla-stran-novinky\">";
+echo"<div class=\"centrovano\">";
     $strana=(int)$strana;
-    $zobrcislo=$strana+1;
-  echo"- $zobrcislo - ";
+  echo"- $strana - ";
     echo"<br />  ";
  for ($i=0;$i<$pocetstran ;$i++ ) {
- if ($i==$strana) {
-     $zpom=$i+1;
- $zobicko='&gt;'.$zpom.'&lt;';
- } 
-   else{$zobicko=$i+1;} 
-  echo"<a href=\"".$this->Nazev.".php?strana=".$i.'&amp;co='.$co."\">|  $zobicko  |</a>"; 	
+  echo"<a href=\"".$this->Nazev.".php?strana=".$i."\">|  $i  |</a>"; 	
  } 
 echo" </div>";                                             
                     } //zobraz vse                        
@@ -855,11 +603,10 @@ if($oznvse=='ano') {// k ifu
 
  echo"<div class=\"centrovano\">    
     <table  class=\"novinka\" width=\"80%\">
- <tr class=\"nadpisv-n-c \" ><td>".$VybranaNovinka[nadpis]."<br /> (Preference záznamu : {$VybranaNovinka[poradi]})
+ <tr class=\"nadpisv-n-c \" ><td>".$VybranaNovinka[nadpis]."
   <hr />
 <span class=\"obrvlevo\"> oznaèit pro následné operace:<input type=\"checkbox\" checked=\"checked\" name=\"smaz[]\" value=\"".$VybranaNovinka[id]."\" /></span>
-<span class=\"obrvpravo\">  editovat záznam:<input type=\"submit\"  name=\"kohoeditovat\" value=\"".$VybranaNovinka[id]."\" class=\"tlacitko\" /></span>
-
+<span class=\"obrvpravo\">  editovat záznam:<input type=\"submit\"  name=\"kohoeditovat\" value=\"".$VybranaNovinka[id]."\" class=\"tlacitko\" /></span> 
  </td></tr>";
 echo"<tr><td class=\"textv_n_c \"> <a name=\"".$VybranaNovinka[id]."\"> </a>";
 $adresafotky=$this->adresarfotek.$VybranaNovinka[id].'.jpg';
@@ -878,7 +625,7 @@ if (file_exists ($adresafotky2))echo"<img src=\"$adresafotky2\"  class=\"obrvlev
 <a href=\"$adresapdefka2\" class=\"pdefko\" onclick=\"return !window.open(this.href)\">
  Pøíloha2 *.pdf
  </a>                                ";   
-  echo"</td></tr> <tr><td>Vlastník :".$VybranaNovinka[vlastnik]."  <div  class=\"den_autor\" >Autor:".$VybranaNovinka[autor]."email:<a href=\"mailto:$VybranaNovinka[email]\" > ".$VybranaNovinka[email]." </a> Datum:".$VybranaNovinka[datum]." <br /> V archivu :".$VybranaNovinka[archiv]."do tisku".$VybranaNovinka['zverejnit']."</div>
+  echo"</td></tr> <tr><td>Vlastník :".$VybranaNovinka[vlastnik]."  <div  class=\"den_autor\" >Autor:".$VybranaNovinka[autor]."email:<a href=\"mailto:$VybranaNovinka[email]\" > ".$VybranaNovinka[email]." </a> Datum:".$VybranaNovinka[datum]." <br /> V archivu :".$VybranaNovinka[archiv]."</div>
   <a href=\"tisk.php?id=".$VybranaNovinka[id]."\"   class=\" tiskzpravy\" 
  onclick=\"return !window.open(this.href)\">Tisk zprávy</a>  
   </td></tr></table>
@@ -892,14 +639,12 @@ echo"<br />";
 else  {
 echo"<div class=\"centrovano\">    
     <table  class=\"novinka\" width=\"80%\">
- <tr class=\"nadpisv-n-c \" ><td>".$VybranaNovinka[nadpis]."<br /> (Preference záznamu : {$VybranaNovinka[poradi]}) 
+ <tr class=\"nadpisv-n-c \" ><td>".$VybranaNovinka[nadpis]."
   <hr />
 <span class=\"obrvlevo\"> oznaèit pro následné vymazání:<input type=\"checkbox\" name=\"smaz[]\" value=\"".$VybranaNovinka[id]."\" /></span>
-<span class=\"obrvpravo\"> editovat záznam:<input type=\"submit\"  name=\"kohoeditovat\" value=\"".$VybranaNovinka[id]."\" class=\"tlacitko\" /></span> 
+<span class=\"obrvpravo\">  editovat záznam:<input type=\"submit\"  name=\"kohoeditovat\" value=\"".$VybranaNovinka[id]."\" class=\"tlacitko\" /></span> 
  </td></tr>";
-echo"<tr><td class=\"textv_n_c \">
-
- <a name=\"".$VybranaNovinka[id]."\"> </a>";
+echo"<tr><td class=\"textv_n_c \"> <a name=\"".$VybranaNovinka[id]."\"> </a>";
 $adresafotky=$this->adresarfotek.$VybranaNovinka[id].'.jpg';
 $adresafotky2=$this->adresarfotek.'2_'.$VybranaNovinka[id].'.jpg';
 $adresapdefka=$this->adresarfotek.$VybranaNovinka[id].'.pdf';
@@ -916,7 +661,7 @@ if (file_exists ($adresafotky2))echo"<img src=\"$adresafotky2\"  class=\"obrvlev
 <a href=\"$adresapdefka2\" class=\"pdefko\" onclick=\"return !window.open(this.href)\">
  Pøíloha2 *.pdf
  </a> ";  
-  echo"</td></tr> <tr><td>Vlastník :".$VybranaNovinka[vlastnik]." <div  class=\"den_autor\" >Autor:".$VybranaNovinka[autor]." email:<a href=\"mailto:$VybranaNovinka[email]\" > ".$VybranaNovinka[email]." </a> Datum:".$VybranaNovinka[datum]."<br /> V archivu :".$VybranaNovinka[archiv]."do tisku".$VybranaNovinka['zverejnit']."</div>
+  echo"</td></tr> <tr><td>Vlastník :".$VybranaNovinka[vlastnik]." <div  class=\"den_autor\" >Autor:".$VybranaNovinka[autor]." email:<a href=\"mailto:$VybranaNovinka[email]\" > ".$VybranaNovinka[email]." </a> Datum:".$VybranaNovinka[datum]."<br /> V archivu :".$VybranaNovinka[archiv]."</div>
   <a href=\"tisk.php?id=".$VybranaNovinka[id]."\"   class=\" tiskzpravy\" 
  onclick=\"return !window.open(this.href)\">Tisk zprávy</a>  
   </td></tr></table>
@@ -945,7 +690,6 @@ for ($i=0;$i<count($PoleRubrik[id]) ;$i++) {
     <table  class=\"novinka\" width=\"80%\">
  <tr class=\"nadpisv-n-c \" ><td>".$PoleRubrik[nadpis][$i]."
   <br />
- (Preference záznamu : {$PoleRubrik[poradi][$i]})<br />
 <span class=\"obrvlevo\"> oznaèit pro následné operace:<input type=\"checkbox\" checked=\"checked\" name=\"smaz[]\" value=\"".$PoleRubrik[id][$i]."\" /></span>
 <span class=\"obrvpravo\">  editovat záznam:<input type=\"submit\"  name=\"kohoeditovat\" value=\"".$PoleRubrik[id][$i]."\" class=\"tlacitko\" /></span> 
  </td></tr>";
@@ -971,7 +715,7 @@ if( (file_exists ($adresafotky2))&&($i%2!=0))echo"<img src=\"$adresafotky2\"  cl
 <a href=\"$adresapdefka2\" class=\"pdefko\" onclick=\"return !window.open(this.href)\">
  Pøíloha2 *.pdf
  </a>             ";
-  echo"</td></tr> <tr><td>Vlastník :".$PoleRubrik[vlastnik][$i]."  <div  class=\"den_autor\" >Autor:".$PoleRubrik[autor][$i]." email:".$PoleRubrik[email][$i]." Datum:".$PoleRubrik[datum][$i]."<br /> V archivu :".$PoleRubrik[archiv][$i]."  zveøejnit v tisku : ".$PoleRubrik['zverejnit'][$i]."</div>
+  echo"</td></tr> <tr><td>Vlastník :".$PoleRubrik[vlastnik][$i]."  <div  class=\"den_autor\" >Autor:".$PoleRubrik[autor][$i]." email:".$PoleRubrik[email][$i]." Datum:".$PoleRubrik[datum][$i]."<br /> V archivu :".$PoleRubrik[archiv][$i]."</div>
   <a href=\"tisk.php?id=".$PoleRubrik[id][$i]."\"   class=\" tiskzpravy\" 
  onclick=\"return !window.open(this.href)\">Tisk zprávy</a>  
   </td></tr></table>
@@ -987,7 +731,7 @@ echo"<br />";
  echo"<div class=\"centrovano\">    
     <table  class=\"novinka\" width=\"80%\">
  <tr class=\"nadpisv-n-c \" ><td>".$PoleRubrik[nadpis][$i]."
- <br /> (Preference záznamu : {$PoleRubrik[poradi][$i]})<br />
+ <br />
 <span class=\"obrvlevo\"> oznaèit pro následné operace:<input type=\"checkbox\"  name=\"smaz[]\" value=\"".$PoleRubrik[id][$i]."\" /></span>
 <span class=\"obrvpravo\">  editovat záznam:<input type=\"submit\"  name=\"kohoeditovat\" value=\"".$PoleRubrik[id][$i]."\" class=\"tlacitko\" /></span>
  </td></tr>";
@@ -1015,7 +759,7 @@ if( (file_exists ($adresafotky2))&&($i%2!=0))echo"<img src=\"$adresafotky2\"  cl
 <a href=\"$adresapdefka2\" class=\"pdefko\" onclick=\"return !window.open(this.href)\">
  Pøíloha2 *.pdf
  </a>             ";  
-  echo"</td></tr> <tr><td>Vlastník :".$PoleRubrik[vlastnik][$i]." <div  class=\"den_autor\" >Autor:".$PoleRubrik[autor][$i]." email:".$PoleRubrik[email][$i]." Datum:".$PoleRubrik[datum][$i]."<br /> V archivu :".$PoleRubrik[archiv][$i]." zveøejnit v tisku : ".$PoleRubrik['zverejnit'][$i]."</div>
+  echo"</td></tr> <tr><td>Vlastník :".$PoleRubrik[vlastnik][$i]." <div  class=\"den_autor\" >Autor:".$PoleRubrik[autor][$i]." email:".$PoleRubrik[email][$i]." Datum:".$PoleRubrik[datum][$i]."<br /> V archivu :".$PoleRubrik[archiv][$i]."</div>
   <a href=\"tisk.php?id=".$PoleRubrik[id][$i]."\"   class=\" tiskzpravy\" 
  onclick=\"return !window.open(this.href)\">Tisk zprávy</a>  
   </td></tr></table>
@@ -1031,19 +775,19 @@ if( (file_exists ($adresafotky2))&&($i%2!=0))echo"<img src=\"$adresafotky2\"  cl
  echo"<hr />";                                        
 echo" <table width=\"100%\" border=\"0\">  
    <tr><td>
-     <div class=\"chyba\" >Oznaèit VŠECHNY   záznamy  pro následné operace? <br /> <input type=\"submit\"  value=\"ano\" name=\"oznvse\" class=\"tlacitko\" />  <input type=\"submit\"  value=\"odznaèit\" name=\"oznvse\" class=\"tlacitko\" />  </div>
+     <div class=\"chyba\" >Oznaèit VŠECHNY ( tj. archivované i aktuální ) VAŠE záznamy  pro následné operace? <br /> <input type=\"submit\"  value=\"ano\" name=\"oznvse\" class=\"tlacitko\" />  <input type=\"submit\"  value=\"odznaèit\" name=\"oznvse\" class=\"tlacitko\" />  </div>
 ";
-echo"<input type=\"hidden\" name=\"co\" value=\"$co\" />";
-echo"<input type=\"hidden\" name=\"akce\" value=\"editace_stranky\" />";
 
+echo"<input type=\"hidden\" name=\"akce\" value=\"editace_stranky\" />";
+if($superadmin==true){
 if ($co!='archiv') {
 	echo" <br /><div>Pøesunout oznaèené záznamy do archivu <input type=\"submit\"  value=\"archivovat\" name=\"editakce\" class=\"tlacitko\" /></div>";
 }
 if ($co!='novinky') {
 echo" <br /><div>Pøesunout oznaèené záznamy z archivu <input type=\"submit\"  value=\"dearchivovat\" name=\"editakce\" class=\"tlacitko\" /></div>";	
 }
-if($superadmin==true){
-echo" <br /><div>Preference oznaèených záznamù: <input type=\"submit\"  value=\"vynulovat preference\" name=\"editakce\" class=\"tlacitko\" /></div>";	
+
+
                       }
 echo" <br /><div>Trvale odstranit oznaèené záznamy <input type=\"submit\"  value=\"smazat\" name=\"editakce\" class=\"tlacitko\" /></div>
     </td></tr> </table>
@@ -1088,26 +832,26 @@ echo"
 <form enctype=\"multipart/form-data\" action=\"$fzpracovani\" method=\"post\">";
 if( file_exists ($adresafotky))
                 echo "<div  class=\"centrovano\"><img src=\"$adresafotky\"   alt=\"náhled_foto\" ><br />
-                  Pøiložené foto1. Smazat : <input type=\"checkbox\"  name=\"smazsoubor[]\" value=\"$adresafotky\" /> 
+                  Pøiložené foto1.
                   </div> ";
       else echo"<div  class=\"centrovano\"> Foto1 není pøiloženo.
                </div>";
   if( file_exists ($adresafotky2))
                 echo "<div  class=\"centrovano\"><img src=\"$adresafotky2\"   alt=\"náhled_foto\" ><br />
-                  Pøiložené foto2. Smazat : <input type=\"checkbox\"  name=\"smazsoubor[]\" value=\"$adresafotky2\" /> 
+                  Pøiložené foto2.
                   </div> ";
       else echo"<div  class=\"centrovano\"> Foto2 není pøiloženo.
                </div>";             
 if (file_exists ($adresapdefka))echo" <div  class=\"centrovano\">
-<a href=\"$adresapdefka\"  onclick=\"return !window.open(this.href)\">
- Pøíloha1 *.pdf.  
- </a>  Smazat : <input type=\"checkbox\"  name=\"smazsoubor[]\" value=\"$adresapdefka\" />   </div> ";
+<a href=\"$adresapdefka\" class=\"pdefko\" onclick=\"return !window.open(this.href)\">
+ Pøíloha1 *.pdf
+ </a>   </div> ";
   else echo"<div  class=\"centrovano\"> Pøíloha1 *.pdf nebyla pøiložena.
                </div>";
 if (file_exists ($adresapdefka2))echo" <div  class=\"centrovano\">
-<a href=\"$adresapdefka2\"  onclick=\"return !window.open(this.href)\">
- Pøíloha2 *.pdf. 
- </a> Smazat : <input type=\"checkbox\"  name=\"smazsoubor[]\" value=\"$adresapdefka2\" />   </div> ";
+<a href=\"$adresapdefka2\" class=\"pdefko\" onclick=\"return !window.open(this.href)\">
+ Pøíloha2 *.pdf
+ </a>   </div> ";
   else echo"<div  class=\"centrovano\"> Pøíloha2 *.pdf nebyla pøiložena.
                </div>";    
 echo"
@@ -1133,7 +877,7 @@ echo"
          echo"<tr><td>";echo $this->sloupec[$i]; echo":</td>";
         echo"
        <td class=\"chyba\">
-        <textarea id=\"elm2\" rows=\"20\" name=\"".$this->sloupec[$i]."\" cols=\"50\">".$PoleZaznamu[$this->sloupec[$i]]."</textarea>".$this->chyba[$i]."</td></tr>
+        <textarea  rows=\"20\" name=\"".$this->sloupec[$i]."\" cols=\"50\">".$PoleZaznamu[$this->sloupec[$i]]."</textarea>".$this->chyba[$i]."</td></tr>
             ";
          	break;  
 case 'vlastnik':
@@ -1171,7 +915,7 @@ $vypis = $PoleZaznamu[vlastnik]==$vlastnici[$j] ? "<option value=\"$vlastnici[$j
          	break;  
                                
 case 'archiv':
-
+if($superadmin==true){
  echo"<tr><td>"; echo"mùžete pøesunout do archivu</td>";
         echo"<td class=\"chyba\">";
          echo"<select name=\"".$this->sloupec[$i]."\" size\"2\">";         
@@ -1188,50 +932,16 @@ $vypis = $PoleZaznamu[archiv]=='ano' ? "<option value=\"ano\" selected=\"selecte
         </td></tr>
             ";
  
-              
-
-  
-         	break;
-           
-           
-case 'poradi': 
-  $mp=MySQL_Query("SELECT Max( poradi) FROM $this->Nazev ");
-$maxporadi=mysql_result($mp,0);
-$poradip=$maxporadi+1;                                                               
- if($superadmin==true){
- echo"<tr><td>"; echo"mùžete nastavit preferenci</td>";
-        echo"<td class=\"chyba\">";
-         echo"<select name=\"".$this->sloupec[$i]."\" size\"1\">";         
-for ($ip=$poradip;$ip>=0;$ip--) {
-$vypis =($ip==$PoleZaznamu[$this->sloupec[$i]])?("<option value=\"$ip\" selected=\"selected\">$ip</option>"):("<option value=\"$ip\">$ip</option>");
-echo $vypis ;	
-}                
-
-                 
-        
-                                                          
-                                                     
-        echo "</select> " .$this->chyba[$i]."
-            
- <a href=\"help_preference.htm\" onclick=\" window.open('help_preference.htm','_blank', 'width=200,height=450,menubar=no,scrollbars=yes,resizable=yes,left=0,top=0');return false\"> 
-       <img src=\"../obr/help.gif\" alt=\"Dokumentace\" title=\"Dokumentace\" width=\"14\" height=\"14\"  /></a>         
-        
-        </td></tr>
-            ";
- 
                 }
 
- else { 
-  
- echo"<input type=\"hidden\"  name=\"".$this->sloupec[$i]."\" value=\"".$PoleZaznamu[$this->sloupec[$i]]."\" />";
-  }  
-         	break;
-case 'zverejnit': 
- echo"<tr><td>"; echo"zveøejnit vtisku</td>";
-        echo"<td class=\"chyba\">".$PoleZaznamu['zverejnit'];
-          echo"<input type=\"hidden\"  name=\"".'zverejnit'."\" value=\"".$PoleZaznamu['zverejnit']."\" />".$this->chyba[$i]."</td></tr>";
-         	break;           
-                         
+ else {
+  echo"<tr class=\"nadpisv-n-c\"><td>"; echo"Umístìní:</td>";
+        echo"<td> Novinka v archivu : {$PoleZaznamu[$this->sloupec[$i]] }
+        <input type=\"hidden\"  name=\"".'archiv'."\" value=\"".$PoleZaznamu[$this->sloupec[$i]]."\" />       
+        </td></tr>
+            ";
+        }       
+         	break;              
   default:
   	/* neprovádí se nic*/
   	break;
@@ -1242,8 +952,8 @@ case 'zverejnit':
 
 
 
-if($this->pocetobr()<1500) {echo"<tr><td colspan=\"2\"  class=\"centrovano\" > Mùžete pøidat k textu 2obrázky, 
-max. 50kB,formát *.jpg,doporuèené  rozmìry: šíøka 250px (jeden obr.), 150px(dva obr.) <br />
+if($this->pocetobr()<500) {echo"<tr><td colspan=\"2\"  class=\"centrovano\" > Mùžete pøidat k textu 2obrázky, 
+max. 50kB,formát *.jpg,doporuèené  rozmìry 300x200px <br />
 nebo 2soubory *.pdf,  max. 50kB  <br />
    <input type=\"hidden\" name=\"MAX_FILE_SIZE\" value=\"50000000\" /> 
   Vyberte obrázek1(soubor1) v poèítaèi:<input name=\"soubor\" type=\"file\"  accept=\"image/* ,application/pdf \" /> <span class=\"chyba\">     $this->chybafotky  </span>
@@ -1252,19 +962,21 @@ nebo 2soubory *.pdf,  max. 50kB  <br />
                      ";
                      if ($this->Upravafoto) {
               echo"<tr><td colspan=\"2\"  class=\"centrovano\" >
-                      <a name=\"cilupravarozmeru\"> </a>               
-             <a href=\"#cilupravarozmeru\"  onclick=\"document.getElementById('upravarozmeru').style.visibility='visible'\" > upravit rozmìry fotek,</a>
-<div  id=\"upravarozmeru\" style=\"visibility: hidden;\">  
+              upravit rozmìry, 
 šíøka: <select name=\"sirka\" size=\"1\">   
-<!-- <option value=\"0\">neupravovat</option> -->
+<option value=\"0\">neupravovat</option>
+<option value=\"450\">450</option>
+<option value=\"400\">400</option>
+<option value=\"350\">350</option>
+<option value=\"300\">300</option>
 <option value=\"250\">250</option>
 <option value=\"200\">200</option>
 <option value=\"150\">150</option>
-<option value=\"100\">100</option>
-<option value=\"0\">neupravovat</option> 
+<option value=\"100\">100</option> 
  </select> px ,  
  výška: <select name=\"vyska\" size=\"1\">
-<option value=\"0\">neupravovat</option> 
+<option value=\"0\">neupravovat</option>  
+<option value=\"400\">400</option>
 <option value=\"350\">350</option>
 <option value=\"300\">300</option>
 <option value=\"250\">250</option>
@@ -1272,7 +984,6 @@ nebo 2soubory *.pdf,  max. 50kB  <br />
 <option value=\"150\">150</option>
 <option value=\"100\">100</option> 
 </select>  px 
-</div>
               </td></tr> ";
  	
                      }  
@@ -1341,10 +1052,10 @@ Metoda VyberSeznamNovinek() vrací pole id, datum, nadpis novinek
 $f_vlastnik=$this->inject_addslashes($f_vlastnik);
   if ($f_vlastnik!='') {
     
-          @$vsechnyzazanamy=MySQL_Query("Select id,datum,nadpis FROM $this->Nazev WHERE vlastnik='$f_vlastnik' ORDER BY poradi DESC,id DESC ; ")OR DIE(MySQL_Error()) ;    
+          @$vsechnyzazanamy=MySQL_Query("Select id,datum,nadpis FROM $this->Nazev WHERE vlastnik='$f_vlastnik' ORDER BY id DESC ; ")OR DIE(MySQL_Error()) ;    
                          }   
                 else   { 
-         @$vsechnyzazanamy=MySQL_Query("Select id,datum,nadpis FROM $this->Nazev  ORDER BY poradi DESC,id DESC ; ")OR DIE(MySQL_Error()) ; 
+         @$vsechnyzazanamy=MySQL_Query("Select id,datum,nadpis FROM $this->Nazev  ORDER BY id DESC ; ")OR DIE(MySQL_Error()) ; 
                         }
          while ($zaznam=mysql_fetch_array ($vsechnyzazanamy, MYSQL_ASSOC)) {
           foreach($zaznam as $k => $v) {
@@ -1371,10 +1082,10 @@ function VyberSeznamNovinekAktualnich($f_vlastnik='')
 $f_vlastnik=$this->inject_addslashes($f_vlastnik);
   if ($f_vlastnik!='') {
     
-          @$vsechnyzazanamy=MySQL_Query("Select id,datum,nadpis FROM $this->Nazev WHERE (vlastnik='$f_vlastnik')AND(archiv='ne') ORDER BY poradi DESC,id DESC ; ")OR DIE(MySQL_Error()) ;    
+          @$vsechnyzazanamy=MySQL_Query("Select id,datum,nadpis FROM $this->Nazev WHERE (vlastnik='$f_vlastnik')AND(archiv='ne') ORDER BY poradi DESC, id DESC ; ")OR DIE(MySQL_Error()) ;    
                          }   
                 else   { 
-         @$vsechnyzazanamy=MySQL_Query("Select id,datum,nadpis FROM $this->Nazev  WHERE archiv='ne'ORDER BY poradi DESC,id DESC ; ")OR DIE(MySQL_Error()) ; 
+         @$vsechnyzazanamy=MySQL_Query("Select id,datum,nadpis FROM $this->Nazev  WHERE archiv='ne'ORDER BY poradi DESC, id DESC ; ")OR DIE(MySQL_Error()) ; 
                         }
          while ($zaznam=mysql_fetch_array ($vsechnyzazanamy, MYSQL_ASSOC)) {
           foreach($zaznam as $k => $v) {
@@ -1394,16 +1105,51 @@ $f_vlastnik=$this->inject_addslashes($f_vlastnik);
                                                                      
 return ($ven);
  }  
+
+function VyberSeznamNovinekAktualnich_S_Textem($f_vlastnik='')
+ {  
+$f_vlastnik=$this->inject_addslashes($f_vlastnik);
+  if ($f_vlastnik!='') {
+    
+          @$vsechnyzazanamy=MySQL_Query("Select id,datum,nadpis, text FROM $this->Nazev WHERE (vlastnik='$f_vlastnik')AND(archiv='ne') ORDER BY poradi DESC, id DESC ; ")OR DIE(MySQL_Error()) ;    
+                         }   
+                else   { 
+         @$vsechnyzazanamy=MySQL_Query("Select id,datum,nadpis, text FROM $this->Nazev  WHERE archiv='ne'ORDER BY poradi DESC, id DESC ; ")OR DIE(MySQL_Error()) ; 
+                        }
+         while ($zaznam=mysql_fetch_array ($vsechnyzazanamy, MYSQL_ASSOC)) {
+          foreach($zaznam as $k => $v) {
+         
+               $ven[$k][]=$v;
+         	
+                         
+                                       }
+         
+         
+         
+            
+         
+                                                                     }
+
+            
+                                                                     
+return ($ven);
+ } 
+
+
+
+
+
+
   
 function VyberSeznamNovinekArchivovanych($f_vlastnik='')
  {  
 $f_vlastnik=$this->inject_addslashes($f_vlastnik);
   if ($f_vlastnik!='') {
     
-          @$vsechnyzazanamy=MySQL_Query("Select id,datum,nadpis FROM $this->Nazev WHERE (vlastnik='$f_vlastnik')AND(archiv='ano') ORDER BY poradi DESC,id DESC ; ")OR DIE(MySQL_Error()) ;    
+          @$vsechnyzazanamy=MySQL_Query("Select id,datum,nadpis FROM $this->Nazev WHERE (vlastnik='$f_vlastnik')AND(archiv='ano') ORDER BY poradi DESC, id DESC ; ")OR DIE(MySQL_Error()) ;    
                          }   
                 else   { 
-         @$vsechnyzazanamy=MySQL_Query("Select id,datum,nadpis FROM $this->Nazev  WHERE archiv='ano'ORDER BY poradi DESC ,id DESC ; ")OR DIE(MySQL_Error()) ; 
+         @$vsechnyzazanamy=MySQL_Query("Select id,datum,nadpis FROM $this->Nazev  WHERE archiv='ano'ORDER BY poradi DESC, id DESC ; ")OR DIE(MySQL_Error()) ; 
                         }
          while ($zaznam=mysql_fetch_array ($vsechnyzazanamy, MYSQL_ASSOC)) {
           foreach($zaznam as $k => $v) {
@@ -1443,51 +1189,9 @@ $f_id=intval($f_id);
 
 return ($f_id);
 } 
-function poleProNavratDoRSS($f_id)
-{  
-$f_id=$this->inject_addslashes($f_id);
-$f_id=intval($f_id);
-$Polozka=CRubrika::VyberPolozku($f_id);
-return ($Polozka);
-}  
-function VynulovatPreference($f_id)
-{  
-$f_id=$this->inject_addslashes($f_id);
-$f_id=intval($f_id);
-@$uprava=MySQL_Query("UPDATE $this->Nazev SET poradi=0  WHERE id=$f_id ;")OR DIE(MySQL_Error()) ; 
-
-return ($f_id);
-}
-
-  
-function VyberSeznamNovinekZverejnenych($f_vlastnik='')
- {  
-$f_vlastnik=$this->inject_addslashes($f_vlastnik);
-  if ($f_vlastnik!='') {
-    
-          @$vsechnyzazanamy=MySQL_Query("Select id,datum,nadpis FROM $this->Nazev WHERE (vlastnik='$f_vlastnik')AND(zverejnit='ano') ORDER BY poradi DESC,id DESC ; ")OR DIE(MySQL_Error()) ;    
-                         }   
-                else   { 
-         @$vsechnyzazanamy=MySQL_Query("Select id,datum,nadpis FROM $this->Nazev  WHERE zverejnit='ano'ORDER BY poradi DESC ,id DESC ; ")OR DIE(MySQL_Error()) ; 
-                        }
-         while ($zaznam=mysql_fetch_array ($vsechnyzazanamy, MYSQL_ASSOC)) {
-          foreach($zaznam as $k => $v) {
-         
-               $ven[$k][]=$v;
-         	
-                         
-                                       }
-         
-         
-         
-            
-         
-                                                                     }
-
-            
-                                                                     
-return ($ven);
- }         
+ 
+ 
+       
 /*---------------------------Popis metody VyberVlastniky()-----------------
 
 Metoda VyberVlastniky()vrací pole vlastniku
@@ -1516,25 +1220,19 @@ funkce pro vložení záznamu do tabuky gympl_rss a pøi neùspìchu vrací hodnotu -1.
 
 
 ***************************************************************************/
-function Pridej_do_Rss($f_idnovinky='',$textp,$nadpisp,$autorp,$webadresa,$zdrojp='pekargmb')
+function Pridej_do_Rss($textp,$nadpisp,$autorp,$webadresa,$zdrojp='pekargmb')
 { 
 $textp=$this->inject_addslashes($textp);
 $nadpisp=$this->inject_addslashes($nadpisp);
 $autorp=$this->inject_addslashes($autorp);
 $webadresa=$this->inject_addslashes($webadresa);
- if ($f_idnovinky!='') {
-$osp=$f_idnovinky;	
-} 
-else
-{                           
+                            
 $mm=MySQL_Query("SELECT Max( ID ) FROM gympl_rss "); 
 $maxcislo=mysql_result($mm,0);
 //echo"maxcislo:$maxcislo<BR>"; 
 $osp=$maxcislo+1; 
-}
 $datump=Date(Y.'-'.m.'-'.d);
-
-$urlp=($f_idnovinky!='')?$webadresa.'?zobr='.$f_idnovinky :$webadresa.'#'.$osp;
+$urlp=$webadresa.'#'.$osp;
 $ukazka=SubStr($textp,0,60);
 @$vlozeni=MySQL_Query("INSERT INTO gympl_rss VALUES ($osp,'$nadpisp','$ukazka','$urlp','$zdrojp','$autorp','$datump');" ) OR DIE(MySQL_Error()) ;
 
@@ -1643,119 +1341,129 @@ while ($data = mysql_fetch_object($res)) {
 }
 // konecfunkce pro zápis do xml feedrss()
 
-
-
-
-/*----------------------------------------------------------------------------*/	
- function 	PosliEmailBartovi( $fto ='nekdo@nekde.cz', $ftext="Vážení.\r\n
- Zasílám Vám tento text a pøílohu pøihlaste se na  http://nekde.neco.com\r\n 
-Dìkujeme za spolupráci\r\n ", $ffrom='from@from.cz',$fsubjekt='subjekt')
-
-{	
-////////////////////// ZADEJTE SVÙJ EMAIL ZDE /////////////////// 
- 
- $to = $fto; 
-$uploadFile= $_FILES['soubor']['tmp_name'];
-// echo"to je : $to <br />" ;
-//  echo"uploadFilejmenodocasne v tempu : $uploadFile  <br />" ;
-if ($uploadFile!='') {
-$message = "";
-$charset = 'windows-1250'; 
-$subject   = $fsubjekt; 
-$from      = $ffrom; 
-//echo"from je :".$ffrom."<br />";
-$headers = "From: $from"; 
-$message .= "\r\n";
-$message .= $ftext;
-
-       //$uploadFile='obr.jpg';      
-       //$file_name=$uploadFile;
-      $file_name= $_FILES['soubor']['name']; 
-       //$file_type = 'image/jpeg';
-      $file_type = $_FILES['soubor']['type'];  
-         	$file = fopen ($uploadFile, "r"); /* otevren pro cteni */
-		$data = fread ($file, filesize($uploadFile)); /* nacteme obsah do promenne */
-		fclose ($file);
-		
-
-          $semi_rand = md5(time()); 
-          $mime_boundary = "==Multipart_Boundary_x{$semi_rand}x"; 
-          $headers .= "\nMIME-Version: 1.0\n" . 
-                      "Content-Type: multipart/mixed;\n" . 
-                      " boundary=\"{$mime_boundary}\""; 
-          $message = "This is a multi-part message in MIME format.\n\n" . 
-                     "--{$mime_boundary}\n" . 
-                     "Content-Type: text/plain; charset=$charset\n" . 
-                     "Content-Transfer-Encoding: 7bit\n\n" . 
-                     $message . "\n\n"; 
-          $data = chunk_split(base64_encode($data)); 
-          $message .= "--{$mime_boundary}\n" . 
-                      "Content-Type: {$file_type};\n" . 
-                      " name=\"{$file_name}\"\n" . 
-                      "Content-Transfer-Encoding: base64\n\n" . 
-                      $data . "\n\n";
-$uploadFile2= $_FILES['soubor2']['tmp_name'];                       
-if ($uploadFile2!='') {
- $file_name2= $_FILES['soubor2']['name']; 
-      
-      $file_type2 = $_FILES['soubor2']['type'];  
-         	$file2 = fopen ($uploadFile2, "r"); /* otevren pro cteni */
-		$data2 = fread ($file2, filesize($uploadFile2)); /* nacteme obsah do promenne */
-		fclose ($file2);
-    $data2 = chunk_split(base64_encode($data2));
-     $message .= "--{$mime_boundary}\n" . 
-                      "Content-Type: {$file_type2};\n" . 
-                      " name=\"{$file_name2}\"\n" . 
-                      "Content-Transfer-Encoding: base64\n\n" . 
-                      $data2 . "\n\n";   
-     	
-} 
-$message .= "--{$mime_boundary}--\n";                     
-       
-        $message = StripSlashes($message); 
-     $sent = @mail($to, $subject, $message, $headers); 
-     //  echo"po odeslání <br /><hr> to:$to <br />";
-      //  echo"subject:$subject <br />";
-     //   echo"mesage :$message<br />";
-        
-       // echo"hlavièky jsou headers jsou: $headers--<br />";
-        if($sent)  echo"<br /> Na adresu $fto byla odeslána žádost o zveøejnìní v tisku. <br />"; 
-        else      echo "<h1>Formuláø se nezdaøilo odeslat na email $fto.</h1>"; 	
-}	
-
-	
-
+function PrictiJedna($f_ip_skoly='')
+{ 
+$ip=getenv("REMOTE_ADDR");
+if ($ip==$f_ip_skoly) {
+	$uu=MySQL_Query("UPDATE gympl_pocitadlo  SET zgymplu=zgymplu+1  WHERE konecmereni='x';");
+}
 else {
-//echo" bez pøílohy <br />";
- $message = "";
-$charset = 'windows-1250'; 
-$subject   = $fsubjekt; 
-$from      = $ffrom; 
-//echo"from je :".$ffrom."<br />";
-$headers = "From: $from"; 
-$message .= "\r\n";
-$message .= $ftext;
- $text = Base64_Encode($ftext);
-   $headers .= "MIME-Version: 1.0\n".
-              "Content-Type: text/plain; charset=\"$charset\"\n".
-              "Content-Transfer-Encoding: base64\n";
-               // odeslání e-mailu              
-  $sentbezpr=@mail($fto, $fsubjekt, $text, $headers); 
-  if($sentbezpr)  echo"<br /> Na adresu $fto byla odeslána žádost o zveøejnìní v tisku. <br />"; 
-        else      echo "<h1>Formuláø se nezdaøilo odeslat na email $fto.</h1>"; 	
-
-	
- // @mail($fto, $subject, $message, $headers); 
-// @mail ($fto, $fsubjekt, $ftext, "From: $ffrom") ;
-//	
-} 
+$uu=MySQL_Query("UPDATE gympl_pocitadlo  SET mimo=mimo+1  WHERE konecmereni='x';");	
 }
 
 
 
+}
+/*poslení novinka*******************/
+function 	FormatujVybranou_novinku($f_id,$zvetsifoto=false)
+{
 
+
+if($f_id!=""){  //zobraz novinku nahore
+$VybranaNovinka=CRubrika::VyberPolozku($f_id);
+
+$sirkafoto=($zvetsifoto)? 250 :100;
+$centrujfotostart=($zvetsifoto)?" <br /><div class=\"centrovano\">"  :'';
+$centrujfotoend=($zvetsifoto)?"</div> <br />"  :'';
+$zarovnejfoto=($zvetsifoto)? '':"class=\"obrvlevo\"";
+
+echo"<div class=\"centrovano\">    
+    <table  class=\"novinka\" width=\"100%\">
+ <tr  ><td>
+  <a href=\"gympl_novinky/gympl_novinky.php?zobr=$f_id\" class=\"tlacitkopodmenuakt\" > 
+ ".$VybranaNovinka[nadpis]."</a></td></tr>";
+echo"<tr><td class=\"textv-n-c \"> <a name=\"".$VybranaNovinka[id]."\"> </a>";
+$adresafotky='gympl_novinky/'.$this->adresarfotek.$VybranaNovinka[id].'.jpg';
+$adresafotky2='gympl_novinky/'.$this->adresarfotek.'2_'.$VybranaNovinka[id].'.jpg';
+$adresapdefka='gympl_novinky/'.$this->adresarfotek.$VybranaNovinka[id].'.pdf';
+$adresapdefka2='gympl_novinky/'.$this->adresarfotek.'2_'.$VybranaNovinka[id].'.pdf';
+if (file_exists ($adresafotky) && (file_exists ($adresafotky2)))echo"
+$centrujfotostart
+<img src=\"$adresafotky\" width=\"$sirkafoto\"  $zarovnejfoto   alt=\"foto\" />
+$centrujfotoend 
+";
+if (file_exists ($adresafotky) && (!file_exists ($adresafotky2)))echo"$centrujfotostart <img src=\"$adresafotky\" width=\"$sirkafoto\"  $zarovnejfoto alt=\"foto\" />$centrujfotoend";
+if (file_exists ($adresafotky2) && (!file_exists ($adresafotky)))echo"$centrujfotostart <img src=\"$adresafotky2\" width=\"$sirkafoto\" $zarovnejfoto alt=\"foto\" />$centrujfotoend";
+/*if (file_exists ($adresafotky2))echo"<img src=\"$adresafotky2\" width=\"100\" class=\"obrvlevo\" alt=\"foto\" />";*/  
+ echo NL2BR($VybranaNovinka[text]);
+if (file_exists ($adresapdefka))echo"
+                                 <hr />
+<a href=\"$adresapdefka\" class=\"pdefko\" onclick=\"return !window.open(this.href)\">
+ Pøíloha *.pdf
+ </a>                                "; 
+ if (file_exists ($adresapdefka2))echo"
+                                
+<a href=\"$adresapdefka2\" class=\"pdefko\" onclick=\"return !window.open(this.href)\">
+ Pøíloha2 *.pdf
+ </a>                                ";  
+  echo"</td></tr> <tr><td> <div  class=\"den-autor\" >Autor: ".$VybranaNovinka[autor]." email:<a href=\"mailto: $VybranaNovinka[email]\"  > ".$VybranaNovinka[email]." </a>Datum: ".$VybranaNovinka[datum]."</div>
+  <a href=\"gympl_novinky/tisk.php?id=".$VybranaNovinka[id]."\"   class=\" tiskzpravy\" 
+ onclick=\"return !window.open(this.href)\">Tisk zprávy</a>  
+  </td></tr></table>
+  </div>";
+  echo"<br />";  
+
+                    } //zobraz novinku nahore
+                      
+                                             
+                                             
+                                              
+}
+
+
+
+function 	FormatujVybranou_novinku_dist($f_id,$zvyrazni=false)
+{
+
+
+if($f_id!=""){  //zobraz novinku nahore
+$VybranaNovinka=CRubrika::VyberPolozku($f_id);
+$tridanovinky=($zvyrazni)?'novinkazvyraznena' :'novinka'   ;
+echo"<div class=\"centrovano\">    
+    <table  class=\"$tridanovinky\" width=\"100%\">
+ <tr  ><td>
+  <a href=\"gympl_novinky/gympl_novinky.php?zobr=$f_id\" class=\"tlacitkopodmenuakt\" > 
+ ".$VybranaNovinka[nadpis]."</a></td></tr>";
+echo"<tr><td class=\"textv-n-c \"> <a name=\"".$VybranaNovinka[id]."\"> </a>";
+$adresafotky='gympl_novinky/'.$this->adresarfotek.$VybranaNovinka[id].'.jpg';
+$adresafotky2='gympl_novinky/'.$this->adresarfotek.'2_'.$VybranaNovinka[id].'.jpg';
+$adresapdefka='gympl_novinky/'.$this->adresarfotek.$VybranaNovinka[id].'.pdf';
+$adresapdefka2='gympl_novinky/'.$this->adresarfotek.'2_'.$VybranaNovinka[id].'.pdf';
+if (file_exists ($adresafotky) && (file_exists ($adresafotky2)))echo"
+
+<img src=\"$adresafotky\" width=\"100\"  class=\"obrvlevo\"   alt=\"foto\" />
+ 
+";
+if (file_exists ($adresafotky) && (!file_exists ($adresafotky2)))echo"<img src=\"$adresafotky\" width=\"100\" class=\"obrvlevo\" alt=\"foto\" />";
+if (file_exists ($adresafotky2) && (!file_exists ($adresafotky)))echo"<img src=\"$adresafotky2\" width=\"100\" class=\"obrvlevo\" alt=\"foto\" />";
+/*if (file_exists ($adresafotky2))echo"<img src=\"$adresafotky2\" width=\"100\" class=\"obrvlevo\" alt=\"foto\" />";*/  
+ echo NL2BR($VybranaNovinka[text]);
+if (file_exists ($adresapdefka))echo"
+                                 <hr />
+<a href=\"$adresapdefka\" class=\"pdefko\" onclick=\"return !window.open(this.href)\">
+ Pøíloha *.pdf
+ </a>                                "; 
+ if (file_exists ($adresapdefka2))echo"
+                                
+<a href=\"$adresapdefka2\" class=\"pdefko\" onclick=\"return !window.open(this.href)\">
+ Pøíloha2 *.pdf
+ </a>                                ";  
+  echo"</td></tr> <tr><td> <div  class=\"den-autor\" >Autor: ".$VybranaNovinka[autor]." email:<a href=\"mailto: $VybranaNovinka[email]\"  > ".$VybranaNovinka[email]." </a>Datum: ".$VybranaNovinka[datum]."</div>
+  <a href=\"gympl_novinky/tisk.php?id=".$VybranaNovinka[id]."\"   class=\" tiskzpravy\" 
+ onclick=\"return !window.open(this.href)\">Tisk zprávy</a>  
+  </td></tr></table>
+  </div>";
+  echo"<br />";  
+
+                    } //zobraz novinku nahore
+                      
+                                             
+                                             
+                                              
+}
 
 /*----------------------------------------------------------------------------*/	
+	
 } // END class CNovinkyRubrika
 
 

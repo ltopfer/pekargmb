@@ -10,9 +10,7 @@ require 'cnasinej_zobr.php';
 
 
 <?php
-echo"<h4> Nejlepší studenti".$hodnotasloupce." </h4> <br /> ";?>
-
-  <br>
+echo"<h4>Nejlepší studenti".$hodnotasloupce." </h4>";?>
  <?php
 $zobr=$_GET[zobr];
 
