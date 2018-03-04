@@ -102,3 +102,15 @@ gympl_rady/crady.php
   - upraven výpis školních řádů - funkce FormatujObashRubriky (původní soubor je zachiván) 
 rss/rss_nanovinky
   - předěláno (přidány obrázky, drobné úpravy; původní soubor zachován)
+  
+  
+  
+VOLITELNÉ PŘEDMĚTY
+ * upravil jsem vol_pr4jednolroc
+ * je to potřeba zkontrolovat, jestli to funguje správně ve všech situácích (fázích volby, v administraci (to jsem nedokázal otestovat, takže to spíš nebude fungovat správně)) a udělat totéž u ostatních variant (3. ročník, ...)
+    - nastavit class "tabeditace" tabulce s formulářem pro editace (aby se dala stylovat) - soubor crubrika_bez_foto.php
+    - v hlavičce změnit úroveň nadpisu na h2 (17), odebrat <br> v podmenu (19-26), odebrat kód pro výpis volných míst a přesunout ho pod editační formulář (do editace.php)  
+    - v souboru editace.php
+        * posunul jsem chybovou hlášku až pod nadpis (50-52 přesunout za echo"<h4>...) 
+        * přidat kód pro výpis volných míst (z hlavičky), nadpis <h5> (125), div (126) jsou potřeba přidat
+        * ten jsem přeformátoval, aby nevyužíval tabulku - výpis je na řádcích 145-161 (tohle by snad mělo fungovat na všech volitelných předmětech, takže to asi stačí překopírovat) 

@@ -16,4 +16,6 @@ HOTOVO opravit odkazy na prohlídky atd na úvodní straně, zmenšit obrázky (
 
 volitelné předměty
  * u 4. ročníku (jednoleté) úpraveno rozhraní -> class predmety, predmet, ...
- * pro přihlášení jde jméno:6co001 a heslo:o55555 
+ * dole ve změnách je popsáno, jak se něco podobného udělá u ostatních - chci, aby to Tumajer zkontroloval (u 4. ročníku) a dodělal u ostatních
+ * border-collapse: collapse; udělá to, že se ohraničení spojí a nebude tam dvojité, to určitě chceš použít
+ * pro přihlášení jde jméno:6co001 a heslo:o55555

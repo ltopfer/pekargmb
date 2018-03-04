@@ -1548,7 +1548,7 @@ echo"
            
 
 echo"
-<table border=\"1\"  class=\"centrovano\" >
+<table border=\"1\"  class=\"centrovano tabeditace\" >
     "; 
     
   for ($i=0;$i<$this->pocetsloupcu ;$i++ ) {

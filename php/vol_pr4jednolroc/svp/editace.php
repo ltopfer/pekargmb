@@ -47,12 +47,13 @@ $pocetpredmetu=$pro_admina->Urci_pocet_vol_predmetu();
 $volitelnapole[]='poznamka';
 
 $pro_admina->Vyber_volitelna_pole($volitelnapole);  
- echo"<div class=\"chyba\">
- Pro odhášení z editace je tøeba zavøít okno prohlížeèe. 
-</div>"; 
 
  
 echo"<h4>$kategorie_nazav, $stav</h4>";
+echo"<div class=\"chyba\">
+ Pro odhášení z editace je tøeba zavøít okno prohlížeèe. 
+</div>"; 
+
 $codelat=$_POST[codelat];
 $sheslem=$_GET[sheslem];
 
@@ -117,9 +118,54 @@ echo" <div class=\"chyba\">Volba bude zahájena  $den.$mesic.$rok v $hodina:$minu
 
 
 
+require 'setup.php';
+if ($zverejnit_pocty_prihlasenych) {
+ 
+    echo"
+    <h5>Obsazenost pøedmìtù</h5>
+    <div class=\"predmety\">"
+    ;
+    
+    $pro_predmety_pocty=new CRubrika_Bez_Foto($tabulka);
+    $seznampr= $pro_predmety_pocty->VyberSeznamPredmetu();
 
-                  
+    for ($i=0;$i<count($seznampr[id]) ;$i++ ) {        
+        $osnovy_predmetu=$adresar_osnov.'/'.$seznampr[zkratka][$i].'.'.$pripona_osnov;
+        
+        if (file_exists($osnovy_predmetu)) {
+            $zobrazovany_nazev="<a href=\"$osnovy_predmetu\" class=\"tlacitkopodmenu\" onclick=\"window.open(this.href,'_blank', 'menubar=no,scrollbars=yes,resizable=yes,left=0,top=0');return false\">{$seznampr[predmet][$i]}</a>";
+        }
+        else {
+            $zobrazovany_nazev="<div class=\"tlacitkopodmenu\">{$seznampr[predmet][$i]}</div>"	;
+        }
+        
+        $pocetprstud=$pro_predmety_pocty->PocetPrihlasenychPredmet($seznampr[predmet][$i]);
+        
+        if ((!strstr($seznampr[predmet][$i], '---'))&&(!strstr($seznampr[predmet][$i], 'žádný'))) {
+            echo "
+            <div class=\"predmet\">
+                <span class=\"nazev\">$zobrazovany_nazev</span>
+                <span class=\"mist\">{$seznampr[maxpocet][$i]} míst</span>
+                <span class=\"zkratka\">{$seznampr[zkratka][$i]}</span>
+                <span class=\"obsazeno\">obsazeno:&nbsp;{$pocetprstud[celkemprihlaseno]}<span>";
+            
+            if ($seznampr[maxpocet][$i]<$pocetprstud[celkemprihlaseno]) {
+                echo"<span class=\"chyba\">pøekroèena kapacita</span> ";	     
+            }
+            
+            echo "
+            </div>";            
+        }
+    }
+    echo "
+            </div>";
+}
 
+
+
+
+echo"
+</div>                         <!-- centrovano   --> ";
 
 
 
