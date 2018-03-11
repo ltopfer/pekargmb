@@ -17,5 +17,12 @@ HOTOVO opravit odkazy na prohlídky atd na úvodní straně, zmenšit obrázky (
 volitelné předměty
  * u 4. ročníku (jednoleté) úpraveno rozhraní -> class predmety, predmet, ...
  * dole ve změnách je popsáno, jak se něco podobného udělá u ostatních - chci, aby to Tumajer zkontroloval (u 4. ročníku) a dodělal u ostatních
+     - takže mu to musíš napsat nebo říct - případně změny jsou v gitu: https://github.com/mnauky94/pekargmb/commit/da90f317289d54bf2915fd437b19e8a03294f250
  * border-collapse: collapse; udělá to, že se ohraničení spojí a nebude tam dvojité, to určitě chceš použít
  * pro přihlášení jde jméno:6co001 a heslo:o55555
+
+
+
+formulář u volitelných předmětů
+        odebrat hr u tlačítek
+        

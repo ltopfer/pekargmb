@@ -382,7 +382,7 @@ h2 {
     margin-top: 30px;
     font-size: 1.5em;
     color: #424452;
-    padding-left: 15px;
+   /* padding-left: 15px; */
 }
 
 h3 {
@@ -730,6 +730,10 @@ h5 {
     list-style-image: url(obr/odr.png);
     float: left;
     width: 100%;
+}
+.podmenu input{
+    margin-left: 15%;
+    width: 70%;
 }
 
 a.tlacitkopodmenu {
@@ -1096,7 +1100,73 @@ table {
 col.prvni-sloupec {
     width: 20%;
 }
+/*////volitelné předněty///*/
+.tabeditace {
+    border-collapse: collapse;
+    border: 2px solid #333;
+}
+.tabeditace input{
+    padding: 10px;
+    width: 200px;
+    border: none;
+}
+.tabeditace input:nth-of-type(2) {
+    background-color: green;
+}
+.tabeditace input:nth-of-type(3) {
+    background-color: red;
+}
+.tabeditace .textv-n-c {
+    margin-left: 0%;
+    text-align: justify;
+    vertical-align: top;
+    padding-left: 2%;
+    padding-right: 10px;
+    font: 100%;
+}
+.tabeditace .nadpisv-n-c {
+    padding-top: 10px;
+    font-size: 1.25em;
+    /* background: #fcbb23; */
+    color: #333;
+    font-weight: bold;
+    padding-top: 3px;
+    padding-bottom: 5px;
+    margin-bottom: 7px;
+    text-align: center;
+    border: none;
+}
 
+
+.predmety {
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: center;
+}
+.predmet {
+    width: 31%;
+    margin: 5px;
+    font-weight: bold;
+    border: 2px solid #333;
+    text-align: center;
+    padding-bottom: 5px;
+    background: #fcbb23;
+}
+.nazev {
+    min-height: 3em;
+    display: block;
+}
+.nazev a.tlacitkopodmenu {
+    text-align: center;
+    min-height: 3em
+}
 /*////////*/
 
 /*dalsi*/
@@ -1147,7 +1217,18 @@ col.prvni-sloupec {
     border: 1px solid #CCCCCC;
     text-align: center;
 }
-
+.fotogalerie li{
+    width: 70%;
+    margin: auto;
+    text-align: left;
+    padding: 5px;
+    border-top: solid #DDD 1px;
+}
+.fotogalerie iframe{
+    width: 90%;
+    margin: 2%;
+    border: 4px solid #fcbb23;
+}
 .skrolovatko {
     overflow: auto;
     width: 100%;
@@ -1278,33 +1359,10 @@ col.prvni-sloupec {
 
 a.tlacitkopodmenurss {
     display: block;
-    text-align: left;
-    /*background: #ff7a00;*/
-    background: #F1F3F5;
-    color: #333333;
-    font-size: 12px;
-    text-decoration: none;
-    border-left: 0px solid #F1F3F5;
-    border-right: 0px solid #F1F3F5;
-    border-top: 0px solid #F1F3F5;
-    border-bottom: 0px solid #F1F3F5;
+    text-align: center;
     margin-left: 0px;
     padding-top: 5px;
     padding-bottom: 5px;
-    padding-right: 5px;
-    padding-left: 25px;
-    background-image: url(obr/rss.gif);
-    background-repeat: no-repeat;
-    background-position: left bottom;
-
-}
-a.tlacitkopodmenurss:hover {
-    color: #AC3232;
-    background: #FFFFFF;
-    padding-left: 25px;
-    background-image: url(obr/rss.gif);
-    background-repeat: no-repeat;
-    background-position: left bottom;
 }
 a.tlacitkopodmenufacebook {
     display: block;
@@ -1338,33 +1396,13 @@ a.tlacitkopodmenufacebook:hover {
 }
 a.tlacitkopodmenuarchiv {
     display: block;
-    text-align: left;
-    background: #F1F3F5;
-    color: #333333;
-    font-size: 12px;
-    text-decoration: none;
-    border-left: 0px solid #F1F3F5;
-    border-right: 0px solid #F1F3F5;
-    border-top: 0px solid #F1F3F5;
-    border-bottom: 0px solid #F1F3F5;
+    border-top: 2px solid #fcbb23;
+    text-align: center;
     margin-left: 0px;
     padding-top: 5px;
     padding-bottom: 5px;
-    padding-right: 5px;
-    padding-left: 20px;
-    background-image: url(obr/archiv.gif);
-    background-repeat: no-repeat;
-    background-position: left bottom;
 }
 
-a.tlacitkopodmenuarchiv:hover {
-    color: #AC3232;
-    background: #FFFFFF;
-    padding-left: 20px;
-    background-image: url(obr/archiv.gif);
-    background-repeat: no-repeat;
-    background-position: left bottom;
-}
 a.tlacitkopodmenuvse {
     width: auto;
     height: auto;
@@ -1382,23 +1420,47 @@ a.tlacitkopodmenuvse {
 }
 .absolventi img, .nasinej img {
     margin: auto;
-    float: none;
+    width: 100%;
 }
 .absolventi td, .nasinej td {
     vertical-align: bottom;
 }
 
 .profil_studenta, .profil_absolventa {
-    background: #FFE000;
+    background: white;
+    padding: 7px;
+    min-height: 300px;
 }
+.profil_studenta img, .profil_absolventa img{
+    width: 20%;
+    margin-right: 10px;
+}
+
 
 .nejstudent, .absolvent {
-    float: left;
-    background: #F00;
+    width: 22%;
+    margin: 10px;
+    background: #fcbb23;
+    font-weight: bold;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
 }
-
+.nejstudent p, .absolvent p{
+    padding: 3px;
+    color: white;
+}
 .vypis_absol, .vypis_nasinej {
-    background: #0F0;
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: center;
+    
 }
 
 .prihlaska{
@@ -1415,7 +1477,7 @@ a.tlacitkopodmenuvse {
 .chyba{
     color: Red;
     font-weight: bold;
-    text-align: left;
+    text-align: center;
 }
 .tlacitko {
     background-color: #AC3232;;
@@ -2552,6 +2614,17 @@ a.tlacitkopodmenuvse {
     }
     #rozdeleny_elearning_pravy {
         padding-bottom: 20px;
+    }
+    .nejstudent, .absolvent {
+        width: 46%;
+        margin: 1.5%;
+        margin-bottom: 12px;
+    }
+    .profil_studenta img, .profil_absolventa img{
+        width: 40%;
+    }
+    .predmet {
+        width: 100%;
     }
 }
 

@@ -28,7 +28,7 @@ echo"
   echo"<link href=\"$adresacss\" type=\"text/css\" rel=\"stylesheet\" >"; 
        
        echo"
-
+        <link href=\"https://fonts.googleapis.com/css?family=Open+Sans:300,700\" rel=\"stylesheet\">
        
         
         <title>Gymnázium Dr.J.Pekaøe</title>
