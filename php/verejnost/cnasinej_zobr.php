@@ -53,6 +53,9 @@ if($f_id!=""){  //zobraz zamìstnance  nahore
     <a name=\"".$VybranyUzivatel[id]."\"> </a>   
     
     <div class=\"novinka profil_studenta\">
+    
+    <a href=\"?zobr= \"><img src=\"../obr/zavri.gif\" alt=\"zavri.gif, 767B\" title=\"zavrít\" border=\"0\" height=\"20\" width=\"20\" class=\"obrvpravobezokraje\"></a> 
+    
         <h5>Profil studenta: {$VybranyUzivatel[jmeno]} {$VybranyUzivatel[prijmeni]} {$VybranyUzivatel[trida]}</h5>";
     
     $adresafotky=$this->adresarfotek.$VybranyUzivatel[id].'.jpg';
@@ -73,7 +76,7 @@ for ($i=0;$i<count($PoleRubrik[id]) ;$i++) {
     echo "<div class=\"nejstudent\">
     ";
     if (file_exists ($adresafotky)) echo"<a href=\" $odkaz \" ><img src=\"$adresafotky\" alt=\"foto\" /></a>";
-    echo"<a href=\" $odkaz \" ><p>".$PoleRubrik[jmeno][$i]. ' '.$PoleRubrik[prijmeni][$i].'<br /> '.$PoleRubrik[trida][$i]."<p></a>";
+    echo"<a href=\" $odkaz \" ><p>".$PoleRubrik[jmeno][$i]. ' '.$PoleRubrik[prijmeni][$i].'<br /> '.$PoleRubrik[trida][$i]."</p></a>";
 
     echo "
     </div>";                                      

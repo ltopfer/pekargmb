@@ -53,6 +53,9 @@ $VybranyUzivatel=CRubrika::VyberPolozku($f_id);
     <a name=\"".$VybranyUzivatel[id]."\"> </a>   
 
     <div class=\"novinka profil_absolventa\">
+    
+    <a href=\"?zobr= \"><img src=\"../obr/zavri.gif\" alt=\"zavri.gif, 767B\" title=\"zavrít\" border=\"0\" height=\"20\" width=\"20\" class=\"obrvpravobezokraje\"></a>     
+    
         <h5>Profil absolventa: {$VybranyUzivatel[titul]} {$VybranyUzivatel[jmeno]} {$VybranyUzivatel[prijmeni]} {$VybranyUzivatel[titulza]}</h5>";
 
     $adresafotky=$this->adresarfotek.$VybranyUzivatel[id].'.jpg';
@@ -70,7 +73,7 @@ $PoleRubrik=CRubrika::FormatujObashRubriky($f_sloupec,$f_kriterium,$f_tridit_pod
   ";
           
 for ($i=0;$i<count($PoleRubrik[id]) ;$i++) { 
-    $odkaz=$this->Nazev.'.php?zobr='.$PoleRubrik[id][$i]; 
+    $odkaz=$this->Nazev.'.php?zobr='.$PoleRubrik[id][$i].'#'.$PoleRubrik[id][$i]; 
     $adresafotky=$this->adresarfotek.$PoleRubrik[id][$i].'.jpg';
     
     
@@ -78,7 +81,7 @@ for ($i=0;$i<count($PoleRubrik[id]) ;$i++) {
     echo "<div class=\"absolvent\">
     ";
     if (file_exists ($adresafotky)) echo"<a href=\" $odkaz \" ><img src=\"$adresafotky\" alt=\"foto\" /></a>";
-    echo"<a href=\" $odkaz \" ><p>".$PoleRubrik[titul][$i].' '.$PoleRubrik[jmeno][$i]. ' '.$PoleRubrik[prijmeni][$i].' '.$PoleRubrik[titulza][$i]."<p></a>";
+    echo"<a href=\" $odkaz \" ><p>".$PoleRubrik[titul][$i].' '.$PoleRubrik[jmeno][$i]. ' '.$PoleRubrik[prijmeni][$i].' '.$PoleRubrik[titulza][$i]."</p></a>";
 
     echo "
     </div>
