@@ -73,13 +73,13 @@ for ($i=0;$i<count($PoleRubrik[id]) ;$i++) {
     $odkaz=$this->Nazev.'.php?zobr='.$PoleRubrik[id][$i].'#'.$PoleRubrik[id][$i]; 
     $adresafotky=$this->adresarfotek.$PoleRubrik[id][$i].'.jpg';
     
-    echo "<div class=\"nejstudent\">
+    echo "<a href=\"$odkaz\" class=\"nejstudent\">
     ";
-    if (file_exists ($adresafotky)) echo"<a href=\" $odkaz \" ><img src=\"$adresafotky\" alt=\"foto\" /></a>";
-    echo"<a href=\" $odkaz \" ><p>".$PoleRubrik[jmeno][$i]. ' '.$PoleRubrik[prijmeni][$i].'<br /> '.$PoleRubrik[trida][$i]."</p></a>";
+    if (file_exists ($adresafotky)) echo"<img src=\"$adresafotky\" alt=\"foto\" />";
+    echo"<p>".$PoleRubrik[jmeno][$i]. ' '.$PoleRubrik[prijmeni][$i].'<br /> '.$PoleRubrik[trida][$i]."</p>";
 
     echo "
-    </div>";                                      
+    </a>";                                      
                     } //zobraz vse                         
                  echo "
                  </div>";

@@ -78,13 +78,13 @@ for ($i=0;$i<count($PoleRubrik[id]) ;$i++) {
     
     
     
-    echo "<div class=\"absolvent\">
+    echo "<a href=\"$odkaz\" class=\"absolvent\">
     ";
-    if (file_exists ($adresafotky)) echo"<a href=\" $odkaz \" ><img src=\"$adresafotky\" alt=\"foto\" /></a>";
-    echo"<a href=\" $odkaz \" ><p>".$PoleRubrik[titul][$i].' '.$PoleRubrik[jmeno][$i]. ' '.$PoleRubrik[prijmeni][$i].' '.$PoleRubrik[titulza][$i]."</p></a>";
+    if (file_exists ($adresafotky)) echo"<img src=\"$adresafotky\" alt=\"foto\" />";
+    echo"<p>".$PoleRubrik[titul][$i].' '.$PoleRubrik[jmeno][$i]. ' '.$PoleRubrik[prijmeni][$i].' '.$PoleRubrik[titulza][$i]."</p>";
 
     echo "
-    </div>
+    </a>
     ";                                      
 } //zobraz vse                         
                  echo "

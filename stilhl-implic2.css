@@ -1137,7 +1137,6 @@ col.prvni-sloupec {
     border: none;
 }
 
-
 .predmety {
     -ms-box-orient: horizontal;
     display: -webkit-box;
@@ -1438,6 +1437,7 @@ a.tlacitkopodmenuvse {
 }
 
 .nejstudent, .absolvent {
+    display: block;
     width: 22%;
     margin: 10px;
     background: #fcbb23;
@@ -1445,6 +1445,7 @@ a.tlacitkopodmenuvse {
     -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
 }
+
 .nejstudent p, .absolvent p {
     padding: 3px;
     color: white;
