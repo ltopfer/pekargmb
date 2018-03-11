@@ -939,8 +939,10 @@ div.obrnovinka img{
     border: none;
 }
 .obrvpravobezokraje {
-    float: right;
     border: none;
+    position: absolute;
+    top: 2px;
+    right: 2px;
 }
 .obrvlevobezokraje {
 
@@ -992,7 +994,10 @@ div.obrnovinka img{
     margin-bottom: 7px;
     text-align: center;
     border-bottom: 2px solid #fcbb23;
+    padding-left: 20px;
+    padding-right: 20px;
 }
+ 
 
 .nadpis,
 .prezdivka {
@@ -1043,6 +1048,14 @@ div.obrnovinka img{
     background: #F1F3F5;
     border-color: #DDD;
     margin: auto;
+}
+
+.rad_nahled {
+    position: relative;
+}
+.rad_nahled .obrvlevobezokraje {
+    position: absolute;
+    top: -20px;
 }
 
 /*/////////*/
@@ -1105,16 +1118,17 @@ col.prvni-sloupec {
     border-collapse: collapse;
     border: 2px solid #333;
 }
-.tabeditace input{
+.tabeditace .tlacitko {
     padding: 10px;
     width: 200px;
     border: none;
+    margin: 15px 3px;
 }
-.tabeditace input:nth-of-type(2) {
+.tabeditace input[type=submit] {
     background-color: green;
 }
-.tabeditace input:nth-of-type(3) {
-    background-color: red;
+.tabeditace input[type=reset] {
+    background-color: #ba0000;
 }
 .tabeditace .textv-n-c {
     margin-left: 0%;
@@ -1152,15 +1166,20 @@ col.prvni-sloupec {
 .predmet {
     width: 31%;
     margin: 5px;
-    font-weight: bold;
+    font-weight: normal;
     border: 2px solid #333;
     text-align: center;
     padding-bottom: 5px;
     background: #fcbb23;
 }
 .nazev {
-    min-height: 3em;
+    min-height: 70px;
     display: block;
+    font-weight: bold;
+}
+.zkratka {
+    font-weight: bold;
+    margin: 0px 7px;
 }
 .nazev a.tlacitkopodmenu {
     text-align: center;
@@ -1215,6 +1234,9 @@ col.prvni-sloupec {
 .fotogaladmin {
     border: 1px solid #CCCCCC;
     text-align: center;
+}
+.fotogalerie ul {
+    list-style: none;
 }
 .fotogalerie li{
     width: 70%;
@@ -1419,6 +1441,9 @@ a.tlacitkopodmenuvse {
     margin: auto;
     width: 100%;
 }
+.absolventi .obrvpravobezokraje, .nasinej .obrvpravobezokraje {
+    width: auto;
+}
 .absolventi td, .nasinej td {
     vertical-align: bottom;
 }
@@ -1428,7 +1453,7 @@ a.tlacitkopodmenuvse {
     padding: 7px;
     min-height: 300px;
 }
-.profil_studenta img, .profil_absolventa img{
+.profil_studenta .obrvlevo, .profil_absolventa .obrvlevo{
     width: 20%;
     margin-right: 10px;
 }

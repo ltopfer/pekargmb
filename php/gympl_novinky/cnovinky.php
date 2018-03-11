@@ -570,7 +570,7 @@ echo"
 <div class=\"centrovano\">    
          <div  class=\"novinka\" width=\"100%\">
              <div class=\"textv-n-c \">
-             <h4 class=\"nadpisv-n-c \" >{$VybranaNovinka[nadpis]} <a href=\"?zobr=".''.'&amp;co='.$co."\" > <img src=\"../obr/zavri.gif\" alt=\"zavri.gif, 767B\" title=\"zavøít\" border=\"0\" height=\"20\" width=\"20\" class=\"obrvpravobezokraje\"> </a></h4>  <a name=\"{$VybranaNovinka[id]}\"> </a>
+             <h4 class=\"nadpisv-n-c \" >{$VybranaNovinka[nadpis]}</h4><a href=\"?zobr=".''.'&amp;co='.$co."\" > <img src=\"../obr/zavri.gif\" alt=\"zavri.gif, 767B\" title=\"zavøít\" border=\"0\" height=\"20\" width=\"20\" class=\"obrvpravobezokraje\"> </a> <a name=\"{$VybranaNovinka[id]}\"> </a>
              <div class=\"obrnovinka\">";
 
     if (file_exists ($adresafotky))echo"<img src=\"$adresafotky\"  class=\"obrvlevo\" alt=\"foto\" />";

@@ -1697,12 +1697,10 @@ echo"</td></tr> ";
 if ($fzpracovani=='editace.php') echo" 
  <tr><td colspan=\"2\"  class=\"centrovano\" >                
 <input type=\"hidden\" name=\"odeslano\" value=\"true\" />
-<br />
+
 <input type=\"submit\"  value=\"uložit\" name=\"codelat\" class=\"tlacitko\" />
-<hr />
 
  <input type=\"reset\" value=\"smazat neodeslané údaje\" class=\"tlacitko\" />
- <hr />
 
 <input type=\"hidden\" name=\"akce\" value=\"editace_stranky\" />
 <input type=\"hidden\" name=\"editzaznam\" value=\"editovat_záznam\" />
@@ -1737,7 +1735,6 @@ if ($fzpracovani=='editace.php') echo"
 <input type=\"hidden\" name=\"editzaznam\" value=\"editovat_záznam\" />
 <input type=\"hidden\" name=\"kohoeditovat\" value=\"$f_id\" />
 
-<hr />
  <input type=\"reset\" value=\"smazat neodeslané údaje\" class=\"tlacitko\" />
   </td></tr>
 </table>
