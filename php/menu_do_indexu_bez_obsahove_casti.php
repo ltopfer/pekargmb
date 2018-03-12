@@ -36,7 +36,11 @@ for ($i=3;$i<count($polozkahl) ;$i++)
 
 echo" </ul>";
 
-echo"<div id=\"odkazy\"><a href=\"/ang_gympl/index.php\"><img  id=\"gb\" src=\"{$adresawebu}obr/gb.png\"></a><a href=\"https://www.facebook.com/pekargmb\"><img class=\"odkaz\" src=\"{$adresawebu}obr/fb-art.png\"></a><a href=\"https://mail.pekargmb.cz/bakaweb/next/login.aspx\"><img class=\"odkaz\" src=\"{$adresawebu}obr/bakalari.png\"></a><a href=\"{$adresawebu}pro_vyhledavani/pro_vyhledavani.php\">
+echo"<div id=\"odkazy\">
+    <a href=\"/ang_gympl/index.php\"><img  id=\"gb\" src=\"{$adresawebu}obr/gb.png\"></a>
+    <a href=\"https://www.facebook.com/pekargmb\" onclick=\"trackOutboundLink(this); return false;\"><img class=\"odkaz\" src=\"{$adresawebu}obr/fb-art.png\"></a>
+    <a href=\"https://mail.pekargmb.cz/bakaweb/next/login.aspx\" onclick=\"trackOutboundLink(this); return false;\"><img class=\"odkaz\" src=\"{$adresawebu}obr/bakalari.png\"></a>
+    <a href=\"{$adresawebu}pro_vyhledavani/pro_vyhledavani.php\">
     <svg class=\"odkaz\" id=\"vyhledavani\" version=\"1.0\" xmlns=\"http://www.w3.org/2000/svg\"
 width=\"200.000000pt\" height=\"200pt\" viewBox=\"0 0 200.000000 200.000000\"
     preserveAspectRatio=\"xMidYMid meet\">

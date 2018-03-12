@@ -122,6 +122,35 @@ echo"
 
         
         </script>
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-115476559-1\"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-115476559-1');
+</script>
+
+<script>
+/**
+* Function that tracks a click on an outbound link in Analytics.
+* This function takes a valid URL string as an argument, and uses that URL string
+* as the event label. Setting the transport method to 'beacon' lets the hit be sent
+* using 'navigator.sendBeacon' in browser that support it.
+*/
+var trackOutboundLink = function(a) {
+  var url = $(a).attr('href');
+  
+  gtag('event', 'click', {
+    'event_category': 'outbound',
+    'event_label': url,
+    'transport_type': 'beacon'
+  });
+  window.open(url);
+}
+</script>
 
     </head>
     
@@ -383,17 +412,17 @@ echo" </li> ";
                     </div>
                 </div>
                 <div id="prohlidky">
-                    <a href="historie_skoly.pdf"><img src="obr/h_odkaz.png" id="historie"></a>
-                    <a href="http://pekar.uvadi.cz/index.swf"><img src="obr/v_prohlidka.png" id="prohlidka"></a>
+                    <a href="historie_skoly.pdf" onclick="trackOutboundLink(this); return false;"><img src="obr/h_odkaz.png" id="historie"></a>
+                    <a href="http://pekar.uvadi.cz/index.swf" onclick="trackOutboundLink(this); return false;"><img src="obr/v_prohlidka.png" id="prohlidka"></a>
                 </div>
                 <div id="spolupracujeme">
                     <a><img src="obr/kraj-znak.png" class="spoluprace_kraj"></a>
-                    <a href="https://www.kr-stredocesky.cz/"><img src="obr/kraj.png" class="spoluprace_kraj"></a>
+                    <a href="https://www.kr-stredocesky.cz/" onclick="trackOutboundLink(this); return false;"><img src="obr/kraj.png" class="spoluprace_kraj"></a>
                     <h2>Blíže spolupracujeme</h2>
-                    <a href="http://talentovani.cz/stredocesky/"><img src="obr/str_cer.png" class="spoluprace_obrazek"></a>
-                    <a href="http://deti.mensa.cz/index.php?pg=spolupracujici-skoly&cid=227"><img src="obr/mensa.png" class="spoluprace_obrazek"></a>
-                    <a href="https://www.muni.cz/"><img src="obr/logopartner.gif" class="spoluprace_obrazek"></a>
-                    <a href="http://www.remasystem.cz/zelena-skola/"><img src="obr/images.jpg" class="spoluprace_obrazek"></a>
+                    <a href="http://talentovani.cz/stredocesky/" onclick="trackOutboundLink(this); return false;"><img src="obr/str_cer.png" class="spoluprace_obrazek"></a>
+                    <a href="http://deti.mensa.cz/index.php?pg=spolupracujici-skoly&cid=227" onclick="trackOutboundLink(this); return false;"><img src="obr/mensa.png" class="spoluprace_obrazek"></a>
+                    <a href="https://www.muni.cz/" onclick="trackOutboundLink(this); return false;"><img src="obr/logopartner.gif" class="spoluprace_obrazek"></a>
+                    <a href="http://www.remasystem.cz/zelena-skola/" onclick="trackOutboundLink(this); return false;"><img src="obr/images.jpg" class="spoluprace_obrazek"></a>
                 </div>
             </div>
         </div>

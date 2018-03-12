@@ -6,10 +6,10 @@ $cislosrovnitkemvnovinkach='='.$vyber.'&amp;co='.$co;//tadz to dod2lat
 for ($i=0;$i<count($polozka) ;$i++ ) {
 $aname='';
 
-if (( substr($polozka[$i],-4,4)=='.pdf' )||( substr($polozka[$i],-5,5)=='.aspx' )||( substr($polozka[$i],-3,3)=='.cz' )|| ($kategorie=='elearning')||( substr($polozka[$i],-4,4)=='.doc' ))  $cil='onclick="return !window.open(this.href)"'; else $cil='';
+if (( substr($polozka[$i],-4,4)=='.pdf' )||( substr($polozka[$i],-5,5)=='.aspx' )||( substr($polozka[$i],-3,3)=='.cz' )|| ( substr($polozka[$i],-4,4)=='.cz/' )||($kategorie=='elearning')||( substr($polozka[$i],-4,4)=='.doc' ))  $cil='onclick="trackOutboundLink(this); return false;"'; else $cil='';
 
 if ($ppmenu!='') {
-if (strstr($polozka[$i],'.pdf') ) $cil='onclick="return !window.open(this.href)"'; else $cil='';
+if (strstr($polozka[$i],'.pdf') ) $cil='onclick="trackOutboundLink(this); return false;"'; else $cil='';
   if ((strstr($polozka[$i],'=')==$cislosrovnitkemppmenu) || (strstr($polozka[$i],'=')==$cislosrovnitkemppmenubezcile) ) {
   $tridapolozkyppmenu='tridappmenuakt'; 
 $aname="<a name=\"$ppmenu\"></a>";
