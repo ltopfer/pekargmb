@@ -115,3 +115,9 @@ VOLITELNÉ PŘEDMĚTY
         * posunul jsem chybovou hlášku až pod nadpis (50-52 přesunout za echo"<h4>...) 
         * přidat kód pro výpis volných míst (z hlavičky), nadpis <h5> (125), div (126) jsou potřeba přidat
         * ten jsem přeformátoval, aby nevyužíval tabulku - výpis je na řádcích 145-161 (tohle by snad mělo fungovat na všech volitelných předmětech, takže to asi stačí překopírovat) 
+
+
+ * JAK ZOBRAZIT PŘEDMĚTY I BEZ PŘIHLÁŠENÍ:
+      - na řádku 36 místo exit dát else větev podmínky (!$uzivatelnalezen) + odebrat zbytečný konec a začátek skriptu
+      - ukončit else větev až na řádku 116 (za formulářem a před výpisem)
+      - úplně na konec se musí přidat ještě } na ukončení else větve podmínky (!isset($_SERVER["PHP_AUTH_USER"]))

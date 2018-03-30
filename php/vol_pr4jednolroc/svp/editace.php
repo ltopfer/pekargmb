@@ -33,11 +33,12 @@ $uzivatelnalezen=($kohoeditovat!='') ? true : false;
  echo "<div class=\"chyba\">Chybné pøihlaèovací údaje. Pro opìtovné pøihlášení je tøeba zavøít okno prohlížeèe.</div>
  
      "; 
-     exit;}
-          }
+     //exit;
+}
+else // uzivatel nalezen
+{
          
 
-?><?php 
 $polozz=$pro_admina->VyberPolozku($kohoeditovat);
 $pocetpredmetu=$pro_admina->Urci_pocet_vol_predmetu(); 
  for ($pocet_zobr=1;$pocet_zobr<=$pocetpredmetu ;$pocet_zobr++ ){ 
@@ -112,7 +113,7 @@ echo" <div class=\"chyba\">Volba bude zahájena  $den.$mesic.$rok v $hodina:$minu
                               break;
                              } // k switch
                                                }// k editovat vybranou radku
-
+}
   
 	
 
@@ -184,6 +185,7 @@ echo"
 
 
 require "paticka.php";
+}
 ?>
 
 
