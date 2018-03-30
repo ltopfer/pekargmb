@@ -1,7 +1,7 @@
 HOTOVO, ÚPRAVA POMOCÍ INDEX.PHP (ČÍSLA NA ŘÁDCÍCH 160 A 162 UDÁVÁJÍ DÉLKU TEXTU VE ZNACÍCH) - novinky na hlavní straně přidat prochu textu 
-SNAD HOTOVO - strana novinky pro mobil - dal jsem obrázek na správné místo, potřeboval bych přidat obtékání textu okolo
+HOTOVO - strana novinky pro mobil - dal jsem obrázek na správné místo, potřeboval bych přidat obtékání textu okolo
 HOTOVO - dát vyhledávání bílou výplň na mobilu - vytvořil jsem svg z png, ale aby fungoval fill tak se asi bude muset přidat jako normální svg, změnit koncovku nestačí.
-fotogalerie
+HOTOVO fotogalerie
 SNAD HOTOVO footer- přidat autory - přidat do php, zkontrolovat nastylování při různý šířce okna (už je to přidaný lokálně na hlstrana.html)
 vyřešit contribution ikonek
 ČÁSTEČNĚ HOTOVO (elearning) mobil - e-learning, volitelný předměty - buď nejak vymyslet nebo nastavit pevnou šířku a scrollovat
@@ -13,6 +13,7 @@ formátování tisku
 PŘĚDĚLÁNO u absolventů je zbytečně moc tabulek v sobě
 PŘEDĚLÁNO (NA H5) fotogalerie má špatný nadpisy mají být h4
 HOTOVO opravit odkazy na prohlídky atd na úvodní straně, zmenšit obrázky (vw se počítá i se scrollbarem, což je problém) - Screenshot 2018-02-25 11.14.34
+HOTOVO formulář u volitelných předmětů - odebrat hr u tlačítek
 
 volitelné předměty
  * u 4. ročníku (jednoleté) úpraveno rozhraní -> class predmety, predmet, ...
@@ -23,6 +24,5 @@ volitelné předměty
 
 
 
-formulář u volitelných předmětů
-        odebrat hr u tlačítek
+
         

@@ -4,6 +4,8 @@ require "hlavicka.php";
 ?>
     <div class="fotogalerie">
         <h4>Fotogalerie</h4>
+        
+        <a name="16"></a>
         <h5>2016/2017</h5>
         <ul>
             <li><a href="http://websidepbtridy.wz.cz/zakldfoto/mann2017cz/" target="_blank">Mannheim Exchange 2017</a> </li>
@@ -16,6 +18,7 @@ require "hlavicka.php";
             <li><a href="https://drive.google.com/file/d/0Bz6BOK42LGT0RzhWS0dxZTZTVE0/view?usp=sharing" target="_blank">Vánoèní akademie 2016 video</a></li>
         </ul>
 
+        <a name="15"></a>
         <h5>2015/2016</h5>
         <ul>
             <li><a href="http://websidepbtridy.wz.cz/zakldfoto/veda16/" target="_blank">Vìda v ulicích</a></li>
@@ -26,7 +29,8 @@ require "hlavicka.php";
             <li><a href="http://websidepbtridy.wz.cz/zakldfoto/vaka2015/" target="_blank">Vánoèní akademie 2015</a></li>
             <li><a href="http://websidepbtridy.wz.cz/foto15/veda/" target="_blank">Vìda v ulicích </a></li>
         </ul>
-
+        
+        <a name="14"></a>
         <h5>2014/2015</h5>
         <ul>
             <li><a href="http://websidepbtridy.wz.cz/zakldfoto/vyrazeni15_02/" target="_blank">Slavnostní vyøazení maturantù 4.B a 8.O</a></li>
@@ -37,6 +41,7 @@ require "hlavicka.php";
             <li><a href="http://websidepbtridy.wz.cz/zakldfoto/vaka2014/" target="_blank">Vánoèní akademie </a></li>
         </ul>
 
+        <a name="13"></a>
         <h5>2013/2014</h5>
         <ul>
             <li><a href="http://websidepbtridy.wz.cz/zakldfoto/mann14cz" target="_blank">Mannheim Exchange 2014</a></li>
@@ -47,6 +52,7 @@ require "hlavicka.php";
             <li><a href="http://websidepbtridy.wz.cz/zakldfoto/vanocni_ak_2013" target="_blank">Vánoèní akademie </a></li>
         </ul>
 
+        <a name="12"></a>
         <h5>2012/2013</h5>
         <ul>
             <li><a href="http://websidepbtridy.wz.cz/zakldfoto/mannheimDE/index.htm " target="_blank">Mannheim 2013 - druhá èást výmìnného zájezdu </a></li>
@@ -60,12 +66,14 @@ require "hlavicka.php";
             <li><a href="http://websidepbtridy.wz.cz/zakldfoto/armada/index.htm" target="_blank">Den s armádou</a></li>
         </ul>
 
+        <a name="11"></a>
         <h5>2011/2012</h5>
         <ul>
             <li><a href="http://websidepbtridy.wz.cz/zakldfoto/mannheimCZ/index.htm" target="_blank">Mannheim 2012 – èást MB</a></li>
             <li><a href="<?php echo$adresawebu ?>fotogalerie_nova/zdroje/vyberovy_zajezd/polsko.ppsx" target="_blank">Výbìrový zájezd Polsko 2012 (*.ppsx) </a></li>
         </ul>
 
+        <a name="10"></a>
         <h5>2010/2011</h5>
         <ul>
             <li><a href="<?php echo$adresawebu ?>fotogalerie_nova/zdroje/24_1_2011/index.htm" target="_blank">Lyžaøský kurz Rakousko 7. - 13. 3. 2010</a></li>

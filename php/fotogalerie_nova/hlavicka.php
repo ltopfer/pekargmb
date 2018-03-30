@@ -17,6 +17,8 @@ require '../menu.php';
                             <line id=\"l2-podmenu\" stroke-linecap=\"square\" stroke-linejoin=\"undefined\" y2=\"8\" x2=\"35\" y1=\"18\" x1=\"21\" stroke-width=\"4\" stroke=\"#333333\" fill=\"none\"/>
                         </svg>  
      ";
+
+/*
      echo"
           <a href=\"http://websidepbtridy.wz.cz/zakldfoto/mann2017cz/\" target=\"_blank\" class=\"tlacitkopodmenu\">Mannheim Exchange 2017</a>
      <a href=\"https://drive.google.com/file/d/0Bz6BOK42LGT0S3dDZUlWTXJZRkk/view?usp=sharing/\" target=\"_blank\" class=\"tlacitkopodmenu\">Humprecht 2017</a>
@@ -58,6 +60,19 @@ echo"<a href=\"http://websidepbtridy.wz.cz/zakldfoto/vaka2014/ \" target=\"_blan
   echo"<a href=\"$adresawebu"."fotogalerie_nova/zdroje/mannheim_16-22_ 5_ 2010/index.htm\" target=\"_blank\" class=\"tlacitkopodmenu\" >Mannheim MB 16. - 22. 5. 2010</a> ";
   echo"<a href=\"$adresawebu"."fotogalerie_nova/zdroje/jarni_akademie_31_3_2011/index.htm\" target=\"_blank\" class=\"tlacitkopodmenu\" >Jarní akademie 31.3.2011</a> ";      
 //require '../vypis_podmenu.php'; 
+*/
+
+
+echo 
+   "<a href=\"#16\" class=\"tlacitkopodmenu\">2016/2017</a>
+    <a href=\"#15\" class=\"tlacitkopodmenu\">2015/2016</a>
+    <a href=\"#14\" class=\"tlacitkopodmenu\">2014/2015</a>
+    <a href=\"#13\" class=\"tlacitkopodmenu\">2013/2014</a>
+    <a href=\"#12\" class=\"tlacitkopodmenu\">2012/2013</a>
+    <a href=\"#11\" class=\"tlacitkopodmenu\">2011/2012</a>
+    <a href=\"#10\" class=\"tlacitkopodmenu\">2010/2011</a>
+";
+
 echo" </div>  <!-- ppodmenu  --> 
 
      </div>  <!-- pravy sloupec uzky  --> 

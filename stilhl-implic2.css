@@ -488,6 +488,12 @@ h3 {
     position: relative;
 }
 
+.karta a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 .predni,
 .zadni {
     -webkit-backface-visibility: hidden;
@@ -535,7 +541,7 @@ h3 {
     display: block;
 }
 
-.zadni a {
+.zadni .vicinfo {
     position: absolute;
     margin: auto;
     width: 100%;
@@ -1948,7 +1954,7 @@ a.tlacitkopodmenuvse {
         font-size: 0.9em;
         top: 15px;
     }
-    .zadni a {
+    .zadni .vicinfo {
         font-size: 1em;
         bottom: 15px;
     }
@@ -2371,7 +2377,7 @@ a.tlacitkopodmenuvse {
     .karta-text-dlouhy {
         display: none;
     }
-    .zadni a {
+    .zadni .vicinfo {
         margin-left: auto;
         width: 90%;
         text-align: center;

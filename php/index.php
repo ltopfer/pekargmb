@@ -92,6 +92,7 @@ echo"
                 function start() {
                     novinky_index = $(\"#novinky_index\").find(\".novinka_index\");
                     pocet = novinky_index.length;
+                    msieversion();
                     moveSlider(0);
                 }
                     
@@ -118,6 +119,24 @@ echo"
                 if(index < 0)
                     index += pocet;
                 return index;
+            }
+            
+            function msieversion() {
+                var ua = window.navigator.userAgent;
+                var msie = ua.indexOf(\"MSIE \");
+
+                if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))  // If Internet Explorer, return version number
+                {
+                    $('.predni').css('display','none');
+                    $('.zadni').css('-webkit-transform','rotateY(0deg)');
+                    $('.zadni').css('transform','rotateY(0deg)');
+                }
+                else  // If another browser, return 0
+                {
+
+                }
+
+                return false;
             }
 
         
@@ -174,7 +193,7 @@ $seznam_novinek= $pro_seznam_novinek->VyberSeznamNovinekAktualnich_S_Textem();
 
 for ($i=0;$i<6 ;$i++ ) { 
 $polozka[$i]=$adresawebu.'gympl_novinky/gympl_novinky.php?zobr='.$seznam_novinek[id][$i];
-$odkaz[$i]="<a href=\"".$polozka[$i]."\">více informací</a>";
+$odkaz[$i]="<a href=\"".$polozka[$i]."\">více informací";
 
 $adresafoto1[$i]='gympl_novinky/foto/'.$seznam_novinek[id][$i].'.jpg';
 
@@ -241,172 +260,186 @@ echo" </li> ";
                 </ul>
                 <div id="busta"><img src="obr/busta.jpg" width=100%><i>Prof. Dr. J. Pekaø<br>1870-1937</i></div>
                 <h2 id="conabizime">Co nabízíme</h2>
-                <div id="nabidky">                    
+                <div id="nabidky">
                     <div class="nabidka prvni">
                         <div class="karta">
                             <div class="predni">
                                 <img class="nabidka_ikona" src="obr/ikony/diploma.svg" width="50px">
-                                
                             </div>
 
                             <div class="zadni">
-                                <p class="karta-text-dlouhy">Všestranné støedoškolské vzdìlání ukonèené maturitou</p>
-                                <p class="karta-text-kratky">Maturita</p>
-                                <a href="">více informací</a>
+                                <a href="">
+                                    <p class="karta-text-dlouhy">Všestranné støedoškolské vzdìlání ukonèené maturitou</p>
+                                    <p class="karta-text-kratky">Maturita</p>
+                                    <span class="vicinfo">více informací</span>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="nabidka druha">
-                         <div class="karta">
+                        <div class="karta">
                             <div class="predni">
                                 <img class="nabidka_ikona" src="obr/ikony/books.svg" width="50px">
-                                
                             </div>
 
                             <div class="zadni">
-                                <p class="karta-text-dlouhy">knihovnu s èítárnou a studovnou</p>
-                                <p class="karta-text-kratky">Knihovna</p>
-                                <a href="">více informací</a>
+                                <a href="">
+                                    <p class="karta-text-dlouhy">knihovnu s èítárnou a studovnou</p>
+                                    <p class="karta-text-kratky">Knihovna</p>
+                                    <span class="vicinfo">více informací</span>
+                                </a>
                             </div>
                         </div>
                     </div>
-                     <div class="nabidka prvni">
-                          <div class="karta">
+                    <div class="nabidka prvni">
+                        <div class="karta">
                             <div class="predni">
                                 <img class="nabidka_ikona" src="obr/ikony/cutlery%20(1).svg" width="50px">
-                                
                             </div>
 
                             <div class="zadni">
-                                <p class="karta-text-dlouhy">obìdy ve vlastní školní jídelnì a obèerstvení ve školním kiosku</p>
-                                <p class="karta-text-kratky">Školní jídelnu</p>
-                                <a href="">více informací</a>
+                                <a href="">
+                                    <p class="karta-text-dlouhy">obìdy ve vlastní školní jídelnì a obèerstvení ve školním kiosku</p>
+                                    <p class="karta-text-kratky">Školní jídelnu</p>
+                                    <span class="vicinfo">více informací</span>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="nabidka druha">
-                          <div class="karta">
+                        <div class="karta">
                             <div class="predni">
                                 <img class="nabidka_ikona" src="obr/ikony/basketball%20(1).svg" width="50px">
-                                
                             </div>
 
                             <div class="zadni">
-                                <p class="karta-text-dlouhy">výbornépodmínky pro tìlesnou výchovu a sportovní èinnist</p>
-                                <p class="karta-text-kratky">Sport</p>
-                                <a href="">více informací</a>
+                                <a href="">
+                                    <p class="karta-text-dlouhy">výbornépodmínky pro tìlesnou výchovu a sportovní èinnist</p>
+                                    <p class="karta-text-kratky">Sport</p>
+                                    <span class="vicinfo">více informací</span>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="nabidka treti">
-                          <div class="karta">
+                        <div class="karta">
                             <div class="predni">
                                 <img class="nabidka_ikona" src="obr/ikony/school.svg" width="50px">
-                                
                             </div>
 
                             <div class="zadni">
-                                <p class="karta-text-dlouhy">spolupráce se školami ve Francii, Nìmecku a Slovensku</p>
-                                <p class="karta-text-kratky">Zahranièní spolupráce</p>
-                                <a href="">více informací</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="nabidka ctvrta">
-                          <div class="karta">
-                            <div class="predni">
-                                <img class="nabidka_ikona" src="obr/ikony/blackboard.svg" width="50px">
-                                
-                            </div>
-
-                            <div class="zadni">
-                                <p class="karta-text-dlouhy">výuku cizích jazykù ve skupinách rozdìlených podle úrovnì znalostí</p>
-                                <p class="karta-text-kratky">Výuka cizích jazykù</p>
-                                <a href="">více informací</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="nabidka treti">
-                         <div class="karta">
-                            <div class="predni">
-                                <img class="nabidka_ikona" src="obr/ikony/panels.svg" width="50px">
-                               
-                            </div>
-
-                            <div class="zadni">
-                                <p class="karta-text-dlouhy">profilaci studia prostøednictvím volitelných pøedmìtù</p>
-                                <p class="karta-text-kratky">Profilace studia</p>
-                                <a href="">více informací</a>
+                                <a href="">
+                                    <p class="karta-text-dlouhy">spolupráce se školami ve Francii, Nìmecku a Slovensku</p>
+                                    <p class="karta-text-kratky">Zahranièní spolupráce</p>
+                                    <span class="vicinfo">více informací</span>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="nabidka ctvrta">
                         <div class="karta">
-                                <div class="predni">
-                                    <img class="nabidka_ikona" src="obr/ikony/mortarboard.svg" width="50px">
-                                    
-                                </div>
+                            <div class="predni">
+                                <img class="nabidka_ikona" src="obr/ikony/blackboard.svg" width="50px">
+                            </div>
 
-                                <div class="zadni">
+                            <div class="zadni">
+                                <a href="">
+                                    <p class="karta-text-dlouhy">výuku cizích jazykù ve skupinách rozdìlených podle úrovnì znalostí</p>
+                                    <p class="karta-text-kratky">Výuka cizích jazykù</p>
+                                    <span class="vicinfo">více informací</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nabidka treti">
+                        <div class="karta">
+                            <div class="predni">
+                                <img class="nabidka_ikona" src="obr/ikony/panels.svg" width="50px">
+                            </div>
+
+                            <div class="zadni">
+                                <a href="">
+                                    <p class="karta-text-dlouhy">profilaci studia prostøednictvím volitelných pøedmìtù</p>
+                                    <p class="karta-text-kratky">Profilace studia</p>
+                                    <span class="vicinfo">více informací</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nabidka ctvrta">
+                        <div class="karta">
+                            <div class="predni">
+                                <img class="nabidka_ikona" src="obr/ikony/mortarboard.svg" width="50px">
+                            </div>
+
+                            <div class="zadni">
+                                <a href="">
                                     <p class="karta-text-dlouhy">pøípravu pro studium na všech typek vyšších odborných škol a vysokých škol</p>
                                     <p class="karta-text-kratky">Pøíprava na VŠ</p>
-                                    <a href="">více informací</a>
-                                </div>
+                                    <span class="vicinfo">více informací</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="nabidka prvni">
-                          <div class="karta">
+                        <div class="karta">
                             <div class="predni">
                                 <img class="nabidka_ikona" src="obr/ikony/two-test-tubes.svg" width="50px">
-                                
                             </div>
 
                             <div class="zadni">
-                                <p class="karta-text-dlouhy">moderní specializované uèebny, laboratoøe a poèítaèové uèebny</p>
-                                <p class="karta-text-kratky">Modernì vybavené uèebny</p>
-                                <a href="">více informací</a>
+                                <a href="">
+                                    <p class="karta-text-dlouhy">moderní specializované uèebny, laboratoøe a poèítaèové uèebny</p>
+                                    <p class="karta-text-kratky">Modernì vybavené uèebny</p>
+                                    <span class="vicinfo">více informací</span>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="nabidka druha">
-                         <div class="karta">
+                        <div class="karta">
                             <div class="predni">
                                 <img class="nabidka_ikona" src="obr/ikony/solution.svg" width="50px">
-                                
+
                             </div>
 
                             <div class="zadni">
-                                <p class="karta-text-dlouhy">možnost bezplatného psychologického poradenství u školního psychologa</p>
-                                <p class="karta-text-kratky">Školní psycholog</p>
-                                <a href="">více informací</a>
+                                <a href="">
+                                    <p class="karta-text-dlouhy">možnost bezplatného psychologického poradenství u školního psychologa</p>
+                                    <p class="karta-text-kratky">Školní psycholog</p>
+                                    <span class="vicinfo">více informací</span>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="nabidka prvni">
-                          <div class="karta">
+                        <div class="karta">
                             <div class="predni">
                                 <img class="nabidka_ikona" src="obr/ikony/533356-entertainment.png" width="50px">
-                               
                             </div>
 
                             <div class="zadni">
-                                <p class="karta-text-dlouhy">mimoškolní aktivity a kulturní, sportovní a poèítaèové kroužky</p>
-                                <p class="karta-text-kratky">Kroužky</p>
-                                <a href="">více informací</a>
+                                <a href="">
+                                    <p class="karta-text-dlouhy">mimoškolní aktivity a kulturní, sportovní a poèítaèové kroužky</p>
+                                    <p class="karta-text-kratky">Kroužky</p>
+                                    <span class="vicinfo">více informací</span>
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div class="nabidka druha">
-                         <div class="karta">
+                        <div class="karta">
                             <div class="predni">
                                 <img class="nabidka_ikona" src="obr/ikony/parlament.png" width="50px">
-                                
+
                             </div>
 
                             <div class="zadni">
-                                <p class="karta-text-dlouhy">možnost aktivnì se zapojit do fungování školy prostøednictvím studentského parlamentu</p>
-                                <p class="karta-text-kratky">Školní parlament</p>
-                                <a href="">více informací</a>
+                                <a href="">
+                                    <p class="karta-text-dlouhy">možnost aktivnì se zapojit do fungování školy prostøednictvím studentského parlamentu</p>
+                                    <p class="karta-text-kratky">Školní parlament</p>
+                                    <span class="vicinfo">více informací</span>
+                                </a>
                             </div>
                         </div>
                     </div>
