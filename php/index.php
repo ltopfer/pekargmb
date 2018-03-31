@@ -268,7 +268,7 @@ echo" </li> ";
                             </div>
 
                             <div class="zadni">
-                                <a href="">
+                                <a href="organizace_studia/maturita_2017_18.php?ppmenu=maturita">
                                     <p class="karta-text-dlouhy">Všestranné støedoškolské vzdìlání ukonèené maturitou</p>
                                     <p class="karta-text-kratky">Maturita</p>
                                     <span class="vicinfo">více informací</span>
@@ -283,7 +283,7 @@ echo" </li> ";
                             </div>
 
                             <div class="zadni">
-                                <a href="">
+                                <a href="verejnost/prostory.php?ppmenu=prost&zobr=knihovna">
                                     <p class="karta-text-dlouhy">knihovnu s èítárnou a studovnou</p>
                                     <p class="karta-text-kratky">Knihovna</p>
                                     <span class="vicinfo">více informací</span>
@@ -298,7 +298,7 @@ echo" </li> ";
                             </div>
 
                             <div class="zadni">
-                                <a href="">
+                                <a href="organizace_studia/jidelna.php?ppmenu=jidelna">
                                     <p class="karta-text-dlouhy">obìdy ve vlastní školní jídelnì a obèerstvení ve školním kiosku</p>
                                     <p class="karta-text-kratky">Školní jídelnu</p>
                                     <span class="vicinfo">více informací</span>
@@ -313,7 +313,7 @@ echo" </li> ";
                             </div>
 
                             <div class="zadni">
-                                <a href="">
+                                <a href="verejnost/prostory.php?ppmenu=prost&zobr=sport">
                                     <p class="karta-text-dlouhy">výbornépodmínky pro tìlesnou výchovu a sportovní èinnist</p>
                                     <p class="karta-text-kratky">Sport</p>
                                     <span class="vicinfo">více informací</span>
@@ -328,7 +328,7 @@ echo" </li> ";
                             </div>
 
                             <div class="zadni">
-                                <a href="">
+                                <a href="/projekty/partnerske_skoly.pdf" onclick="trackOutboundLink(this); return false;">
                                     <p class="karta-text-dlouhy">spolupráce se školami ve Francii, Nìmecku a Slovensku</p>
                                     <p class="karta-text-kratky">Zahranièní spolupráce</p>
                                     <span class="vicinfo">více informací</span>
@@ -358,7 +358,7 @@ echo" </li> ";
                             </div>
 
                             <div class="zadni">
-                                <a href="">
+                                <a href="organizace_studia/osnovy_nab_vol_pr__2018_19.php?ppmenu=vol_pr">
                                     <p class="karta-text-dlouhy">profilaci studia prostøednictvím volitelných pøedmìtù</p>
                                     <p class="karta-text-kratky">Profilace studia</p>
                                     <span class="vicinfo">více informací</span>
@@ -388,7 +388,7 @@ echo" </li> ";
                             </div>
 
                             <div class="zadni">
-                                <a href="">
+                                <a href="verejnost/prostory.php?ppmenu=prost&zobr=ucebny">
                                     <p class="karta-text-dlouhy">moderní specializované uèebny, laboratoøe a poèítaèové uèebny</p>
                                     <p class="karta-text-kratky">Modernì vybavené uèebny</p>
                                     <span class="vicinfo">více informací</span>
@@ -404,7 +404,7 @@ echo" </li> ";
                             </div>
 
                             <div class="zadni">
-                                <a href="">
+                                <a href="gympl_psycholog/gympl_psycholog.php">
                                     <p class="karta-text-dlouhy">možnost bezplatného psychologického poradenství u školního psychologa</p>
                                     <p class="karta-text-kratky">Školní psycholog</p>
                                     <span class="vicinfo">více informací</span>
@@ -435,7 +435,7 @@ echo" </li> ";
                             </div>
 
                             <div class="zadni">
-                                <a href="">
+                                <a href="http://parlament.pekcloud.cz/" onclick="trackOutboundLink(this); return false;">
                                     <p class="karta-text-dlouhy">možnost aktivnì se zapojit do fungování školy prostøednictvím studentského parlamentu</p>
                                     <p class="karta-text-kratky">Školní parlament</p>
                                     <span class="vicinfo">více informací</span>

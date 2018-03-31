@@ -1796,6 +1796,70 @@ a.tlacitkopodmenuvse {
 }
 
 
+/* Naše prostory */
+.prostory {
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: center;
+}
+.obrazekProstory {
+    width: 31%;
+    margin: 5px;
+    font-weight: normal;
+    border: 2px solid #333;
+    text-align: center;
+    position: relative;
+    /*-webkit-transition: 0.5s;
+    transition: 0.5s;*/
+}
+.obrazekProstory .overlay {
+    display: none;
+}
+.obrazekProstory img {
+    width: 100%;
+}
+.obrazekProstory .popisek {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.obrazekProstory.velkyProstory  {
+    position: fixed;
+    padding: 20px;
+    z-index: 100;
+    margin: 0px;
+    width: auto;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+}
+
+.obrazekProstory.velkyProstory img {
+    width: auto;
+    height: 100%;
+}
+
+.obrazekProstory.velkyProstory .overlay {
+    position: absolute;
+    display: block;
+    background: rgba(0, 0, 0, 0.35);
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    z-index: -1;
+}
+
 
 
 /*///////*/

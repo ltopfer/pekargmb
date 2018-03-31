@@ -8,8 +8,17 @@ require '../menu.php';
 
 $polozka[]='co_nabizime.php';$nazev[]='Co nabízíme';$ppkat[]='';
 $polozka[]='../organizace_studia/volitelne_predmety.php?ppmenu=vol_pr'/*'studijni_smery.php'*/;$nazev[]='Studijní smìry';$ppkat[]='';
+
+$k_pom='prost';
+$polozka[]="prostory.php?ppmenu=$k_pom#$k_pom";$nazev[]='Naše prostory';$ppkat[]='';
+if ($ppmenu==$k_pom) {
+    $polozka[]="prostory.php?ppmenu=$k_pom&zobr=knihovna";$nazev[]='Knihovna';$ppkat[]=$k_pom;
+    $polozka[]="prostory.php?ppmenu=$k_pom&zobr=sport";$nazev[]='Sportovištì';$ppkat[]=$k_pom;
+    $polozka[]="prostory.php?ppmenu=$k_pom&zobr=ucebny";$nazev[]='Uèebny';$ppkat[]=$k_pom;
+}
+
 $k_pom='pprac';
-$polozka[]="spp.php?ppmenu=$k_pom";$nazev[]='Školní poradenské pracovištì';$ppkat[]='';
+$polozka[]="spp.php?ppmenu=$k_pom#$k_pom";$nazev[]='Školní poradenské pracovištì';$ppkat[]='';
 if ($ppmenu==$k_pom) {
 $polozka[]="../gympl_psycholog/gympl_psycholog.php?ppmenu=$k_pom";$nazev[]='Školní psycholog';$ppkat[]=$k_pom;
 $polozka[]="../gympl_poradce/gympl_poradce.php?ppmenu=$k_pom";$nazev[]='Výchovný poradce';$ppkat[]=$k_pom;
