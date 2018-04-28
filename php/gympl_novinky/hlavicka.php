@@ -61,7 +61,6 @@ echo"
 echo" 
 <a href=\"../rss/rss_nanoivinky.php\" onclick=\"return !window.open(this.href)\" class=\"tlacitkopodmenurss\">RSS</a>
 <br />
-<hr />
  <a href=\"administrace.php \" class=\"tlacitkopodmenu\"> Editace rubriky <br /> ( pro zamìstnance ) </a>
 </div>  <!-- ppodmenu  --> 
      

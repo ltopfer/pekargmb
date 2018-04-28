@@ -124,12 +124,11 @@ echo"
             function msieversion() {
                 var ua = window.navigator.userAgent;
                 var msie = ua.indexOf(\"MSIE \");
+                var safari = ua.indexOf(\"Safari\");
 
-                if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))  // If Internet Explorer, return version number
+                if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./) || safari > 0)  // If Internet Explorer or Safari
                 {
-                    $('.predni').css('display','none');
-                    $('.zadni').css('-webkit-transform','rotateY(0deg)');
-                    $('.zadni').css('transform','rotateY(0deg)');
+                    $('.nabidka').addClass('nabidkaIE').removeClass('nabidka');
                 }
                 else  // If another browser, return 0
                 {
@@ -141,6 +140,7 @@ echo"
 
         
         </script>
+        <noscript><div id=\"warning\">Máte vypnutý JavaScript. Stránka se nemusí zobrazovat správne.</div></noscript>
         
         <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-115476559-1\"></script>
@@ -269,7 +269,7 @@ echo" </li> ";
 
                             <div class="zadni">
                                 <a href="organizace_studia/maturita_2017_18.php?ppmenu=maturita">
-                                    <p class="karta-text-dlouhy">Všestranné støedoškolské vzdìlání ukonèené maturitou</p>
+                                    <p class="karta-text-dlouhy">všestranné støedoškolské vzdìlání ukonèené maturitou</p>
                                     <p class="karta-text-kratky">Maturita</p>
                                     <span class="vicinfo">více informací</span>
                                 </a>
@@ -314,7 +314,7 @@ echo" </li> ";
 
                             <div class="zadni">
                                 <a href="verejnost/prostory.php?ppmenu=prost&zobr=sport">
-                                    <p class="karta-text-dlouhy">výbornépodmínky pro tìlesnou výchovu a sportovní èinnist</p>
+                                    <p class="karta-text-dlouhy">výborné podmínky pro tìlesnou výchovu a sport</p>
                                     <p class="karta-text-kratky">Sport</p>
                                     <span class="vicinfo">více informací</span>
                                 </a>
@@ -329,7 +329,7 @@ echo" </li> ";
 
                             <div class="zadni">
                                 <a href="/projekty/partnerske_skoly.pdf" onclick="trackOutboundLink(this); return false;">
-                                    <p class="karta-text-dlouhy">spolupráce se školami ve Francii, Nìmecku a Slovensku</p>
+                                    <p class="karta-text-dlouhy">spolupráce se školami v Nemecku, Polsku, Francii a na Slovensku</p>
                                     <p class="karta-text-kratky">Zahranièní spolupráce</p>
                                     <span class="vicinfo">více informací</span>
                                 </a>
@@ -373,7 +373,7 @@ echo" </li> ";
                             </div>
 
                             <div class="zadni">
-                                <a href="">
+                                <a href="organizace_studia/vs.php">
                                     <p class="karta-text-dlouhy">pøípravu pro studium na všech typek vyšších odborných škol a vysokých škol</p>
                                     <p class="karta-text-kratky">Pøíprava na VŠ</p>
                                     <span class="vicinfo">více informací</span>
@@ -389,7 +389,7 @@ echo" </li> ";
 
                             <div class="zadni">
                                 <a href="verejnost/prostory.php?ppmenu=prost&zobr=ucebny">
-                                    <p class="karta-text-dlouhy">moderní specializované uèebny, laboratoøe a poèítaèové uèebny</p>
+                                    <p class="karta-text-dlouhy">specializované uèebny, laboratoøe a poèítaèové uèebny</p>
                                     <p class="karta-text-kratky">Modernì vybavené uèebny</p>
                                     <span class="vicinfo">více informací</span>
                                 </a>
@@ -420,7 +420,7 @@ echo" </li> ";
 
                             <div class="zadni">
                                 <a href="">
-                                    <p class="karta-text-dlouhy">mimoškolní aktivity a kulturní, sportovní a poèítaèové kroužky</p>
+                                    <p class="karta-text-dlouhy">mimoškolní aktivity, kulturní, sportovní a poèítaèové kroužky</p>
                                     <p class="karta-text-kratky">Kroužky</p>
                                     <span class="vicinfo">více informací</span>
                                 </a>

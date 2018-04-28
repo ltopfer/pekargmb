@@ -55,6 +55,7 @@ echo"
             });
         
         </script>
+        <noscript><div id=\"warning\">Máte vypnutý JavaScript. Stránka se nemusí zobrazovat správne.</div></noscript>
         
         <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-115476559-1\"></script>
