@@ -1,0 +1,180 @@
+<!-- odkaz 1 - tento radek nechte i ve vasem vlastnim souboru stylu -->
+   <!-- rozvrh trid  -->
+<!-- zakladni styly pisma  -->
+.textnormal_1 {font-family: Arial; font-size: 12px}
+.textlarge_1 {font-family: Arial; font-size: 15px}
+.textsmall_1 {font-family: Arial; font-size: 9px}
+.textsmaller_1 {font-family: Arial; font-size: 8px}
+.textbaka_1 {font-family: Arial; font-size: 9px}
+.textinfo_1 {font-family: Arial; font-weight: bold; text-decoration: underline}
+.textlargebold_1 {font-family: Arial; font-size: 15px; font-weight: bold}
+.textlargerbold_1 {font-family: Arial; font-size: 16px; font-weight: bold}
+
+
+<!-- stranka s nabidkou  -->
+body.nb_rozvrh_1 {font-family: Arial; font-size: 13px; color: #000000; background-color: #C0C0C0; margin: 10px 10px 10px 10px}
+table.nb_tb_1 {font-family: Arial; font-size: 13px; color: #000000; background-color: #C0C0C0; border-collapse: separate; border: none #000000 0px}
+td.nb_td_1 {padding: 3px 13px 3px 13px; border: solid #000000 1px}
+td.nb_td_titulek_1 {font-family: Arial; font-size: 15px; font-weight: bold; text-align: center; border: solid #000000 1px}
+
+<!--  stranka s obsahem -->
+body.rozvrh_1 {font-family: Arial; font-size: 12px; color: #000000; background-color: #FFFFFF; margin: 10px 10px 10px 10px}
+table.tb_rozvrh_1 {table-layout: fixed; border-collapse: collapse; border: solid #000000 1px; margin: 5px 0px 5px 0px}
+table.tb_bezohr_1 {border: none #FFFFFF 0px; margin: 5px 0px 5px 0px}
+td.td_titulek_1 {background-color: #C0C0C0}
+td.td_ohr_1 {border: none #FFFFFF 0px; padding: 1px}
+td.td_1 {border: solid #C0C0C0 1px; padding: 1px 3px 1px 3px; text-align: center}
+<!-- odkaz 2 - tento radek nechte i ve vasem vlastnim souboru stylu -->
+   <!-- rozvrh ucitelu  -->
+<!-- zakladni styly pisma  -->
+.textnormal_2 {font-family: Arial; font-size: 12px}
+.textlarge_2 {font-family: Arial; font-size: 15px}
+.textsmall_2 {font-family: Arial; font-size: 9px}
+.textsmaller_2 {font-family: Arial; font-size: 8px}
+.textbaka_2 {font-family: Arial; font-size: 9px}
+.textinfo_2 {font-family: Arial; font-weight: bold; text-decoration: underline}
+.textlargebold_2 {font-family: Arial; font-size: 15px; font-weight: bold}
+.textlargerbold_2 {font-family: Arial; font-size: 16px; font-weight: bold}
+
+
+<!-- stranka s nabidkou  -->
+body.nb_rozvrh_2 {font-family: Arial; font-size: 13px; color: #000000; background-color: #C0C0C0; margin: 10px 10px 10px 10px}
+table.nb_tb_2 {font-family: Arial; font-size: 13px; color: #000000; background-color: #C0C0C0; border-collapse: separate; border: none #000000 0px}
+td.nb_td_2 {padding: 3px 13px 3px 13px; border: solid #000000 1px}
+td.nb_td_titulek_2 {font-family: Arial; font-size: 15px; font-weight: bold; text-align: center; border: solid #000000 1px}
+
+<!--  stranka s obsahem -->
+body.rozvrh_2 {font-family: Arial; font-size: 12px; color: #000000; background-color: #FFFFFF; margin: 10px 10px 10px 10px}
+table.tb_rozvrh_2 {table-layout: fixed; border-collapse: collapse; border: solid #000000 1px; margin: 5px 0px 5px 0px}
+table.tb_bezohr_2 {border: none #FFFFFF 0px; margin: 5px 0px 5px 0px}
+td.td_titulek_2 {background-color: #C0C0C0}
+td.td_ohr_2 {border: none #FFFFFF 0px; padding: 1px}
+td.td_2 {border: solid #C0C0C0 1px; padding: 1px 3px 1px 3px; text-align: center}
+<!-- odkaz 3 - tento radek nechte i ve vasem vlastnim souboru stylu -->
+   <!-- rozvrh mistnosti  -->
+<!-- zakladni styly pisma  -->
+.textnormal_3 {font-family: Arial; font-size: 12px}
+.textlarge_3 {font-family: Arial; font-size: 15px}
+.textsmall_3 {font-family: Arial; font-size: 9px}
+.textsmaller_3 {font-family: Arial; font-size: 8px}
+.textbaka_3 {font-family: Arial; font-size: 9px}
+.textinfo_3 {font-family: Arial; font-weight: bold; text-decoration: underline}
+.textlargebold_3 {font-family: Arial; font-size: 15px; font-weight: bold}
+.textlargerbold_3 {font-family: Arial; font-size: 16px; font-weight: bold}
+
+
+<!-- stranka s nabidkou  -->
+body.nb_rozvrh_3 {font-family: Arial; font-size: 13px; color: #000000; background-color: #C0C0C0; margin: 10px 10px 10px 10px}
+table.nb_tb_3 {font-family: Arial; font-size: 13px; color: #000000; background-color: #C0C0C0; border-collapse: separate; border: none #000000 0px}
+td.nb_td_3 {padding: 3px 13px 3px 13px; border: solid #000000 1px}
+td.nb_td_titulek_3 {font-family: Arial; font-size: 15px; font-weight: bold; text-align: center; border: solid #000000 1px}
+
+<!--  stranka s obsahem -->
+body.rozvrh_3 {font-family: Arial; font-size: 12px; color: #000000; background-color: #FFFFFF; margin: 10px 10px 10px 10px}
+table.tb_rozvrh_3 {table-layout: fixed; border-collapse: collapse; border: solid #000000 1px; margin: 5px 0px 5px 0px}
+table.tb_bezohr_3 {border: none #FFFFFF 0px; margin: 5px 0px 5px 0px}
+td.td_titulek_3 {background-color: #C0C0C0}
+td.td_ohr_3 {border: none #FFFFFF 0px; padding: 1px}
+td.td_3 {border: solid #C0C0C0 1px; padding: 1px 3px 1px 3px; text-align: center}
+<!-- odkaz 4 - tento radek nechte i ve vasem vlastnim souboru stylu -->
+   <!-- rozvrh supl. pohotovosti  -->
+<!-- zakladni styly pisma  -->
+.textnormal_4 {font-family: Arial; font-size: 12px}
+.textlarge_4 {font-family: Arial; font-size: 15px}
+.textsmall_4 {font-family: Arial; font-size: 9px}
+.textsmaller_4 {font-family: Arial; font-size: 8px}
+.textbaka_4 {font-family: Arial; font-size: 9px}
+.textinfo_4 {font-family: Arial; font-weight: bold; text-decoration: underline}
+.textlargebold_4 {font-family: Arial; font-size: 15px; font-weight: bold}
+.textlargerbold_4 {font-family: Arial; font-size: 16px; font-weight: bold}
+
+
+<!-- stranka s nabidkou  -->
+body.nb_rozvrh_4 {font-family: Arial; font-size: 13px; color: #000000; background-color: #C0C0C0; margin: 10px 10px 10px 10px}
+table.nb_tb_4 {font-family: Arial; font-size: 13px; color: #000000; background-color: #C0C0C0; border-collapse: separate; border: none #000000 0px}
+td.nb_td_4 {padding: 3px 13px 3px 13px; border: solid #000000 1px}
+td.nb_td_titulek_4 {font-family: Arial; font-size: 15px; font-weight: bold; text-align: center; border: solid #000000 1px}
+
+<!--  stranka s obsahem -->
+body.rozvrh_4 {font-family: Arial; font-size: 12px; color: #000000; background-color: #FFFFFF; margin: 10px 10px 10px 10px}
+table.tb_rozvrh_4 {table-layout: fixed; border-collapse: collapse; border: solid #000000 1px; margin: 5px 0px 5px 0px}
+table.tb_bezohr_4 {border: none #FFFFFF 0px; margin: 5px 0px 5px 0px}
+td.td_titulek_4 {background-color: #C0C0C0}
+td.td_ohr_4 {border: none #FFFFFF 0px; padding: 1px}
+td.td_4 {border: solid #C0C0C0 1px; padding: 1px 3px 1px 3px; text-align: center}
+<!-- odkaz 5 - tento radek nechte i ve vasem vlastnim souboru stylu -->
+   <!-- rozvrh dozoru v hodine  -->
+<!-- zakladni styly pisma  -->
+.textnormal_5 {font-family: Arial; font-size: 12px}
+.textlarge_5 {font-family: Arial; font-size: 15px}
+.textsmall_5 {font-family: Arial; font-size: 9px}
+.textsmaller_5 {font-family: Arial; font-size: 8px}
+.textbaka_5 {font-family: Arial; font-size: 9px}
+.textinfo_5 {font-family: Arial; font-weight: bold; text-decoration: underline}
+.textlargebold_5 {font-family: Arial; font-size: 15px; font-weight: bold}
+.textlargerbold_5 {font-family: Arial; font-size: 16px; font-weight: bold}
+
+
+<!-- stranka s nabidkou  -->
+body.nb_rozvrh_5 {font-family: Arial; font-size: 13px; color: #000000; background-color: #C0C0C0; margin: 10px 10px 10px 10px}
+table.nb_tb_5 {font-family: Arial; font-size: 13px; color: #000000; background-color: #C0C0C0; border-collapse: separate; border: none #000000 0px}
+td.nb_td_5 {padding: 3px 13px 3px 13px; border: solid #000000 1px}
+td.nb_td_titulek_5 {font-family: Arial; font-size: 15px; font-weight: bold; text-align: center; border: solid #000000 1px}
+
+<!--  stranka s obsahem -->
+body.rozvrh_5 {font-family: Arial; font-size: 12px; color: #000000; background-color: #FFFFFF; margin: 10px 10px 10px 10px}
+table.tb_rozvrh_5 {table-layout: fixed; border-collapse: collapse; border: solid #000000 1px; margin: 5px 0px 5px 0px}
+table.tb_bezohr_5 {border: none #FFFFFF 0px; margin: 5px 0px 5px 0px}
+td.td_titulek_5 {background-color: #C0C0C0}
+td.td_ohr_5 {border: none #FFFFFF 0px; padding: 1px}
+td.td_5 {border: solid #C0C0C0 1px; padding: 1px 3px 1px 3px; text-align: center}
+<!-- odkaz 6 - tento radek nechte i ve vasem vlastnim souboru stylu -->
+   <!-- rozvrh dozoru o prestavce  -->
+<!-- zakladni styly pisma  -->
+.textnormal_6 {font-family: Arial; font-size: 12px}
+.textlarge_6 {font-family: Arial; font-size: 15px}
+.textsmall_6 {font-family: Arial; font-size: 9px}
+.textsmaller_6 {font-family: Arial; font-size: 8px}
+.textbaka_6 {font-family: Arial; font-size: 9px}
+.textinfo_6 {font-family: Arial; font-weight: bold; text-decoration: underline}
+.textlargebold_6 {font-family: Arial; font-size: 15px; font-weight: bold}
+.textlargerbold_6 {font-family: Arial; font-size: 16px; font-weight: bold}
+
+
+<!-- stranka s nabidkou  -->
+body.nb_rozvrh_6 {font-family: Arial; font-size: 13px; color: #000000; background-color: #C0C0C0; margin: 10px 10px 10px 10px}
+table.nb_tb_6 {font-family: Arial; font-size: 13px; color: #000000; background-color: #C0C0C0; border-collapse: separate; border: none #000000 0px}
+td.nb_td_6 {padding: 3px 13px 3px 13px; border: solid #000000 1px}
+td.nb_td_titulek_6 {font-family: Arial; font-size: 15px; font-weight: bold; text-align: center; border: solid #000000 1px}
+
+<!--  stranka s obsahem -->
+body.rozvrh_6 {font-family: Arial; font-size: 12px; color: #000000; background-color: #FFFFFF; margin: 10px 10px 10px 10px}
+table.tb_rozvrh_6 {table-layout: fixed; border-collapse: collapse; border: solid #000000 1px; margin: 5px 0px 5px 0px}
+table.tb_bezohr_6 {border: none #FFFFFF 0px; margin: 5px 0px 5px 0px}
+td.td_titulek_6 {background-color: #C0C0C0}
+td.td_ohr_6 {border: none #FFFFFF 0px; padding: 1px}
+td.td_6 {border: solid #C0C0C0 1px; padding: 1px 3px 1px 3px; text-align: center}
+
+
+/* ////////////////////////// Přidáno /////////////////////////////// */
+.tb_bezohr_1 {
+    width: 100%;
+}
+td.td_ohr_1 {
+    display: none;
+}
+td.nb_td_titulek_1, td.nb_td_1 {
+    border: 0px;
+}
+.tb_bezohr_2 {
+    width: 100%;
+}
+td.td_ohr_2 {
+    display: none;
+}
+td.nb_td_titulek_2, td.nb_td_2 {
+    border: 0px;
+}
+form {
+    margin-bottom: 0px;
+}

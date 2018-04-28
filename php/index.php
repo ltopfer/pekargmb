@@ -32,16 +32,55 @@ echo"
         
         <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js\"></script>
         <script>
-              // obecné
+            // obecné
+            var open = false;
+
             $(document).ready(function() {
                 $(\"#menuButton\").click(function() {
                     $(\"#menu\").toggleClass(\"otevreno\");
                 });
                 
+                $(\"#rychlOdkazy\").mouseenter(function() {
+                           if(!open)
+                           {
+                               $(this).addClass(\"rychlOdkazyOtevreno\");
+                           }  
+                });
+
+                $(\"#rychlOdkazy\").mouseleave(function() {
+                    if(!open)
+                    {
+                        $(this).removeClass(\"rychlOdkazyOtevreno\");
+                    }
+                });
+
+                $(\"#rychlOdkazy\").click(function() {
+                    if(!open)
+                    {
+                        open = true;
+                        $(this).addClass(\"rychlOdkazyOtevreno\");
+                    }
+                    else
+                    {
+                        open = false;
+                        $(this).removeClass(\"rychlOdkazyOtevreno\");    
+                    }
+                });
+
+                $(\"#rychlOdkazy a\").click(function() {
+                    var url = $(this).attr('href');
+
+                    gtag('event', 'click', {
+                        'event_category': 'rychlOdkazy',
+                        'event_label': url,
+                        'transport_type': 'beacon'
+                    });
+                });
+
                 // jen na hlavní stranì
                 hlstrana();
             });
-            
+
             // hlstrana
             var moveTime = 8;
             var timer = 0;
@@ -69,14 +108,14 @@ echo"
                 $(\".novinka_index\").mouseleave(function() {
                     countTimer = true;
                 });
-                
+
                 $(\"#sipkal\").click(function() {
                     moveSlider(-1);
                 });
                 $(\"#sipkap\").click(function() {
                     moveSlider(1);
                 });
-                
+
                 $(window).scroll(function() {
                     var scrolledY = $(window).scrollTop();
                     if(window.innerWidth <= 768)
@@ -84,35 +123,35 @@ echo"
                     else
                         $(\"#obrazek-pozadi\").css(\"margin-top\", 75 - scrolledY*0.3);
                 });
-                
+
                 start();
                 //timer = moveTime - 3;                
             }
-                
+
                 function start() {
                     novinky_index = $(\"#novinky_index\").find(\".novinka_index\");
                     pocet = novinky_index.length;
                     msieversion();
                     moveSlider(0);
                 }
-                    
-                
+
+
                 function moveSlider(posun) {
                     prvni = prvni + posun;
 
                     timer = 0;
-                    
+
                     $(novinky_index[cyklindex(prvni+0)]).removeClass().addClass(\"novinka_index n1\");
                     $(novinky_index[cyklindex(prvni+1)]).removeClass().addClass(\"novinka_index n2\");
                     $(novinky_index[cyklindex(prvni+2)]).removeClass().addClass(\"novinka_index n3\");
-                    
+
                     for (i = 3; i < pocet - 1; i++)
                     {
                         $(novinky_index[cyklindex(prvni+i)]).removeClass().addClass(\"novinka_index n4\");
                     }
                     $(novinky_index[cyklindex(prvni+pocet-1)]).removeClass().addClass(\"novinka_index n0\");
                 }
-            
+
             function cyklindex(index)
             {
                 index = index % pocet;
@@ -120,7 +159,7 @@ echo"
                     index += pocet;
                 return index;
             }
-            
+
             function msieversion() {
                 var ua = window.navigator.userAgent;
                 var msie = ua.indexOf(\"MSIE \");
@@ -136,9 +175,9 @@ echo"
                 }
 
                 return false;
-            }
+            }                                           
 
-        
+
         </script>
         <noscript><div id=\"warning\">Máte vypnutý JavaScript. Stránka se nemusí zobrazovat správne.</div></noscript>
         

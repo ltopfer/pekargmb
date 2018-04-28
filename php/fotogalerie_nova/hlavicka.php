@@ -64,7 +64,8 @@ echo"<a href=\"http://websidepbtridy.wz.cz/zakldfoto/vaka2014/ \" target=\"_blan
 
 
 echo 
-   "<a href=\"#16\" class=\"tlacitkopodmenu\">2016/2017</a>
+   "<a href=\"#17\" class=\"tlacitkopodmenu\">2017/2018</a>
+    <a href=\"#16\" class=\"tlacitkopodmenu\">2016/2017</a>
     <a href=\"#15\" class=\"tlacitkopodmenu\">2015/2016</a>
     <a href=\"#14\" class=\"tlacitkopodmenu\">2014/2015</a>
     <a href=\"#13\" class=\"tlacitkopodmenu\">2013/2014</a>

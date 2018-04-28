@@ -8,7 +8,7 @@ $polozkahl[]=$adresawebu.'gympl_novinky/gympl_novinky.php';$nazevhl[]='Novinky';
 $polozkahl[]=$adresawebu.'gympl_ucitele/gympl_ucitele.php';$nazevhl[]='Kontakty';$titl[]='Kontakty';
 $polozkahl[]=$adresawebu.'dokumentace/skolni_rad.php';$nazevhl[]='Dokumenty';$titl[]='Dokumenty, plány, školní øád a žádosti';
 $polozkahl[]=$adresawebu.'projekty/podpora.php';$nazevhl[]='Projekty';$titl[]='Projekty';
-$polozkahl[]=$adresawebu.'fotogalerie_nova/fotogalerie_nova.php';$nazevhl[]='Fotogalerie';$titl[]='Fotogalerie';
+//$polozkahl[]=$adresawebu.'fotogalerie_nova/fotogalerie_nova.php';$nazevhl[]='Fotogalerie';$titl[]='Fotogalerie';
 
 echo"<div id=\"menu\">";
 echo"<ul id=\"textmenul\">";
@@ -33,6 +33,18 @@ for ($i=3;$i<count($polozkahl) ;$i++)
         echo "<li>";
     echo "<a href=\"$polozkahl[$i]\" class=\"$tridapolozky\" title=\"$titl[$i]\">$nazevhl[$i]</a></li> ";
 }
+
+// rychlé odkazy
+echo "<li id=rychlOdkazy>
+<span class=topmenuitem>Rychlé odkazy</span>
+<ul class=\"innermenu\">
+    <li> <a href=\"https://drive.google.com/a/pekcloud.cz/#my-drive\" target=\"_blank\" \">PekCloud</a></li>
+    <li> <a href=\"/organizace_studia/rozvrhy.php?ppmenu=rozvrhy&zobr=supl\">Suplování</a></li> 
+    <li> <a href=\"/organizace_studia/maturita_2017_18.php?ppmenu=maturita\">Maturity</a></li>       
+    <li> <a href=\"https://login.microsoftonline.com/\" target=\"_blank\" \">Email pro zamìstnance</a></li>
+</ul>
+</li>";
+// konec rychlých odkazù
 
 echo" </ul>";
 

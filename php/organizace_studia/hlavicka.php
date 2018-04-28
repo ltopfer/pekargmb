@@ -23,13 +23,17 @@ $polozka[]='../gympl_casopis/gympl_casopis.php';$nazev[]='Školní èasopis';$ppkat
 $polozka[]='http://www.pekargmb.cz/vol_primajaz/svp/editace.php';$nazev[]='Prima volba jazykù';$ppkat[]='';  
 $polozka[]='http://www.pekargmb.cz/vol_pr1rocjaz/svp/editace.php';$nazev[]='1.roè. volba jazykù';$ppkat[]='';
 $k_pom='rozvrhy';
-$polozka[]="?ppmenu=$k_pom#$k_pom";$nazev[]='Rozvrhy';$ppkat[]='';
-if ($ppmenu==$k_pom) {
+$polozka[]="rozvrhy.php?ppmenu=$k_pom&zobr=tridy#$k_pom";$nazev[]='Rozvrhy';$ppkat[]='';
+/*if ($ppmenu==$k_pom) {
 $polozka[]="../rozvrh/rozvrhtr.htm?ppmenu=$k_pom";$nazev[]='Rozvrh (tøídy)';$ppkat[]=$k_pom;
 $polozka[]="../rozvrh/rozvrhuc.htm?ppmenu=$k_pom";$nazev[]='Rozvrh (uèitelé)';$ppkat[]=$k_pom;
 $polozka[]="http://supl.esy.es/supl/suplovtr.htm?ppmenu=$k_pom";$nazev[]='Suplování (tøídy)';$ppkat[]=$k_pom;	
+}*/
+if ($ppmenu==$k_pom) {
+    $polozka[]="rozvrhy.php?ppmenu=$k_pom&zobr=tridy";$nazev[]='Rozvrh (tøídy)';$ppkat[]=$k_pom;
+    $polozka[]="rozvrhy.php?ppmenu=$k_pom&zobr=ucitele";$nazev[]='Rozvrh (uèitelé)';$ppkat[]=$k_pom;
+    $polozka[]="rozvrhy.php?ppmenu=$k_pom&zobr=supl";$nazev[]='Suplování (tøídy)';$ppkat[]=$k_pom;	
 }
-
 
   
 

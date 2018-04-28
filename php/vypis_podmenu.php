@@ -7,7 +7,7 @@ $cislosrovnitkemzobr='='.$ppmenu.'&zobr=';
 for ($i=0;$i<count($polozka) ;$i++ ) {
     $aname='';
 
-    if (( substr($polozka[$i],-4,4)=='.pdf' )||( substr($polozka[$i],-5,5)=='.aspx' )||( substr($polozka[$i],-3,3)=='.cz' )|| ( substr($polozka[$i],-4,4)=='.cz/' )||($kategorie=='elearning')||( substr($polozka[$i],-4,4)=='.doc' ))  
+    if (( substr($polozka[$i],-4,4)=='.pdf' )||( substr($polozka[$i],-5,5)=='.aspx' )||( substr($polozka[$i],-3,3)=='.cz' )||( substr($polozka[$i],-4,4)=='.com' )||( substr($polozka[$i],-5,5)=='.com/' )|| ( substr($polozka[$i],-4,4)=='.cz/' )||($kategorie=='elearning')||( substr($polozka[$i],-4,4)=='.doc' ))  
         $cil='onclick="trackOutboundLink(this); return false;"'; else $cil='';
 
     if ($ppmenu!='') {

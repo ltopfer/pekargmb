@@ -36,6 +36,8 @@ echo"
         <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js\"></script>
         <script>
             // obecné
+            var open = false;
+                            
             $(document).ready(function() {
                 if(window.location.hash) {
                 $(\".podmenu\").addClass(\"otevrenopod\");
@@ -51,6 +53,43 @@ echo"
                 
                 $(\".textmenul_akt\").click(function() {
                     $(\"#menu\").removeClass(\"otevreno\");
+                });
+                
+                $(\"#rychlOdkazy\").mouseenter(function() {
+                           if(!open)
+                           {
+                               $(this).addClass(\"rychlOdkazyOtevreno\");
+                           }  
+                });
+
+                $(\"#rychlOdkazy\").mouseleave(function() {
+                    if(!open)
+                    {
+                        $(this).removeClass(\"rychlOdkazyOtevreno\");
+                    }
+                });
+
+                $(\"#rychlOdkazy\").click(function() {
+                    if(!open)
+                    {
+                        open = true;
+                        $(this).addClass(\"rychlOdkazyOtevreno\");
+                    }
+                    else
+                    {
+                        open = false;
+                        $(this).removeClass(\"rychlOdkazyOtevreno\");    
+                    }
+                });
+
+                $(\"#rychlOdkazy a\").click(function() {
+                    var url = $(this).attr('href');
+
+                    gtag('event', 'click', {
+                        'event_category': 'rychlOdkazy',
+                        'event_label': url,
+                        'transport_type': 'beacon'
+                    });
                 });
             });
         

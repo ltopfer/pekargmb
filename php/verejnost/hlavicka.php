@@ -4,7 +4,9 @@ $ppmenu=$_GET[ppmenu];
 require '../hlavicka.php';
 require '../menu.php';
 
- $polozka[]='prijimacky.php';$nazev[]='Pøijímací zkoušky';$ppkat[]='';
+$polozka[]='prijimacky.php';$nazev[]='Pøijímací zkoušky';$ppkat[]='';
+
+$polozka[]='/fotogalerie_nova/fotogalerie_nova.php';$nazev[]='Fotogalerie';$ppkat[]='';
 
 $polozka[]='co_nabizime.php';$nazev[]='Co nabízíme';$ppkat[]='';
 $polozka[]='../organizace_studia/volitelne_predmety.php?ppmenu=vol_pr'/*'studijni_smery.php'*/;$nazev[]='Studijní smìry';$ppkat[]='';

@@ -5,6 +5,15 @@ require "hlavicka.php";
     <div class="fotogalerie">
         <h4>Fotogalerie</h4>
         
+        <a name="17"></a>
+        <h2>2017/2018</h2>
+        <ul>
+            <li><a href="http://websidepbtridy.wz.cz/zakldfoto/jaaka2018/" target="_blank">Jarní akademie 2018 foto</a></li>
+            <li><a href="https://photos.app.goo.gl/Udxpw6EPMwo67ZgU2" target="_blank">Jarní akademie 2018 video</a></li>
+            <li><a href="https://photos.google.com/share/AF1QipOyNAGKFx34nlqJ_fSeUDxFmhXYxVbhZ3QmZgasxn_moN96Vmfiw91wFjcBg_IcjQ?key=VTRXSFFvN3ExcEo0RERWTGtmZkJHNVk1dWVxcjN3" target="_blank">Vánoèní akademie 2017</a></li>
+        </ul>
+        
+        
         <a name="16"></a>
         <h5>2016/2017</h5>
         <ul>
