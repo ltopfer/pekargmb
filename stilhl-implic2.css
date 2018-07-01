@@ -2400,6 +2400,12 @@ a.tlacitkopodmenuvse {
     #logomenu {
         display: none;
     }
+    #rychlOdkazy {
+        height: auto;
+    }
+    .innermenu {
+        height: 10em;
+    }
     /*#odkazy {
         margin-top: 360px;
         width: 50%;
