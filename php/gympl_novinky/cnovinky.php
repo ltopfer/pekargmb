@@ -196,13 +196,12 @@ $vypis ="<option value=\"ano\" selected=\"selected\">ano</option>";
 }  
 
 
-if($this->pocetobr()<1500) {echo"<tr><td colspan=\"2\"  class=\"centrovano\" > Mùžete pøidat k textu 2obrázky, 
-max. 50kB,formát *.jpg,doporuèené  rozmìry: šíøka 250px (jeden obr.), 150px (dva obr.) <br />
-nebo 2soubory *.pdf,  max. 50kB  <br />
+if($this->pocetobr()<1500) {echo"<tr><td colspan=\"2\"  class=\"centrovano\" > Mùžete pøidat k textu 2 obrázky, formát *.jpg, doporuèené  rozmìry: šíøka 400px<br />
+nebo 2 soubory *.pdf<br />
    <input type=\"hidden\" name=\"MAX_FILE_SIZE\" value=\"50000000\" /> 
-  Vyberte obrázek1(soubor1) v poèítaèi:<input name=\"soubor\" type=\"file\"  accept=\"image/* ,application/pdf \" /> <span class=\"chyba\">     $this->chybafotky  </span>
+  Vyberte obrázek1 (soubor1) v poèítaèi:<input name=\"soubor\" type=\"file\"  accept=\"image/* ,application/pdf \" /> <span class=\"chyba\">     $this->chybafotky  </span>
 <br />
-   Vyberte obrázek2(soubor2) v poèítaèi:<input name=\"soubor2\" type=\"file\"  accept=\"image/* ,application/pdf \" /> <span class=\"chyba\">     $this->chybafotky2  </span>  
+   Vyberte obrázek2 (soubor2) v poèítaèi:<input name=\"soubor2\" type=\"file\"  accept=\"image/* ,application/pdf \" /> <span class=\"chyba\">     $this->chybafotky2  </span>  
     </td></tr> 
                      ";
                       if ($this->Upravafoto) {
@@ -214,21 +213,22 @@ nebo 2soubory *.pdf,  max. 50kB  <br />
 <!-- <option value=\"0\">neupravovat</option> -->
 
 
-
-<option value=\"250\">250</option>
+<option value=\"400\">400</option>
+<!--<option value=\"250\">250</option>
 <option value=\"200\">200</option>
 <option value=\"150\">150</option>
-<option value=\"100\">100</option>
+<option value=\"100\">100</option>-->
 <option value=\"0\">neupravovat</option>  
  </select> px ,  
  výška: <select name=\"vyska\" size=\"1\">
 <option value=\"0\">neupravovat</option>
-<option value=\"350\">350</option>
+<option value=\"400\">400</option>
+<!--<option value=\"350\">350</option>
 <option value=\"300\">300</option>
 <option value=\"250\">250</option>
 <option value=\"200\">200</option>
 <option value=\"150\">150</option>
-<option value=\"100\">100</option> 
+<option value=\"100\">100</option> -->
 </select>  px 
 </div>
               </td></tr> ";
@@ -369,10 +369,10 @@ $uploadDir = $this->adresarfotek;$uploadFile2 = $uploadDir.$nazev2;
 if($vysledek2==$uploadFile2 && $this->Upravafoto && ($fvyska!=0||$fsirka!=0)&& $_FILES['soubor2']['type']!="application/pdf" ) $this->image_resize($uploadFile2,$uploadFile2,$fvyska,$fsirka); 
  
            }           
-//pokud jsou dva jpg, tak je zmenšit na 150px šíøky           
+//pokud jsou dva jpg, tak je zmenšit na 150px šíøky - NE         
 if (file_exists ($uploadFile ) && file_exists ($uploadFile2) && (substr ($uploadFile, -3)=='jpg')&& (substr ($uploadFile2, -3)=='jpg') ) {
- $this->image_resize($uploadFile,$uploadFile,150,0);
- $this->image_resize($uploadFile2,$uploadFile2,150,0);	
+ $this->image_resize($uploadFile,$uploadFile,400,0);
+ $this->image_resize($uploadFile2,$uploadFile2,400,0);	
 }           
 return $poradovecislo ;
 }
@@ -435,10 +435,10 @@ if( file_exists ($uploadFile2)){
 if($vysledek2==$uploadFile2 && $this->Upravafoto && ($fvyska!=0||$fsirka!=0)&& $_FILES['soubor2']['type']!="application/pdf" ) $this->image_resize($uploadFile2,$uploadFile2,$fvyska,$fsirka); 
  
            }
-//pokud jsou dva jpg, tak je zmenšit na 150px šíøky           
+//pokud jsou dva jpg, tak je zmenšit na 150px šíøky - NE           
 if (file_exists ($uploadFile ) && file_exists ($uploadFile2) && (substr ($uploadFile, -3)=='jpg')&& (substr ($uploadFile2, -3)=='jpg') ) {
- $this->image_resize($uploadFile,$uploadFile,150,0);
- $this->image_resize($uploadFile2,$uploadFile2,150,0);	
+ $this->image_resize($uploadFile,$uploadFile,400,0);
+ $this->image_resize($uploadFile2,$uploadFile2,400,0);	
 }             
 return ($f_id);
 }
@@ -1242,13 +1242,12 @@ case 'zverejnit':
 
 
 
-if($this->pocetobr()<1500) {echo"<tr><td colspan=\"2\"  class=\"centrovano\" > Mùžete pøidat k textu 2obrázky, 
-max. 50kB,formát *.jpg,doporuèené  rozmìry: šíøka 250px (jeden obr.), 150px(dva obr.) <br />
-nebo 2soubory *.pdf,  max. 50kB  <br />
+if($this->pocetobr()<1500) {echo"<tr><td colspan=\"2\"  class=\"centrovano\" > Mùžete pøidat k textu 2 obrázky, formát *.jpg, doporuèené  rozmìry: šíøka 400px<br />
+nebo 2 soubory *.pdf<br />
    <input type=\"hidden\" name=\"MAX_FILE_SIZE\" value=\"50000000\" /> 
-  Vyberte obrázek1(soubor1) v poèítaèi:<input name=\"soubor\" type=\"file\"  accept=\"image/* ,application/pdf \" /> <span class=\"chyba\">     $this->chybafotky  </span>
+  Vyberte obrázek1 (soubor1) v poèítaèi:<input name=\"soubor\" type=\"file\"  accept=\"image/* ,application/pdf \" /> <span class=\"chyba\">     $this->chybafotky  </span>
 <br />
-   Vyberte obrázek2(soubor2) v poèítaèi:<input name=\"soubor2\" type=\"file\"  accept=\"image/* ,application/pdf \" /> <span class=\"chyba\">     $this->chybafotky2  </span>  </td></tr> 
+   Vyberte obrázek2 (soubor2) v poèítaèi:<input name=\"soubor2\" type=\"file\"  accept=\"image/* ,application/pdf \" /> <span class=\"chyba\">     $this->chybafotky2  </span>  </td></tr> 
                      ";
                      if ($this->Upravafoto) {
               echo"<tr><td colspan=\"2\"  class=\"centrovano\" >
@@ -1257,20 +1256,23 @@ nebo 2soubory *.pdf,  max. 50kB  <br />
 <div  id=\"upravarozmeru\" style=\"visibility: hidden;\">  
 šíøka: <select name=\"sirka\" size=\"1\">   
 <!-- <option value=\"0\">neupravovat</option> -->
-<option value=\"250\">250</option>
+
+<option value=\"400\">400</option>
+<!--<option value=\"250\">250</option>
 <option value=\"200\">200</option>
 <option value=\"150\">150</option>
-<option value=\"100\">100</option>
-<option value=\"0\">neupravovat</option> 
+<option value=\"100\">100</option>-->
+<option value=\"0\">neupravovat</option>  
  </select> px ,  
  výška: <select name=\"vyska\" size=\"1\">
-<option value=\"0\">neupravovat</option> 
-<option value=\"350\">350</option>
+<option value=\"0\">neupravovat</option>
+<option value=\"400\">400</option>
+<!--<option value=\"350\">350</option>
 <option value=\"300\">300</option>
 <option value=\"250\">250</option>
 <option value=\"200\">200</option>
 <option value=\"150\">150</option>
-<option value=\"100\">100</option> 
+<option value=\"100\">100</option> -->
 </select>  px 
 </div>
               </td></tr> ";

@@ -2810,6 +2810,13 @@ a.tlacitkopodmenuvse {
         padding-top: 0px;
         padding-bottom: 10px;
     }
+    .novinka {
+        overflow: auto;
+        margin: 15px 0px;
+    }
+    .nadpisv-n-c {
+        margin-top: 5px;
+    }
     div.obrnovinka {
         position: relative;
         width: 50%;

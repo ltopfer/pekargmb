@@ -270,7 +270,7 @@ if (file_exists ($adresafoto1[$i]) ){
 echo"<a href=\"{$polozka[$i]}\"><img src=\"".$adresafoto1[$i]."\"> </a>";
 }
 else {
-echo"<a href=\"{$polozka[$i]}\"><img src=\"obr/1200px-Budova_Gymn%C3%A1zia_Dr._Josefa_Peka%C5%99e.jpg\"> </a>";
+    echo"<a href=\"{$polozka[$i]}\"></a>";
 }
 
 echo" </li> "; 
