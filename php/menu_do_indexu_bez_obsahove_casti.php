@@ -40,7 +40,7 @@ echo "<li id=rychlOdkazy>
 <ul class=\"innermenu\">
     <li> <a href=\"https://drive.google.com/a/pekcloud.cz/#my-drive\" target=\"_blank\" \">PekCloud</a></li>
     <li> <a href=\"/organizace_studia/rozvrhy.php?ppmenu=rozvrhy&zobr=supl\">Suplování</a></li> 
-    <li> <a href=\"/organizace_studia/maturita_2017_18.php?ppmenu=maturita\">Maturity</a></li>       
+    <li> <a href=\"/organizace_studia/maturita_2018_19.php?ppmenu=maturita\">Maturity</a></li>       
     <li> <a href=\"https://login.microsoftonline.com/\" target=\"_blank\" \">Email pro zamìstnance</a></li>
 </ul>
 </li>";

@@ -1039,6 +1039,7 @@ a.tridappmenuakt {
     color: #AAA;
     font-weight: bold;
     padding: 5px;
+    float: left;
 }
 
 #cisla-stran-novinky a:hover {
