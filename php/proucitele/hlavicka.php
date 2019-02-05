@@ -36,8 +36,8 @@ if ($ppmenu==$k_pom) {
     $polozka[]="jidelna.php?ppmenu=$k_pom";$nazev[]='Školní jídelna';$ppkat[]=$k_pom;
     $polozka[]="odhlasky.php?ppmenu=$k_pom";$nazev[]='Odhlášky obìdù';$ppkat[]=$k_pom;
 
-    $polozka[]="jidelnicek.pdf?ppmenu=$k_pom";$nazev[]='Jídelníèek';$ppkat[]=$k_pom;
-    $polozka[]="jidelnicek1.pdf?ppmenu=$k_pom";$nazev[]='Jídelníèek další týden';$ppkat[]=$k_pom;
+    $polozka[]="../organizace_studia/jidelnicek.pdf?ppmenu=$k_pom";$nazev[]='Jídelníèek';$ppkat[]=$k_pom;
+    $polozka[]="../organizace_studia/jidelnicek1.pdf?ppmenu=$k_pom";$nazev[]='Jídelníèek další týden';$ppkat[]=$k_pom;
     $polozka[]="http://www.strava.cz?ppmenu=$k_pom";$nazev[]='Objednávání stravy';$ppkat[]=$k_pom;
     $polozka[]="../organizace_studia/prihlaska_stravovani.pdf?ppmenu=$k_pom";$nazev[]='Pøihláška ke stravování';$ppkat[]=$k_pom;
     $polozka[]="../organizace_studia/strav_komise.pdf?ppmenu=$k_pom";$nazev[]='Stravovací komise';$ppkat[]=$k_pom;

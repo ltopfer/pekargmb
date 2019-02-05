@@ -1800,7 +1800,7 @@ a.tlacitkopodmenuvse {
 .hledej-tlacitko{
     float: right;
 }
-.aktualnistrana {
+#cisla-stran-novinky a.aktualnistrana {
     color: #333333;
 }
 #rozdeleny_obsah_oskole {
