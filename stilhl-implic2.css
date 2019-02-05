@@ -199,7 +199,7 @@ a[name] {
 #rychlOdkazy .innermenu {
     display: none;
     padding-left: 10px;
-    cursor: pointer;
+    /*cursor: pointer;*/
 }
 .innermenu{
     background: rgb(106, 108, 126);
@@ -2401,7 +2401,7 @@ a.tlacitkopodmenuvse {
     #logomenu {
         display: none;
     }
-    #rychlOdkazy {
+    #textmenup li#rychlOdkazy {
         height: auto;
     }
     .innermenu {
@@ -2581,6 +2581,18 @@ a.tlacitkopodmenuvse {
     }
     .nabidka.prvni .karta,
     .nabidka.treti .karta {
+        background: #fdd16d;
+    }
+    .nabidkaIE {
+        width: 33.33%;
+        height: 33.33vw;
+    }
+    .nabidkaIE.prvni .karta,
+    .nabidkaIE.ctvrta .karta {
+        background: #fcbb23
+    }
+    .nabidkaIE.prvni .karta,
+    .nabidkaIE.treti .karta {
         background: #fdd16d;
     }
     .predni,

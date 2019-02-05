@@ -164,12 +164,13 @@ echo"
                 var ua = window.navigator.userAgent;
                 var msie = ua.indexOf(\"MSIE \");
                 var safari = ua.indexOf(\"Safari\");
+                var chrome = ua.indexOf(\"Chrome\");
 
-                if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./) || safari > 0)  // If Internet Explorer or Safari
+                if (msie > -1 || !!navigator.userAgent.match(/Trident.*rv\:11\./) || (safari > -1 && chrome == -1))  // If Internet Explorer or Safari
                 {
                     $('.nabidka').addClass('nabidkaIE').removeClass('nabidka');
                 }
-                else  // If another browser, return 0
+                else  // another browser
                 {
 
                 }

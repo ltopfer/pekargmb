@@ -39,8 +39,8 @@ if ($ppmenu==$k_pom) {
     $polozka[]="jidelnicek.pdf?ppmenu=$k_pom";$nazev[]='Jídelníèek';$ppkat[]=$k_pom;
     $polozka[]="jidelnicek1.pdf?ppmenu=$k_pom";$nazev[]='Jídelníèek další týden';$ppkat[]=$k_pom;
     $polozka[]="http://www.strava.cz?ppmenu=$k_pom";$nazev[]='Objednávání stravy';$ppkat[]=$k_pom;
-    $polozka[]="prihlaska_stravovani.pdf?ppmenu=$k_pom";$nazev[]='Pøihláška ke stravování';$ppkat[]=$k_pom;
-    $polozka[]="strav_komise.pdf?ppmenu=$k_pom";$nazev[]='Stravovací komise';$ppkat[]=$k_pom;
+    $polozka[]="../organizace_studia/prihlaska_stravovani.pdf?ppmenu=$k_pom";$nazev[]='Pøihláška ke stravování';$ppkat[]=$k_pom;
+    $polozka[]="../organizace_studia/strav_komise.pdf?ppmenu=$k_pom";$nazev[]='Stravovací komise';$ppkat[]=$k_pom;
 }
 
 $polozka[]="http://www.pekargmb.cz/vol_rezervace/vlozenirezervaci/editace_ddd.php";$nazev[]='Rezervace';$ppkat[]='';
